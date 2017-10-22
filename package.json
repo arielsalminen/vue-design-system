@@ -1,6 +1,6 @@
 {
   "name": "system",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A Vue.js Design System boilerplate",
   "author": "viljamis <viljami.salminen@gmail.com>",
   "private": true,
