@@ -48,8 +48,9 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 ├── src
 │   ├── tokens
 │   ├── elements
-│   │   ├── icons
+│   │    └── icons
 │   ├── components
+│   │    └── styleguide
 │   ├── templates
 │   ├── styles
 │   ├── router
