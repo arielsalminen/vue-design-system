@@ -1,8 +1,11 @@
 # Vue.js Design System
 
-This is a [Vue.js](https://vuejs.org) boilerplate to kick start your [design system](http://carbondesignsystem.com). It’s aimed for designers/front-end developers who have at least the basic knowledge of HTML, SCSS & JS. It’s a work-in-progress, but can already be used for some serious design work.
+This is a [Vue.js](https://vuejs.org) boilerplate to kick start your [design system](http://carbondesignsystem.com). It’s aimed for designers/front-end developers who have at least the basic knowledge of HTML, SCSS & JS. It’s a work-in-progress, but can already be used for serious design work.
 
-The structure is based on my previous experience working on design systems and aims to simplify certain aspects of the workflow. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, this boilerplate doesn’t include molecule level at all. This is done to help reduce the complexity of the system for its end-users.
+The structure is based on my previous experience working on design systems and aims to simplify certain aspects of the workflow. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, this boilerplate doesn’t include molecule level at all. It’s omitted to help reduce the complexity of the system for its end-users.
+
+**Side note:** Automatic creation of documentation isn’t included right now, but is a part of my [future plans](https://github.com/viljamis/vue-design-system#to-do-list).
+
 
 ## System Hierarchy
 
@@ -110,8 +113,8 @@ Coming soon…
 - [ ] “How to work with the system” section for the readme
 - [ ] Simplify current naming model
 - [ ] Automate the creation of the style guide/playground view.
-- [ ] Should maybe switch to using YAML for Design Tokens
-- [ ] More coming…
+- [ ] Should we switch to YAML for Design Tokens?
+- [ ] Automatic creation of Documentation
 
 
 ## Questions?
