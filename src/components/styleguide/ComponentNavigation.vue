@@ -7,12 +7,6 @@
   </nav>
 </template>
 
-<script>
-  export default {
-    name: 'componentNavigation',
-  };
-</script>
-
 <style lang="scss" scoped>
   nav {
     background: $color-primary-rich-black;

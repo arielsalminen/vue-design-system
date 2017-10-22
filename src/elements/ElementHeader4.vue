@@ -4,12 +4,6 @@
   </h4>
 </template>
 
-<script>
-  export default {
-    name: 'elementHeader4',
-  };
-</script>
-
 <style lang="scss" scoped>
   h4 {
     line-height: $line-height-heading;

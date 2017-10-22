@@ -1,15 +1,9 @@
 <template>
-  <table></table>
+  <div class="example"></div>
 </template>
 
-<script>
-  export default {
-    name: 'componentExample',
-  };
-</script>
-
 <style lang="scss" scoped>
-  table {
+  .example {
     /* Some styles */
   }
 </style>

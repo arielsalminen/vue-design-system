@@ -4,12 +4,6 @@
   </h5>
 </template>
 
-<script>
-  export default {
-    name: 'elementHeader5',
-  };
-</script>
-
 <style lang="scss" scoped>
   h5 {
     font-family: $font-primary;

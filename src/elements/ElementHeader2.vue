@@ -4,12 +4,6 @@
   </h2>
 </template>
 
-<script>
-  export default {
-    name: 'elementHeader2',
-  };
-</script>
-
 <style lang="scss" scoped>
   h2 {
     margin-bottom: $space-small;

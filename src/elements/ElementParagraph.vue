@@ -4,12 +4,6 @@
   </p>
 </template>
 
-<script>
-  export default {
-    name: 'elementParagraph',
-  };
-</script>
-
 <style lang="scss" scoped>
   p {
     line-height: $line-height-base;
