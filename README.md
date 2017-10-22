@@ -259,9 +259,17 @@ Once imported, you can start using the element:
 </script>
 ```
 
+As you can see, we’ve also added some content inside our `Element` to override the default `<slot/>` contents. If wanted, we could also use the element as is:
+
+```html
+<template>
+  <element-button/>
+</template>
+```
+
 ### `Components`
 
-The exact same rules apply for both `Components` and `Elements`. From Vue.js’s perspective these are all *“components”*, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for the system.
+The exact same rules apply to both `Components` and `Elements`. From Vue.js’s perspective these are all *“components”*, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for the system.
 
 To better understand the difference, see [System Hierarchy section](https://github.com/viljamis/vue-design-system#system-hierarchy).
 
