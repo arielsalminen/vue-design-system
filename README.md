@@ -57,11 +57,11 @@ missing-glyph
 
 ## Directory Structure
 
-Below is the design system’s basic structure that you should pay attention to. The system’s pieces are split into `Tokens`, `Elements`, `Components` and `Templates` as explained above.
+Below is the design system’s basic structure. The system’s pieces are split into `Tokens`, `Elements`, `Components` and `Templates` as explained above.
 
-There’s also `Styles` directory which includes generic reset and font-face rules. These are being imported inside `App.vue` and used across the whole system.
+There’s also `Styles` directory which includes generic reset and font-face rules + any other global styles/functions that you might need. Currently, there’s for example a set of functions that can create tints and shades out of colors defined in `Tokens`.
 
-`Static` directory can be used for any mockup stuff like for example images, fonts, and similar.
+`Static` directory is meant for any design mockup related things like for example images, fonts and similar.
 
 ```bash
 ├─ src

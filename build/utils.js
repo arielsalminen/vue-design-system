@@ -46,8 +46,8 @@ exports.cssLoaders = function (options) {
   }
 
   var sassOptions = {
-    includePaths: ['./src/tokens'],
-    data: '@import "global.scss";',
+    includePaths: ['./src/tokens', './src/styles'],
+    data: '@import "tokens.scss"; @import "styles.scss";',
     outputStyle: 'compressed'
   }
 

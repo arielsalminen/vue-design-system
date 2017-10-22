@@ -56,7 +56,6 @@
   import ElementHeader6 from '@/elements/ElementHeader6';
   import ElementParagraph from '@/elements/ElementParagraph';
   import ElementLink from '@/elements/ElementLink';
-  import ElementButton from '@/elements/ElementButton';
 
   import IconClose from '@/elements/icons/iconClose';
   import IconArrowLeft from '@/elements/icons/iconArrowLeft';
@@ -76,7 +75,6 @@
       elementHeader6: ElementHeader6,
       elementParagraph: ElementParagraph,
       elementLink: ElementLink,
-      elementButton: ElementButton,
 
       iconClose: IconClose,
       iconArrowLeft: IconArrowLeft,

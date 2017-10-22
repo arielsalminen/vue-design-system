@@ -1,0 +1,21 @@
+
+/* GLOBAL FUNCTIONS
+--------------------------------------------- */
+
+// Create a tint
+//
+// @param  {Color}  $color to tint
+// @param  {Number} $percentage of `$color` in returned color
+// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// Create a shade
+//
+// @param  {Color}  $color to shade
+// @param  {Number} $percentage of `$color` in returned color
+// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

@@ -5,9 +5,6 @@
 </template>
 
 <script>
-  import './styles/fonts.scss';
-  import './styles/reset.scss';
-
   export default {
     name: 'app',
   };
