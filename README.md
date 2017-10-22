@@ -72,7 +72,9 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 │   ├─ styles
 │   ├─ router
 │   └─ App.vue
-└─ static
+├─ static
+├─ config
+└─ build
 ```
 
 
