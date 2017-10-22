@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Styleguide from '@/templates/Styleguide'
+import StyleGuide from '@/templates/StyleGuide'
 import Template1 from '@/templates/Template1'
 import Template2 from '@/templates/Template2'
 import Template3 from '@/templates/Template3'
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Styleguide',
-      component: Styleguide
+      name: 'StyleGuide',
+      component: StyleGuide
     },
     {
       path: '/templates/1/',

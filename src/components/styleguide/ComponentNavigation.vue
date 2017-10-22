@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link :to="{ name: 'Styleguide' }" exact>Style Guide</router-link>
+    <router-link :to="{ name: 'StyleGuide' }" exact>Style Guide</router-link>
     <router-link :to="{ name: 'Template1' }" exact>Template 1</router-link>
     <router-link :to="{ name: 'Template2' }" exact>Template 2</router-link>
     <router-link :to="{ name: 'Template3' }" exact>Template 3</router-link>
