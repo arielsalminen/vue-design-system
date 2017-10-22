@@ -8,10 +8,10 @@ The structure is based on my previous experience working on design systems and a
 
 The following hierarchy is used throughout the system, so it’ll be useful to get familiar with these concepts before diving deeper.
 
-1. `Tokens` are the visual design atoms of the design system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
-2. `Elements` are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples.
-3. `Components` are UI patterns that fall on the more complex side of the spectrum. Components utilize elements.
-4. `Templates` exist to document the layout and structure of a section or the entirety of an interface.
+* `Tokens` are the visual design atoms of the design system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
+* `Elements` are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples.
+* `Components` are UI patterns that fall on the more complex side of the spectrum. Components utilize elements.
+* `Templates` exist to document the layout and structure of a section or the entirety of an interface.
 
 
 ## Naming of Things
