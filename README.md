@@ -13,7 +13,7 @@ The following hierarchy is used throughout the system, so it’ll be useful to g
 * `Components` are UI patterns that fall on the more complex side of the spectrum. Components consist of both *Elements* and *Tokens*.
 * `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates consist of all three things mentioned above: *Components*, *Elements* and *Tokens*.
 
-If visualized, the hierarchy looks about like this (simplified):
+**When visualized, the hierarchy looks about like this (simplified):**
 
 ```bash
 Template
@@ -72,9 +72,7 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 │   ├─ styles
 │   ├─ router
 │   └─ App.vue
-├─ static
-├─ config
-└─ build
+└─ static
 ```
 
 
@@ -108,6 +106,7 @@ Coming soon…
 
 ## To-Do List
 
+- [x] Visualize the structure better
 - [ ] “How to work with the system” section for the readme
 - [ ] Simplify current naming model
 - [ ] Automate the creation of the style guide/playground view.
