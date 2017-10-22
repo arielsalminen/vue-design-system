@@ -16,7 +16,7 @@ The following hierarchy is used throughout the system, so it’s useful to get y
 * `Components` are UI patterns that fall on the more complex side of the spectrum. Components consist of both *Elements* and *Tokens*.
 * `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates consist of all three things mentioned above: *Components*, *Elements* and *Tokens*.
 
-##### Visualized, the hierarchy looks about this:
+#### Visualized, the hierarchy looks about this:
 
 ```bash
 Template
@@ -168,7 +168,7 @@ Since tokens are imported globally, you can use them inside any `Element`, `Comp
 
 To create a new element, you will first want to navigate to `/src/elements/` and create a new `.vue` file. Element names start with `Element` prefix, except for icons that live inside a subdirectory (see [Naming of Things](https://github.com/viljamis/vue-design-system#naming-of-things)).
 
-##### For the sake of simplicity, let’s imagine you’re creating a button:
+#### For the sake of simplicity, let’s imagine you’re creating a button:
 
 First, name your new file `ElementButton.vue`.
 
