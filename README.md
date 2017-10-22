@@ -4,19 +4,19 @@ This is a [Vue.js](https://vuejs.org) boilerplate to kick start your [design sys
 
 The structure is based on my previous experience working on design systems and aims to simplify certain aspects of the workflow. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, this boilerplate doesn’t include molecule level at all. It’s omitted to help reduce the complexity of the system for its end-users.
 
-**Side note:** Automatic creation of documentation isn’t included right now, but is a part of my [future plans](https://github.com/viljamis/vue-design-system#to-do-list).
+**Side note:** Automatic creation of documentation isn’t included right now, but is a part of [the future plans](https://github.com/viljamis/vue-design-system#to-do-list).
 
 
 ## System Hierarchy
 
-The following hierarchy is used throughout the system, so it’ll be useful to get familiar with these concepts before diving deeper.
+The following hierarchy is used throughout the system, so it’s useful to get yourself familiar with these concepts before diving deeper.
 
 * `Tokens` are the visual design atoms of the design system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
 * `Elements` are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples. Elements utilize *Tokens* mentioned above.
 * `Components` are UI patterns that fall on the more complex side of the spectrum. Components consist of both *Elements* and *Tokens*.
 * `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates consist of all three things mentioned above: *Components*, *Elements* and *Tokens*.
 
-**When visualized, the hierarchy looks about like this (simplified):**
+##### Visualized, the hierarchy looks about this:
 
 ```bash
 Template
@@ -39,7 +39,7 @@ The names are used to communicate about `Tokens`, `Elements`, `Components` and `
 
 * **Multiword:** names should always be multi-word, except for root App components: This prevents conflicts with existing and future HTML elements, since all HTML elements are a single word.
 * **Meaningful:** not over specific, not overly abstract.
-* **Short:** 2 words or 3 words
+* **Short:** 2 or 3 words.
 * **Pronounceable:** we want to be able talk about them.
 * **Custom element spec compliant:** don't use reserved names. Reserved names include:
 
@@ -107,9 +107,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ### `Tokens`
 
+
 #### Creating a new `Token`
 
-Creating a new *Design Token* is as simple as navigating to `/src/tokens/` and editing any of the partials. I strongly recommend you to see what kind of example tokens `_spacing.scss` or `_color.scss` already have inside of them.
+Creating a new design token is as simple as navigating to `/src/tokens/` and editing any of the partials. I strongly recommend you to see what kind of example tokens `_spacing.scss` or `_color.scss` already have inside of them.
 
 If you need to add a new category in addition to the existing ones, you’ll have to create a new SCSS partial inside the same directory with a name that starts with `_`. Once done, you can import the new partial inside `/src/tokens/tokens.scss`:
 
@@ -146,9 +147,10 @@ $space-xx-large: 128px;
 $space-xxx-large: 256px;
 ```
 
+
 #### Using a `Token`
 
-Since tokens are imported globally, you can use them inside any `Element`, `Component` or `Template` file. Using a *Token* is as simple as:
+Since tokens are imported globally, you can use them inside any `Element`, `Component` or `Template` without any extra work. Using a token is as simple as:
 
 ```html
 <style lang="scss" scoped>
@@ -160,12 +162,117 @@ Since tokens are imported globally, you can use them inside any `Element`, `Comp
 ```
 
 
+### `Elements`
+
+#### Creating a new `Element`
+
+To create a new element, you will first want to navigate to `/src/elements/` and create a new `.vue` file. Element names start with `Element` prefix, except for icons that live inside a subdirectory (see [Naming of Things](https://github.com/viljamis/vue-design-system#naming-of-things)).
+
+##### For the sake of simplicity, let’s imagine you’re creating a button:
+
+First, name your new file `ElementButton.vue`.
+
+After you’ve created the file, it’s time to get yourself familiar with [Vue’s templates and how they work](https://vuejs.org/v2/guide/single-file-components.html). The basic structure is following:
+
+```html
+<template>
+  <!-- Your element’s HTML -->
+</template>
+
+<script>
+  // Your element’s JS
+</script>
+
+<style>
+  /* Your element’s CSS */
+</style>
+```
+
+Hopefully looks quite simple so far!
+
+Now, let’s add a little bit of template markup. It’s a button, so we’ll add a basic html `<button>` and a `<slot/>` inside of it. *Slot* is used to allow a parent `Component` to pass DOM elements into a child `Element`.
+
+```html
+<template>
+  <button>
+    <slot/>
+  </button>
+</template>
+```
+
+Moving further, we can also add default content for the `<slot/>` that will be shown if nothing gets passed:
+
+```html
+<template>
+  <button>
+    <slot>I’m a Button!</slot>
+  </button>
+</template>
+
+<style lang="scss" scoped>
+  button {
+    font-family: $font-primary;
+    background: $color-primary-rich-black;
+    color: $color-primary-white;
+  }
+</style>
+```
+
+In the above example, I’ve also added some basic style properties which utilize design system’s `Tokens`. The *scoped* attribute in `<style>` means that this SCSS will apply to the current `Element` only, which is similar to the style encapsulation found in Shadow DOM.
+
+To see additional examples about passing  `props` to elements, see `/src/elements/ElementLink.vue` which is utilized inside of `/src/templates/StyleGuide.vue`.
+
+
+#### Using an `Element`
+
+Now that you’ve created your first custom element, it’s time to use it inside one of the `Components` or `Templates`. To do this, you need to first import your element:
+
+```html
+<script>
+  import ElementButton from '@/elements/ElementButton';
+
+  export default {
+    components: {
+      elementButton: ElementButton,
+    },
+  };
+</script>
+```
+
+Once imported, you can start using the element:
+
+```html
+<template>
+  <element-button>
+    This content overrides the default slot
+  </element-button>
+</template>
+
+<script>
+  import ElementButton from '@/elements/ElementButton';
+
+  export default {
+    components: {
+      elementButton: ElementButton,
+    },
+  };
+</script>
+```
+
+### `Components`
+
+The exact same rules apply for both `Components` and `Elements`. From Vue.js’s perspective these are all *“components”*, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for the system.
+
+To better understand the difference, see [System Hierarchy section](https://github.com/viljamis/vue-design-system#system-hierarchy).
+
+
+### `Templates`
+
+More instructions coming…
+
+
 ## To-Do List
 
-- [x] Visualize the structure better
-- [x] “How to use Tokens” section
-- [ ] “How to use Elements” section
-- [ ] “How to use Components” section
 - [ ] “How to use Templates” section
 - [ ] Simplify/cleanup naming of things
 - [ ] Automatic creation of Style Guide
