@@ -104,13 +104,69 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## Working with the System
 
-Coming soon…
+
+### `Tokens`
+
+#### Creating a new `Token`
+
+Creating a new *Design Token* is as simple as navigating to `/src/tokens/` and editing any of the partials. I strongly recommend you to see what kind of example tokens `_spacing.scss` or `_color.scss` already have inside of them.
+
+If you need to add a new category in addition to the existing ones, you’ll have to create a new SCSS partial inside the same directory with a name that starts with `_`. Once done, you can import the new partial inside `/src/tokens/tokens.scss`:
+
+```scss
+/* GLOBAL: DESIGN TOKENS
+--------------------------------------------- */
+
+@import "../tokens/color";
+@import "../tokens/font";
+@import "../tokens/font-size";
+@import "../tokens/opacity";
+@import "../tokens/line-height";
+@import "../tokens/spacing";
+@import "../tokens/radius";
+@import "../tokens/sizing";
+@import "../tokens/shadow";
+@import "../tokens/time";
+@import "../tokens/media-query";
+@import "../tokens/z-index";
+```
+
+`Token` partials themselves will look somewhat like this, depending on the complexity of your system:
+
+```scss
+/* SPACE TOKENS
+--------------------------------------------- */
+
+$space-tiny: 8px;
+$space-small: 16px;
+$space-base: 24px;
+$space-large: 48px;
+$space-x-large: 64px;
+$space-xx-large: 128px;
+$space-xxx-large: 256px;
+```
+
+#### Using a `Token`
+
+Since tokens are imported globally, you can use them inside any `Element`, `Component` or `Template` file. Using a *Token* is as simple as:
+
+```html
+<style lang="scss" scoped>
+  a {
+    font-family: $font-primary;
+    color: $color-primary-vermilion;
+  }
+</style>
+```
 
 
 ## To-Do List
 
 - [x] Visualize the structure better
-- [ ] “How to work with the system” section for the readme
+- [x] “How to use Tokens” section
+- [ ] “How to use Elements” section
+- [ ] “How to use Components” section
+- [ ] “How to use Templates” section
 - [ ] Simplify/cleanup naming of things
 - [ ] Automatic creation of Style Guide
 - [ ] Automatic creation of Documentation
