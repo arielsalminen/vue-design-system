@@ -111,10 +111,11 @@ Coming soon…
 
 - [x] Visualize the structure better
 - [ ] “How to work with the system” section for the readme
-- [ ] Simplify current naming model
-- [ ] Automate the creation of the style guide/playground view.
-- [ ] Should we switch to YAML for Design Tokens?
+- [ ] Simplify/cleanup naming of things
+- [ ] Automatic creation of Style Guide
 - [ ] Automatic creation of Documentation
+- [ ] Better defaults
+- [ ] Accessibility tests
 
 
 ## Questions?
