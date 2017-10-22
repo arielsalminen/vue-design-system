@@ -9,9 +9,25 @@ The structure is based on my previous experience working on design systems and a
 The following hierarchy is used throughout the system, so it’ll be useful to get familiar with these concepts before diving deeper.
 
 * `Tokens` are the visual design atoms of the design system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
-* `Elements` are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples.
-* `Components` are UI patterns that fall on the more complex side of the spectrum. Components utilize elements.
-* `Templates` exist to document the layout and structure of a section or the entirety of an interface.
+* `Elements` are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples. Elements utilize *Tokens* mentioned above.
+* `Components` are UI patterns that fall on the more complex side of the spectrum. Components consist of both *Elements* and *Tokens*.
+* `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates consist of all three things mentioned above: *Components*, *Elements* and *Tokens*.
+
+If visualized, the hierarchy looks about like this (simplified):
+
+```bash
+Template
+ ├─ Component
+ │   ├─ Element
+ │   │   ├─ Token
+ │   │   └─ Token
+ │   └─ Element
+ │       └─ Token
+ └─ Component
+     └─ Element
+         ├─ Token
+         └─ Token
+```
 
 
 ## Naming of Things
@@ -45,18 +61,18 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 `Static` directory can be used for any mockup stuff like for example images, fonts, and similar.
 
 ```bash
-├── src
-│   ├── tokens
-│   ├── elements
-│   │    └── icons
-│   ├── components
-│   ├── templates
-│   │    ├── Styleguide.vue
-│   │    └── Template 1,2,3…
-│   ├── styles
-│   ├── router
-│   └── App.vue
-└── static
+├─ src
+│   ├─ tokens
+│   ├─ elements
+│   │   └─ icons
+│   ├─ components
+│   ├─ templates
+│   │   ├─ Styleguide.vue
+│   │   └─ Template 1,2,3…
+│   ├─ styles
+│   ├─ router
+│   └─ App.vue
+└─ static
 ```
 
 
@@ -66,7 +82,7 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 
 To get started, follow the instructions below:
 
-``` bash
+```bash
 # install dependencies
 npm install
 
