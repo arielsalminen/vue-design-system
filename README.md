@@ -50,8 +50,9 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 │   ├── elements
 │   │    └── icons
 │   ├── components
-│   │    └── styleguide
 │   ├── templates
+│   │    ├── Styleguide.vue
+│   │    └── Template 1,2,3…
 │   ├── styles
 │   ├── router
 │   └── App.vue
