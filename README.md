@@ -1,20 +1,24 @@
 # Vue Design System
 
-This is a [Vue.js](https://vuejs.org) template to kick start a [design system](http://carbondesignsystem.com) project. It provides opinionated design and development tooling setup so that users can get started with actual app code as fast as possible. The template is aimed for designers/front-end developers who have at least basic knowledge of component based workflows + HTML, CSS & JS. Currently, this is still a work-in-progress, but can already be used for some serious work.
+*Vue Design System* is a [Vue.js](https://vuejs.org) based open-source tool for prototyping UI design systems. It provides you and your team a set of interconnected patterns & practices to build upon so that you can get started with actual app code faster.
 
-The structure is based on my previous experience working on design systems and aims to simplify certain aspects of the workflow. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, the setup doesn’t include molecule level at all. It’s omitted to help reduce the complexity of the system for its end-users.
+The tool is aimed for designers & front-end developers who have at least basic knowledge of component based workflows + HTML, CSS & JS. Currently, it’s still a work-in-progress, but can already be used for some serious prototyping.
 
-**Side note:** Automatic creation of design system documentation isn’t included right now, but is a part of [the future plans](https://github.com/viljamis/vue-design-system#to-do-list).
+The structure is based on my personal experience working on design systems and aims to simplify certain aspects. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, this setup doesn’t include molecule level at all. It’s omitted to help reduce the complexity of the system for its end-users.
+
+Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
+
+**Side note:** Automatic creation of system documentation isn’t included right now, but is a part of [the future plans](https://github.com/viljamis/vue-design-system#to-do-list).
 
 
 ## System Hierarchy
 
-The following hierarchy is used throughout the system, so it’s useful to get yourself familiar with these concepts before diving deeper.
+The following hierarchy and terms are used throughout the system. It’s a good idea to get familiar with these concepts before diving any deeper.
 
 * `Tokens` are the visual design atoms of the design system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
 * `Elements` are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples. Elements utilize *Tokens* mentioned above.
 * `Components` are UI patterns that fall on the more complex side of the spectrum. Components consist of both *Elements* and *Tokens*.
-* `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates consist of all three things mentioned above: *Components*, *Elements* and *Tokens*.
+* `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of all three things mentioned above: *Components*, *Elements* and *Tokens*.
 
 #### Visualized, the hierarchy looks about this:
 
@@ -52,7 +56,7 @@ We use the **names** to communicate about `Tokens`, `Elements`, `Components` and
 
 ### Prefixing Names
 
-There’re a few rules you will want to follow to keep the system consistent:
+There are a few rules around prefixing things, that you’ll want to follow to keep the system consistent:
 
 * **Tokens:** Token names always start with a category name and a hyphen. For example `$color-` or `$space-`. If you have subcategories, include them in the naming as well and separate with hyphen, Example: `$color-primary-` or `$color-secondary-`.
 * **Elements:** Element names always start with `Element` prefix. Example: `ElementButton.vue`.
@@ -88,8 +92,6 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 └─ static
 ```
 
-In addition, the structure also includes `build` and `config` directories, but you shouldn’t have to touch these to get started.
-
 
 ## Build Setup
 
@@ -101,7 +103,7 @@ To install dependencies, run:
 npm install
 ```
 
-After installing dependencies, you can start up and serve the project with hot reload enabled at [http://localhost:8080](http://localhost:8080), by running:
+After installing dependencies, you can start up and serve the project at [http://localhost:8080](http://localhost:8080), by running:
 
 ```bash
 npm run dev
@@ -126,6 +128,8 @@ For a detailed explanation on how things work, check out the [Webpack guide](htt
 
 
 ### `Tokens`
+
+Tokens are the visual design atoms of the design system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
 
 
 #### Creating a new `Token`
@@ -182,6 +186,8 @@ Since tokens are imported globally, you can use them inside any `Element`, `Comp
 
 
 ### `Elements`
+
+Elements are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples. Elements utilize `Tokens`.
 
 #### Creating a new `Element`
 
@@ -278,7 +284,6 @@ See below for additional examples about passing `props` to `Elements` and `Compo
 ```
 
 
-
 #### Using an `Element`
 
 Now that you’ve created your first custom element, it’s time to use it inside one of the `Components` or `Templates`. To do this, you will have to first import your *element:*
@@ -323,7 +328,10 @@ As you can see, we’ve also added some basic text content inside our `Element` 
 </template>
 ```
 
+
 ### `Components`
+
+Components are UI patterns that fall on the more complex side of the spectrum. Components can consist of both `Elements` and `Tokens`.
 
 The exact same rules apply to both `Components` and `Elements`. From Vue.js’s perspective these are all `Vue Components`, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for a system.
 
@@ -332,13 +340,12 @@ To better understand the hierarchy and terms used in this project, see [System H
 
 ### `Templates`
 
-More instructions coming…
+Templates exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of `Components`, `Elements` and `Tokens`.
 
 
 ## To-Do List
 
-- [ ] “How to use Templates” section
-- [ ] Automatic creation of Style Guide
+- [ ] Automatic creation of Style Guide Playground?
 - [ ] Automatic creation of Documentation
 - [ ] Better defaults?
 - [ ] Accessibility tests
