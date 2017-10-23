@@ -1,6 +1,6 @@
 # Vue.js Design System
 
-This is a [Vue.js](https://vuejs.org) boilerplate to kick start your [design system](http://carbondesignsystem.com). It’s aimed for designers/front-end developers who have at least the basic knowledge of HTML, SCSS & JS. It’s a work-in-progress, but can already be used for serious design work.
+This is a [Vue.js](https://vuejs.org) project template to kick start [design system](http://carbondesignsystem.com) work. It’s aimed for designers/front-end developers who have at least the basic knowledge of HTML, SCSS & JS. It’s a work-in-progress, but can already be used for some serious design work.
 
 The structure is based on my previous experience working on design systems and aims to simplify certain aspects of the workflow. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, this boilerplate doesn’t include molecule level at all. It’s omitted to help reduce the complexity of the system for its end-users.
 
@@ -269,7 +269,7 @@ As you can see, we’ve also added some content inside our `Element` to override
 
 ### `Components`
 
-The exact same rules apply to both `Components` and `Elements`. From Vue.js’s perspective these are all *“components”*, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for the system.
+The exact same rules apply to both `Components` and `Elements`. From Vue.js’s perspective these are all *“Vue Components”*, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for the system.
 
 To better understand the difference, see [System Hierarchy section](https://github.com/viljamis/vue-design-system#system-hierarchy).
 
