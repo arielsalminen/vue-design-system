@@ -1,8 +1,8 @@
 # Vue Design System
 
-*Vue Design System* is a [Vue.js](https://vuejs.org) based open-source tool for prototyping UI design systems. It provides you and your team a set of interconnected patterns & practices to build upon so that you can get started with actual app code faster.
+*Vue Design System* is an open-source tool for prototyping UI design systems. It provides you and your team a set of interconnected patterns & practices to build upon so that you can get started with actual app code faster.
 
-The tool is aimed for designers & front-end developers who have at least basic knowledge of component based workflows + HTML, CSS & JS. Currently, it’s still a work-in-progress, but can already be used for some serious prototyping.
+The tool is built on top of [Vue.js](https://vuejs.org) and is aimed for designers & front-end developers who have at least basic knowledge of component based workflows + HTML, CSS & JS. Currently, it’s still a work-in-progress, but can already be used for some serious prototyping.
 
 The structure is based on my personal experience working on design systems and aims to simplify certain aspects. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, this setup doesn’t include molecule level at all. It’s omitted to help reduce the complexity of the system for its end-users.
 
@@ -95,7 +95,7 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 
 ## Build Setup
 
-[Vue.js Design System](https://github.com/viljamis/vue-design-system) is built on top of official Vue project templates that are to provide opinionated, battery-included development tooling setups so that users can get started with actual app code as fast as possible.
+[Vue Design System](https://github.com/viljamis/vue-design-system) is built on top of official [Vue.js](https://vuejs.org) project templates that are to provide opinionated, battery-included development tooling setups so that users can get started with actual app code as fast as possible.
 
 To install dependencies, run:
 
