@@ -4,6 +4,12 @@
   </h3>
 </template>
 
+<script>
+  export default {
+    name: 'ElementHeader3'
+  }
+</script>
+
 <style lang="scss" scoped>
   h3 {
     font-family: $font-primary;
@@ -16,3 +22,9 @@
     font-weight: 700;
   }
 </style>
+
+<docs>
+  ```jsx
+  <element-header3>The quick brown fox</element-header3>
+  ```
+</docs>

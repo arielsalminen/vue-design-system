@@ -4,6 +4,12 @@
   </h4>
 </template>
 
+<script>
+  export default {
+    name: 'ElementHeader4'
+  }
+</script>
+
 <style lang="scss" scoped>
   h4 {
     line-height: $line-height-heading;
@@ -15,3 +21,9 @@
     font-weight: 700;
   }
 </style>
+
+<docs>
+  ```jsx
+  <element-header4>The quick brown fox</element-header4>
+  ```
+</docs>

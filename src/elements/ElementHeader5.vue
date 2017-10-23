@@ -4,6 +4,12 @@
   </h5>
 </template>
 
+<script>
+  export default {
+    name: 'ElementHeader5'
+  }
+</script>
+
 <style lang="scss" scoped>
   h5 {
     font-family: $font-primary;
@@ -15,3 +21,9 @@
     font-weight: 700;
   }
 </style>
+
+<docs>
+  ```jsx
+  <element-header5>The quick brown fox</element-header5>
+  ```
+</docs>

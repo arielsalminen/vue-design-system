@@ -10,6 +10,7 @@
   import ComponentNavigation from '@/components/styleguide/ComponentNavigation';
 
   export default {
+    name: 'Template1',
     components: {
       elementHeader1: ElementHeader1,
       componentNavigation: ComponentNavigation,

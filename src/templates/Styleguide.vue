@@ -65,6 +65,7 @@
   import ComponentNavigation from '@/components/styleguide/ComponentNavigation';
 
   export default {
+    name: 'StyleGuide',
     components: {
       elementHeader1: ElementHeader1,
       elementHeader2: ElementHeader2,

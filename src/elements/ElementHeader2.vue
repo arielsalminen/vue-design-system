@@ -4,6 +4,12 @@
   </h2>
 </template>
 
+<script>
+  export default {
+    name: 'ElementHeader2'
+  }
+</script>
+
 <style lang="scss" scoped>
   h2 {
     margin-bottom: $space-small;
@@ -16,3 +22,9 @@
     font-weight: 700;
   }
 </style>
+
+<docs>
+  ```jsx
+  <element-header2>The quick brown fox</element-header2>
+  ```
+</docs>

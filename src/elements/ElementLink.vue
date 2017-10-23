@@ -6,6 +6,7 @@
 
 <script>
   export default {
+    name: 'ElementLink',
     props: ['href'],
   };
 </script>
@@ -16,3 +17,9 @@
     color: $color-primary-vermilion;
   }
 </style>
+
+<docs>
+  ```jsx
+  <element-link>I am a link!</element-link>
+  ```
+</docs>

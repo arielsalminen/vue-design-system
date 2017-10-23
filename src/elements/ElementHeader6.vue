@@ -4,6 +4,12 @@
   </h6>
 </template>
 
+<script>
+  export default {
+    name: 'ElementHeader6'
+  }
+</script>
+
 <style lang="scss" scoped>
   h6 {
     font-family: $font-primary;
@@ -15,3 +21,9 @@
     font-weight: 700;
   }
 </style>
+
+<docs>
+  ```jsx
+  <element-header6>The quick brown fox</element-header6>
+  ```
+</docs>
