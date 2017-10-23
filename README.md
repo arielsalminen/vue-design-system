@@ -8,7 +8,7 @@ The structure is based on my personal experience working on design systems and a
 
 Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
 
-**Side note:** Automatic creation of system documentation isn’t included right now, but is a part of [the future plans](https://github.com/viljamis/vue-design-system#to-do-list).
+**Side note:** Automatic creation of system documentation isn’t included right now, but is under work. See [Style Guide branch](https://github.com/viljamis/vue-design-system/tree/feature/styleguide).
 
 
 ## System Hierarchy
@@ -345,11 +345,13 @@ Templates exist to document the layout and structure of a section or the entiret
 
 ## To-Do List
 
+- [ ] Automatic creation of Style Guide Playground ([under work](https://github.com/viljamis/vue-design-system/tree/feature/styleguide))
+- [ ] Automatic creation of Documentation ([under work](https://github.com/viljamis/vue-design-system/tree/feature/styleguide))
 - [ ] Fix build scripts (style related especially)
-- [ ] Automatic creation of Style Guide Playground?
-- [ ] Automatic creation of Documentation
-- [ ] Better defaults?
-- [ ] Accessibility tests
+- [ ] Fix styleguide warnings
+- [ ] Better naming conventions
+- [ ] Better defaults
+- [ ] Automated accessibility tests
 
 
 ## Questions?
