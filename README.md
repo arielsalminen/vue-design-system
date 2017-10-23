@@ -345,6 +345,7 @@ Templates exist to document the layout and structure of a section or the entiret
 
 ## To-Do List
 
+- [ ] Fix build scripts (style related especially)
 - [ ] Automatic creation of Style Guide Playground?
 - [ ] Automatic creation of Documentation
 - [ ] Better defaults?
