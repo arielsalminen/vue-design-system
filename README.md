@@ -1,14 +1,14 @@
 # Vue Design System
 
-*Vue Design System* is a [Vue.js](https://vuejs.org) based open-source tool for prototyping UI design systems. It provides you and your team a set of interconnected patterns & practices to build upon so that you can get started with actual app code faster.
+*Vue Design System* is an open-source tool for prototyping UI design systems. It provides you and your team a set of interconnected patterns & practices to build upon so that you can get started with actual app code faster.
 
-The tool is aimed for designers & front-end developers who have at least basic knowledge of component based workflows + HTML, CSS & JS. Currently, it’s still a work-in-progress, but can already be used for some serious prototyping.
+The tool is built on top of [Vue.js](https://vuejs.org) and is aimed for designers & front-end developers who have at least basic knowledge of component based workflows + HTML, CSS & JS. Currently, it’s still a work-in-progress, but can already be used for some serious prototyping.
 
 The structure is based on my personal experience working on design systems and aims to simplify certain aspects. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, this setup doesn’t include molecule level at all. It’s omitted to help reduce the complexity of the system for its end-users.
 
 Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
 
-**Side note:** Automatic creation of system documentation isn’t included right now, but is a part of [the future plans](https://github.com/viljamis/vue-design-system#to-do-list).
+**Side note:** Automatic creation of system documentation isn’t included right now, but is under work. See [Style Guide branch](https://github.com/viljamis/vue-design-system/tree/feature/styleguide).
 
 
 ## System Hierarchy
@@ -95,7 +95,7 @@ There’s also `Styles` directory which includes generic reset and font-face rul
 
 ## Build Setup
 
-[Vue.js Design System](https://github.com/viljamis/vue-design-system) is built on top of official Vue project templates that are to provide opinionated, battery-included development tooling setups so that users can get started with actual app code as fast as possible.
+[Vue Design System](https://github.com/viljamis/vue-design-system) is built on top of official [Vue.js](https://vuejs.org) project templates that are to provide opinionated, battery-included development tooling setups so that users can get started with actual app code as fast as possible.
 
 To install dependencies, run:
 
@@ -345,11 +345,13 @@ Templates exist to document the layout and structure of a section or the entiret
 
 ## To-Do List
 
+- [ ] Automatic creation of Style Guide Playground ([under work](https://github.com/viljamis/vue-design-system/tree/feature/styleguide))
+- [ ] Automatic creation of Documentation ([under work](https://github.com/viljamis/vue-design-system/tree/feature/styleguide))
 - [ ] Fix build scripts (style related especially)
-- [ ] Automatic creation of Style Guide Playground?
-- [ ] Automatic creation of Documentation
-- [ ] Better defaults?
-- [ ] Accessibility tests
+- [ ] Fix styleguide warnings
+- [ ] Better naming conventions
+- [ ] Better defaults
+- [ ] Automated accessibility tests
 
 
 ## Questions?
