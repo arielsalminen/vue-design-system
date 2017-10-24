@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name: 'ComponentNavigation'
+    name: 'Navigation'
   }
 </script>
 
@@ -37,6 +37,6 @@
 
 <docs>
   ```jsx
-  <component-navigation/>
+  <navigation/>
   ```
 </docs>

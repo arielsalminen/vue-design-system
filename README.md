@@ -267,9 +267,9 @@ See below for additional examples about passing `props` to `Elements` and `Compo
 
 ```html
 <template>
-  <element-link href="https://viljamis.com/">
+  <link href="https://viljamis.com/">
     This is a label!
-  </element-link>
+  </link>
 </template>
 
 <script>

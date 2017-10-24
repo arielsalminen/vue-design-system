@@ -1,9 +1,23 @@
 module.exports = {
-  title: 'Design System',
-  components: 'src/**/**/[A-Z]*.vue',
+  title: 'Vue Design System',
+  showCode: true,
+  skipComponentsWithoutExample: false,
+  sections: [
+    {
+      name: 'Elements',
+      components: 'src/elements/**/[A-Z]*.vue'
+    },
+    {
+      name: 'Components',
+      components: 'src/components/**/[A-Z]*.vue'
+    },
+    {
+      name: 'Templates',
+      components: 'src/templates/**/[A-Z]*.vue'
+    }
+  ],
   ignore: [
     '**/App.vue',
-    '**/templates/*.vue',
     '**/__tests__/**',
     '**/*.test.js',
     '**/*.test.jsx',

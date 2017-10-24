@@ -20,7 +20,8 @@
     "vue": "^2.5.2",
     "vue-lodash": "^1.0.4",
     "vue-router": "^3.0.1",
-    "vuex": "^2.4.1"
+    "vuex": "^2.4.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

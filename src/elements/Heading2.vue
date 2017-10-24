@@ -1,22 +1,23 @@
 <template>
-  <h6>
+  <h2>
     <slot/>
-  </h6>
+  </h2>
 </template>
 
 <script>
   export default {
-    name: 'ElementHeader6'
+    name: 'Heading2'
   }
 </script>
 
 <style lang="scss" scoped>
-  h6 {
-    font-family: $font-primary;
-    margin-bottom: $space-small;
-    color: $color-primary-rich-black;
+  h2 {
+    margin: 0 0 $space-small;
     line-height: $line-height-heading;
-    font-size: $font-size-tiny;
+    font-family: $font-primary;
+    font-size: $font-size-x-large;
+    color: $color-primary-rich-black;
+    letter-spacing: -0.5px;
     font-style: normal;
     font-weight: 700;
   }
@@ -24,6 +25,6 @@
 
 <docs>
   ```jsx
-  <element-header6>The quick brown fox</element-header6>
+  <heading-2>The quick brown fox</heading-2>
   ```
 </docs>

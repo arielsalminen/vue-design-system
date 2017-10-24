@@ -1,22 +1,28 @@
 <template>
   <div>
-    <component-navigation/>
-    <element-header1>Template 2</element-header1>
+    <navigation/>
+    <heading-1>Template 2</heading-1>
   </div>
 </template>
 
 <script>
-  import ElementHeader1 from '@/elements/ElementHeader1';
-  import ComponentNavigation from '@/components/styleguide/ComponentNavigation';
+  import Heading1 from '@/elements/Heading1';
+  import Navigation from '@/components/styleguide/Navigation';
 
   export default {
     name: 'Template2',
     components: {
-      elementHeader1: ElementHeader1,
-      componentNavigation: ComponentNavigation,
+      heading1: Heading1,
+      navigation: Navigation,
     },
   };
 </script>
 
 <style lang="scss" scoped>
 </style>
+
+<docs>
+  ```jsx
+  <template-2/>
+  ```
+</docs>

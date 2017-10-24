@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'ComponentExample'
+    name: 'Example'
   }
 </script>
 
@@ -19,6 +19,6 @@
 
 <docs>
   ```jsx
-  <component-example>test</component-example>
+  <example>test</example>
   ```
 </docs>
