@@ -6,6 +6,7 @@
 
 <script>
   export default {
+    name: 'ParagraphLink',
     props: ['href'],
   };
 </script>
@@ -14,5 +15,12 @@
   a {
     font-family: $font-primary;
     color: $color-primary-vermilion;
+    margin: 0;
   }
 </style>
+
+<docs>
+  ```jsx
+  <paragraph-link>I am a link!</paragraph-link>
+  ```
+</docs>

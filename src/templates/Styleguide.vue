@@ -1,6 +1,6 @@
 <template>
   <div>
-    <component-navigation/>
+    <navigation/>
     <div class="wrapper">
 
       <section>
@@ -15,14 +15,10 @@
 
       <section>
         <span class="divider">Typography</span>
-        <element-header1>The quick brown fox</element-header1>
-        <element-header2>The quick brown fox</element-header2>
-        <element-header3>The quick brown fox</element-header3>
-        <element-header4>The quick brown fox</element-header4>
-        <element-header5>The quick brown fox</element-header5>
-        <element-header6>The quick brown fox</element-header6>
-        <element-paragraph>Design isn’t just about the look and feel. <element-link href="https://viljamis.com/2017/design-tools-processes/">Design is how it works</element-link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s why we start all our projects with simple sketches, and quickly transition into design­ing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.</element-paragraph>
-        <element-paragraph>Our core belief is that the products we design should work across anything that can access the web. Whether it’s a laptop, a smartphone, a watch, or even a browser integrated into a car’s dashboard. Previously, we worked in Silicon Valley designing digital products for everyone from startups to Fortune 500 companies. Today, we’re focused on helping our own clients to succeed in their businesses. <element-link href="https://viljamisdesign.com/">Have a project in mind?</element-link></element-paragraph>
+        <heading>The quick brown fox</heading>
+        <sub-heading>The quick brown fox</sub-heading>
+        <paragraph>Design isn’t just about the look and feel. <paragraph-link href="https://viljamis.com/2017/design-tools-processes/">Design is how it works</paragraph-link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s why we start all our projects with simple sketches, and quickly transition into design­ing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.</paragraph>
+        <paragraph>Our core belief is that the products we design should work across anything that can access the web. Whether it’s a laptop, a smartphone, a watch, or even a browser integrated into a car’s dashboard. Previously, we worked in Silicon Valley designing digital products for everyone from startups to Fortune 500 companies. Today, we’re focused on helping our own clients to succeed in their businesses. <paragraph-link href="https://viljamisdesign.com/">Have a project in mind?</paragraph-link></paragraph>
       </section>
 
       <section>
@@ -48,39 +44,32 @@
 </template>
 
 <script>
-  import ElementHeader1 from '@/elements/ElementHeader1';
-  import ElementHeader2 from '@/elements/ElementHeader2';
-  import ElementHeader3 from '@/elements/ElementHeader3';
-  import ElementHeader4 from '@/elements/ElementHeader4';
-  import ElementHeader5 from '@/elements/ElementHeader5';
-  import ElementHeader6 from '@/elements/ElementHeader6';
-  import ElementParagraph from '@/elements/ElementParagraph';
-  import ElementLink from '@/elements/ElementLink';
+  import Heading from '@/elements/Heading';
+  import SubHeading from '@/elements/SubHeading';
+  import Paragraph from '@/elements/Paragraph';
+  import ParagraphLink from '@/elements/ParagraphLink';
 
   import IconClose from '@/elements/icons/iconClose';
   import IconArrowLeft from '@/elements/icons/iconArrowLeft';
   import IconSettings from '@/elements/icons/iconSettings';
   import IconDelete from '@/elements/icons/iconDelete';
 
-  import ComponentNavigation from '@/components/styleguide/ComponentNavigation';
+  import Navigation from '@/components/styleguide/Navigation';
 
   export default {
+    name: 'StyleGuide',
     components: {
-      elementHeader1: ElementHeader1,
-      elementHeader2: ElementHeader2,
-      elementHeader3: ElementHeader3,
-      elementHeader4: ElementHeader4,
-      elementHeader5: ElementHeader5,
-      elementHeader6: ElementHeader6,
-      elementParagraph: ElementParagraph,
-      elementLink: ElementLink,
+      heading: Heading,
+      subHeading: SubHeading,
+      paragraph: Paragraph,
+      paragraphLink: ParagraphLink,
 
       iconClose: IconClose,
       iconArrowLeft: IconArrowLeft,
       iconSettings: IconSettings,
       iconDelete: IconDelete,
 
-      componentNavigation: ComponentNavigation,
+      navigation: Navigation,
     },
   };
 </script>
@@ -166,3 +155,9 @@
     }
   }
 </style>
+
+<docs>
+  ```jsx
+  <style-guide/>
+  ```
+</docs>

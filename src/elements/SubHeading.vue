@@ -4,9 +4,15 @@
   </h2>
 </template>
 
+<script>
+  export default {
+    name: 'SubHeading'
+  }
+</script>
+
 <style lang="scss" scoped>
   h2 {
-    margin-bottom: $space-small;
+    margin: 0 0 $space-small;
     line-height: $line-height-heading;
     font-family: $font-primary;
     font-size: $font-size-x-large;
@@ -16,3 +22,9 @@
     font-weight: 700;
   }
 </style>
+
+<docs>
+  ```jsx
+  <sub-heading>The quick brown fox</sub-heading>
+  ```
+</docs>

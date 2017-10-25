@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav">
     <router-link :to="{ name: 'StyleGuide' }" exact>Style Guide</router-link>
     <router-link :to="{ name: 'Template1' }" exact>Template 1</router-link>
     <router-link :to="{ name: 'Template2' }" exact>Template 2</router-link>
@@ -7,14 +7,20 @@
   </nav>
 </template>
 
+<script>
+  export default {
+    name: 'Navigation'
+  }
+</script>
+
 <style lang="scss" scoped>
-  nav {
+  .nav {
     background: $color-primary-rich-black;
     line-height: $line-height-base;
     font-family: $font-primary;
     font-size: $font-size-small;
+    color: $color-primary-white;
     text-align: center;
-    float: left;
     width: 100%;
     a {
       padding: $space-small $space-tiny;
@@ -28,3 +34,9 @@
     }
   }
 </style>
+
+<docs>
+  ```jsx
+  <navigation/>
+  ```
+</docs>

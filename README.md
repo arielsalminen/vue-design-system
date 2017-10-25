@@ -8,8 +8,6 @@ The structure is based on my personal experience working on design systems and a
 
 Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
 
-**Side note:** Automatic creation of system documentation isn’t included right now, but is under work. See [Style Guide branch](https://github.com/viljamis/vue-design-system/tree/feature/styleguide).
-
 
 ## System Hierarchy
 
@@ -41,7 +39,7 @@ Template
 
 We use the **names** to communicate about `Tokens`, `Elements`, `Components` and `Templates`. Hence, they must be short, meaningful and pronounceable. Each name must be:
 
-* **Multiword:** Names should always be multi-word, except for root App components: This prevents conflicts with existing and future HTML elements, since all HTML elements are a single word.
+* **Multiword:** Names should be most of the time multi-word, except for root App components: This prevents conflicts with [existing and future HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), since all HTML elements are a single word.
 * **Meaningful:** Not over specific, not overly abstract.
 * **Short:** Maximum of 2 or 3 words.
 * **Pronounceable:** We want to be able talk about them.
@@ -59,12 +57,8 @@ We use the **names** to communicate about `Tokens`, `Elements`, `Components` and
 There are a few rules around prefixing things, that you’ll want to follow to keep the system consistent:
 
 * **Tokens:** Token names always start with a category name and a hyphen. For example `$color-` or `$space-`. If you have subcategories, include them in the naming as well and separate with hyphen, Example: `$color-primary-` or `$color-secondary-`.
-* **Elements:** Element names always start with `Element` prefix. Example: `ElementButton.vue`.
-* **Icon Elements:** Icons, which live inside a separate `elements/icons` directory, start with `Icon` prefix. Example: `IconSettings.vue`.
-* **Components:** Component names always start with `Component` prefix. Example: `ComponentNavigation.vue`.
-* **Templates:** Template names don’t have a prefix, but *have to be* multiword as explained above. Example: `CustomTemplate.vue`.
-
-
+* **Icon Elements:** Icons, which live inside a separate `/elements/icons/` directory, start with `Icon` prefix. Example: `IconSettings.vue`.
+* **Element, Components & Templates:** Names don’t have a prefix, but *should be* multiword or otherwise compatible with existing and future HTML elements.
 
 
 ## Directory Structure
@@ -103,13 +97,13 @@ To install dependencies, run:
 npm install
 ```
 
-After installing dependencies, you can start up and serve the project at [http://localhost:8080](http://localhost:8080), by running:
+After installing dependencies, you can start up and serve the project at [http://localhost:8080](http://localhost:8080), by running the below command. This will also start up and serve the living documentation at [http://localhost:6060](http://localhost:6060).
 
 ```bash
-npm run dev
+npm start
 ```
 
-Build for production with minification:
+Build for production with minification *(currently builds only the playground):*
 
 ```bash
 npm run build
@@ -267,9 +261,9 @@ See below for additional examples about passing `props` to `Elements` and `Compo
 
 ```html
 <template>
-  <element-link href="https://viljamis.com/">
+  <link href="https://viljamis.com/">
     This is a label!
-  </element-link>
+  </link>
 </template>
 
 <script>
@@ -345,8 +339,7 @@ Templates exist to document the layout and structure of a section or the entiret
 
 ## To-Do List
 
-- [ ] Automatic creation of Style Guide Playground ([under work](https://github.com/viljamis/vue-design-system/tree/feature/styleguide))
-- [ ] Automatic creation of Documentation ([under work](https://github.com/viljamis/vue-design-system/tree/feature/styleguide))
+- [ ] Automatic creation of Documentation (under work, somewhat working already)
 - [ ] Fix build scripts (style related especially)
 - [ ] Fix styleguide warnings
 - [ ] Better naming conventions

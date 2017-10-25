@@ -22,4 +22,8 @@
   * {
     border-color: red;
   }
+  body,html {
+    margin: 0;
+    padding: 0;
+  }
 </style>
