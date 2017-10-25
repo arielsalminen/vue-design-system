@@ -1,18 +1,18 @@
 <template>
   <div>
     <navigation/>
-    <heading-1>Template 3</Heading-1>
+    <heading>Template 3</heading>
   </div>
 </template>
 
 <script>
-  import Heading1 from '@/elements/Heading1';
+  import Heading from '@/elements/Heading';
   import Navigation from '@/components/styleguide/Navigation';
 
   export default {
     name: 'Template3',
     components: {
-      heading1: Heading1,
+      heading: Heading,
       navigation: Navigation,
     },
   };

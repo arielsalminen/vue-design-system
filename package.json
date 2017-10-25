@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "npm run dev",
+    "start": "npm run dev | npm run styleguide",
     "build": "node build/build.js",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build"

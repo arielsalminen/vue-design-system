@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'ElementLink',
+    name: 'ParagraphLink',
     props: ['href'],
   };
 </script>
@@ -21,6 +21,6 @@
 
 <docs>
   ```jsx
-  <element-link>I am a link!</element-link>
+  <paragraph-link>I am a link!</paragraph-link>
   ```
 </docs>
