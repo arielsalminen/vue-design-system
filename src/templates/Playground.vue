@@ -49,10 +49,10 @@
   import Paragraph from '@/elements/Paragraph';
   import ParagraphLink from '@/elements/ParagraphLink';
 
-  import IconClose from '@/elements/icons/iconClose';
-  import IconArrowLeft from '@/elements/icons/iconArrowLeft';
-  import IconSettings from '@/elements/icons/iconSettings';
-  import IconDelete from '@/elements/icons/iconDelete';
+  import IconClose from '@/elements/icons/IconClose';
+  import IconArrowLeft from '@/elements/icons/IconArrowLeft';
+  import IconSettings from '@/elements/icons/IconSettings';
+  import IconDelete from '@/elements/icons/IconDelete';
 
   import Navigation from '@/components/styleguide/Navigation';
 
@@ -158,6 +158,6 @@
 
 <docs>
   ```jsx
-  <style-guide/>
+  <playground/>
   ```
 </docs>
