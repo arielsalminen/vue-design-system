@@ -185,11 +185,11 @@ Elements are the smallest basic structures of a UI. They can not be broken down 
 
 #### Creating a new `Element`
 
-To create a new element, you will first want to navigate to `/src/elements/` and create a new `.vue` file. Element names start with `Element` prefix, except for icons that live inside a subdirectory *(see [Naming of Things](https://github.com/viljamis/vue-design-system#naming-of-things)).*
+To create a new element, you will first want to navigate to `/src/elements/` and create a new `.vue` file. Element names don’t have a prefix, but it’s recommended that they are *multiword* or otherwise compatible with existing and future HTML elements *(to learn more, see [Naming of Things](https://github.com/viljamis/vue-design-system#naming-of-things)).*
 
 #### For the sake of simplicity, let’s imagine you’re creating a button:
 
-First, name your file `ElementButton.vue`.
+First, name your file for example `VueButton.vue`.
 
 After you’ve created the file, it’s time to get yourself familiar with [Vue’s templates and how they work](https://vuejs.org/v2/guide/single-file-components.html). The basic structure is following:
 
@@ -213,7 +213,7 @@ Now, let’s add a little bit of template markup. It’s a button, so we’ll ad
 
 ```html
 <template>
-  <button>
+  <button class="button">
     <slot/>
   </button>
 </template>
@@ -223,13 +223,19 @@ Moving further, we can also add default content for the `<slot/>` that will be s
 
 ```html
 <template>
-  <button>
+  <button class="button">
     <slot>I’m a Button!</slot>
   </button>
 </template>
 
+<script>
+  export default {
+    name: 'VueButton',
+  };
+</script>
+
 <style lang="scss" scoped>
-  button {
+  .button {
     font-family: $font-primary;
     background: $color-primary-rich-black;
     color: $color-primary-white;
@@ -252,6 +258,7 @@ See below for additional examples about passing `props` to `Elements` and `Compo
 
 <script>
   export default {
+    name: 'VueLink',
     props: ['href'],
   };
 </script>
@@ -261,17 +268,18 @@ See below for additional examples about passing `props` to `Elements` and `Compo
 
 ```html
 <template>
-  <link href="https://viljamis.com/">
+  <vue-link href="https://viljamis.com/">
     This is a label!
-  </link>
+  </vue-link>
 </template>
 
 <script>
-  import ElementLink from '@/elements/ElementLink';
+  import VueLink from '@/elements/VueLink';
 
   export default {
+    name: 'MyTemplate',
     components: {
-      elementLink: ElementLink,
+      vueLink: VueLink,
     },
   };
 </script>
@@ -284,11 +292,11 @@ Now that you’ve created your first custom element, it’s time to use it insid
 
 ```html
 <script>
-  import ElementButton from '@/elements/ElementButton';
+  import VueButton from '@/elements/VueButton';
 
   export default {
     components: {
-      elementButton: ElementButton,
+      vueButton: VueButton,
     },
   };
 </script>
@@ -298,27 +306,17 @@ Once imported in `<script/>`, you can start using the element in your `<template
 
 ```html
 <template>
-  <element-button>
+  <vue-button>
     This content overrides the default slot
-  </element-button>
+  </vue-button>
 </template>
-
-<script>
-  import ElementButton from '@/elements/ElementButton';
-
-  export default {
-    components: {
-      elementButton: ElementButton,
-    },
-  };
-</script>
 ```
 
 As you can see, we’ve also added some basic text content inside our `Element` to override the default `<slot/>` contents. If wanted, we could also use the element as is, with the default *slot* contents shown:
 
 ```html
 <template>
-  <element-button/>
+  <vue-button/>
 </template>
 ```
 
@@ -354,6 +352,7 @@ For any questions contact [@viljamis](https://twitter.com/viljamis) via Twitter 
 
 ## Changelog
 
+`0.1.1` (2017-10-25) - Adds initial alpha documentation creation
 `0.1.0` (2017-10-23) - Initial prototype
 
 
