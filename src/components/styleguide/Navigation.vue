@@ -1,9 +1,10 @@
 <template>
   <nav class="nav">
-    <router-link :to="{ name: 'StyleGuide' }" exact>Style Guide</router-link>
+    <router-link :to="{ name: 'Playground' }" exact>Playground</router-link>
     <router-link :to="{ name: 'Template1' }" exact>Template 1</router-link>
     <router-link :to="{ name: 'Template2' }" exact>Template 2</router-link>
     <router-link :to="{ name: 'Template3' }" exact>Template 3</router-link>
+    <a href="http://localhost:6060" target="_blank">Style Guide</a>
   </nav>
 </template>
 

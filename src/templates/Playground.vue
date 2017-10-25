@@ -57,7 +57,7 @@
   import Navigation from '@/components/styleguide/Navigation';
 
   export default {
-    name: 'StyleGuide',
+    name: 'Playground',
     components: {
       heading: Heading,
       subHeading: SubHeading,

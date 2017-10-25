@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import WebFont from 'webfontloader';
+import WebFont from 'webfontloader'
 
 Vue.config.productionTip = false
 
