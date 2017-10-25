@@ -352,6 +352,7 @@ For any questions contact [@viljamis](https://twitter.com/viljamis) via Twitter 
 
 ## Changelog
 
+* `0.1.2` (2017-10-25) - Fixes styleguide warnings + adds global resets
 * `0.1.1` (2017-10-25) - Adds initial alpha documentation creation
 * `0.1.0` (2017-10-23) - Initial prototype
 
