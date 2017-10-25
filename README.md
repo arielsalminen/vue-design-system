@@ -337,9 +337,9 @@ Templates exist to document the layout and structure of a section or the entiret
 
 ## To-Do List
 
+- [x] Fix styleguide warnings
 - [ ] Automatic creation of Documentation (under work, somewhat working already)
 - [ ] Fix build scripts (style related especially)
-- [ ] Fix styleguide warnings
 - [ ] Better naming conventions
 - [ ] Better defaults
 - [ ] Automated accessibility tests
