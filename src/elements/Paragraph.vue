@@ -12,10 +12,11 @@
 
 <style lang="scss" scoped>
   p {
+    @include reset;
     line-height: $line-height-base;
     font-family: $font-primary;
     font-size: $font-size-base;
-    margin: 0 0 $space-small;
+    margin-bottom: $space-small;
     color: $color-text-default;
     font-style: normal;
     font-weight: 400;

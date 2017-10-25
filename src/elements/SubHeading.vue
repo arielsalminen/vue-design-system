@@ -12,7 +12,8 @@
 
 <style lang="scss" scoped>
   h2 {
-    margin: 0 0 $space-small;
+    @include reset;
+    margin-bottom: $space-small;
     line-height: $line-height-heading;
     font-family: $font-primary;
     font-size: $font-size-x-large;

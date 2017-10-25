@@ -13,9 +13,9 @@
 
 <style lang="scss" scoped>
   a {
+    @include reset;
     font-family: $font-primary;
     color: $color-primary-vermilion;
-    margin: 0;
   }
 </style>
 
