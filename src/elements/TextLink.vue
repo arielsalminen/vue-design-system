@@ -12,8 +12,8 @@
        * The URL for the link
        */
       href: {
-        type: String,
-        default: '#'
+        default: '#',
+        required: true
       },
       /**
        * Specifies where to display the linked URL.

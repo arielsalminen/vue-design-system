@@ -82,13 +82,9 @@ h1#tokens + article + div div[class^='rsg--preview'] {
 }
 
 h1#tokens + div .react-codemirror2,
-h1#templates + div .react-codemirror2,
 h1#tokens + div div[class^='rsg--tabs'],
-h1#templates + div div[class^='rsg--tabs'],
 h1#tokens + article + div .react-codemirror2,
-h1#templates + article + div .react-codemirror2,
-h1#tokens + article + div div[class^='rsg--tabs'],
-h1#templates + article + div div[class^='rsg--tabs'] {
+h1#tokens + article + div div[class^='rsg--tabs'] {
   display: none;
 }
 

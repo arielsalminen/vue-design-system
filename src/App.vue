@@ -16,7 +16,7 @@
   // Elements and Components should have fonts, spacing, etc.
   // defined in them to keep things as modular as possible.
   #app {
-    font: normal normal 100%/20 "Comic Sans MS", "Comic Sans", cursive;
+    font: normal normal 100%/normal "Comic Sans MS", "Comic Sans", cursive;
     color: red;
   }
   * {

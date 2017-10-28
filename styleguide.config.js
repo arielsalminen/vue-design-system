@@ -1,10 +1,6 @@
 const path = require('path')
 const baseConfig = require('./build/webpack.base.conf.js')
 const merge = require('webpack-merge')
-//const vueDocs = require('vue-docgen-api')
-//const camelToKebab = function (str) {
-//  return str.replace(/([A-Z])/g, function ($1) { return '-' + $1.toLowerCase() })
-//}
 
 module.exports = {
   title: 'Vue Design System',
@@ -48,11 +44,6 @@ module.exports = {
     const dir = path.dirname(componentPath);
     return `import ${name} from '${dir}/${name}';`;
   },
-  //propsParser(file, source) {
-  //  const doc = vueDocs.parse(file)
-  //  doc.displayName = camelToKebab(doc.displayName)
-  //  return doc
-  //},
   require: [
     path.join(__dirname, 'docs/styleguide.helper.js'),
     path.join(__dirname, 'docs/styleguide.styles.css'),

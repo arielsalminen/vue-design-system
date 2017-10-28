@@ -14,7 +14,7 @@
        * The name of the icon to display
        */
       name: {
-        type: String,
+        required: true,
         default: 'settings'
       },
       /**
@@ -37,6 +37,13 @@
       type: {
         type: String,
         default: 'span'
+      },
+      /**
+       * The size of the icon
+       */
+      size: {
+        type: String,
+        default: '16px'
       }
     },
     async mounted() {
@@ -51,22 +58,15 @@
       if (cache.has(currPath)) {
         this.$el.innerHTML = await cache.get(currPath);
         this.$el.children[0].style.fill = this.fill;
+        this.$el.children[0].style.width = this.size;
+        this.$el.children[0].style.height = this.size;
       }
     }
   };
 </script>
 
-<style lang="scss">
-  .icon {
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
-</style>
-
 <docs>
   ```jsx
-  <icon name="settings" aria-label="App Settings" fill="#00264c" />
+  <icon name="settings" aria-label="App Settings" fill="#00264c" size="16px" />
   ```
 </docs>
