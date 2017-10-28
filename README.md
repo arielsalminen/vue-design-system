@@ -462,7 +462,7 @@ To learn more about the documentation format and what you can do with it, Please
 - [x] Fix styleguide build scripts.
 - [x] Add a default `Icon` element that can import any SVG icon from `/static/icons/` by name only.
 - [x] better @font-face import.
-- [ ] Make it possible to install via NPM
+- [x] Make it possible to install via NPM
 - [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
 - [ ] Better defaults.
 - [ ] Better code comments.
@@ -475,6 +475,7 @@ To learn more about the documentation format and what you can do with it, Please
 
 ## Changelog
 
+* `0.1.4` (2017-10-28) - Possibility to install via NPM.
 * `0.1.3` (2017-10-28) - Automatic creation of documentation, better naming conventions, fixes styleguide build scripts and adds better icon workflow.
 * `0.1.2` (2017-10-25) - Fixes styleguide warnings + adds global resets
 * `0.1.1` (2017-10-25) - Adds initial alpha documentation creation

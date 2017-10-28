@@ -1,9 +1,15 @@
 {
   "name": "vue-design-system",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Vue Design System is an open-source tool for prototyping UI design systems.",
   "author": "viljamis <me@viljamis.com>",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viljamis/vue-design-system"
+  },
+  "homepage": "https://vueds.com",
+  "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev | npm run styleguide",
