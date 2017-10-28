@@ -1,4 +1,4 @@
-# Vue Design System (WIP…!)
+# Vue Design System (W-I-P)
 
 [Vue Design System](https://vueds.com) is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon so that you can get started with actual app code faster.
 
