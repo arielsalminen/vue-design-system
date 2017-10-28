@@ -1,12 +1,12 @@
 # Vue Design System
 
-[Vue Design System](https://github.com/viljamis/vue-design-system) is an open-source tool for building UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon so that you can get started with actual app code faster.
+[Vue Design System](http://vueds.com) is an open-source tool for building UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon so that you can get started with actual app code faster.
 
 The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) & [Vue Webpack Template](http://vuejs-templates.github.io/webpack/) and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
 Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
 
-Made by [@viljamis](https://twitter.com/viljamis). Read more from [the official docs](https://github.com/viljamis/vue-design-system) on GitHub.
+Made by [@viljamis](https://twitter.com/viljamis). See also [the official website](http://vueds.com) of Vue Design System.
 
 
 ## Features
@@ -23,16 +23,16 @@ Made by [@viljamis](https://twitter.com/viljamis). Read more from [the official 
 ## Sections
 
 1. [Introduction](#vue-design-system)
-* [Examples](#examples)
-* [Terminology](#terminology)
-* [Naming of things](#naming-of-things)
-* [Directory structure](#directory-structure)
-* [Getting started](#getting-started)
-* [Working with the system](#working-with-the-system)
-* [Editing documentation](#editing-documentation)
-* [Roadmap](#future-roadmap)
-* [Changelog](#changelog)
-* [License](#license)
+2. [Examples](#examples)
+3. [Terminology](#terminology)
+4. [Naming of things](#naming-of-things)
+5. [Directory structure](#directory-structure)
+6. [Getting started](#getting-started)
+7. [Working with the system](#working-with-the-system)
+8. [Editing documentation](#editing-documentation)
+9. [Roadmap](#roadmap)
+10. [Changelog](#changelog)
+11. [License](#license)
 
 ## Examples
 
