@@ -131,7 +131,7 @@ Finally, `docs` includes any custom content that is shown in the system document
 
 [Vue Design System](https://github.com/viljamis/vue-design-system) is built on top of official [Vue.js](https://vuejs.org) project templates that are to provide opinionated, battery-included development tooling setups so that users can get started with actual app code as fast as possible.
 
-Get started by cloning the repo and install dependencies:
+Get started by cloning the repo and installing dependencies:
 
 ```bash
 git clone git@github.com:viljamis/vue-design-system.git
