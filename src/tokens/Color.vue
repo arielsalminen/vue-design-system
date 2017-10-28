@@ -89,12 +89,11 @@
     width: 100%;
   }
   .color {
-    margin-right: map-get($spacing, tiny);
-    width: 100%;
     font-size: map-get($font-size, small);
     font-family: $font-primary;
     color: map-get($color, primary-white);
-    box-shadow: inset 0 0 0 1px rgba(92,106,196,.1);
+    box-shadow: $shadow-inset-tiny;
+    width: 100%;
     text-align: center;
     float: left;
   }
