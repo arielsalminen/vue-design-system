@@ -17,6 +17,26 @@ Made by [@viljamis](https://twitter.com/viljamis) and other contributors. Read m
 * Autoprefixing, SCSS, Webpack & CSS extraction included by default *(Extend with lint-on-save & unit tests).*
 * [And more…](https://github.com/viljamis/vue-design-system)
 
+
+## Get Started
+
+Get started by cloning the repo and installing dependencies:
+
+```bash
+git clone git@github.com:viljamis/vue-design-system.git
+cd vue-design-system
+npm install
+```
+
+Start up the project and living documentation at [http://localhost:8080](http://localhost:8080) & [http://localhost:6060](http://localhost:6060):
+
+```bash
+npm start
+```
+
+To learn more, view the [official documentation](https://github.com/viljamis/vue-design-system) on GitHub.
+
+
 ## Terminology
 
 The following terminology is used throughout Vue Design System. It’s a good idea to get familiar with these concepts before diving deeper.
@@ -27,7 +47,7 @@ The following terminology is used throughout Vue Design System. It’s a good id
 * **Patterns** are UI patterns that fall on the more complex side of the spectrum. Patterns consist of both *Elements* and *Tokens*.
 * **Templates** exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of all three things mentioned above: *Patterns*, *Elements* and *Tokens*.
 
-### Hierarchy, visualized:
+## Hierarchy, visualized:
 
 ```bash
 Template
@@ -43,4 +63,4 @@ Template
          └─ Token
 ```
 
-To learn more, view the [official documentation](https://github.com/viljamis/vue-design-system) on GitHub.
+### [View project on GitHub →](https://github.com/viljamis/vue-design-system)
