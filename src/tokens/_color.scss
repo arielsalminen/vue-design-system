@@ -2,25 +2,11 @@
 /* COLOR TOKENS
 --------------------------------------------- */
 
-// Color: Primary
-$color-primary-vermilion      : #ed4b37;
-$color-primary-ucla-gold      : #ffbb08;
-$color-primary-bleu-de-france : #2389ee;
-$color-primary-rich-black     : #001123;
-$color-primary-oxford-blue    : #00264c;
-$color-primary-white          : #fff;
-
-// Color: Text
-$color-text-default           : desaturate(lighten($color-primary-rich-black, 30%), 90%);
-$color-text-light             : desaturate(lighten($color-primary-rich-black, 40%), 90%);
-
-// Color: Border
-$color-border-default         : desaturate(lighten($color-primary-rich-black, 84%), 90%);
-
-// Color: Aliases
-$color-primary-red            : $color-primary-vermilion;
-$color-primary-yellow         : $color-primary-ucla-gold;
-$color-primary-blue-light     : $color-primary-bleu-de-france;
-$color-primary-black          : $color-primary-rich-black;
-$color-primary-blue           : $color-primary-oxford-blue;
-$color-primary-blue-dark      : $color-primary-oxford-blue;
+$color: (
+  primary-vermilion      : #ed4b37,
+  primary-ucla-gold      : #ffbb08,
+  primary-bleu-de-france : #2389ee,
+  primary-rich-black     : #001123,
+  primary-oxford-blue    : #00264c,
+  primary-white          : #fff
+);

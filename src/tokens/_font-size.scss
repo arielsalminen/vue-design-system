@@ -2,9 +2,11 @@
 /* FONT-SIZE TOKENS
 --------------------------------------------- */
 
-$font-size-tiny: 11px;
-$font-size-small: 13px;
-$font-size-base: 16px;
-$font-size-large: 24px;
-$font-size-x-large: 48px;
-$font-size-xx-large: 64px;
+$font-size: (
+  xx-large: 64px,
+  x-large:  48px,
+  large:    24px,
+  base:     16px,
+  small:    13px,
+  tiny:     11px
+);

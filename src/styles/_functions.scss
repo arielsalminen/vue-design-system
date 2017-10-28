@@ -19,3 +19,14 @@
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
+
+// Set text color based on contrast
+//
+// @param  {Color}  $color to set
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

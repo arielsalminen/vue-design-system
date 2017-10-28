@@ -1,31 +1,64 @@
 <template>
-  <h1>
+  <component :is="level" class="heading">
     <slot/>
-  </h1>
+  </component>
 </template>
 
 <script>
   export default {
-    name: 'Heading'
+    name: 'Heading',
+    props: {
+      /**
+       * The heading level used for the heading.
+       * `h1, h2, h3, h4, h5, h6`
+       */
+      level: {
+        type: String,
+        default: 'h1'
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
-  h1 {
+  .heading {
     @include reset;
     line-height: $line-height-heading;
-    color: $color-primary-rich-black;
-    font-size: $font-size-xx-large;
+    color: map-get($color, primary-rich-black);
     font-family: $font-primary;
-    margin-bottom: $space-small;
-    letter-spacing: -1px;
+    margin-bottom:  map-get($spacing, small);
     font-style: normal;
+  }
+  h1 {
+    font-size: map-get($font-size, xx-large);
+    letter-spacing: -1px;
     font-weight: 700;
+  }
+  h2 {
+    font-size: map-get($font-size, x-large);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  h3 {
+    font-size: map-get($font-size, large);
+    font-weight: 700;
+  }
+  h4 {
+    font-size: map-get($font-size, base);
+    font-weight: 600;
+  }
+  h5 {
+    font-size: map-get($font-size, small);
+    font-weight: 400;
+  }
+  h6 {
+    font-size: map-get($font-size, tiny);
+    font-weight: 400;
   }
 </style>
 
 <docs>
   ```jsx
-  <heading>The quick brown fox</heading>
+  <heading level="h1">The quick brown fox</heading>
   ```
 </docs>
