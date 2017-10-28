@@ -131,9 +131,11 @@ Finally, `docs` includes any custom content that is shown in the system document
 
 [Vue Design System](https://github.com/viljamis/vue-design-system) is built on top of official [Vue.js](https://vuejs.org) project templates that are to provide opinionated, battery-included development tooling setups so that users can get started with actual app code as fast as possible.
 
-To install dependencies, run:
+Get started by cloning the repo and install dependencies:
 
 ```bash
+git clone git@github.com:viljamis/vue-design-system.git
+cd vue-design-system
 npm install
 ```
 
@@ -462,7 +464,6 @@ To learn more about the documentation format and what you can do with it, Please
 - [x] Fix styleguide build scripts.
 - [x] Add a default `Icon` element that can import any SVG icon from `/static/icons/` by name only.
 - [x] better @font-face import.
-- [x] Make it possible to install via NPM
 - [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
 - [ ] Better defaults.
 - [ ] Better code comments.
@@ -475,8 +476,7 @@ To learn more about the documentation format and what you can do with it, Please
 
 ## Changelog
 
-* `0.1.5` (2017-10-28) - Possibility to install via NPM.
-* `0.1.3` (2017-10-28) - Automatic creation of documentation, better naming conventions, fixes styleguide build scripts and adds better icon workflow.
+* `0.1.5` (2017-10-28) - Automatic creation of documentation, better naming conventions, fixes styleguide build scripts and adds better icon workflow.
 * `0.1.2` (2017-10-25) - Fixes styleguide warnings + adds global resets
 * `0.1.1` (2017-10-25) - Adds initial alpha documentation creation
 * `0.1.0` (2017-10-23) - Initial prototype
