@@ -6,8 +6,13 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/viljamis/vue-design-system"
+    "url": "git+https://github.com/viljamis/vue-design-system.git"
   },
+  "keywords": [
+    "vue",
+    "design",
+    "system"
+  ],
   "homepage": "https://vueds.com",
   "license": "MIT",
   "scripts": {
