@@ -1,4 +1,4 @@
-# Vue Design System
+# Vue Design System (WIP…!)
 
 [Vue Design System](https://vueds.com) is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon so that you can get started with actual app code faster.
 
@@ -6,9 +6,10 @@ The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](http
 
 Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
 
-Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See also [the official website](https://vueds.com) of Vue Design System.
+Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See also **[the official website](https://vueds.com) of Vue Design System.**
 
-[![Screenshot](./screenshot.png)](https://vueds.com/)
+[![Screenshot](./preview.gif)](https://vueds.com/)
+
 
 ## Features
 
