@@ -1,34 +1,66 @@
 # Vue Design System
 
-*Vue Design System* is an open-source tool for prototyping UI design systems. It provides you and your team a set of interconnected patterns & practices to build upon so that you can get started with actual app code faster.
+[Vue Design System](https://github.com/viljamis/vue-design-system) is an open-source tool for building UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon so that you can get started with actual app code faster.
 
-The tool is built on top of [Vue.js](https://vuejs.org) and is aimed for designers & front-end developers who have at least basic knowledge of component based workflows + HTML, CSS & JS. Currently, it’s still a work-in-progress, but can already be used for some serious prototyping.
-
-The structure is based on my personal experience working on design systems and aims to simplify certain aspects. Compared to [Atomic Design](http://atomicdesign.bradfrost.com) for example, this setup doesn’t include molecule level at all. It’s omitted to help reduce the complexity of the system for its end-users.
+The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) & [Vue Webpack Template](http://vuejs-templates.github.io/webpack/) and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
 Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
 
+Made by [@viljamis](https://twitter.com/viljamis). Read more from [the official docs](https://github.com/viljamis/vue-design-system) on GitHub.
 
-## System Hierarchy
 
-The following hierarchy and terms are used throughout the system. It’s a good idea to get familiar with these concepts before diving any deeper.
+## Features
+
+* A set of interconnected patterns & practices for you and your team.
+* Global design tokens that can be used inside any component.
+* Simple and sane SVG icon and @font-face defaults.
+* Live reloading for both the app and the system documentation.
+* Automatic generation of documentation *(the very page you’re looking at).*
+* Documentation and the app logic are separated, so you can have public docs while the app itself is private.
+* Autoprefixing, SCSS, Webpack & CSS extraction included by default *(Extend with lint-on-save & unit tests).*
+* And more…
+
+## Sections
+
+1. [Introduction](#vue-design-system)
+* [Examples](#examples)
+* [Terminology](#terminology)
+* [Naming of things](#naming-of-things)
+* [Directory structure](#directory-structure)
+* [Getting started](#getting-started)
+* [Working with the system](#working-with-the-system)
+* [Editing documentation](#editing-documentation)
+* [Roadmap](#future-roadmap)
+* [Changelog](#changelog)
+* [License](#license)
+
+## Examples
+
+Projects using Vue Design System:
+
+* [Vue Design System website](http://vueds.com)
+
+
+## Terminology
+
+The following terminology is used throughout Vue Design System. It’s a good idea to get familiar with these concepts before diving deeper.
 
 * `Tokens` are the visual design atoms of the design system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
 * `Elements` are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples. Elements utilize *Tokens* mentioned above.
-* `Components` are UI patterns that fall on the more complex side of the spectrum. Components consist of both *Elements* and *Tokens*.
-* `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of all three things mentioned above: *Components*, *Elements* and *Tokens*.
+* `Patterns` are UI patterns that fall on the more complex side of the spectrum. Patterns consist of both *Elements* and *Tokens*.
+* `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of all three things mentioned above: *Patterns*, *Elements* and *Tokens*.
 
-#### Visualized, the hierarchy looks about this:
+#### Hierarchy, visualized:
 
 ```bash
 Template
- ├─ Component
+ ├─ Pattern
  │   ├─ Element
  │   │   ├─ Token
  │   │   └─ Token
  │   └─ Element
  │       └─ Token
- └─ Component
+ └─ Pattern
      └─ Element
          ├─ Token
          └─ Token
@@ -37,9 +69,9 @@ Template
 
 ## Naming of Things
 
-We use the **names** to communicate about `Tokens`, `Elements`, `Components` and `Templates`. Hence, they must be short, meaningful and pronounceable. Each name must be:
+We use the **names** to communicate about `Tokens`, `Elements`, `Patterns` and `Templates`. Hence, they must be short, meaningful and pronounceable. Each name must be:
 
-* **Multiword:** Names should be most of the time multi-word, except for root App components: This prevents conflicts with [existing and future HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), since all HTML elements are a single word.
+* **Multiword:** Names should be most of the time multi-word, except for root App component: This prevents conflicts with [existing and future HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), since all HTML elements are a single word.
 * **Meaningful:** Not over specific, not overly abstract.
 * **Short:** Maximum of 2 or 3 words.
 * **Pronounceable:** We want to be able talk about them.
@@ -58,36 +90,41 @@ There are a few rules around prefixing things, that you’ll want to follow to k
 
 * **Tokens:** Token names always start with a category name and a hyphen. For example `$color-` or `$space-`. If you have subcategories, include them in the naming as well and separate with hyphen, Example: `$color-primary-` or `$color-secondary-`.
 * **Icon Elements:** Icons, which live inside a separate `/elements/icons/` directory, start with `Icon` prefix. Example: `IconSettings.vue`.
-* **Element, Components & Templates:** Names don’t have a prefix, but *should be* multiword or otherwise compatible with existing and future HTML elements.
+* **Element, Pattern & Templates:** Names don’t have a prefix, but *should be* multiword or otherwise compatible with existing and future HTML elements.
 
 
 ## Directory Structure
 
-Below is the design system’s basic structure. The system’s pieces are split into `Tokens`, `Elements`, `Components` and `Templates` as explained above.
+Below is the design system’s basic structure. The system’s pieces are split into `Tokens`, `Elements`, `Patterns` and `Templates` as explained above.
 
 There’s also `Styles` directory which includes generic reset and font-face rules + any other global styles/functions that you might need. Currently, there’s for example a set of functions that can create tints and shades out of colors defined in `Tokens`.
 
-`Static` directory is meant for any design mockup related things like for example images, fonts and similar.
+`Static` directory is meant for any static files like for example icons, fonts and similar.
 
 `Router` maps `Templates` to the routes and lets vue-router know when and where to render them.
+
+Finally, `docs` includes any custom content that is shown in the system documentation.
 
 ```bash
 ├─ src
 │   ├─ tokens
 │   ├─ elements
 │   │   └─ icons
-│   ├─ components
+│   ├─ patterns
 │   ├─ templates
 │   │   ├─ Styleguide.vue
 │   │   └─ Template 1,2,3…
 │   ├─ styles
 │   ├─ router
 │   └─ App.vue
+├─ docs
+├─ config
+├─ build
 └─ static
 ```
 
 
-## Build Setup
+## Getting Started
 
 [Vue Design System](https://github.com/viljamis/vue-design-system) is built on top of official [Vue.js](https://vuejs.org) project templates that are to provide opinionated, battery-included development tooling setups so that users can get started with actual app code as fast as possible.
 
@@ -168,7 +205,7 @@ $space-xxx-large: 256px;
 
 #### Using a `Token`
 
-Since tokens are imported globally, you can use them inside any `Element`, `Component` or `Template` without extra work. Using a token is as simple as:
+Since tokens are imported globally, you can use them inside any `Element`, `Pattern` or `Template` without extra work. Using a token is as simple as:
 
 ```html
 <style lang="scss" scoped>
@@ -209,7 +246,7 @@ After you’ve created the file, it’s time to get yourself familiar with [Vue�
 
 *Looks quite simple, right?*
 
-Now, let’s add a little bit of template markup. It’s a button, so we’ll add a basic html `<button>` and a `<slot/>` inside of it. *Slot* is used to allow a parent `Component` to pass DOM elements into a child `Element`.
+Now, let’s add a little bit of template markup. It’s a button, so we’ll add a basic html `<button>` and a `<slot/>` inside of it. *Slot* is used to allow a parent `Pattern` to pass DOM elements into a child `Element`.
 
 ```html
 <template>
@@ -245,7 +282,7 @@ Moving further, we can also add default content for the `<slot/>` that will be s
 
 In the above example, I’ve also added some basic style properties which utilize design system’s `Tokens`. The *scoped* attribute in `<style>` means that this SCSS will apply to the current `Element` only, which is similar to the style encapsulation found in Shadow DOM.
 
-See below for additional examples about passing `props` to `Elements` and `Components`.
+See below for additional examples about passing `props` to `Elements` and `Patterns`.
 
 ##### Example `Element` with a custom `props`:
 
@@ -288,7 +325,7 @@ See below for additional examples about passing `props` to `Elements` and `Compo
 
 #### Using an `Element`
 
-Now that you’ve created your first custom element, it’s time to use it inside one of the `Components` or `Templates`. To do this, you will have to first import your *element:*
+Now that you’ve created your first custom element, it’s time to use it inside one of the `Patterns` or `Templates`. To do this, you will have to first import your *element:*
 
 ```html
 <script>
@@ -321,28 +358,123 @@ As you can see, we’ve also added some basic text content inside our `Element` 
 ```
 
 
-### `Components`
+### `Patterns`
 
-Components are UI patterns that fall on the more complex side of the spectrum. Components can consist of both `Elements` and `Tokens`.
+Patterns are UI patterns that fall on the more complex side of the spectrum. Patterns can consist of both `Elements` and `Tokens`.
 
-The exact same rules apply to both `Components` and `Elements`. From Vue.js’s perspective these are all `Vue Components`, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for a system.
+The exact same rules apply to both `Patterns` and `Elements`. From Vue.js’s perspective these are all `Vue Components`, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for a system.
 
 To better understand the hierarchy and terms used in this project, see [System Hierarchy section](https://github.com/viljamis/vue-design-system#system-hierarchy).
 
 
 ### `Templates`
 
-Templates exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of `Components`, `Elements` and `Tokens`.
+Templates exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of `Patterns`, `Elements` and `Tokens`.
 
 
-## To-Do List
+## Editing Documentation
 
-- [x] Fix styleguide warnings
-- [ ] Automatic creation of Documentation (under work, somewhat working already)
-- [ ] Fix build scripts (style related especially)
-- [ ] Better naming conventions
-- [ ] Better defaults
-- [ ] Automated accessibility tests
+System’s components are documented based on the comments in your source code and readme files that live inside `/docs/`. Each `Element`, `Pattern` and `Template` should also include a custom block called `<docs/>`, which is used to provide an example of the markup. Like this:
+
+````html
+<docs>
+  ```jsx
+  <wrapper>I’m an example that will be shown in docs.</wrapper>
+  ```
+</docs>
+````
+
+In addition, you can include JSDoc style comment blocks inside your `<script/>` which will be shown in the documentation. Simple example:
+
+````html
+<script>
+  /**
+   * A wrapper element is used to wrap elements and patterns.
+   */
+  export default {
+    name: 'Wrapper',
+    props: {
+      /**
+       * The html element name used for the wrapper.
+       */
+      type: {
+        type: String,
+        default: 'div'
+      }
+    }
+  }
+</script>
+````
+
+Finally, the wrapper `Element` with all the documentation added, looks like this:
+
+````html
+<template>
+  <component :is="type" class="wrapper">
+    <slot/>
+  </component>
+</template>
+
+<script>
+  /**
+   * A wrapper element is used to wrap elements and patterns.
+   */
+  export default {
+    name: 'Wrapper',
+    props: {
+      /**
+       * The html element name used for the wrapper.
+       */
+      type: {
+        type: String,
+        default: 'div'
+      }
+    }
+  }
+</script>
+
+<style lang="scss" scoped>
+  .wrapper {
+    @include reset;
+    width: 100%;
+    padding: map-get($spacing, large);
+  }
+</style>
+
+<docs>
+  ```jsx
+  <wrapper>I’m an example that will be shown in docs.</wrapper>
+  ```
+</docs>
+````
+
+To learn more about the documentation format and what you can do with it, Please refer to [Vue Styleguidist’s official docs](https://github.com/vue-styleguidist/vue-styleguidist/tree/master/docs) on GitHub.
+
+
+## Roadmap
+
+- [x] Fix styleguide warnings.
+- [x] Automatic creation of documentation.
+- [x] Better naming conventions.
+- [x] Fix styleguide build scripts.
+- [x] Add a default `Icon` element that can import any SVG icon from `/static/icons/` by name only.
+- [x] better @font-face import.
+- [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
+- [ ] Better defaults.
+- [ ] Better code comments.
+- [ ] Cleanup generic stylesheets.
+- [ ] Use YAML for `Tokens` and convert to both JS/SCSS.
+- [ ] Auto create markup (not just SCSS) for all tokens displayed.
+- [ ] Fix app build scripts (styles!!).
+- [ ] Automated accessibility tests.
+
+
+## Changelog
+
+* `0.1.3` (2017-10-28) - Automatic creation of documentation, better naming conventions, fixes styleguide build scripts and adds better icon workflow.
+* `0.1.2` (2017-10-25) - Fixes styleguide warnings + adds global resets
+* `0.1.1` (2017-10-25) - Adds initial alpha documentation creation
+* `0.1.0` (2017-10-23) - Initial prototype
 
 
 ## Questions?
@@ -350,18 +482,11 @@ Templates exist to document the layout and structure of a section or the entiret
 For any questions contact [@viljamis](https://twitter.com/viljamis) via Twitter or the [Design Systems Slack](http://designsystems.herokuapp.com).
 
 
-## Changelog
-
-* `0.1.2` (2017-10-25) - Fixes styleguide warnings + adds global resets
-* `0.1.1` (2017-10-25) - Adds initial alpha documentation creation
-* `0.1.0` (2017-10-23) - Initial prototype
-
-
 ## License
 
 Licensed under the MIT license.
 
-Copyright (c) 2017 Viljami Salminen, [http://viljamisdesign.com/](http://viljamisdesign.com/)
+Copyright (c) 2017 Viljami Salminen, [https://viljamis.com/](https://viljamis.com/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

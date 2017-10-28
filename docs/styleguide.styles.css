@@ -1,0 +1,106 @@
+div.rsg--root-1 {
+  background: #fff;
+}
+
+pre[class^='rsg--pre'],
+div[class^='rsg--preview'] {
+  padding: 30px;
+  border: 1px solid rgba(92,106,196,.07);
+  background: #f4f6f8;
+  margin-bottom: 16px;
+  border-radius: 3px;
+}
+
+div[class^='rsg--tabButtons'],
+div[class^='rsg--toolbar'],
+div[class^='rsg--controls'],
+div[class^='rsg--pathline'],
+footer[class^='rsg--footer'] {
+  display: none;
+}
+
+div[class^='rsg--tabs'],
+table[class^='rsg--table'] {
+  margin-bottom: 16px;
+}
+
+section[class^='rsg--root'] > h1 a {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: -1px;
+  padding-bottom: 1rem;
+  margin: 3rem 0 2rem;
+  border-bottom: 1px solid #e8e8e8
+}
+
+header[class^='rsg--header'] > h2 a,
+h2[class^='rsg--h2'],
+h2[class^='rsg--h2'] a {
+  font-weight: 600 !important;
+  letter-spacing: -0.5px;
+}
+
+div[class^='rsg--logo'] {
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+div[class^='rsg--logo'] h1 {
+  font-weight: 400;
+}
+
+div[class^='rsg--search'] input {
+  color: #fff;
+  border: 1px solid transparent;
+  padding: .5rem .8rem .58rem;
+  background: rgba(255,255,255,.1);
+}
+
+div[class^='rsg--search'] input:focus {
+  border: 1px solid #2389ee;
+}
+
+h1#templates + div div[class^='rsg--preview'],
+h1#templates + article + div div[class^='rsg--preview'] {
+  padding: 0;
+}
+
+div[class^='rsg--search'] input::-webkit-input-placeholder {
+  color: rgba(150,200,255,.3);
+}
+
+h1#tokens + div div[class^='rsg--preview'],
+h1#tokens + article + div div[class^='rsg--preview'] {
+  background: transparent;
+  padding: 0;
+  border: 0;
+}
+
+.CodeMirror {
+  background: #001123;
+  border-radius: 3px;
+}
+
+h1#tokens + div .react-codemirror2,
+h1#templates + div .react-codemirror2,
+h1#tokens + div div[class^='rsg--tabs'],
+h1#templates + div div[class^='rsg--tabs'],
+h1#tokens + article + div .react-codemirror2,
+h1#templates + article + div .react-codemirror2,
+h1#tokens + article + div div[class^='rsg--tabs'],
+h1#templates + article + div div[class^='rsg--tabs'] {
+  display: none;
+}
+
+section > h1 + article[class^='rsg--root'] {
+  margin: 0 0 2.5rem !important;
+}
+
+ul[class^='rsg--list'] a[class*=' rsg--heading'],
+div[class^='rsg--root'] > ul[class^='rsg--list'] > li > a {
+  font-weight: 600;
+}
+
+div[class^='rsg--sidebar'] a:hover {
+  color: #fff;
+}
