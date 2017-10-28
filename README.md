@@ -97,7 +97,7 @@ There are a few rules around prefixing things, that you’ll want to follow to k
 
 Below is the design system’s basic structure. The system’s pieces are split into `Tokens`, `Elements`, `Patterns` and `Templates` as explained above.
 
-There’s also `Styles` directory which includes generic reset and font-face rules + any other global styles/functions that you might need. Currently, there’s for example a set of functions that can create tints and shades out of colors defined in `Tokens`.
+There’s also `Styles` directory which includes generic `functions`, `mixins` and `variables` that you might need. Currently, there’s for example a set of functions that can create tints and shades out of colors defined in `Tokens`.
 
 `Static` directory is meant for any static files like for example icons, fonts and similar.
 
