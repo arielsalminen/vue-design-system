@@ -374,7 +374,7 @@ Templates exist to document the layout and structure of a section or the entiret
 
 ## Editing Documentation
 
-System’s components are documented based on the comments in your source code and readme files that live inside `/docs/`. Each `Element`, `Pattern` and `Template` should also include a custom block called `<docs/>`, which is used to provide an example of the markup. Like this:
+System’s components are documented based on the comments in your source code and readme files that live inside `/docs/`. Each `Element`, `Pattern` and `Template` can also include a custom block called `<docs/>`, which is used to provide an example of the markup. Like this:
 
 ````html
 <docs>
@@ -384,7 +384,7 @@ System’s components are documented based on the comments in your source code a
 </docs>
 ````
 
-In addition, you can include JSDoc style comment blocks inside your `<script/>` which will be shown in the documentation. Simple example:
+In addition, you can include JSDoc style comment blocks inside your `<script/>` which will be shown in the documentation. An example:
 
 ````html
 <script>
@@ -406,7 +406,7 @@ In addition, you can include JSDoc style comment blocks inside your `<script/>` 
 </script>
 ````
 
-Finally, the wrapper `Element` with all the documentation added, looks like this:
+Finally, the wrapper `Element` with all the documentation added:
 
 ````html
 <template>
