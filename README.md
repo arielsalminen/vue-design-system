@@ -45,10 +45,11 @@ Projects using Vue Design System:
 
 The following terminology is used throughout Vue Design System. It’s a good idea to get familiar with these concepts before diving deeper.
 
-* `Tokens` are the visual design atoms of the design system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
-* `Elements` are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links, and inputs are good examples. Elements utilize *Tokens* mentioned above.
-* `Patterns` are UI patterns that fall on the more complex side of the spectrum. Patterns consist of both *Elements* and *Tokens*.
-* `Templates` exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of all three things mentioned above: *Patterns*, *Elements* and *Tokens*.
+* **Principles** are a set of established design principles that are at the heart of the system. They should guide you when working with *Tokens*, *Elements*, *Patterns* and *Templates* listed below.
+* **Tokens** are the visual design atoms of the system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
+* **Elements** are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links and inputs are good examples. Elements utilize *Tokens* mentioned above.
+* **Patterns** are UI patterns that fall on the more complex side of the spectrum. Patterns consist of both *Elements* and *Tokens*.
+* **Templates** exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of all three things mentioned above: *Patterns*, *Elements* and *Tokens*.
 
 #### Hierarchy, visualized:
 
