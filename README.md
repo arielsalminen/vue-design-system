@@ -8,8 +8,6 @@ Even though this is a system prototyping tool first and foremost, it has all the
 
 Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See also [the official website](https://vueds.com) of Vue Design System.
 
-![Screenshot](./screenshot.png)
-
 
 ## Features
 
@@ -21,6 +19,10 @@ Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See al
 * Documentation and the app logic are separated, so you can have public docs while the app itself is private.
 * Autoprefixing, SCSS, Webpack & CSS extraction included by default *(Extend with lint-on-save & unit tests).*
 * And more…
+
+
+![Screenshot](./screenshot.png)
+
 
 ## Sections
 
