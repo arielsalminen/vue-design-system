@@ -1,0 +1,8 @@
+props:
+  button_background:
+    value: "#0070d2"
+  button_text:
+    value: "#fff"
+global:
+  type: color
+  category: buttons

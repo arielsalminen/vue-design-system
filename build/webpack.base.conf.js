@@ -4,6 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const WebpackShellPlugin = require('webpack-shell-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -66,6 +67,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("style.css")
+    new ExtractTextPlugin("style.css"),
+    new WebpackShellPlugin({
+      onBuildExit:['theo src/tokens/test.yml --transform web --format scss --dest src/tokens']
+    })
   ]
 }
