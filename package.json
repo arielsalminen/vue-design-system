@@ -17,7 +17,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "npm run dev | npm run styleguide | theo src/tokens/test.yml --transform web --format scss --dest src/tokens",
+    "start": "npm run styleguide | theo src/tokens/tokens.yml --transform web --format scss,json --dest src/tokens/build | onchange 'src/tokens/*.yml' -- theo src/tokens/tokens.yml --transform web --format scss,json --dest src/tokens/build | npm run dev",
     "build": "node build/build.js",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build"
@@ -75,8 +75,7 @@
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.18.2",
-    "webpack-merge": "^4.1.0",
-    "webpack-shell-plugin": "^0.5.0"
+    "webpack-merge": "^4.1.0"
   },
   "engines": {
     "node": ">= 4.0.0",
