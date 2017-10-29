@@ -17,7 +17,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "npm run styleguide | theo src/tokens/tokens.yml --transform web --format scss,json --dest src/tokens/build | onchange 'src/tokens/*.yml' -- theo src/tokens/tokens.yml --transform web --format scss,json --dest src/tokens/build | npm run dev",
+    "start": "npm run styleguide | onchange 'src/tokens/*.yml' -- theo src/tokens/tokens.yml --transform web --format scss,json --dest src/tokens/build | theo src/tokens/tokens.yml --transform web --format scss,json --dest src/tokens/build | npm run dev",
     "build": "node build/build.js",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build"
@@ -27,6 +27,7 @@
     "grunt": "^0.4.5",
     "lodash": "^4.17.4",
     "magic-string": "^0.22.4",
+    "onchange": "^3.2.1",
     "readline": "^1.3.0",
     "styles": "^0.2.1",
     "vue": "^2.5.2",
