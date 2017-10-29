@@ -25,7 +25,7 @@ Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See al
 
 ## Sections
 
-1. [Introduction](#vue-design-system)
+1. [Introduction](#vue-design-system-w-i-p)
 2. [Examples](#examples)
 3. [Terminology](#terminology)
 4. [Naming of things](#naming-of-things)
@@ -370,7 +370,7 @@ Patterns are UI patterns that fall on the more complex side of the spectrum. Pat
 
 The exact same rules apply to both `Patterns` and `Elements`. From Vue.js’s perspective these are all `Vue Components`, but for the sake of communication between different teams, diciplines and stakeholders we need a set of unified terms and hierarchy for a system.
 
-To better understand the hierarchy and terms used in this project, see [System Hierarchy section](https://github.com/viljamis/vue-design-system#system-hierarchy).
+To better understand the hierarchy and terms used in this project, see [System Hierarchy section](#terminology).
 
 
 ### `Templates`
