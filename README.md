@@ -458,19 +458,19 @@ To learn more about the documentation format and what you can do with it, Please
 
 ## Frequently Asked Questions
 
-##### I’m working on a new component, but the text is displayed in Comic Sans with red color?
+#### I’m working on a new component, but the text is displayed in Comic Sans with red color?
 
 This is the expected behaviour. It’s done to highlight issues with scoping. Elements and Components should have fonts, spacing, etc. defined inside them to keep things as modular as possible. If you need to remove this functionality for some reason, see `src/App.vue` styles.
 
-##### I’m trying to use the default `Icon` element included, but can’t figure out what icons are available?
+#### I’m trying to use the default `Icon` element included, but can’t figure out what icons are available?
 
 Currently you can use any icon from [Font Awesome](http://fontawesome.io/icons/). Icons are inside the `static/icons` directory, so you can also just replace the default SVG icons with your own.
 
-##### I want to use another typeface, how do I change it?
+#### I want to use another typeface, how do I change it?
 
 Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/webfontloader) which is easy to configure. To load your own font files, see [Getting Started with WebFontLoader](https://github.com/typekit/webfontloader#get-started). Currently, the app is loading *Fira Sans* and a few different weights from Google Fonts. See `src/App.vue` for an example. To get the fonts working in the Styleguide as well, you’ll want to add the same configuration to `docs/styleguide.helper.js`.
 
-##### Why aren’t there more components by default?
+#### Why aren’t there more components by default?
 
 Vue Design System is not a front-end component library and never will be. Instead it tries to provide you and your team a set of organized tools, patterns & practices to build upon, so that you can get started with the actual design system faster.
 
