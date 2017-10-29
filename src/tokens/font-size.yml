@@ -1,0 +1,20 @@
+#
+# FONT-SIZE TOKENS
+#
+
+props:
+  font_size_xx_large:
+    value: "64px"
+  font_size_x_large:
+    value: "48px"
+  font_size_large:
+    value: "24px"
+  font_size_base:
+    value: "16px"
+  font_size_small:
+    value: "13px"
+  font_size_tiny:
+    value: "11px"
+global:
+  type: number
+  category: font-size

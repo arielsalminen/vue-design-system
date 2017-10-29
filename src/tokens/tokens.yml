@@ -1,16 +1,11 @@
-props:
-  button_background:
-    value: "#0070d2"
-  button_text:
-    value: "#fff"
-  button_test:
-    value: "green"
-  button_foo:
-    value: "blue"
-  button_bar:
-    value: "red"
+#
+# GLOBAL: DESIGN TOKENS
+#
+
 imports:
   - color.yml
+  - font-size.yml
+  - fonts.yml
 global:
-  type: color
-  category: button
+  type: global
+  category: all

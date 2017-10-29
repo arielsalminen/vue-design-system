@@ -1,0 +1,10 @@
+#
+# FONT TOKENS
+#
+
+props:
+  font_primary:
+    value: "'Fira Sans', Helvetica, Arial, sans-serif"
+global:
+  type: list
+  category: font-family
