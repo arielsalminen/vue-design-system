@@ -43,7 +43,50 @@
   <title>Vue Design System</title>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <section>
+      <h1>Vue Design System</h1>
+      <article>
+        <div>
+          <p><strong>Vue Design System</strong> is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns &amp; practices to build upon, so that you can get started with the actual design system faster.</p><p>The tool is built on top of <a href="https://vuejs.org">Vue.js</a>, <a href="https://github.com/vue-styleguidist/vue-styleguidist">Vue Styleguidist</a> &amp; <a href="http://vuejs-templates.github.io/webpack/">Vue Webpack Template</a> and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS &amp; JavaScript.</p>
+          <p>Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.</p><p>Made by <a href="https://twitter.com/viljamis">@viljamis</a> and other contributors. Read more from <a href="https://github.com/viljamis/vue-design-system">the official docs</a> on GitHub.</p>
+          <h2>Features</h2>
+          <ul>
+            <li>A set of interconnected patterns &amp; practices for you and your team.</li>
+            <li>Global design tokens that can be used inside any component.</li>
+            <li>Simple and sane SVG icon and @font-face defaults.</li>
+            <li>Live reloading for both the app and the system documentation.</li>
+            <li>Automatic generation of documentation <em>(the very page you’re looking at).</em></li>
+            <li>Documentation and the app logic are separated, so you can have public docs while the app itself is private.</li>
+            <li>Autoprefixing, SCSS, Webpack &amp; CSS extraction included by default <em>(Extend with lint-on-save &amp; unit tests).</em></li>
+            <li><a href="https://github.com/viljamis/vue-design-system">And more…</a></li>
+          </ul>
+          <h2>Get Started</h2>
+          <p>Get started by cloning the repo and installing dependencies:</p>
+<pre>
+<code>
+git clone git@github.com:viljamis/vue-design-system.git
+cd vue-design-system
+npm install
+</code>
+</pre>
+          <p>Start up the project and living documentation at <a  href="http://localhost:8080">http://localhost:8080</a> &amp; <a  href="http://localhost:6060">http://localhost:6060</a>:</p>
+          <pre><code>npm start</code></pre>
+          <p>To learn more, view the <a href="https://github.com/viljamis/vue-design-system">official documentation</a> on GitHub.</p>
+          <h2>Terminology</h2>
+          <p>The following terminology is used throughout Vue Design System. It’s a good idea to get familiar with these concepts before diving deeper.</p>
+          <ul>
+            <li><strong>Principles</strong> are a set of established design principles that are at the heart of the system. They should guide you when working with <em>Tokens</em>, <em>Elements</em>, <em>Patterns</em> and <em>Templates</em> listed below.</li>
+            <li><strong>Tokens</strong> are the visual design atoms of the system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has <a href="https://www.lightningdesignsystem.com/design-tokens/">a great example</a>.</li>
+            <li><strong>Elements</strong> are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links and inputs are good examples. Elements utilize <em>Tokens</em> mentioned above.</li>
+            <li><strong>Patterns</strong> are UI patterns that fall on the more complex side of the spectrum. Patterns consist of both <em>Elements</em> and <em>Tokens</em>.</li>
+            <li><strong>Templates</strong> exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of all three things mentioned above: <em>Patterns</em>, <em>Elements</em> and <em>Tokens</em></li>
+          </ul>
+          <h3><a href="https://github.com/viljamis/vue-design-system">View project on GitHub →</a></h3>
+        </div>
+      </article>
+    </section>
+  </div>
   <script type="text/javascript" src="/build/bundle.0e75d931.js"></script>
 </body>
 </html>
