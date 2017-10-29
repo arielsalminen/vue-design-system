@@ -13,7 +13,7 @@
   import Wrapper from '@/elements/Wrapper';
 
   export default {
-    name: 'Dashboard',
+    name: 'NotFound',
     components: {
       heading: Heading,
       textStyle: TextStyle,
@@ -36,6 +36,6 @@
 
 <docs>
   ```jsx
-  <dashboard/>
+  <not-found/>
   ```
 </docs>
