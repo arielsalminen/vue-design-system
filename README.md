@@ -1,6 +1,6 @@
 # Vue Design System (W-I-P)
 
-[Vue Design System](https://vueds.com) is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon so that you can get started with actual app code faster.
+[Vue Design System](https://vueds.com) is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon, so that you can get started with the actual design system faster.
 
 The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) & [Vue Webpack Template](http://vuejs-templates.github.io/webpack/) and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
@@ -33,9 +33,10 @@ Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See al
 6. [Getting started](#getting-started)
 7. [Working with the system](#working-with-the-system)
 8. [Editing documentation](#editing-documentation)
-9. [Roadmap](#roadmap)
-10. [Changelog](#changelog)
-11. [License](#license)
+9. [Frequently asked questions](#frequently-asked-questions)
+10. [Roadmap](#roadmap)
+11. [Changelog](#changelog)
+12. [Authors and license](#authors-and-license)
 
 ## Examples
 
@@ -455,22 +456,36 @@ Finally, the wrapper `Element` with all the documentation added:
 
 To learn more about the documentation format and what you can do with it, Please refer to [Vue Styleguidist’s official docs](https://github.com/vue-styleguidist/vue-styleguidist/tree/master/docs) on GitHub.
 
+## Frequently Asked Questions
+
+###### I’m working on a new component, but the text is displayed in Comic Sans with red color?
+
+This is the expected behaviour. It’s done to highlight issues with scoping. Elements and Components should have fonts, spacing, etc. defined inside them to keep things as modular as possible. If you need to remove this functionality for some reason, see `src/App.vue` styles.
+
+###### I’m trying to use the default `Icon` element included, but can’t figure out what icons are available?
+
+Currently you can use any icon from [Font Awesome](http://fontawesome.io/icons/). Icons are inside the `static/icons` directory, so you can also just replace the default SVG icons with your own.
+
+###### I want to use another typeface, how do I change it?
+
+Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/webfontloader) which is easy to configure. To load your own font files, see [Getting Started with WebFontLoader](https://github.com/typekit/webfontloader#get-started). Currently, the app is loading *Fira Sans* and a few different weights from Google Fonts. See `src/App.vue` for an example. To get the fonts working in the Styleguide as well, you’ll want to add the same configuration to `docs/styleguide.helper.js`.
+
+###### Why aren’t there more components by default?
+
+Vue Design System is not a front-end component library and never will be. Instead it tries to provide you and your team a set of organized tools, patterns & practices to build upon, so that you can get started with the actual design system faster.
+
+
+
 
 ## Roadmap
 
-- [x] Fix styleguide warnings.
-- [x] Automatic creation of documentation.
-- [x] Better naming conventions.
-- [x] Fix styleguide build scripts.
-- [x] Add a default `Icon` element that can import any SVG icon from `/static/icons/` by name only.
-- [x] better @font-face import.
+- [ ] Separate documentation from the readme and split onto multiple pages.
 - [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
 - [ ] Better defaults.
 - [ ] Better code comments.
-- [ ] Cleanup generic stylesheets.
-- [ ] Use JSON for `Tokens` and convert to SCSS (maybe https://github.com/Updater/node-sass-json-importer?)
+- [ ] Use one Webfont config for both the app and the documentation.
+- [ ] Use JSON or YAML for `Tokens` and convert to SCSS (maybe https://github.com/Updater/node-sass-json-importer?)
 - [ ] Auto create markup (not just SCSS) for all tokens displayed.
-- [ ] Fix app build scripts (styles!!).
 - [ ] Automated accessibility tests.
 
 
@@ -482,16 +497,11 @@ To learn more about the documentation format and what you can do with it, Please
 * `0.1.0` (2017-10-23) - Initial prototype
 
 
-## Questions?
+## Authors and License
 
-For any questions contact [@viljamis](https://twitter.com/viljamis) via Twitter or the [Design Systems Slack](http://designsystems.herokuapp.com).
-
-
-## License
+[Viljami Salminen](https://viljamis.com), [Artem Sapegin](http://sapegin.me), [Rafael Escala](https://github.com/rafaesc), [react-styleguidist contributors](https://github.com/styleguidist/react-styleguidist/graphs/contributors), [vue-styleguidist contributors](https://github.com/vue-styleguidist/vue-styleguidist/graphs/contributors), [Vue.js contributors](https://github.com/vuejs/vue/graphs/contributors) and [vue-webpack-boilerplate contributors](https://github.com/vuejs-templates/webpack/graphs/contributors).
 
 Licensed under the MIT license.
-
-Copyright (c) 2017 Viljami Salminen, [https://viljamis.com/](https://viljamis.com/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

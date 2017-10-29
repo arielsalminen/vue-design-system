@@ -11,7 +11,7 @@
 </script>
 
 <style lang="scss">
-  // These styles exist mostly to highlight issues with scoping
+  // These styles exist to highlight issues with scoping
   //
   // Elements and Components should have fonts, spacing, etc.
   // defined in them to keep things as modular as possible.
