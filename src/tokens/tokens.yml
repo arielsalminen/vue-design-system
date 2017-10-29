@@ -3,6 +3,10 @@ props:
     value: "#0070d2"
   button_text:
     value: "#fff"
+  button_test:
+    value: "green"
+  button_foo:
+    value: "blue"
 global:
   type: color
   category: buttons
