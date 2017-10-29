@@ -479,12 +479,13 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Roadmap
 
+- [ ] Use YAML for `Tokens` and convert to both JSON & SCSS ([already under work](https://github.com/viljamis/vue-design-system/tree/feature/json-tokens))
+- [ ] Better console updates and error messages
 - [ ] Separate documentation from the readme and split onto multiple pages.
 - [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
 - [ ] Better defaults.
 - [ ] Better code comments.
 - [ ] Use one Webfont config for both the app and the documentation.
-- [ ] Use JSON or YAML for `Tokens` and convert to SCSS (maybe https://github.com/Updater/node-sass-json-importer?)
 - [ ] Auto create markup (not just SCSS) for all tokens displayed.
 - [ ] Automated accessibility tests.
 
