@@ -24,35 +24,35 @@
   .heading {
     @include reset;
     line-height: $line-height-heading;
-    color: map-get($color, primary-rich-black);
-    font-family: $font-primary;
-    margin-bottom:  map-get($spacing, small);
+    color: $color-primary-rich-black;
+    font-family: $font-family-primary;
+    margin-bottom:  $space-small;
     font-style: normal;
   }
   h1 {
-    font-size: map-get($font-size, xx-large);
+    font-size: $font-size-xx-large;
     letter-spacing: -1px;
     font-weight: 700;
   }
   h2 {
-    font-size: map-get($font-size, x-large);
+    font-size: $font-size-x-large;
     font-weight: 700;
     letter-spacing: -0.5px;
   }
   h3 {
-    font-size: map-get($font-size, large);
+    font-size: $font-size-large;
     font-weight: 700;
   }
   h4 {
-    font-size: map-get($font-size, base);
+    font-size: $font-size-base;
     font-weight: 600;
   }
   h5 {
-    font-size: map-get($font-size, small);
+    font-size: $font-size-small;
     font-weight: 400;
   }
   h6 {
-    font-size: map-get($font-size, tiny);
+    font-size: $font-size-tiny;
     font-weight: 400;
   }
 </style>

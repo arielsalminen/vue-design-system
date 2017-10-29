@@ -30,8 +30,8 @@
 <style lang="scss" scoped>
   a {
     @include reset;
-    font-family: $font-primary;
-    color: map-get($color, primary-vermilion);
+    font-family: $font-family-primary;
+    color: $color-primary-vermilion;
     text-decoration: underline;
   }
 </style>

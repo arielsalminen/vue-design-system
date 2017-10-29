@@ -8,69 +8,6 @@
   -->
   <div class="font-sizes">
     <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
-    <div class="font"></div>
   </div>
 </template>
 
@@ -88,20 +25,11 @@
   .font {
     @include reset;
     line-height: $line-height-heading;
-    color: map-get($color, primary-rich-black);
-    font-family: $font-primary;
-    margin-bottom: map-get($spacing, small);
+    color: $color-primary-rich-black;
+    font-family: $font-family-primary;
+    margin-bottom: $space-small;
     font-style: normal;
     font-weight: 700;
-  }
-  @each $property, $value in $font-size {
-    $i: index(($font-size), ($property $value));
-    .font:nth-of-type(#{$i}) {
-      font-size: $value;
-      &::before {
-        content: "$font-size, #{$property}";
-      }
-    }
   }
 </style>
 

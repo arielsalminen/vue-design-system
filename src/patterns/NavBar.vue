@@ -48,22 +48,22 @@
 
 <style lang="scss" scoped>
   .nav {
-    margin: map-get($spacing, base) 0;
+    margin: $space-base 0;
     line-height: $line-height-base;
-    font-family: $font-primary;
-    font-size: map-get($font-size, small);
-    color: map-get($color, primary-white);
+    font-family: $font-family-primary;
+    font-size: $font-size-small;
+    color: $color-primary-white;
     text-align: center;
     width: 100%;
     a {
-      padding: map-get($spacing, tiny) 0;
-      margin: 0 map-get($spacing, tiny);
+      padding: $space-tiny 0;
+      margin: 0 $space-tiny;
       text-decoration: none;
       display: inline-block;
-      color: map-get($color, primary-oxford-blue);
+      color: $color-primary-oxford-blue;
       &.active {
-        color: map-get($color, primary-vermilion);
-        border-bottom: 2px solid map-get($color, primary-vermilion);
+        color: $color-primary-vermilion;
+        border-bottom: 2px solid $color-primary-vermilion;
       }
     }
   }

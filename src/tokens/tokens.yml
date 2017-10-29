@@ -5,7 +5,16 @@
 imports:
   - color.yml
   - font-size.yml
-  - fonts.yml
+  - font-family.yml
+  - opacity.yml
+  - size.yml
+  - timing.yml
+  - z-index.yml
+  - media-query.yml
+  - box-shadow.yml
+  - border-radius.yml
+  - spacing.yml
+  - line-height.yml
 global:
   type: global
   category: all

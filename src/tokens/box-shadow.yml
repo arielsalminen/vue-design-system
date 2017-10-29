@@ -1,0 +1,10 @@
+#
+# BOX SHADOW TOKENS
+#
+
+props:
+  box_shadow_inset_tiny:
+    value: "inset 0 0 0 1px rgba(92,106,196,.1)"
+global:
+  type: box-shadow
+  category: shadow
