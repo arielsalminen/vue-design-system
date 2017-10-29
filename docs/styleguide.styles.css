@@ -9,6 +9,8 @@ div[class^='rsg--preview'] {
   background: #f4f6f8;
   margin-bottom: 16px;
   border-radius: 3px;
+  overflow: hidden;
+  overflow-x: auto;
 }
 
 div[class^='rsg--tabButtons'],
@@ -22,6 +24,7 @@ footer[class^='rsg--footer'] {
 div[class^='rsg--tabs'],
 table[class^='rsg--table'] {
   margin-bottom: 16px;
+  overflow-x: auto;
 }
 
 section[class^='rsg--root'] > h1 a {
@@ -31,7 +34,15 @@ section[class^='rsg--root'] > h1 a {
   letter-spacing: -1px;
   padding-bottom: 1rem;
   margin: 3rem 0 2rem;
-  border-bottom: 1px solid #e8e8e8
+  border-bottom: 1px solid #e8e8e8;
+}
+
+@media (max-width: 400px) {
+  section[class^='rsg--root'] > h1 a {
+    margin: 1rem 0 1rem;
+    padding-bottom: .3rem;
+    font-size: 42px;
+  }
 }
 
 header[class^='rsg--header'] > h2 a,
@@ -39,6 +50,15 @@ h2[class^='rsg--h2'],
 h2[class^='rsg--h2'] a {
   font-weight: 600 !important;
   letter-spacing: -0.5px;
+  line-height: 1.3;
+}
+
+@media (max-width: 400px) {
+  header[class^='rsg--header'] > h2 a,
+  h2[class^='rsg--h2'],
+  h2[class^='rsg--h2'] a {
+    font-size: 28px;
+  }
 }
 
 div[class^='rsg--logo'] {
