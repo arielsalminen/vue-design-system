@@ -1,0 +1,6 @@
+props:
+  color_grey:
+    value: "#555555"
+global:
+  type: color
+  category: brand

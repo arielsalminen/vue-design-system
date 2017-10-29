@@ -9,6 +9,8 @@ props:
     value: "blue"
   button_bar:
     value: "red"
+imports:
+  - color.yml
 global:
   type: color
-  category: buttons
+  category: button
