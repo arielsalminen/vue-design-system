@@ -1,6 +1,12 @@
 <template>
-  <!-- This component will pull max 64 font-sizes from tokens -->
-  <component :is="type" class="font-sizes">
+  <!--
+    This component will pull max 64 font-size tokens.
+    The task will be more automated in the future when
+    we move onto having the design tokens in JSON.
+
+    Want to help? Get in touch with @viljamis.
+  -->
+  <div class="font-sizes">
     <div class="font"></div>
     <div class="font"></div>
     <div class="font"></div>
@@ -65,21 +71,12 @@
     <div class="font"></div>
     <div class="font"></div>
     <div class="font"></div>
-  </component>
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'FontSize',
-    props: {
-      /**
-       * The html element name used for the component
-       */
-      type: {
-        type: String,
-        default: 'div'
-      }
-    }
+    name: 'FontSize'
   }
 </script>
 

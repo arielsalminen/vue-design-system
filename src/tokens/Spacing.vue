@@ -1,6 +1,12 @@
 <template>
-  <!-- This component will pull max 64 space tokens -->
-  <component :is="type" class="spacing">
+  <!--
+    This component will pull max 64 space tokens now.
+    The task will be more automated in the future when
+    we move onto having the design tokens in JSON.
+
+    Want to help? Get in touch with @viljamis.
+  -->
+  <div class="spacing">
     <div class="space"></div>
     <div class="space"></div>
     <div class="space"></div>
@@ -63,21 +69,14 @@
     <div class="space"></div>
     <div class="space"></div>
     <div class="space"></div>
-  </component>
+    <div class="space"></div>
+    <div class="space"></div>
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'Spacing',
-    props: {
-      /**
-       * The html element name used for the component
-       */
-      type: {
-        type: String,
-        default: 'div'
-      }
-    }
+    name: 'Spacing'
   }
 </script>
 

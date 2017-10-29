@@ -1,6 +1,12 @@
 <template>
-  <!-- This component will pull max 64 colors from tokens -->
-  <component :is="type" class="colors">
+  <!--
+    This component will pull max 64 color tokens.
+    The task will be more automated in the future when
+    we move onto having the design tokens in JSON.
+
+    Want to help? Get in touch with @viljamis.
+  -->
+  <div class="colors">
     <div class="color"></div>
     <div class="color"></div>
     <div class="color"></div>
@@ -65,21 +71,12 @@
     <div class="color"></div>
     <div class="color"></div>
     <div class="color"></div>
-  </component>
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'Color',
-    props: {
-      /**
-       * The html element name used for the component
-       */
-      type: {
-        type: String,
-        default: 'div'
-      }
-    }
+    name: 'Color'
   }
 </script>
 
