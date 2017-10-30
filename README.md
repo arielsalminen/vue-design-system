@@ -500,7 +500,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 #### How do you use media queries defined in tokens?
 
-```html
+```scss
 .wrapper {
   padding: $space-large;
   @media #{$media-query-large} {
