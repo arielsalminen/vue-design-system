@@ -1,0 +1,12 @@
+#
+# LINE HEIGHT
+#
+
+props:
+  line-height-base:
+    value: "1.6"
+  line-height-heading:
+    value: "1.1"
+global:
+  type: number
+  category: line-height

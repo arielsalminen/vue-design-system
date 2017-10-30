@@ -31,27 +31,27 @@
   .text {
     @include reset;
     line-height: $line-height-base;
-    font-family: $font-primary;
-    font-size: map-get($font-size, base);
-    margin-bottom: map-get($spacing, small);
-    color: map-get($color, primary-rich-black);
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    margin-bottom: $space-small;
+    color: $color-primary-rich-black;
     font-style: normal;
     font-weight: 400;
     &:last-child {
       margin-bottom: 0;
     }
     &.disabled {
-      color: tint(map-get($color, primary-rich-black), 50%);
+      color: tint($color-primary-rich-black, 50%);
     }
     &.strong {
       font-weight: 600;
     }
     &.positive {
-      color: shade(map-get($color, primary-bleu-de-france), 50%);
+      color: shade($color-primary-bleu-de-france, 50%);
       font-style: italic;
     }
     &.negative {
-      color: map-get($color, primary-vermilion);
+      color: $color-primary-vermilion;
       font-style: italic;
     }
   }

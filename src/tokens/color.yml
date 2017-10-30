@@ -1,0 +1,20 @@
+#
+# COLOR TOKENS
+#
+
+props:
+  color_primary_vermilion:
+    value: "#ed4b37"
+  color_primary-ucla-gold:
+    value: "#ffbb08"
+  color_primary_bleu_de_france:
+    value: "#2389ee"
+  color_primary_rich_black:
+    value: "#001123"
+  color_primary_oxford_blue:
+    value: "#00264c"
+  color_primary_white:
+    value: "#fff"
+global:
+  type: color
+  category: color

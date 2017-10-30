@@ -2,7 +2,7 @@
 
 [Vue Design System](https://vueds.com) is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon, so that you can get started with the actual design system faster.
 
-The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) & [Vue Webpack Template](http://vuejs-templates.github.io/webpack/) and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
+The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist), [Vue Webpack Template](http://vuejs-templates.github.io/webpack/) & [Theo](https://github.com/salesforce-ux/theo) and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
 Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
 
@@ -171,41 +171,57 @@ Tokens are the visual design atoms of the design system. Specifically, they are 
 
 #### Creating a new `Token`
 
-Creating a new design token is as simple as navigating to `/src/tokens/` and editing any of the partials. I strongly recommend you to see what kind of example tokens `_spacing.scss` or `_color.scss` already have inside of them.
+Creating a new design token is as simple as navigating to `/src/tokens/` and editing any of the YAML files. I strongly recommend you to see what kind of example tokens `spacing.yml` or `color.yml` already have inside of them.
 
-If you need to add a new category in addition to the existing ones, you’ll have to create a new SCSS partial inside the same directory with a name that starts with `_`. Once done, you can import the new partial inside `/src/tokens/tokens.scss`:
+If you need to add a new category in addition to the existing ones, you’ll have to create a new YAML file inside the same directory. Once done, you can import the new partial inside `/src/tokens/tokens.yml`:
 
-```scss
-/* GLOBAL: DESIGN TOKENS
---------------------------------------------- */
+```yml
+#
+# GLOBAL: DESIGN TOKENS
+#
 
-@import "../tokens/color";
-@import "../tokens/font";
-@import "../tokens/font-size";
-@import "../tokens/opacity";
-@import "../tokens/line-height";
-@import "../tokens/spacing";
-@import "../tokens/radius";
-@import "../tokens/sizing";
-@import "../tokens/shadow";
-@import "../tokens/time";
-@import "../tokens/media-query";
-@import "../tokens/z-index";
+imports:
+  - color.yml
+  - font-size.yml
+  - font-family.yml
+  - opacity.yml
+  - size.yml
+  - timing.yml
+  - z-index.yml
+  - media-query.yml
+  - box-shadow.yml
+  - border-radius.yml
+  - spacing.yml
+  - line-height.yml
+global:
+  type: global
+  category: all
 ```
 
 `Token` partials themselves will look somewhat like this, depending on the complexity of your system:
 
-```scss
-/* SPACE TOKENS
---------------------------------------------- */
+```yml
+#
+# SPACING TOKENS
+#
 
-$space-tiny: 8px;
-$space-small: 16px;
-$space-base: 24px;
-$space-large: 48px;
-$space-x-large: 64px;
-$space-xx-large: 128px;
-$space-xxx-large: 256px;
+props:
+  space_xx_large:
+    value: "128px"
+  space_x_large:
+    value: "64px"
+  space_large:
+    value: "48px"
+  space_base:
+    value: "24px"
+  space_small:
+    value: "16px"
+  space_tiny:
+    value: "8px"
+global:
+  type: number
+  category: space
+
 ```
 
 
@@ -216,10 +232,12 @@ Since tokens are imported globally, you can use them inside any `Element`, `Patt
 ```html
 <style lang="scss" scoped>
   a {
-    font-family: $font-primary;
+    font-family: $font-family-primary;
   }
 </style>
 ```
+
+Vue Design System uses [Theo](https://github.com/salesforce-ux/theo) to transform and format the design tokens from YAML to both JSON and SCSS formats. To learn more about using and formatting `Tokens`, see [Theo’s documentation](https://github.com/salesforce-ux/theo).
 
 
 ### `Elements`
@@ -443,7 +461,7 @@ Finally, the wrapper `Element` with all the documentation added:
   .wrapper {
     @include reset;
     width: 100%;
-    padding: map-get($spacing, large);
+    padding: $space-large;
   }
 </style>
 
@@ -468,30 +486,26 @@ Currently you can use any icon from [Font Awesome](http://fontawesome.io/icons/)
 
 #### I want to use another typeface, how do I change it?
 
-Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/webfontloader) which is easy to configure. To load your own font files, see [Getting Started with WebFontLoader](https://github.com/typekit/webfontloader#get-started). Currently, the app is loading *Fira Sans* and a few different weights from Google Fonts. See `src/App.vue` for an example. To get the fonts working in the Styleguide as well, you’ll want to add the same configuration to `docs/styleguide.helper.js`.
+Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/webfontloader) which is easy to configure. To load your own font files, see [Getting Started with WebFontLoader](https://github.com/typekit/webfontloader#get-started). Currently, the app is loading *Fira Sans* and a few different weights from Google Fonts. See `src/utils/webFontLoader.js` for an example.
 
 #### Why aren’t there more components by default?
 
 Vue Design System is not a front-end component library and never will be. Instead it tries to provide you and your team a set of organized tools, patterns & practices to build upon, so that you can get started with the actual design system faster.
 
 
-
-
 ## Roadmap
 
-- [ ] Use YAML for `Tokens` and convert to both JSON & SCSS ([already under work](https://github.com/viljamis/vue-design-system/tree/feature/json-tokens))
-- [ ] Better console updates and error messages
-- [ ] Separate documentation from the readme and split onto multiple pages.
+- [ ] Better error handling and console logging.
+- [ ] Cleanup dependencies.
+- [ ] Remove Vue components from `/tokens/` and make docs specific.
+- [ ] Separate documentation from the readme on GitHub and split onto multiple pages.
 - [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
-- [ ] Better defaults.
-- [ ] Better code comments.
-- [ ] Use one Webfont config for both the app and the documentation.
-- [ ] Auto create markup (not just SCSS) for all tokens displayed.
 - [ ] Automated accessibility tests.
 
 
 ## Changelog
 
+* `0.2.0` (2017-10-30) - Adds `YAML Tokens` that are auto converted to JSON and SCSS.
 * `0.1.6` (2017-10-29) - General cleanup, updated readme & fixes to styleguide.
 * `0.1.5` (2017-10-28) - Automatic creation of documentation, better naming conventions, fixes styleguide build scripts and adds better icon workflow.
 * `0.1.2` (2017-10-25) - Fixes styleguide warnings + adds global resets
@@ -501,7 +515,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Authors and License
 
-[Viljami Salminen](https://viljamis.com), [Artem Sapegin](http://sapegin.me), [Rafael Escala](https://github.com/rafaesc), [react-styleguidist contributors](https://github.com/styleguidist/react-styleguidist/graphs/contributors), [vue-styleguidist contributors](https://github.com/vue-styleguidist/vue-styleguidist/graphs/contributors), [Vue.js contributors](https://github.com/vuejs/vue/graphs/contributors) and [vue-webpack-boilerplate contributors](https://github.com/vuejs-templates/webpack/graphs/contributors).
+[Viljami Salminen](https://viljamis.com), [Artem Sapegin](http://sapegin.me), [Rafael Escala](https://github.com/rafaesc), [react-styleguidist contributors](https://github.com/styleguidist/react-styleguidist/graphs/contributors), [vue-styleguidist contributors](https://github.com/vue-styleguidist/vue-styleguidist/graphs/contributors), [Vue.js contributors](https://github.com/vuejs/vue/graphs/contributors), [vue-webpack-boilerplate contributors](https://github.com/vuejs-templates/webpack/graphs/contributors) and & [Theo contributos](https://github.com/salesforce-ux/theo/graphs/contributors).
 
 Licensed under the MIT license.
 

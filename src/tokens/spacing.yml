@@ -1,0 +1,20 @@
+#
+# SPACING TOKENS
+#
+
+props:
+  space_xx_large:
+    value: "128px"
+  space_x_large:
+    value: "64px"
+  space_large:
+    value: "48px"
+  space_base:
+    value: "24px"
+  space_small:
+    value: "16px"
+  space_tiny:
+    value: "8px"
+global:
+  type: number
+  category: space

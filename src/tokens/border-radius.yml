@@ -1,0 +1,10 @@
+#
+# BORDER RADIUS TOKENS
+#
+
+props:
+  border_radius_default:
+    value: "3px"
+global:
+  type: number
+  category: radius

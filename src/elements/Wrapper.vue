@@ -23,7 +23,7 @@
   .wrapper {
     @include reset;
     width: 100%;
-    padding: map-get($spacing, large);
+    padding: $space-large;
   }
 </style>
 
