@@ -475,16 +475,14 @@ Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/
 Vue Design System is not a front-end component library and never will be. Instead it tries to provide you and your team a set of organized tools, patterns & practices to build upon, so that you can get started with the actual design system faster.
 
 
-
-
 ## Roadmap
 
-- [ ] Separate documentation from the readme and split onto multiple pages.
+
+- [ ] Better error handling and console logging.
+- [ ] Cleanup dependencies.
+- [ ] Remove Vue components from `/tokens/` and make docs specific.
+- [ ] Separate documentation from the readme on GitHub and split onto multiple pages.
 - [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
-- [ ] Better defaults.
-- [ ] Better code comments.
-- [ ] Use JSON or YAML for `Tokens` and convert to SCSS (maybe https://github.com/Updater/node-sass-json-importer?)
-- [ ] Auto create markup (not just SCSS) for all tokens displayed.
 - [ ] Automated accessibility tests.
 
 
