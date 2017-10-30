@@ -468,7 +468,7 @@ Currently you can use any icon from [Font Awesome](http://fontawesome.io/icons/)
 
 #### I want to use another typeface, how do I change it?
 
-Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/webfontloader) which is easy to configure. To load your own font files, see [Getting Started with WebFontLoader](https://github.com/typekit/webfontloader#get-started). Currently, the app is loading *Fira Sans* and a few different weights from Google Fonts. See `src/App.vue` for an example. To get the fonts working in the Styleguide as well, you’ll want to add the same configuration to `docs/styleguide.helper.js`.
+Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/webfontloader) which is easy to configure. To load your own font files, see [Getting Started with WebFontLoader](https://github.com/typekit/webfontloader#get-started). Currently, the app is loading *Fira Sans* and a few different weights from Google Fonts. See `src/utils/webFontLoader.js` for an example.
 
 #### Why aren’t there more components by default?
 
@@ -483,7 +483,6 @@ Vue Design System is not a front-end component library and never will be. Instea
 - [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
 - [ ] Better defaults.
 - [ ] Better code comments.
-- [ ] Use one Webfont config for both the app and the documentation.
 - [ ] Use JSON or YAML for `Tokens` and convert to SCSS (maybe https://github.com/Updater/node-sass-json-importer?)
 - [ ] Auto create markup (not just SCSS) for all tokens displayed.
 - [ ] Automated accessibility tests.

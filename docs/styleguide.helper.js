@@ -1,1 +1,1 @@
-import WebFontLoader from '../src/utils/WebFontLoader'
+import WebFontLoader from '../src/utils/webFontLoader'
