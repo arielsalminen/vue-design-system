@@ -161,7 +161,7 @@ npm run build --report
 Build styleguide for production:
 
 ```bash
-styleguide:build
+npm run styleguide:build
 ```
 
 For a detailed explanation on how things work, check out the [Webpack guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
