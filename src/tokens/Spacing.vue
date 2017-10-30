@@ -1,19 +1,25 @@
 <template>
-  <!--
-    This component will pull max 64 space tokens now.
-    The task will be more automated in the future when
-    we move onto having the design tokens in JSON.
-
-    Want to help? Get in touch with @viljamis.
-  -->
-  <div class="spacing">
-    <div class="space"></div>
-  </div>
+  <component :is="type" class="spacing">
+    <div v-for="token in designTokens" class="space" />
+  </component>
 </template>
 
 <script>
+  import designTokens from '@/tokens/compiled/tokens.json';
+
   export default {
-    name: 'Spacing'
+    name: 'Spacing',
+    props: {
+      type: {
+        type: String,
+        default: 'div'
+      },
+    },
+    data() {
+      return {
+        designTokens
+      };
+    }
   }
 </script>
 
@@ -30,6 +36,21 @@
     text-align: center;
     position: relative;
     float: left;
+  }
+  @each $property, $value in $tokens-map {
+    $i: index(($tokens-map), ($property $value));
+    @if str_index($property, "space") {
+      .space:nth-of-type(#{$i}) {
+        border: 1px solid rgba(92,106,196,.07);
+        margin-bottom: $space-tiny;
+        background: #f4f6f8;
+        line-height: $value;
+        height: $value;
+        &::before {
+          content: "$#{$property}";
+        }
+      }
+    }
   }
 </style>
 

@@ -1,24 +1,25 @@
 <template>
-  <div class="colors">
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-  </div>
+  <component :is="type" class="colors">
+    <div v-for="token in designTokens" class="color" />
+  </component>
 </template>
 
 <script>
+  import designTokens from '@/tokens/compiled/tokens.json';
+
   export default {
-    name: 'Color'
+    name: 'Color',
+    props: {
+      type: {
+        type: String,
+        default: 'div'
+      },
+    },
+    data() {
+      return {
+        designTokens
+      };
+    }
   }
 </script>
 
@@ -38,7 +39,7 @@
   }
   @each $property, $value in $tokens-map {
     $i: index(($tokens-map), ($property $value));
-    @if type-of($value) == 'color' {
+    @if str_index($property, "color") {
       .color:nth-of-type(#{$i}) {
         height: $space-large;
         line-height: $space-large;

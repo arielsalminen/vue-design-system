@@ -1,19 +1,25 @@
 <template>
-  <!--
-    This component will pull max 64 font-size tokens.
-    The task will be more automated in the future when
-    we move onto having the design tokens in JSON.
-
-    Want to help? Get in touch with @viljamis.
-  -->
-  <div class="font-sizes">
-    <div class="font"></div>
-  </div>
+  <component :is="type" class="font-sizes">
+    <div v-for="token in designTokens" class="font" />
+  </component>
 </template>
 
 <script>
+  import designTokens from '@/tokens/compiled/tokens.json';
+
   export default {
-    name: 'FontSize'
+    name: 'FontSize',
+    props: {
+      type: {
+        type: String,
+        default: 'div'
+      },
+    },
+    data() {
+      return {
+        designTokens
+      };
+    }
   }
 </script>
 
@@ -30,6 +36,17 @@
     margin-bottom: $space-small;
     font-style: normal;
     font-weight: 700;
+  }
+  @each $property, $value in $tokens-map {
+    $i: index(($tokens-map), ($property $value));
+    @if str_index($property, "font-size") {
+      .font:nth-of-type(#{$i}) {
+        font-size: $value;
+        &::before {
+          content: "$#{$property}";
+        }
+      }
+    }
   }
 </style>
 
