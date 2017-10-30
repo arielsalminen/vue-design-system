@@ -1,3 +1,13 @@
 #
 # SIZING TOKENS
+# Use these tokens for the width and height properties.
 #
+
+props:
+  height_footer:
+    value: "64px"
+  tappable_square:
+    value: "44px"
+global:
+  type: number
+  category: size

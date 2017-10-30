@@ -1,3 +1,11 @@
 #
 # OPACITY TOKENS
+# Use these tokens to set opacity.
 #
+
+props:
+  opacity_disabled:
+    value: "0.5"
+global:
+  type: number
+  category: opacity

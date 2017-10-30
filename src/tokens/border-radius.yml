@@ -1,10 +1,13 @@
 #
 # BORDER RADIUS TOKENS
+# Use these tokens to change border-radius size.
 #
 
 props:
   border_radius_default:
     value: "3px"
+  border_radius_circle:
+    value: "50%"
 global:
   type: number
-  category: radius
+  category: border-radius

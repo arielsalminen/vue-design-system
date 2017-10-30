@@ -23,37 +23,39 @@
 <style lang="scss" scoped>
   .heading {
     @include reset;
+    font-family: $font-family-heading;
     line-height: $line-height-heading;
     color: $color-primary-rich-black;
-    font-family: $font-family-primary;
-    margin-bottom:  $space-small;
-    font-style: normal;
+    margin-bottom: $space-small;
+    @media #{$media-query-large} {
+      // This is how you’d use design tokens with media queries
+    }
   }
   h1 {
+    letter-spacing: $letter-spacing-tiny;
     font-size: $font-size-xx-large;
-    letter-spacing: -1px;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
   }
   h2 {
+    letter-spacing: $letter-spacing-small;
     font-size: $font-size-x-large;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    font-weight: $font-weight-bold;
   }
   h3 {
     font-size: $font-size-large;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
   }
   h4 {
     font-size: $font-size-base;
-    font-weight: 600;
+    font-weight: $font-weight-semi-bold;
   }
   h5 {
     font-size: $font-size-small;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
   }
   h6 {
     font-size: $font-size-tiny;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
   }
 </style>
 

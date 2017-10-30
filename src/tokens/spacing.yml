@@ -1,5 +1,6 @@
 #
 # SPACING TOKENS
+# Use these tokens to set padding, margin and position coordinates.
 #
 
 props:

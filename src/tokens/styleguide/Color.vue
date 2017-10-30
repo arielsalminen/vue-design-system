@@ -30,12 +30,12 @@
   }
   .color {
     font-size: $font-size-small;
-    font-family: $font-family-primary;
+    font-family: $font-family-text;
     color: $color-primary-white;
-    box-shadow: $box-shadow-inset-tiny;
-    width: 100%;
+    box-shadow: $box-shadow-tiny-inset;
     text-align: center;
     float: left;
+    width: 100%;
   }
   @each $property, $value in $tokens-map {
     $i: index(($tokens-map), ($property $value));

@@ -5,13 +5,14 @@
 imports:
   - color.yml
   - font-size.yml
-  - font-family.yml
+  - font.yml
   - opacity.yml
   - size.yml
   - timing.yml
   - z-index.yml
   - media-query.yml
   - box-shadow.yml
+  - letter-spacing.yml
   - border-radius.yml
   - spacing.yml
   - line-height.yml
