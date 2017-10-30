@@ -303,7 +303,7 @@ Moving further, we can also add default content for the `<slot/>` that will be s
 
 <style lang="scss" scoped>
   .button {
-    font-family: $font-primary;
+    font-family: $font-family-primary;
     background: $color-primary-rich-black;
     color: $color-primary-white;
   }
@@ -521,7 +521,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Authors and License
 
-[Viljami Salminen](https://viljamis.com), [Artem Sapegin](http://sapegin.me), [Rafael Escala](https://github.com/rafaesc), [react-styleguidist contributors](https://github.com/styleguidist/react-styleguidist/graphs/contributors), [vue-styleguidist contributors](https://github.com/vue-styleguidist/vue-styleguidist/graphs/contributors), [Vue.js contributors](https://github.com/vuejs/vue/graphs/contributors), [vue-webpack-boilerplate contributors](https://github.com/vuejs-templates/webpack/graphs/contributors) and & [Theo contributos](https://github.com/salesforce-ux/theo/graphs/contributors).
+[Viljami Salminen](https://viljamis.com), [Artem Sapegin](http://sapegin.me), [Rafael Escala](https://github.com/rafaesc), [react-styleguidist contributors](https://github.com/styleguidist/react-styleguidist/graphs/contributors), [vue-styleguidist contributors](https://github.com/vue-styleguidist/vue-styleguidist/graphs/contributors), [Vue.js contributors](https://github.com/vuejs/vue/graphs/contributors), [vue-webpack-boilerplate contributors](https://github.com/vuejs-templates/webpack/graphs/contributors) and & [Theo contributors](https://github.com/salesforce-ux/theo/graphs/contributors).
 
 Licensed under the MIT license.
 
