@@ -1,6 +1,11 @@
 <template>
   <component :is="type">
-    <nav-bar active="Posts" :navItems="[{name: 'Dashboard', component: 'Dashboard', href: '/#/'}, {name: 'Posts', component: 'Posts', href: '/#/posts'}, {name: 'Settings', component: 'Settings', href: '/#/settings'}, {name: 'Style Guide', href: 'http://localhost:6060/'}]" />
+    <nav-bar active="Posts" :navItems="[
+      {name: 'Dashboard', component: 'Dashboard', href: '/#/'},
+      {name: 'Posts', component: 'Posts', href: '/#/posts'},
+      {name: 'Settings', component: 'Settings', href: '/#/settings'},
+      {name: 'Style Guide', href: 'http://localhost:6060/'}
+    ]"/>
     <wrapper>
       <heading level="h3">Posts</heading>
       <ul class="list">

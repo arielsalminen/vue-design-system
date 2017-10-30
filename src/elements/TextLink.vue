@@ -30,9 +30,12 @@
 <style lang="scss" scoped>
   a {
     @include reset;
-    font-family: $font-family-primary;
+    font-family: $font-family-text;
     color: $color-primary-vermilion;
     text-decoration: underline;
+    @media #{$media-query-large} {
+      // This is how you’d use design tokens with media queries
+    }
   }
 </style>
 

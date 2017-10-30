@@ -498,9 +498,21 @@ Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/
 
 Vue Design System is not a front-end component library and never will be. Instead it tries to provide you and your team a set of organized tools, patterns & practices to build upon, so that you can get started with the actual design system faster.
 
+#### How do you use media queries defined in tokens?
+
+```html
+.wrapper {
+  padding: $space-large;
+  @media #{$media-query-large} {
+    padding: $space-x-large;
+  }
+}
+```
+
 
 ## Roadmap
 
+- [ ] Create custom template for Styleguidist.
 - [ ] Better error handling and console logging.
 - [ ] Cleanup dependencies.
 - [ ] Remove Vue components from `/tokens/` and make docs specific.
@@ -511,6 +523,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Changelog
 
+* `0.2.1` (2017-10-30) - Cleans up SCSS styles and adds examples for each token category.
 * `0.2.0` (2017-10-30) - Adds YAML Design Token that are auto converted to JSON and SCSS.
 * `0.1.6` (2017-10-29) - General cleanup, updated readme & fixes to styleguide.
 * `0.1.5` (2017-10-28) - Automatic creation of documentation, better naming conventions, fixes styleguide build scripts and adds better icon workflow.

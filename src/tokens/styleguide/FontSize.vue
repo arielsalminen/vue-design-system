@@ -30,12 +30,12 @@
   }
   .font {
     @include reset;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-bold;
     line-height: $line-height-heading;
     color: $color-primary-rich-black;
-    font-family: $font-family-primary;
     margin-bottom: $space-small;
     font-style: normal;
-    font-weight: 700;
   }
   @each $property, $value in $tokens-map {
     $i: index(($tokens-map), ($property $value));

@@ -48,22 +48,25 @@
 
 <style lang="scss" scoped>
   .nav {
-    margin: $space-base 0;
-    line-height: $line-height-base;
-    font-family: $font-family-primary;
+    font-family: $font-family-text;
     font-size: $font-size-small;
+    line-height: $line-height-base;
     color: $color-primary-white;
+    margin: $space-base 0;
     text-align: center;
     width: 100%;
+    @media #{$media-query-large} {
+      // This is how you’d use design tokens with media queries
+    }
     a {
+      color: $color-primary-oxford-blue;
       padding: $space-tiny 0;
       margin: 0 $space-tiny;
       text-decoration: none;
       display: inline-block;
-      color: $color-primary-oxford-blue;
       &.active {
-        color: $color-primary-vermilion;
         border-bottom: 2px solid $color-primary-vermilion;
+        color: $color-primary-vermilion;
       }
     }
   }
@@ -71,6 +74,11 @@
 
 <docs>
   ```jsx
-  <nav-bar active="Dashboard" :navItems="[{name: 'Dashboard', component: 'Dashboard', href: '/'}, {name: 'Posts', component: 'Posts', href: '/posts'}, {name: 'Users', component: 'Users', href: '/posts'}, {name: 'Settings', component: 'Settings', href: '/settings'}]" />
+  <nav-bar active="Dashboard" :navItems="[
+    {name: 'Dashboard', component: 'Dashboard', href: '/'},
+    {name: 'Posts', component: 'Posts', href: '/posts'},
+    {name: 'Users', component: 'Users', href: '/users'},
+    {name: 'Settings', component: 'Settings', href: '/settings'}
+  ]"/>
   ```
 </docs>

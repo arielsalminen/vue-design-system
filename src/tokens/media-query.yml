@@ -1,3 +1,13 @@
 #
 # MEDIA QUERY TOKENS
+# Use these tokens to set media query width ranges.
 #
+
+props:
+  media_query_medium:
+    value: "(min-width: 768px)"
+  media_query_large:
+    value: "(min-width: 1024px)"
+global:
+  type: ...
+  category: media-query

@@ -30,13 +30,15 @@
 <style lang="scss" scoped>
   .text {
     @include reset;
-    line-height: $line-height-base;
-    font-family: $font-family-primary;
-    font-size: $font-size-base;
-    margin-bottom: $space-small;
     color: $color-primary-rich-black;
-    font-style: normal;
-    font-weight: 400;
+    font-family: $font-family-text;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    margin-bottom: $space-small;
+    @media #{$media-query-large} {
+      // This is how you’d use design tokens with media queries
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -44,7 +46,7 @@
       color: tint($color-primary-rich-black, 50%);
     }
     &.strong {
-      font-weight: 600;
+      font-weight: $font-weight-semi-bold;
     }
     &.positive {
       color: shade($color-primary-bleu-de-france, 50%);

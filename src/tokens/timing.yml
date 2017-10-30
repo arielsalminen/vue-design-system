@@ -1,3 +1,13 @@
 #
 # TIMING TOKENS
+# Use these tokens for animation durations.
 #
+
+props:
+  duration_quickly:
+    value: "0.08s"
+  duration_slowly:
+    value: "0.5s"
+global:
+  type: number
+  category: time

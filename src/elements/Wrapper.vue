@@ -22,8 +22,11 @@
 <style lang="scss" scoped>
   .wrapper {
     @include reset;
-    width: 100%;
     padding: $space-large;
+    width: 100%;
+    @media #{$media-query-large} {
+      padding: $space-x-large;
+    }
   }
 </style>
 
