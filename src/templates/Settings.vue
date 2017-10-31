@@ -8,10 +8,10 @@
     ]"/>
     <wrapper>
       <heading level="h3">Settings</heading>
-      <icon name="facebook" fill="#00264c" size="20px"/>
-      <icon name="twitter" fill="#00264c" size="20px"/>
-      <icon name="instagram" fill="#00264c" size="20px"/>
-      <icon name="youtube" fill="#00264c" size="20px"/>
+      <svg-icon name="facebook" fill="#00264c" size="20px"/>
+      <svg-icon name="twitter" fill="#00264c" size="20px"/>
+      <svg-icon name="instagram" fill="#00264c" size="20px"/>
+      <svg-icon name="youtube" fill="#00264c" size="20px"/>
     </wrapper>
   </component>
 </template>
@@ -21,7 +21,7 @@
   import TextStyle from '@/elements/TextStyle';
   import TextLink from '@/elements/TextLink';
   import Wrapper from '@/elements/Wrapper';
-  import Icon from '@/elements/Icon';
+  import SvgIcon from '@/elements/SvgIcon';
   import NavBar from '@/patterns/NavBar';
 
   export default {
@@ -32,7 +32,7 @@
       textLink: TextLink,
       navBar: NavBar,
       wrapper: Wrapper,
-      icon: Icon
+      svgIcon: SvgIcon
     },
     props: {
       /**

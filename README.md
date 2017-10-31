@@ -93,7 +93,7 @@ We use the **names** to communicate about `Tokens`, `Elements`, `Patterns` and `
 
 There are a few rules around prefixing things, that you’ll want to follow to keep the system consistent:
 
-* **Tokens:** Token names always start with a category name and a hyphen. For example `$color-` or `$space-`. If you have subcategories, include them in the naming as well and separate with hyphen, Example: `$color-primary-` or `$color-secondary-`.
+* **Tokens:** Token names always start with a category name and a hyphen. For example `color-` or `space-`. If you have subcategories, include them in the naming as well and separate with hyphen, Example: `color-primary-` or `color-secondary-`.
 * **Element, Pattern & Templates:** Names don’t have a prefix, but *should be* multiword or otherwise compatible with existing and future HTML elements.
 
 

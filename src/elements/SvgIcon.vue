@@ -8,7 +8,7 @@
   const path = require('path')
 
   export default {
-    name: 'Icon',
+    name: 'SvgIcon',
     props: {
       /**
        * The name of the icon to display
@@ -67,6 +67,6 @@
 
 <docs>
   ```jsx
-  <icon name="settings" aria-label="App Settings" fill="#00264c" size="16px" />
+  <svg-icon name="settings" aria-label="App Settings" fill="#00264c" size="16px" />
   ```
 </docs>
