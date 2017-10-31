@@ -512,16 +512,18 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Roadmap
 
-- [ ] Make it possible to build the application and generate every route as a HTML file to use for static hosting (use [https://nuxtjs.org](https://nuxtjs.org)).
-- [ ] Create a tutorial why and what you can do with the tool.
-- [ ] Implement more best practices
-- [ ] Create custom template for Styleguidist.
+- [ ] Implement a top level utility nav and structure for prototyping.
+- [ ] Make it possible to build as static HTML files to use for S3/GitHub hosting (use f.ex. [https://nuxtjs.org](https://nuxtjs.org)).
+- [ ] Create a tutorial on why and what you can/should do with the tool.
+- [ ] Implement some of the known best practices.
+- [ ] Create better custom templates for styleguide.
 - [ ] Better error handling and console logging.
-- [ ] Cleanup dependencies.
-- [ ] Remove Vue components from `/tokens/` and make docs specific.
+- [ ] Cleanup NPM dependencies.
+- [ ] Remove Vue components from `/tokens/` and make styleguide specific.
 - [ ] Separate documentation from the readme on GitHub and split onto multiple pages.
-- [ ] Add a default `Button` element with sensible default `props` for type, style, etc.
+- [ ] Add a few default elements (like button f.ex.) with sensible default `props` for type, style, etc.
 - [ ] Automated accessibility tests.
+- [ ] Consider bringing all tokens to separate category under styleguide.
 
 
 ## Changelog
