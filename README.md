@@ -512,6 +512,8 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Roadmap
 
+- [ ] Create a tutorial why and what you can do with the tool.
+- [ ] Implement more best practices
 - [ ] Create custom template for Styleguidist.
 - [ ] Better error handling and console logging.
 - [ ] Cleanup dependencies.
