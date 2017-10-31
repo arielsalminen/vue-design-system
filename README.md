@@ -512,6 +512,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Roadmap
 
+- [ ] Make it possible to build the application and generate every route as a HTML file to use for static hosting (use [https://nuxtjs.org](https://nuxtjs.org)).
 - [ ] Create a tutorial why and what you can do with the tool.
 - [ ] Implement more best practices
 - [ ] Create custom template for Styleguidist.
