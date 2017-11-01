@@ -24,7 +24,7 @@
 //
 // @param  {Color}  $color to set
 @function set-text-color($color) {
-  @if (lightness($color) > 50) {
+  @if (lightness($color) > 58) {
     @return #000;
   } @else {
     @return #fff;
