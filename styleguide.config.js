@@ -95,5 +95,11 @@ module.exports = {
         }
       ]
     }
-  })
+  }),
+  configureServer(app) {
+    // `app` is the instance of the express server running Styleguidist
+    app.get('/static/icons/:name', (req, res) => {
+      res.redirect('/icons/' + req.params.name);
+    });
+  }
 };
