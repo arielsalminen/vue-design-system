@@ -252,7 +252,7 @@ Elements are the smallest basic structures of a UI. They can not be broken down 
 
 #### Creating a new `Element`
 
-To create a new element, you will first want to navigate to `/src/elements/` and create a new `.vue` file. Element names don’t have a prefix, but it’s recommended that they are *multiword* or otherwise compatible with existing and future HTML elements *(to learn more, see [Naming of Things](https://github.com/viljamis/vue-design-system#naming-of-things)).*
+To create a new element, you will first want to navigate to `/src/elements/` and create a new `.vue` file. Element names don’t have a prefix, but it’s recommended that they are *multiword* or otherwise compatible with existing and future HTML elements *(to learn more, see [Naming of Things](#naming-of-things)).*
 
 #### For the sake of simplicity, let’s imagine you’re creating a button:
 
