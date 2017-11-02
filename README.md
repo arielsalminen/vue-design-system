@@ -528,6 +528,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Changelog
 
+* `0.2.2` (2017-11-02) - Fixes the serving of SVG icons to living documentation.
 * `0.2.1` (2017-10-31) - Cleans up SCSS styles and adds examples for each token category.
 * `0.2.0` (2017-10-30) - Adds YAML Design Token that are auto converted to JSON and SCSS.
 * `0.1.6` (2017-10-29) - General cleanup, updated readme & fixes to styleguide.
