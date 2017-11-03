@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" :aria-label="ariaLabel" class="icon">
+  <component :is="type" :aria-label="ariaLabel" class="svg-icon">
   </component>
 </template>
 

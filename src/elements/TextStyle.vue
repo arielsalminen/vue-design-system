@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" :class="['text ', variation]">
+  <component :is="type" :class="['text-style ', variation]">
     <slot/>
   </component>
 </template>
@@ -28,7 +28,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .text {
+  .text-style {
     @include reset;
     color: $color-primary-rich-black;
     font-family: $font-family-text;

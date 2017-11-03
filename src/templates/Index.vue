@@ -1,12 +1,12 @@
 <template>
-  <component :is="type" class="not-found">
-    <nav-bar active="NotFound" :navItems="[
+  <component :is="type" class="index">
+    <nav-bar active="Index" :navItems="[
       {name: 'Template', component: 'Index', href: '/#/'},
       {name: 'Style Guide', href: 'http://localhost:6060/'}
     ]"/>
     <wrapper>
-      <heading level="h1">404 Error</heading>
-      <text-style>Couldn’t find a component that would match the URL you entered. Double check configuration in router/index.js.</text-style>
+      <heading level="h1">Vue Design System</heading>
+      <text-style><text-link href="https://vueds.com">Vue Design System</text-link> is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns &amp; practices to build upon, so that you can get started with the actual design system faster.</text-style>
     </wrapper>
   </component>
 </template>
@@ -14,13 +14,17 @@
 <script>
   import Heading from '@/elements/Heading';
   import TextStyle from '@/elements/TextStyle';
+  import TextLink from '@/elements/TextLink';
   import Wrapper from '@/elements/Wrapper';
+  import NavBar from '@/patterns/NavBar';
 
   export default {
-    name: 'NotFound',
+    name: 'Index',
     components: {
       heading: Heading,
       textStyle: TextStyle,
+      textLink: TextLink,
+      navBar: NavBar,
       wrapper: Wrapper
     },
     props: {
@@ -44,7 +48,7 @@
   $color-template-text: $color-primary-white;
   $color-template-link: $color-primary-bleu-de-france;
 
-  .not-found {
+  .index {
     min-height: $space-xx-large * 4;
     background: $color-template-background;
     background: linear-gradient(0deg, $color-template-background-bottom, $color-template-background-top 100%);
@@ -68,6 +72,6 @@
 
 <docs>
   ```jsx
-  <not-found />
+  <index />
   ```
 </docs>

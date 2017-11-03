@@ -2,6 +2,9 @@
 # COLOR TOKENS
 # Use these tokens to set a color.
 #
+# To make things a little simpler for your team,
+# utilize both global & local tokens for colors.
+#
 
 props:
   color_primary_vermilion:

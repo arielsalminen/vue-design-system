@@ -512,13 +512,8 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Roadmap
 
-- [ ] Implement a top level utility nav and structure for prototyping.
 - [ ] Make it possible to build as static HTML files to use with S3/GitHub hosting (use f.ex. [https://nuxtjs.org](https://nuxtjs.org)).
 - [ ] Create a tutorial on why and what you can/should do with the tool.
-- [ ] Implement some of the known best practices.
-- [ ] Create better custom templates for styleguide.
-- [ ] Better error handling and console logging.
-- [ ] Cleanup NPM dependencies.
 - [ ] Remove Vue components from `/tokens/` and make styleguide specific.
 - [ ] Separate documentation from the readme on GitHub and split onto multiple pages.
 - [ ] Add a few more default elements (like button f.ex.) with sensible default `props` for type, style, etc. for prototyping.
@@ -528,6 +523,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Changelog
 
+* `0.2.3` (2017-11-03) - Better examples, error handling, and console logging.
 * `0.2.2` (2017-11-02) - Fixes the serving of SVG icons to living documentation.
 * `0.2.1` (2017-10-31) - Cleans up SCSS styles and adds examples for each token category.
 * `0.2.0` (2017-10-30) - Adds YAML Design Token that are auto converted to JSON and SCSS.
@@ -542,10 +538,4 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 [Viljami Salminen](https://viljamis.com), [Artem Sapegin](http://sapegin.me), [Rafael Escala](https://github.com/rafaesc), [react-styleguidist contributors](https://github.com/styleguidist/react-styleguidist/graphs/contributors), [vue-styleguidist contributors](https://github.com/vue-styleguidist/vue-styleguidist/graphs/contributors), [Vue.js contributors](https://github.com/vuejs/vue/graphs/contributors), [vue-webpack-boilerplate contributors](https://github.com/vuejs-templates/webpack/graphs/contributors) and & [Theo contributors](https://github.com/salesforce-ux/theo/graphs/contributors).
 
-Licensed under the MIT license.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Licensed under the [MIT license](https://github.com/viljamis/vue-design-system/blob/master/LICENSE).

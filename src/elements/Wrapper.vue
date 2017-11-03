@@ -25,7 +25,7 @@
     padding: $space-large;
     width: 100%;
     @media #{$media-query-large} {
-      padding: $space-x-large;
+      padding: $space-large;
     }
   }
 </style>
