@@ -47,6 +47,10 @@
 </script>
 
 <style lang="scss" scoped>
+  // Local component variables
+  $color-nav-link: $color-primary-bleu-de-france;
+  $color-nav-link-active: $color-primary-bleu-de-france;
+
   .nav {
     font-family: $font-family-text;
     font-size: $font-size-small;
@@ -59,14 +63,18 @@
       // This is how you’d use design tokens with media queries
     }
     a {
-      color: $color-primary-oxford-blue;
+      color: $color-nav-link;
       padding: $space-tiny 0;
       margin: 0 $space-tiny;
       text-decoration: none;
       display: inline-block;
+      &:hover {
+        color: $color-nav-link-active;
+      }
       &.active {
-        border-bottom: 2px solid $color-primary-vermilion;
-        color: $color-primary-vermilion;
+        border-bottom: 2px solid $color-nav-link;
+        font-weight: $font-weight-bold;
+        color: $color-nav-link;
       }
     }
   }

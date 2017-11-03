@@ -512,13 +512,9 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Roadmap
 
-- [ ] Implement a top level utility nav and structure for prototyping.
+- [ ] Better error handling and console logging.
 - [ ] Make it possible to build as static HTML files to use with S3/GitHub hosting (use f.ex. [https://nuxtjs.org](https://nuxtjs.org)).
 - [ ] Create a tutorial on why and what you can/should do with the tool.
-- [ ] Implement some of the known best practices.
-- [ ] Create better custom templates for styleguide.
-- [ ] Better error handling and console logging.
-- [ ] Cleanup NPM dependencies.
 - [ ] Remove Vue components from `/tokens/` and make styleguide specific.
 - [ ] Separate documentation from the readme on GitHub and split onto multiple pages.
 - [ ] Add a few more default elements (like button f.ex.) with sensible default `props` for type, style, etc. for prototyping.
@@ -528,6 +524,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Changelog
 
+* `0.2.3` (2017-11-03) - Better example templates.
 * `0.2.2` (2017-11-02) - Fixes the serving of SVG icons to living documentation.
 * `0.2.1` (2017-10-31) - Cleans up SCSS styles and adds examples for each token category.
 * `0.2.0` (2017-10-30) - Adds YAML Design Token that are auto converted to JSON and SCSS.

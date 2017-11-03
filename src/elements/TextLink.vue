@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" :target="target">
+  <a :href="href" :target="target" class="text-link">
     <slot/>
   </a>
 </template>
@@ -28,7 +28,7 @@
 </script>
 
 <style lang="scss" scoped>
-  a {
+  .text-link {
     @include reset;
     font-family: $font-family-text;
     color: $color-primary-vermilion;
