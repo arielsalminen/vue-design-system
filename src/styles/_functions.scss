@@ -30,3 +30,83 @@
     @return #fff;
   }
 }
+
+/// Darkens the foreground color by the background color. This is the same as the
+/// “multiply” filter in graphics apps.
+///
+/// @param {Color} $foreground - The color to darken.
+/// @param {Color} $background - The background to base darkening on.
+/// @return {Color} The modified color.
+@function color-multiply($foreground, $background: null) {
+  @if $background == null {
+    $background: #ffffff;
+  }
+
+  @return $foreground * $background / 255;
+}
+
+/// Returns the value in rem for a given pixel value.
+/// @param {Number} $value - The pixel value to be converted.
+/// @return {Number} The converted value in rem.
+@function rem($value) {
+  $unit: unit($value);
+
+  @if $unit == 'rem' {
+    @return $value;
+  } @else if $unit == 'px' {
+    @return $value / $font-size-base * 1rem;
+  } @else if $unit == 'em' {
+    @return $unit / 1em * 1rem;
+  } @else {
+    @error 'Value must be in px, em, or rem.';
+  }
+}
+
+/// Returns the value in pixels for a given rem value.
+/// @param {Number} $value - The rem value to be converted.
+/// @return {Number} The converted value in pixels.
+@function px($value) {
+  $unit: unit($value);
+
+  @if $unit == 'px' {
+    @return $value;
+  } @else if $unit == 'em' {
+    @return ($value / 1em) * $font-size-base;
+  } @else if $unit == 'rem' {
+    @return ($value / 1rem) * $font-size-base;
+  } @else {
+    @error 'Value must be in rem, em, or px.';
+  }
+}
+
+/// Returns the list of available names in a given map.
+/// @param {Map} $map - The map of data to list the names from.
+/// @param {Number} $map - The level of depth to get names from.
+/// @return {String} The list of names in the map.
+@function available-names($map, $level: 1) {
+  @if type-of($map) != 'map' {
+    @return null;
+  }
+
+  $output: '';
+  $newline: '\A ';
+
+  @if $level == 1 {
+    @each $key, $value in $map {
+      $output: $output + '#{$newline}- #{$key} #{available-names($value, $level + 1)}';
+    }
+  } @else {
+    $output: '(';
+    $i: 1;
+
+    @each $key, $value in $map {
+      $sep: if($i < length($map), ', ', '');
+      $output: $output + '#{$key}#{$sep}#{available-names($value, $level + 1)}';
+      $i: $i + 1;
+    }
+
+    $output: $output + ')';
+  }
+
+  @return $output;
+}
