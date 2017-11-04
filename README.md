@@ -512,6 +512,8 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Roadmap
 
+- [ ] Create compiler config for style guide.
+- [ ] Cleanup style guide CSS.
 - [ ] Create a tutorial on why and what you can/should do with the tool.
 - [ ] Separate documentation from the readme on GitHub and split onto multiple pages.
 - [ ] Add a few more example default elements (like button f.ex.) with sensible default `props` for type, style, etc. for prototyping.
