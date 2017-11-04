@@ -5,6 +5,8 @@ const merge = require('webpack-merge')
 module.exports = {
   title: 'Vue Design System',
   theme: {
+    maxWidth: '1024px',
+    sidebarWidth: 210,
     color: {
       link: '#2389ee',
       linkHover: '#1960a7',
@@ -60,7 +62,7 @@ module.exports = {
     {
       name: 'Tokens',
       content: 'docs/tokens.md',
-      components: 'src/tokens/**/[A-Z]*.vue'
+      components: 'docs/components/**/[A-Z]*.vue'
     },
     {
       name: 'Elements',
@@ -78,6 +80,7 @@ module.exports = {
       components: 'src/templates/**/[A-Z]*.vue'
     }
   ],
+  template: 'docs/styleguide.template.html',
   ignore: [
     '**/App.vue',
     '**/__tests__/**',
@@ -97,9 +100,11 @@ module.exports = {
     }
   }),
   configureServer(app) {
-    // `app` is the instance of the express server running Styleguidist
     app.get('/static/icons/:name', (req, res) => {
       res.redirect('/icons/' + req.params.name);
     });
+  },
+  compilerConfig: {
+    // TODO
   }
 };
