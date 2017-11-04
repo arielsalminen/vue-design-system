@@ -523,16 +523,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Changelog
 
-* `0.2.4` (2017-11-04) - Brings a few helper Sass functions and mixins from [Shopify’s Polaris](https://polaris.shopify.com). Also cleans up token logic.
-* `0.2.3` (2017-11-03) - Better examples, error handling, and console logging.
-* `0.2.2` (2017-11-02) - Fixes the serving of SVG icons to living documentation.
-* `0.2.1` (2017-10-31) - Cleans up SCSS styles and adds examples for each token category.
-* `0.2.0` (2017-10-30) - Adds YAML Design Token that are auto converted to JSON and SCSS.
-* `0.1.6` (2017-10-29) - General cleanup, updated readme & fixes to styleguide.
-* `0.1.5` (2017-10-28) - Automatic creation of documentation, better naming conventions, fixes styleguide build scripts and adds better icon workflow.
-* `0.1.2` (2017-10-25) - Fixes styleguide warnings + adds global resets
-* `0.1.1` (2017-10-25) - Adds initial alpha documentation creation
-* `0.1.0` (2017-10-23) - Initial prototype
+See [Releases tab](https://github.com/viljamis/vue-design-system/releases) for changelog.
 
 
 ## Authors and License
