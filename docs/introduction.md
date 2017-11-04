@@ -17,50 +17,15 @@ Made by [@viljamis](https://twitter.com/viljamis) and other contributors. Read m
 * Autoprefixing, SCSS, Webpack & CSS extraction included by default *(Extend with lint-on-save & unit tests).*
 * [And more…](https://github.com/viljamis/vue-design-system)
 
-
 ## Get Started
 
-Get started by cloning the repo and installing dependencies:
+* **[Getting Started](https://github.com/viljamis/vue-design-system/wiki/getting-started): How to install and run Vue Design System.**
+* [Terminology](https://github.com/viljamis/vue-design-system/wiki/terminology): Introduction to the system concepts and its hierarchy.
+* [Naming of Things](https://github.com/viljamis/vue-design-system/wiki/naming-of-Things): Naming is hard, so it’s good to have clear guidelines.
+* [Directory Structure](https://github.com/viljamis/vue-design-system/wiki/directory-structure): What goes where and why.
+* [Working with the System](https://github.com/viljamis/vue-design-system/wiki/working-with-the-system): Concrete examples on how to work with `Tokens`, `Elements` , `Patterns` and `Templates`.
+* [Editing Living Documentation](https://github.com/viljamis/vue-design-system/wiki/editing-living-documentation): How to customize the living system documentation.
+* [Frequently Asked Questions](https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ)): How to use icons, how to use font-face, etc.
 
-```bash
-git clone git@github.com:viljamis/vue-design-system.git
-cd vue-design-system
-npm install
-```
-
-Start up the project and living documentation at [http://localhost:8080](http://localhost:8080) & [http://localhost:6060](http://localhost:6060):
-
-```bash
-npm start
-```
-
-To learn more, view the [official documentation](https://github.com/viljamis/vue-design-system) on GitHub.
-
-
-## Terminology
-
-The following terminology is used throughout Vue Design System. It’s a good idea to get familiar with these concepts before diving deeper.
-
-* **Principles** are a set of established design principles that are at the heart of the system. They should guide you when working with *Tokens*, *Elements*, *Patterns* and *Templates* listed below.
-* **Tokens** are the visual design atoms of the system. Specifically, they are named entities that store visual design attributes. SalesForce’s system has [a great example](https://www.lightningdesignsystem.com/design-tokens/).
-* **Elements** are the smallest basic structures of a UI. They can not be broken down any further. Buttons, links and inputs are good examples. Elements utilize *Tokens* mentioned above.
-* **Patterns** are UI patterns that fall on the more complex side of the spectrum. Patterns consist of both *Elements* and *Tokens*.
-* **Templates** exist to document the layout and structure of a section or the entirety of an interface. Templates can consist of all three things mentioned above: *Patterns*, *Elements* and *Tokens*.
-
-## Hierarchy, visualized:
-
-```bash
-Template
- ├─ Pattern
- │   ├─ Element
- │   │   ├─ Token
- │   │   └─ Token
- │   └─ Element
- │       └─ Token
- └─ Pattern
-     └─ Element
-         ├─ Token
-         └─ Token
-```
-
-### [View project on GitHub →](https://github.com/viljamis/vue-design-system)
+<a href="https://github.com/viljamis/vue-design-system" class="button button--primary">View on GitHub</a>
+<a href="https://github.com/viljamis/vue-design-system/wiki" class="button button--secondary">Documentation</a>

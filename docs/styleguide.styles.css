@@ -120,3 +120,52 @@ div[class^='rsg--root'] > ul[class^='rsg--list'] > li > a {
 div[class^='rsg--sidebar'] a:hover {
   color: #fff;
 }
+
+a[class^='rsg--link'].button {
+  width: 100%;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: 1px solid #2389ee;
+  background: #2389ee;
+  border-radius: 3px;
+  font-weight: 600;
+  display: inline-block;
+  padding: .7rem 2rem;
+  margin: 0 .2rem .4rem 0;
+  color: #fff;
+}
+
+a[class^='rsg--link'].button:hover {
+  border: 1px solid #1960a7;
+  background: #1960a7;
+}
+
+a[class^='rsg--link'].button--secondary:hover {
+  border: 1px solid #ddd;
+  background: #ddd;
+}
+
+a[class^='rsg--link'].button:active {
+  opacity: 0.8;
+}
+
+a[class^='rsg--link'].button:first-child {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  a[class^='rsg--link'].button {
+    width: auto;
+    margin: 1.5rem .2rem 1rem 0;
+  }
+}
+
+a[class^='rsg--link'].button--secondary {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+strong[class^='rsg--strong'] a[class^='rsg--link'] {
+  font-weight: 600;
+}

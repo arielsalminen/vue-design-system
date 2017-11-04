@@ -1,4 +1,4 @@
-**Principles** are a set of established design principles that are at the heart of the design system. They should guide us when working with *Tokens*, *Elements*, *Patterns* and *Templates*. *(btw: everything you see here is user editable, to change or remove this text, see `/docs/principles.md`)*
+**Principles** are a set of established design principles that are at the heart of the design system. They should guide us when working with *Tokens*, *Elements*, *Patterns* and *Templates*. *(Everything you see here is user editable, to change or remove this text, see `/docs/principles.md`. The principles below are just an example, you should replace them.)*
 
 1. **Design is how it works**
 2. **Reduce concepts to increase confidence**
