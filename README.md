@@ -25,20 +25,18 @@ Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See al
 
 ## Documentation
 
-* **[Getting Started:](https://github.com/viljamis/vue-design-system/wiki/getting-started) How to install and run Vue Design System**
-* [Terminology](https://github.com/viljamis/vue-design-system/wiki/terminology)
-* [Naming of Things](https://github.com/viljamis/vue-design-system/wiki/naming-of-Things)
-* [Directory Structure](https://github.com/viljamis/vue-design-system/wiki/directory-structure)
-* [Working with the System](https://github.com/viljamis/vue-design-system/wiki/working-with-the-system)
-* [Editing Living Documentation](https://github.com/viljamis/vue-design-system/wiki/editing-living-documentation)
-* [Frequently Asked Questions](https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ))
+* **[Getting Started](https://github.com/viljamis/vue-design-system/wiki/getting-started): How to install and run Vue Design System.**
+* [Terminology](https://github.com/viljamis/vue-design-system/wiki/terminology): Introduction to the system concepts and its hierarchy.
+* [Naming of Things](https://github.com/viljamis/vue-design-system/wiki/naming-of-Things): Naming is hard, so it’s good to have clear guidelines.
+* [Directory Structure](https://github.com/viljamis/vue-design-system/wiki/directory-structure): What goes where and why.
+* [Working with the System](https://github.com/viljamis/vue-design-system/wiki/working-with-the-system): Concrete examples on how to work with `Tokens`, `Elements` , `Patterns` and `Templates`.
+* [Editing Living Documentation](https://github.com/viljamis/vue-design-system/wiki/editing-living-documentation): How to customize the living system documentation.
+* [Frequently Asked Questions](https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ): How to use icons, how to use font-face, etc.
 
 
 ## Examples
 
-Projects using Vue Design System:
-
-* [Vue Design System website](https://vueds.com)
+* **[Vue Design System website](https://vueds.com)**
 
 
 ## Roadmap
@@ -53,7 +51,7 @@ Projects using Vue Design System:
 
 ## Changelog
 
-See [Releases tab](https://github.com/viljamis/vue-design-system/releases) for changelog.
+**`0.2.4` is the latest release.** See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 
 ## Authors and License
