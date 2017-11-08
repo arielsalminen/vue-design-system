@@ -26,6 +26,10 @@ table[class^='rsg--table'] {
   overflow-x: auto;
 }
 
+div[class^='rsg--root'] {
+  position: relative;
+}
+
 section[class^='rsg--root'] > h1 a {
   display: block;
   width: 100%;
@@ -176,14 +180,18 @@ strong[class^='rsg--strong'] a[class^='rsg--link'] {
 
 /* Labels used for component statuses */
 label.status {
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
   float: right;
-  margin-top: -60px;
-  margin-right: 40px;
-  background: #26A75B;
-  padding: .3rem 1rem;
+  position: absolute;
+  top: 12px;
+  line-height: 1;
+  right: 30px;
+  background: #25A532;
+  padding: .4rem 1rem .38rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 12px;
+  font-size: 11px;
   border-radius: 50px;
   color: #fff;
 }

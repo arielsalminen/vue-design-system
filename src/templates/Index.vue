@@ -19,7 +19,7 @@
   import NavBar from '@/patterns/NavBar';
 
   /**
-   * <label class="status status-prototype">Prototype<label>
+   * @version `prototype`
    */
   export default {
     name: 'Index',

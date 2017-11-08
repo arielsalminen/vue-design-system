@@ -6,7 +6,7 @@
 
 <script>
   /**
-   * <label class="status status-ready">Ready<label>
+   * @version `ready`
    */
   export default {
     name: 'TextStyle',

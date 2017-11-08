@@ -8,7 +8,7 @@
   const path = require('path')
 
   /**
-   * <label class="status status-wip">WIP<label>
+   * @version `wip`
    */
   export default {
     name: 'SvgIcon',

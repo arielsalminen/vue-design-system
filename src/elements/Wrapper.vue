@@ -6,7 +6,7 @@
 
 <script>
   /**
-   * <label class="status status-ready">Ready<label>
+   * @version `wip`
    */
   export default {
     name: 'Wrapper',

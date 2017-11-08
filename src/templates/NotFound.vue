@@ -17,7 +17,7 @@
   import Wrapper from '@/elements/Wrapper';
 
   /**
-   * <label class="status status-prototype">Prototype<label>
+   * @version `prototype`
    */
   export default {
     name: 'NotFound',
