@@ -7,6 +7,9 @@
   let cache = new Map();
   const path = require('path')
 
+  /**
+   * <label class="status status-wip">WIP<label>
+   */
   export default {
     name: 'SvgIcon',
     props: {

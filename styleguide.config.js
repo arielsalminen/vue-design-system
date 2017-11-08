@@ -103,8 +103,5 @@ module.exports = {
     app.get('/static/icons/:name', (req, res) => {
       res.redirect('/icons/' + req.params.name);
     });
-  },
-  compilerConfig: {
-    // TODO
   }
 };

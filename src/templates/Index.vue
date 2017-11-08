@@ -18,6 +18,9 @@
   import Wrapper from '@/elements/Wrapper';
   import NavBar from '@/patterns/NavBar';
 
+  /**
+   * <label class="status status-prototype">Prototype<label>
+   */
   export default {
     name: 'Index',
     components: {

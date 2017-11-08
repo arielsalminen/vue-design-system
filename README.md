@@ -42,6 +42,7 @@ Even though this is a system prototyping tool first and foremost, it has all the
 
 ## Roadmap
 
+- [ ] Component Statuses
 - [ ] Implement an automated kitchen sink test view for each component.
 - [ ] Create compiler config for style guide.
 - [ ] Cleanup style guide CSS.

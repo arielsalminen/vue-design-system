@@ -5,6 +5,9 @@
 </template>
 
 <script>
+  /**
+   * <label class="status status-ready">Ready<label>
+   */
   export default {
     name: 'TextLink',
     props: {

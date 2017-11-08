@@ -5,6 +5,9 @@
 </template>
 
 <script>
+  /**
+   * <label class="status status-prototype">Prototype<label>
+   */
   export default {
     name: 'Heading',
     props: {

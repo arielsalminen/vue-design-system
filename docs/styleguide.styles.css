@@ -14,7 +14,6 @@ div[class^='rsg--preview'] {
 }
 
 div[class^='rsg--tabButtons'],
-div[class^='rsg--toolbar'],
 div[class^='rsg--controls'],
 div[class^='rsg--pathline'],
 footer[class^='rsg--footer'] {
@@ -104,7 +103,11 @@ h1#tokens + article + div div[class^='rsg--preview'] {
 h1#tokens + div .react-codemirror2,
 h1#tokens + div div[class^='rsg--tabs'],
 h1#tokens + article + div .react-codemirror2,
-h1#tokens + article + div div[class^='rsg--tabs'] {
+h1#tokens + article + div div[class^='rsg--tabs'],
+h2#color div[class^='rsg--toolbar'],
+h2#fontsize div[class^='rsg--toolbar'],
+h2#spacing div[class^='rsg--toolbar'],
+section h1[class^='rsg--root'] div[class^='rsg--toolbar'] {
   display: none;
 }
 
@@ -168,4 +171,30 @@ a[class^='rsg--link'].button--secondary {
 
 strong[class^='rsg--strong'] a[class^='rsg--link'] {
   font-weight: 600;
+}
+
+
+/* Labels used for component statuses */
+label.status {
+  float: right;
+  margin-top: -60px;
+  margin-right: 40px;
+  background: #26A75B;
+  padding: .3rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #fff;
+}
+
+label.status-wip {
+  background: #ffbb08;
+  color: #000;
+}
+
+label.status-prototype,
+label.status-deprecated {
+  background: #ed4b37;
+  color: #fff;
 }

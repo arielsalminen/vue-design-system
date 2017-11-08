@@ -16,6 +16,9 @@
   import TextStyle from '@/elements/TextStyle';
   import Wrapper from '@/elements/Wrapper';
 
+  /**
+   * <label class="status status-prototype">Prototype<label>
+   */
   export default {
     name: 'NotFound',
     components: {
