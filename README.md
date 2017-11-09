@@ -43,7 +43,6 @@ Even though this is a system prototyping tool first and foremost, it has all the
 
 ## Roadmap
 
-- [ ] Component Statuses
 - [ ] Implement an automated kitchen sink test view for each component.
 - [ ] Create compiler config for style guide.
 - [ ] Cleanup style guide CSS.
@@ -55,7 +54,7 @@ Even though this is a system prototyping tool first and foremost, it has all the
 
 ## Changelog
 
-* **`0.2.5` is the latest release.**
+* `0.2.6` is the latest release.
 * See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 
