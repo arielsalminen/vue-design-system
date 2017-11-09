@@ -5,6 +5,9 @@
 </template>
 
 <script>
+  /**
+   * @version `wip`
+   */
   export default {
     name: 'Wrapper',
     props: {

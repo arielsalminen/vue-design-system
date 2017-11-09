@@ -5,6 +5,9 @@
 </template>
 
 <script>
+  /**
+   * @version `prototype`
+   */
   export default {
     name: 'Heading',
     props: {

@@ -7,6 +7,9 @@
   let cache = new Map();
   const path = require('path')
 
+  /**
+   * @version `wip`
+   */
   export default {
     name: 'SvgIcon',
     props: {

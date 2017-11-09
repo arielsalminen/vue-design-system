@@ -18,6 +18,9 @@
   import Wrapper from '@/elements/Wrapper';
   import NavBar from '@/patterns/NavBar';
 
+  /**
+   * @version `prototype`
+   */
   export default {
     name: 'Index',
     components: {

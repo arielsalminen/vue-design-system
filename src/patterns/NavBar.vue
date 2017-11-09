@@ -5,6 +5,9 @@
 </template>
 
 <script>
+  /**
+   * @version `ready`
+   */
   export default {
     name: 'NavBar',
     model: {

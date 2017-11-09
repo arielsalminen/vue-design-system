@@ -14,9 +14,9 @@ div[class^='rsg--preview'] {
 }
 
 div[class^='rsg--tabButtons'],
-div[class^='rsg--toolbar'],
 div[class^='rsg--controls'],
 div[class^='rsg--pathline'],
+div[class^='rsg--toolbar'],
 footer[class^='rsg--footer'] {
   display: none;
 }
@@ -25,6 +25,10 @@ div[class^='rsg--tabs'],
 table[class^='rsg--table'] {
   margin-bottom: 16px;
   overflow-x: auto;
+}
+
+div[class^='rsg--root'] {
+  position: relative;
 }
 
 section[class^='rsg--root'] > h1 a {
@@ -96,15 +100,30 @@ h1#tokens + article + div div[class^='rsg--preview'] {
   border: 0;
 }
 
+thead[class^='rsg--tableHead'] {
+  border: 0;
+}
+
 .CodeMirror {
   background: #001123;
   border-radius: 3px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 400px) {
+  .CodeMirror {
+    margin-bottom: 16px;
+  }
 }
 
 h1#tokens + div .react-codemirror2,
 h1#tokens + div div[class^='rsg--tabs'],
 h1#tokens + article + div .react-codemirror2,
-h1#tokens + article + div div[class^='rsg--tabs'] {
+h1#tokens + article + div div[class^='rsg--tabs'],
+h2#color div[class^='rsg--toolbar'],
+h2#fontsize div[class^='rsg--toolbar'],
+h2#spacing div[class^='rsg--toolbar'],
+section h1[class^='rsg--root'] div[class^='rsg--toolbar'] {
   display: none;
 }
 
@@ -168,4 +187,39 @@ a[class^='rsg--link'].button--secondary {
 
 strong[class^='rsg--strong'] a[class^='rsg--link'] {
   font-weight: 600;
+}
+
+
+/* Labels used for component statuses */
+.status {
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  float: right;
+  position: absolute;
+  top: 14px;
+  line-height: 1;
+  right: 0;
+  background: #eee;
+  padding: .4rem 1rem .38rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  border-radius: 50px;
+  color: #333;
+}
+
+.status-ready {
+  background: #7CB518;
+  color: #fff;
+}
+
+.status-wip {
+  background: #ffbb08;
+  color: #000;
+}
+
+.status-prototype,
+.status-deprecated {
+  background: #ed4b37;
+  color: #fff;
 }

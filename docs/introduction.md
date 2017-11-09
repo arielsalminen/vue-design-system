@@ -25,6 +25,7 @@ Made by [@viljamis](https://twitter.com/viljamis) and other contributors. Read m
 * [Directory Structure](https://github.com/viljamis/vue-design-system/wiki/directory-structure): What goes where and why.
 * [Working with the System](https://github.com/viljamis/vue-design-system/wiki/working-with-the-system): Concrete examples on how to work with `Tokens`, `Elements` , `Patterns` and `Templates`.
 * [Editing Living Documentation](https://github.com/viljamis/vue-design-system/wiki/editing-living-documentation): How to customize the living system documentation.
+* [Component Status](https://github.com/viljamis/vue-design-system/wiki/Component-Status): Clear labels that reflect the state of completion.
 * [Component QA](https://github.com/viljamis/vue-design-system/wiki/Component-QA): How to review new components and keep the quality high.
 * [Frequently Asked Questions](https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ)): How to use icons, how to use font-face, etc.
 

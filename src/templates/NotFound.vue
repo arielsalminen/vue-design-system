@@ -16,6 +16,9 @@
   import TextStyle from '@/elements/TextStyle';
   import Wrapper from '@/elements/Wrapper';
 
+  /**
+   * @version `prototype`
+   */
   export default {
     name: 'NotFound',
     components: {
