@@ -39,8 +39,11 @@
   }
   h1 {
     letter-spacing: $letter-spacing-tiny;
-    font-size: $font-size-xx-large;
+    font-size: $font-size-x-large;
     font-weight: $font-weight-bold;
+    @media #{$media-query-large} {
+      font-size: $font-size-xx-large;
+    }
   }
   h2 {
     letter-spacing: $letter-spacing-small;
