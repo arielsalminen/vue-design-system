@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-
+function processTags() {
   // Find all tags in a styleguide
   const tags = document.querySelectorAll("div[class^='rsg--docs'] code[class^='rsg--code']")
 
@@ -11,5 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     el.parentNode.parentNode.appendChild(label);
     el.parentNode.style.display = "none";
   });
+}
 
+document.addEventListener("DOMContentLoaded", function() {
+  processTags();
 });
+
+processTags();
