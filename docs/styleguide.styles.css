@@ -200,12 +200,18 @@ strong[class^='rsg--strong'] a[class^='rsg--link'] {
   line-height: 1;
   right: 0;
   background: #eee;
-  padding: .4rem 1rem .38rem;
+  padding: .42rem 1rem .38rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 11px;
   border-radius: 50px;
   color: #333;
+}
+
+@media (max-width: 400px) {
+  .status {
+    top: 7px;
+  }
 }
 
 .status-ready {
