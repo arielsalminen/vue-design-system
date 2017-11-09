@@ -16,6 +16,7 @@ div[class^='rsg--preview'] {
 div[class^='rsg--tabButtons'],
 div[class^='rsg--controls'],
 div[class^='rsg--pathline'],
+div[class^='rsg--toolbar'],
 footer[class^='rsg--footer'] {
   display: none;
 }
@@ -99,9 +100,20 @@ h1#tokens + article + div div[class^='rsg--preview'] {
   border: 0;
 }
 
+thead[class^='rsg--tableHead'] {
+  border: 0;
+}
+
 .CodeMirror {
   background: #001123;
   border-radius: 3px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 400px) {
+  .CodeMirror {
+    margin-bottom: 16px;
+  }
 }
 
 h1#tokens + div .react-codemirror2,
@@ -179,30 +191,35 @@ strong[class^='rsg--strong'] a[class^='rsg--link'] {
 
 
 /* Labels used for component statuses */
-label.status {
+.status {
   font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   float: right;
   position: absolute;
-  top: 12px;
+  top: 14px;
   line-height: 1;
-  right: 30px;
-  background: #25A532;
+  right: 0;
+  background: #eee;
   padding: .4rem 1rem .38rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 11px;
   border-radius: 50px;
+  color: #333;
+}
+
+.status-ready {
+  background: #7CB518;
   color: #fff;
 }
 
-label.status-wip {
+.status-wip {
   background: #ffbb08;
   color: #000;
 }
 
-label.status-prototype,
-label.status-deprecated {
+.status-prototype,
+.status-deprecated {
   background: #ed4b37;
   color: #fff;
 }
