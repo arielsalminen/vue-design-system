@@ -1,3 +1,5 @@
+![Build status](https://travis-ci.org/viljamis/vue-design-system.svg?branch=master) ![Dependencies status](https://david-dm.org/viljamis/vue-design-system.svg)
+
 # Vue Design System
 
 [Vue Design System](https://vueds.com) is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns & practices to build upon, so that you can get started with the actual design system faster.
