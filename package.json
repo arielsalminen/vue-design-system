@@ -17,7 +17,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "concurrently \"npm run styleguide\" \"onchange 'src/tokens/*.yml' -- theo src/tokens/tokens.yml --transform web --format map.scss,scss,json --dest src/tokens/compiled\" \"theo src/tokens/tokens.yml --transform web --format map.scss,scss,json --dest src/tokens/compiled\" \"npm run dev\"",
+    "start": "concurrently \"npm run styleguide\" \"onchange 'src/tokens/*.yml' -- theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/tokens/compiled\" \"theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/tokens/compiled\" \"npm run dev\"",
     "build": "node build/build.js",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build",
