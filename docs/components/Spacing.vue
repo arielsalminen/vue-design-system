@@ -31,7 +31,7 @@ export default {
   .space {
     font-size: $font-size-tiny;
     font-family: $font-family-text;
-    color: $color-primary-rich-black;
+    color: $color-rich-black;
     text-align: center;
     position: relative;
     float: left;

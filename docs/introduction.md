@@ -29,5 +29,5 @@ Made by [@viljamis](https://twitter.com/viljamis) and other contributors. Read m
 * [Component QA](https://github.com/viljamis/vue-design-system/wiki/Component-QA): How to review new components and keep the quality high.
 * [Frequently Asked Questions](https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ)): How to use icons, how to use font-face, etc.
 
-<a href="https://github.com/viljamis/vue-design-system" class="button button--primary">View on GitHub</a>
+<a href="https://github.com/viljamis/vue-design-system" class="button button-">View on GitHub</a>
 <a href="https://github.com/viljamis/vue-design-system/wiki" class="button button--secondary">Documentation</a>

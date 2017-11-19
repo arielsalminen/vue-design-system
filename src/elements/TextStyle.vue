@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
   .text-style {
     @include reset;
-    color: $color-primary-rich-black;
+    color: $color-rich-black;
     font-family: $font-family-text;
     font-weight: $font-weight-regular;
     font-size: $font-size-base;
@@ -46,17 +46,17 @@ export default {
       margin-bottom: 0;
     }
     &.disabled {
-      color: tint($color-primary-rich-black, 50%);
+      color: tint($color-rich-black, 50%);
     }
     &.strong {
       font-weight: $font-weight-semi-bold;
     }
     &.positive {
-      color: shade($color-primary-bleu-de-france, 50%);
+      color: shade($color-bleu-de-france, 50%);
       font-style: italic;
     }
     &.negative {
-      color: $color-primary-vermilion;
+      color: $color-vermilion;
       font-style: italic;
     }
   }

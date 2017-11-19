@@ -28,7 +28,7 @@ export default {
     @include reset;
     font-family: $font-family-heading;
     line-height: $line-height-heading;
-    color: $color-primary-rich-black;
+    color: $color-rich-black;
     margin-bottom: $space-base;
     @media #{$media-query-large} {
       // This is how you’d use design tokens with media queries

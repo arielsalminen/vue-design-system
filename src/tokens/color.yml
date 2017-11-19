@@ -1,24 +1,65 @@
 #
 # COLOR TOKENS
 # Use these tokens to set a color.
+# For reference, see http://hslpicker.com/
 #
 # To make things a little simpler for your team,
 # utilize both global & local tokens for colors.
 #
 
-props:
-  color_primary_vermilion:
-    value: "#ed4b37"
-  color_primary-ucla-gold:
-    value: "#ffbb08"
-  color_primary_bleu_de_france:
-    value: "#2389ee"
-  color_primary_rich_black:
+aliases:
+  vermilion:
+    value: "7, 83%"
+  ucla_gold:
+    value: "43, 100%"
+  bleu_de_france:
+    value: "210, 86%"
+  oxford_blue:
+    value: "210, 100%"
+  rich_black:
     value: "#001123"
-  color_primary_oxford_blue:
-    value: "#00264c"
-  color_primary_white:
+  white:
     value: "#fff"
+props:
+  color_vermilion:
+    value: "hsla({!vermilion}, 53%, 1)"
+    category: color_group_1
+  color_vermilion_dark:
+    value: "hsla({!vermilion}, 43%, 1)"
+    category: color_group_1
+  color_vermilion_light:
+    value: "hsla({!vermilion}, 63%, 1)"
+    category: color_group_1
+
+  color_ucla_gold:
+    value: "hsla({!ucla_gold}, 52%, 1)"
+    category: color_group_2
+  color_ucla_gold_dark:
+    value: "hsla({!ucla_gold}, 45%, 1)"
+    category: color_group_2
+  color_ucla_gold_light:
+    value: "hsla({!ucla_gold}, 65%, 1)"
+    category: color_group_2
+
+  color_bleu_de_france:
+    value: "hsla({!bleu_de_france}, 54%, 1)"
+    category: color_group_3
+  color_bleu_de_france_light:
+    value: "hsla({!bleu_de_france}, 64%, 1)"
+    category: color_group_3
+  color_bleu_de_france_dark:
+    value: "hsla({!bleu_de_france}, 44%, 1)"
+    category: color_group_3
+
+  color_oxford_blue:
+    value: "hsla({!oxford_blue}, 15%, 1)"
+    category: color_group_4
+  color_rich_black:
+    value: "{!rich_black}"
+    category: color_group_4
+  color_white:
+    value: "{!white}"
+    category: color_group_4
 global:
   type: color
   category: color

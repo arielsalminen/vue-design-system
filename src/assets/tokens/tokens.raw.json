@@ -1,47 +1,108 @@
 {
-  "aliases": {},
+  "aliases": {
+    "vermilion": {
+      "value": "7, 83%"
+    },
+    "ucla_gold": {
+      "value": "43, 100%"
+    },
+    "bleu_de_france": {
+      "value": "210, 86%"
+    },
+    "oxford_blue": {
+      "value": "210, 100%"
+    },
+    "rich_black": {
+      "value": "#001123"
+    },
+    "white": {
+      "value": "#fff"
+    }
+  },
   "props": {
-    "color_primary_vermilion": {
+    "color_ucla_gold": {
       "type": "color",
-      "category": "color",
-      "value": "rgb(237, 75, 55)",
-      "originalValue": "#ed4b37",
-      "name": "color_primary_vermilion"
+      "category": "color_group_2",
+      "value": "rgb(255, 186, 10)",
+      "originalValue": "hsla({!ucla_gold}, 52%, 1)",
+      "name": "color_ucla_gold"
     },
-    "color_primary-ucla-gold": {
+    "color_bleu_de_france_dark": {
       "type": "color",
-      "category": "color",
-      "value": "rgb(255, 187, 8)",
-      "originalValue": "#ffbb08",
-      "name": "color_primary-ucla-gold"
+      "category": "color_group_3",
+      "value": "rgb(16, 112, 209)",
+      "originalValue": "hsla({!bleu_de_france}, 44%, 1)",
+      "name": "color_bleu_de_france_dark"
     },
-    "color_primary_bleu_de_france": {
+    "color_bleu_de_france_light": {
       "type": "color",
-      "category": "color",
-      "value": "rgb(35, 137, 238)",
-      "originalValue": "#2389ee",
-      "name": "color_primary_bleu_de_france"
+      "category": "color_group_3",
+      "value": "rgb(84, 163, 242)",
+      "originalValue": "hsla({!bleu_de_france}, 64%, 1)",
+      "name": "color_bleu_de_france_light"
     },
-    "color_primary_rich_black": {
+    "color_white": {
       "type": "color",
-      "category": "color",
-      "value": "rgb(0, 17, 35)",
-      "originalValue": "#001123",
-      "name": "color_primary_rich_black"
-    },
-    "color_primary_oxford_blue": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(0, 38, 76)",
-      "originalValue": "#00264c",
-      "name": "color_primary_oxford_blue"
-    },
-    "color_primary_white": {
-      "type": "color",
-      "category": "color",
+      "category": "color_group_4",
       "value": "rgb(255, 255, 255)",
-      "originalValue": "#fff",
-      "name": "color_primary_white"
+      "originalValue": "{!white}",
+      "name": "color_white"
+    },
+    "color_bleu_de_france": {
+      "type": "color",
+      "category": "color_group_3",
+      "value": "rgb(37, 138, 239)",
+      "originalValue": "hsla({!bleu_de_france}, 54%, 1)",
+      "name": "color_bleu_de_france"
+    },
+    "color_ucla_gold_dark": {
+      "type": "color",
+      "category": "color_group_2",
+      "value": "rgb(230, 164, 0)",
+      "originalValue": "hsla({!ucla_gold}, 45%, 1)",
+      "name": "color_ucla_gold_dark"
+    },
+    "color_vermilion_light": {
+      "type": "color",
+      "category": "color_group_1",
+      "value": "rgb(239, 101, 82)",
+      "originalValue": "hsla({!vermilion}, 63%, 1)",
+      "name": "color_vermilion_light"
+    },
+    "color_vermilion_dark": {
+      "type": "color",
+      "category": "color_group_1",
+      "value": "rgb(201, 40, 19)",
+      "originalValue": "hsla({!vermilion}, 43%, 1)",
+      "name": "color_vermilion_dark"
+    },
+    "color_ucla_gold_light": {
+      "type": "color",
+      "category": "color_group_2",
+      "value": "rgb(255, 204, 77)",
+      "originalValue": "hsla({!ucla_gold}, 65%, 1)",
+      "name": "color_ucla_gold_light"
+    },
+    "color_rich_black": {
+      "type": "color",
+      "category": "color_group_4",
+      "value": "rgb(0, 17, 35)",
+      "originalValue": "{!rich_black}",
+      "name": "color_rich_black"
+    },
+    "color_oxford_blue": {
+      "type": "color",
+      "category": "color_group_4",
+      "value": "rgb(0, 38, 77)",
+      "originalValue": "hsla({!oxford_blue}, 15%, 1)",
+      "name": "color_oxford_blue"
+    },
+    "color_vermilion": {
+      "type": "color",
+      "category": "color_group_1",
+      "value": "rgb(235, 59, 36)",
+      "originalValue": "hsla({!vermilion}, 53%, 1)",
+      "name": "color_vermilion"
     },
     "font_size_xx_large": {
       "type": "number",
@@ -193,8 +254,8 @@
     "box_shadow_tiny_inset": {
       "type": "...",
       "category": "box-shadow",
-      "value": "inset 0 0 0 1px rgba(92,106,196,.1)",
-      "originalValue": "inset 0 0 0 1px rgba(92,106,196,.1)",
+      "value": "inset 0 0 0 1px rgba(0,0,0,.05)",
+      "originalValue": "inset 0 0 0 1px rgba(0,0,0,.05)",
       "name": "box_shadow_tiny_inset"
     },
     "letter_spacing_x_large": {

@@ -1,11 +1,15 @@
 <template>
   <component :is="type" class="colors">
-    <div v-for="token in designTokens" class="color" />
+    <div v-for="prop in tokens" class="color" :class="prop.category" v-if="prop.type === 'color'" :style="{ backgroundColor: prop.value, color: setTextColor(prop.value) }">
+      ${{prop.name.replace(/_/g, "-")}} <span>{{prop.value}}</span>
+    </div>
   </component>
 </template>
 
 <script>
-import designTokens from "@/assets/tokens/tokens.json";
+import designTokens from "@/assets/tokens/tokens.raw.json";
+import tinycolor from "tinycolor2";
+import _ from "lodash";
 
 export default {
   name: "Color",
@@ -15,9 +19,24 @@ export default {
       default: "div"
     }
   },
+  methods: {
+    setTextColor: function(color) {
+      let background = tinycolor(color);
+      if (background.isLight()) {
+        return "#000";
+      } else {
+        return "#fff";
+      }
+    },
+    orderData: function(data) {
+      let byName = _.orderBy(data, "name");
+      let byCategoryAndName = _.orderBy(byName, "category");
+      return byCategoryAndName;
+    }
+  },
   data() {
     return {
-      designTokens
+      tokens: this.orderData(designTokens.props)
     };
   }
 };
@@ -31,24 +50,16 @@ export default {
   .color {
     font-size: $font-size-small;
     font-family: $font-family-text;
-    color: $color-primary-white;
-    box-shadow: $box-shadow-tiny-inset;
+    color: $color-white;
+    height: $space-large;
+    line-height: $space-large;
     text-align: center;
     float: left;
     width: 100%;
-  }
-  @each $property, $value in $tokens-map {
-    $i: index(($tokens-map), ($property $value));
-    @if str_index($property, "color") {
-      .color:nth-of-type(#{$i}) {
-        height: $space-large;
-        line-height: $space-large;
-        background-color: $value;
-        color: set-text-color($value);
-        &::before {
-          content: "$#{$property}";
-        }
-      }
+    span {
+      margin-left: 10px;
+      font-style: italic;
+      opacity: 0.5;
     }
   }
 </style>

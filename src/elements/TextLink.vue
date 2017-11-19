@@ -34,7 +34,7 @@ export default {
   .text-link {
     @include reset;
     font-family: $font-family-text;
-    color: $color-primary-vermilion;
+    color: $color-vermilion;
     text-decoration: underline;
     @media #{$media-query-large} {
       // This is how you’d use design tokens with media queries

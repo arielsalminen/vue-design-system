@@ -19,8 +19,8 @@ import Wrapper from "@/elements/Wrapper";
 import NavBar from "@/patterns/NavBar";
 
 /**
-   * @version `prototype`
-   */
+ * @version `prototype`
+ */
 export default {
   name: "Index",
   components: {
@@ -32,8 +32,8 @@ export default {
   },
   props: {
     /**
-       * The html element name used for the component
-       */
+     * The html element name used for the component
+     */
     type: {
       type: String,
       default: "div"
@@ -45,11 +45,11 @@ export default {
 <style lang="scss" scoped>
 
   // Local component variables
-  $color-template-background: $color-primary-rich-black;
+  $color-template-background: $color-rich-black;
   $color-template-background-top: tint($color-template-background, 5%);
   $color-template-background-bottom: shade($color-template-background, 5%);
-  $color-template-text: $color-primary-white;
-  $color-template-link: $color-primary-bleu-de-france;
+  $color-template-text: $color-white;
+  $color-template-link: $color-bleu-de-france;
 
   .index {
     min-height: $space-xx-large * 4;

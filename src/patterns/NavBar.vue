@@ -51,14 +51,14 @@ export default {
 
 <style lang="scss" scoped>
   // Local component variables
-  $color-nav-link: $color-primary-bleu-de-france;
-  $color-nav-link-active: $color-primary-bleu-de-france;
+  $color-nav-link: $color-bleu-de-france;
+  $color-nav-link-active: $color-bleu-de-france;
 
   .nav {
     font-family: $font-family-text;
     font-size: $font-size-small;
     line-height: $line-height-base;
-    color: $color-primary-white;
+    color: $color-white;
     margin: $space-base 0;
     text-align: center;
     width: 100%;

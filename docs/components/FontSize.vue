@@ -33,7 +33,7 @@ export default {
     font-family: $font-family-heading;
     font-weight: $font-weight-bold;
     line-height: $line-height-heading;
-    color: $color-primary-rich-black;
+    color: $color-rich-black;
     margin-bottom: $space-small;
     font-style: normal;
   }

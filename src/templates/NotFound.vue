@@ -41,11 +41,11 @@ export default {
 <style lang="scss" scoped>
 
   // Local component variables
-  $color-template-background: $color-primary-rich-black;
+  $color-template-background: $color-rich-black;
   $color-template-background-top: tint($color-template-background, 5%);
   $color-template-background-bottom: shade($color-template-background, 5%);
-  $color-template-text: $color-primary-white;
-  $color-template-link: $color-primary-bleu-de-france;
+  $color-template-text: $color-white;
+  $color-template-link: $color-bleu-de-france;
 
   .not-found {
     min-height: $space-xx-large * 4;
