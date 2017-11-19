@@ -6,8 +6,8 @@
 
 <script>
 /**
-   * @version `ready`
-   */
+ * @version `ready`
+ */
 export default {
   name: "NavBar",
   model: {
@@ -15,22 +15,22 @@ export default {
   },
   props: {
     /**
-       * The html element name used for the nav bar.
-       */
+     * The html element name used for the nav bar.
+     */
     type: {
       type: String,
       default: "nav"
     },
     /**
-       * State which tab is active when initiated (using name of the component).
-       */
+     * State which tab is active when initiated (using name of the component).
+     */
     active: {
       required: true,
       type: String
     },
     /**
-       * Menu items to be displayed on the nav bar.
-       */
+     * Menu items to be displayed on the nav bar.
+     */
     navItems: {
       required: true,
       type: Array

@@ -8,42 +8,42 @@ let cache = new Map();
 const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/);
 
 /**
-     * @version `wip`
-     */
+ * @version `wip`
+ */
 export default {
   name: "SvgIcon",
   props: {
     /**
-         * The name of the icon to display
-         */
+     * The name of the icon to display
+     */
     name: {
       required: true,
       default: "settings"
     },
     /**
-         * The fill color of the SVG icon
-         */
+     * The fill color of the SVG icon
+     */
     fill: {
       type: String,
       default: "#00264c"
     },
     /**
-         * Descriptive text to be read to screenreaders
-         */
+     * Descriptive text to be read to screenreaders
+     */
     ariaLabel: {
       type: String,
       default: "icon"
     },
     /**
-         * The html element name used for the icon
-         */
+     * The html element name used for the icon
+     */
     type: {
       type: String,
       default: "span"
     },
     /**
-         * The size of the icon
-         */
+     * The size of the icon
+     */
     size: {
       type: String,
       default: "16px"

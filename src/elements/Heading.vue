@@ -6,15 +6,15 @@
 
 <script>
 /**
-   * @version `prototype`
-   */
+ * @version `prototype`
+ */
 export default {
   name: "Heading",
   props: {
     /**
-       * The heading level used for the heading.
-       * `h1, h2, h3, h4, h5, h6`
-       */
+     * The heading level used for the heading.
+     * `h1, h2, h3, h4, h5, h6`
+     */
     level: {
       type: String,
       default: "h1"

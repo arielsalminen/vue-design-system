@@ -6,14 +6,14 @@
 
 <script>
 /**
-   * @version `wip`
-   */
+ * @version `wip`
+ */
 export default {
   name: "Wrapper",
   props: {
     /**
-       * The html element name used for the wrapper
-       */
+     * The html element name used for the wrapper
+     */
     type: {
       type: String,
       default: "div"

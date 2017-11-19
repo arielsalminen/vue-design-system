@@ -6,22 +6,22 @@
 
 <script>
 /**
-   * @version `ready`
-   */
+ * @version `ready`
+ */
 export default {
   name: "TextStyle",
   props: {
     /**
-       * The html element name used for the text
-       */
+     * The html element name used for the text
+     */
     type: {
       type: String,
       default: "p"
     },
     /**
-       * Style variation to give additional meaning.
-       * `default, disabled, strong, positive, negative`
-       */
+     * Style variation to give additional meaning.
+     * `default, disabled, strong, positive, negative`
+     */
     variation: {
       type: String,
       default: "default"

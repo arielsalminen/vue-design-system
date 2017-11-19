@@ -12,24 +12,15 @@
 </template>
 
 <script>
-import Heading from "@/elements/Heading";
-import TextStyle from "@/elements/TextStyle";
-import Wrapper from "@/elements/Wrapper";
-
 /**
-   * @version `prototype`
-   */
+ * @version `prototype`
+ */
 export default {
   name: "NotFound",
-  components: {
-    heading: Heading,
-    textStyle: TextStyle,
-    wrapper: Wrapper
-  },
   props: {
     /**
-       * The html element name used for the component
-       */
+     * The html element name used for the component
+     */
     type: {
       type: String,
       default: "div"
