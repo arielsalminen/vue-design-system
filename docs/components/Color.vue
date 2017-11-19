@@ -5,22 +5,22 @@
 </template>
 
 <script>
-  import designTokens from '@/tokens/compiled/tokens.json';
+import designTokens from "@/assets/tokens/tokens.json";
 
-  export default {
-    name: 'Color',
-    props: {
-      type: {
-        type: String,
-        default: 'div'
-      },
-    },
-    data() {
-      return {
-        designTokens
-      };
+export default {
+  name: "Color",
+  props: {
+    type: {
+      type: String,
+      default: "div"
     }
+  },
+  data() {
+    return {
+      designTokens
+    };
   }
+};
 </script>
 
 <style lang="scss">

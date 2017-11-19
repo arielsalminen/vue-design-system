@@ -12,34 +12,34 @@
 </template>
 
 <script>
-  import Heading from '@/elements/Heading';
-  import TextStyle from '@/elements/TextStyle';
-  import TextLink from '@/elements/TextLink';
-  import Wrapper from '@/elements/Wrapper';
-  import NavBar from '@/patterns/NavBar';
+import Heading from "@/elements/Heading";
+import TextStyle from "@/elements/TextStyle";
+import TextLink from "@/elements/TextLink";
+import Wrapper from "@/elements/Wrapper";
+import NavBar from "@/patterns/NavBar";
 
-  /**
+/**
    * @version `prototype`
    */
-  export default {
-    name: 'Index',
-    components: {
-      heading: Heading,
-      textStyle: TextStyle,
-      textLink: TextLink,
-      navBar: NavBar,
-      wrapper: Wrapper
-    },
-    props: {
-      /**
+export default {
+  name: "Index",
+  components: {
+    heading: Heading,
+    textStyle: TextStyle,
+    textLink: TextLink,
+    navBar: NavBar,
+    wrapper: Wrapper
+  },
+  props: {
+    /**
        * The html element name used for the component
        */
-      type: {
-        type: String,
-        default: 'div'
-      }
+    type: {
+      type: String,
+      default: "div"
     }
-  };
+  }
+};
 </script>
 
 <style lang="scss" scoped>

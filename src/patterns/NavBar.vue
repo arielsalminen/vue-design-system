@@ -5,48 +5,48 @@
 </template>
 
 <script>
-  /**
+/**
    * @version `ready`
    */
-  export default {
-    name: 'NavBar',
-    model: {
-      prop: 'active',
-    },
-    props: {
-      /**
+export default {
+  name: "NavBar",
+  model: {
+    prop: "active"
+  },
+  props: {
+    /**
        * The html element name used for the nav bar.
        */
-      type: {
-        type: String,
-        default: 'nav'
-      },
-      /**
+    type: {
+      type: String,
+      default: "nav"
+    },
+    /**
        * State which tab is active when initiated (using name of the component).
        */
-      active: {
-        required: true,
-        type: String,
-      },
-      /**
+    active: {
+      required: true,
+      type: String
+    },
+    /**
        * Menu items to be displayed on the nav bar.
        */
-      navItems: {
-        required: true,
-        type: Array,
+    navItems: {
+      required: true,
+      type: Array
+    }
+  },
+  computed: {
+    localActive: {
+      get() {
+        return this.active;
       },
-    },
-    computed: {
-      localActive: {
-        get() {
-          return this.active
-        },
-        set(val) {
-          this.$emit('input', val)
-        },
-      },
-    },
+      set(val) {
+        this.$emit("input", val);
+      }
+    }
   }
+};
 </script>
 
 <style lang="scss" scoped>

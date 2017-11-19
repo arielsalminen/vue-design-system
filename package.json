@@ -1,27 +1,26 @@
 {
   "name": "vue-design-system",
-  "version": "0.2.6",
-  "description": "Vue Design System is an open-source tool for prototyping UI design systems.",
+  "version": "0.3.0",
+  "description":
+    "Vue Design System is an open-source tool for prototyping UI design systems.",
   "author": "viljamis <me@viljamis.com>",
   "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viljamis/vue-design-system.git"
   },
-  "keywords": [
-    "vue",
-    "design",
-    "system"
-  ],
+  "keywords": ["vue", "design", "system"],
   "homepage": "https://vueds.com",
   "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "concurrently \"npm run styleguide\" \"onchange 'src/tokens/*.yml' -- theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/tokens/compiled\" \"theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/tokens/compiled\" \"npm run dev\"",
+    "start":
+      "concurrently \"npm run styleguide\" \"onchange 'src/tokens/*.yml' -- theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/assets/tokens\" \"theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/assets/tokens\" \"npm run dev\"",
     "build": "node build/build.js",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build",
-    "theo": "theo src/tokens/tokens.yml --transform web --format map.scss,scss,json --dest src/tokens/compiled"
+    "theo":
+      "theo src/tokens/tokens.yml --transform web --format map.scss,scss,json --dest src/tokens/compiled"
   },
   "dependencies": {
     "assemble": "^0.3.83",
@@ -84,9 +83,5 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }

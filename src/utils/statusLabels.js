@@ -1,6 +1,8 @@
 function processTags() {
   // Find all tags in a styleguide
-  const tags = document.querySelectorAll("div[class^='rsg--docs'] code[class^='rsg--code']")
+  const tags = document.querySelectorAll(
+    "div[class^='rsg--docs'] code[class^='rsg--code']"
+  );
 
   // For each found tag create an appropriate status label
   tags.forEach(function(el) {

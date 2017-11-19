@@ -12,30 +12,30 @@
 </template>
 
 <script>
-  import Heading from '@/elements/Heading';
-  import TextStyle from '@/elements/TextStyle';
-  import Wrapper from '@/elements/Wrapper';
+import Heading from "@/elements/Heading";
+import TextStyle from "@/elements/TextStyle";
+import Wrapper from "@/elements/Wrapper";
 
-  /**
+/**
    * @version `prototype`
    */
-  export default {
-    name: 'NotFound',
-    components: {
-      heading: Heading,
-      textStyle: TextStyle,
-      wrapper: Wrapper
-    },
-    props: {
-      /**
+export default {
+  name: "NotFound",
+  components: {
+    heading: Heading,
+    textStyle: TextStyle,
+    wrapper: Wrapper
+  },
+  props: {
+    /**
        * The html element name used for the component
        */
-      type: {
-        type: String,
-        default: 'div'
-      }
+    type: {
+      type: String,
+      default: "div"
     }
-  };
+  }
+};
 </script>
 
 <style lang="scss" scoped>

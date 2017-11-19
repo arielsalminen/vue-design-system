@@ -1,2 +1,2 @@
-import WebFontLoader from '../src/utils/webFontLoader'
-import statusLabels from '../src/utils/statusLabels'
+import WebFontLoader from "../src/utils/webFontLoader";
+import statusLabels from "../src/utils/statusLabels";

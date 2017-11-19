@@ -5,29 +5,29 @@
 </template>
 
 <script>
-  /**
+/**
    * @version `ready`
    */
-  export default {
-    name: 'TextStyle',
-    props: {
-      /**
+export default {
+  name: "TextStyle",
+  props: {
+    /**
        * The html element name used for the text
        */
-      type: {
-        type: String,
-        default: 'p'
-      },
-      /**
+    type: {
+      type: String,
+      default: "p"
+    },
+    /**
        * Style variation to give additional meaning.
        * `default, disabled, strong, positive, negative`
        */
-      variation: {
-        type: String,
-        default: 'default'
-      }
+    variation: {
+      type: String,
+      default: "default"
     }
   }
+};
 </script>
 
 <style lang="scss" scoped>

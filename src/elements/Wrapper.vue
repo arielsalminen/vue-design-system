@@ -5,21 +5,21 @@
 </template>
 
 <script>
-  /**
+/**
    * @version `wip`
    */
-  export default {
-    name: 'Wrapper',
-    props: {
-      /**
+export default {
+  name: "Wrapper",
+  props: {
+    /**
        * The html element name used for the wrapper
        */
-      type: {
-        type: String,
-        default: 'div'
-      }
+    type: {
+      type: String,
+      default: "div"
     }
   }
+};
 </script>
 
 <style lang="scss" scoped>

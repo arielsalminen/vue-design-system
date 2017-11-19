@@ -46,17 +46,18 @@ Even though this is a system prototyping tool first and foremost, it has all the
 ## Roadmap
 
 - [ ] Implement an automated kitchen sink test view for each component.
-- [ ] Create compiler config for style guide.
-- [ ] Cleanup style guide CSS.
 - [ ] Create a tutorial on why and what you can/should do with the tool.
 - [ ] Add a few more example default elements (like button f.ex.) with sensible default `props` for type, style, etc. for prototyping.
+- [ ] Add a configurable base grid.
 - [ ] Automated accessibility tests.
 - [ ] Consider showing all tokens under a separate category in living documentation.
+- [ ] Split sections in living documentation into separate views.
+- [ ] Implement isolated mode for components.
 
 
 ## Changelog
 
-* `0.2.6` is the latest release.
+* `0.3.0` is the latest release.
 * See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 
