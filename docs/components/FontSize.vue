@@ -1,11 +1,13 @@
 <template>
   <component :is="type" class="font-sizes">
-    <div v-for="token in designTokens" class="font" />
+    <div v-for="prop in tokens" class="font" v-if="prop.category === 'font-size'" :style="{ fontSize: prop.value }">
+      ${{prop.name.replace(/_/g, "-")}} <span>({{prop.value}})</span>
+    </div>
   </component>
 </template>
 
 <script>
-import designTokens from "@/assets/tokens/tokens.json";
+import designTokens from "@/assets/tokens/tokens.raw.json";
 
 export default {
   name: "FontSize",
@@ -15,9 +17,15 @@ export default {
       default: "div"
     }
   },
+  methods: {
+    orderData: function(data) {
+      let byName = _.orderBy(data, "category");
+      return byName;
+    }
+  },
   data() {
     return {
-      designTokens
+      tokens: this.orderData(designTokens.props)
     };
   }
 };
@@ -36,16 +44,10 @@ export default {
     color: $color-rich-black;
     margin-bottom: $space-small;
     font-style: normal;
-  }
-  @each $property, $value in $tokens-map {
-    $i: index(($tokens-map), ($property $value));
-    @if str_index($property, "font-size") {
-      .font:nth-of-type(#{$i}) {
-        font-size: $value;
-        &::before {
-          content: "$#{$property}";
-        }
-      }
+    span {
+      margin-left: 10px;
+      font-style: italic;
+      opacity: 0.5;
     }
   }
 </style>
