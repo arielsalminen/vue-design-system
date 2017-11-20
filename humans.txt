@@ -1,0 +1,6 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Viljami Salminen -- designer & developer -- https://twitter.com/viljamis
