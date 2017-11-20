@@ -2,10 +2,10 @@ div.rsg--root-1 {
   background: #fff;
 }
 
-pre[class^='rsg--pre'],
-div[class^='rsg--preview'] {
+pre[class^="rsg--pre"],
+div[class^="rsg--preview"] {
   padding: 30px;
-  border: 1px solid rgba(92,106,196,.07);
+  border: 1px solid rgba(92, 106, 196, 0.07);
   background: #f4f6f8;
   margin-bottom: 16px;
   border-radius: 3px;
@@ -13,25 +13,24 @@ div[class^='rsg--preview'] {
   overflow-x: auto;
 }
 
-div[class^='rsg--tabButtons'],
-div[class^='rsg--controls'],
-div[class^='rsg--pathline'],
-div[class^='rsg--toolbar'],
-footer[class^='rsg--footer'] {
+div[class^="rsg--tabButtons"],
+div[class^="rsg--controls"],
+div[class^="rsg--pathline"],
+footer[class^="rsg--footer"] {
   display: none;
 }
 
-div[class^='rsg--tabs'],
-table[class^='rsg--table'] {
+div[class^="rsg--tabs"],
+table[class^="rsg--table"] {
   margin-bottom: 16px;
   overflow-x: auto;
 }
 
-div[class^='rsg--root'] {
+div[class^="rsg--root"] {
   position: relative;
 }
 
-section[class^='rsg--root'] > h1 a {
+section[class^="rsg--root"] > h1 a {
   display: block;
   width: 100%;
   font-weight: 700;
@@ -42,65 +41,65 @@ section[class^='rsg--root'] > h1 a {
 }
 
 @media (max-width: 400px) {
-  section[class^='rsg--root'] > h1 a {
+  section[class^="rsg--root"] > h1 a {
     margin: 1rem 0 1rem;
-    padding-bottom: .3rem;
+    padding-bottom: 0.3rem;
     font-size: 42px;
   }
 }
 
-header[class^='rsg--header'] > h2 a,
-h2[class^='rsg--h2'],
-h2[class^='rsg--h2'] a {
+header[class^="rsg--header"] > h2 a,
+h2[class^="rsg--h2"],
+h2[class^="rsg--h2"] a {
   font-weight: 600 !important;
   letter-spacing: -0.5px;
   line-height: 1.3;
 }
 
 @media (max-width: 400px) {
-  header[class^='rsg--header'] > h2 a,
-  h2[class^='rsg--h2'],
-  h2[class^='rsg--h2'] a {
+  header[class^="rsg--header"] > h2 a,
+  h2[class^="rsg--h2"],
+  h2[class^="rsg--h2"] a {
     font-size: 28px;
   }
 }
 
-div[class^='rsg--logo'] {
-  border-bottom: 1px solid rgba(255,255,255,.15);
+div[class^="rsg--logo"] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-div[class^='rsg--logo'] h1 {
+div[class^="rsg--logo"] h1 {
   font-weight: 400;
 }
 
-div[class^='rsg--search'] input {
+div[class^="rsg--search"] input {
   color: #fff;
   border: 1px solid transparent;
-  padding: .5rem .8rem .58rem;
-  background: rgba(255,255,255,.1);
+  padding: 0.5rem 0.8rem 0.58rem;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-div[class^='rsg--search'] input:focus {
+div[class^="rsg--search"] input:focus {
   border: 1px solid #2389ee;
 }
 
-h1#templates + div div[class^='rsg--preview'],
-h1#templates + article + div div[class^='rsg--preview'] {
+h1#templates + div div[class^="rsg--preview"],
+h1#templates + article + div div[class^="rsg--preview"] {
   padding: 0;
 }
 
-div[class^='rsg--search'] input::-webkit-input-placeholder {
-  color: rgba(150,200,255,.3);
+div[class^="rsg--search"] input::-webkit-input-placeholder {
+  color: rgba(150, 200, 255, 0.3);
 }
 
-h1#tokens + div div[class^='rsg--preview'],
-h1#tokens + article + div div[class^='rsg--preview'] {
+h1#tokens + div div[class^="rsg--preview"],
+h1#tokens + article + div div[class^="rsg--preview"] {
   background: transparent;
   padding: 0;
   border: 0;
 }
 
-thead[class^='rsg--tableHead'] {
+thead[class^="rsg--tableHead"] {
   border: 0;
 }
 
@@ -117,30 +116,30 @@ thead[class^='rsg--tableHead'] {
 }
 
 h1#tokens + div .react-codemirror2,
-h1#tokens + div div[class^='rsg--tabs'],
+h1#tokens + div div[class^="rsg--tabs"],
 h1#tokens + article + div .react-codemirror2,
-h1#tokens + article + div div[class^='rsg--tabs'],
-h2#color div[class^='rsg--toolbar'],
-h2#fontsize div[class^='rsg--toolbar'],
-h2#spacing div[class^='rsg--toolbar'],
-section h1[class^='rsg--root'] div[class^='rsg--toolbar'] {
+h1#tokens + article + div div[class^="rsg--tabs"],
+h2#color div[class^="rsg--toolbar"],
+h2#fontsize div[class^="rsg--toolbar"],
+h2#spacing div[class^="rsg--toolbar"],
+section h1[class^="rsg--root"] div[class^="rsg--toolbar"] {
   display: none;
 }
 
-section > h1 + article[class^='rsg--root'] {
+section > h1 + article[class^="rsg--root"] {
   margin: 0 0 2.5rem !important;
 }
 
-ul[class^='rsg--list'] a[class*=' rsg--heading'],
-div[class^='rsg--root'] > ul[class^='rsg--list'] > li > a {
+ul[class^="rsg--list"] a[class*=" rsg--heading"],
+div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
   font-weight: 600;
 }
 
-div[class^='rsg--sidebar'] a:hover {
+div[class^="rsg--sidebar"] a:hover {
   color: #fff;
 }
 
-a[class^='rsg--link'].button {
+a[class^="rsg--link"].button {
   width: 100%;
   text-align: center;
   -webkit-font-smoothing: antialiased;
@@ -149,58 +148,57 @@ a[class^='rsg--link'].button {
   border-radius: 3px;
   font-weight: 600;
   display: inline-block;
-  padding: .7rem 2rem;
-  margin: 0 .2rem .4rem 0;
+  padding: 0.7rem 2rem;
+  margin: 0 0.2rem 0.4rem 0;
   color: #fff;
 }
 
-a[class^='rsg--link'].button:hover {
+a[class^="rsg--link"].button:hover {
   border: 1px solid #1960a7;
   background: #1960a7;
 }
 
-a[class^='rsg--link'].button--secondary:hover {
+a[class^="rsg--link"].button--secondary:hover {
   border: 1px solid #ddd;
   background: #ddd;
 }
 
-a[class^='rsg--link'].button:active {
+a[class^="rsg--link"].button:active {
   opacity: 0.8;
 }
 
-a[class^='rsg--link'].button:first-child {
+a[class^="rsg--link"].button:first-child {
   margin-top: 1.5rem;
 }
 
 @media (min-width: 600px) {
-  a[class^='rsg--link'].button {
+  a[class^="rsg--link"].button {
     width: auto;
-    margin: 1.5rem .2rem 1rem 0;
+    margin: 1.5rem 0.2rem 1rem 0;
   }
 }
 
-a[class^='rsg--link'].button--secondary {
+a[class^="rsg--link"].button--secondary {
   background: transparent;
   border: 1px solid #ccc;
   color: #333;
 }
 
-strong[class^='rsg--strong'] a[class^='rsg--link'] {
+strong[class^="rsg--strong"] a[class^="rsg--link"] {
   font-weight: 600;
 }
 
-
 /* Labels used for component statuses */
 .status {
-  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
   float: right;
   position: absolute;
-  top: 14px;
+  top: 12px;
   line-height: 1;
-  right: 0;
+  right: 30px;
   background: #eee;
-  padding: .42rem 1rem .38rem;
+  padding: 0.42rem 1rem 0.38rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 11px;
@@ -210,12 +208,12 @@ strong[class^='rsg--strong'] a[class^='rsg--link'] {
 
 @media (max-width: 400px) {
   .status {
-    top: 7px;
+    top: 8px;
   }
 }
 
 .status-ready {
-  background: #7CB518;
+  background: #7cb518;
   color: #fff;
 }
 

@@ -5,7 +5,7 @@ const merge = require("webpack-merge");
 module.exports = {
   title: "Vue Design System",
   theme: {
-    maxWidth: "1200px",
+    maxWidth: "100%",
     sidebarWidth: 210,
     color: {
       link: "#2389ee",

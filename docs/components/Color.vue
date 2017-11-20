@@ -29,7 +29,7 @@ export default {
       }
     },
     orderData: function(data) {
-      let byName = _.orderBy(data, "name");
+      let byName = _.orderBy(data, "value", "asc");
       let byCategoryAndName = _.orderBy(byName, "category");
       return byCategoryAndName;
     }

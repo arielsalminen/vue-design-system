@@ -19,8 +19,8 @@ export default {
   },
   methods: {
     orderData: function(data) {
-      let byName = _.orderBy(data, "category");
-      return byName;
+      let order = _.orderBy(data, "value", "desc");
+      return order;
     }
   },
   data() {
