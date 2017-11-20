@@ -42,7 +42,7 @@ module.exports = {
   ],
   sections: [
     {
-      name: "Introduction",
+      name: "Vue Design System",
       content: "docs/introduction.md"
     },
     {
