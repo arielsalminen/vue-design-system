@@ -52,12 +52,11 @@ Even though this is a system prototyping tool first and foremost, it has all the
 - [ ] Automated accessibility tests.
 - [ ] Consider showing all tokens under a separate category in living documentation.
 - [ ] Split sections in living documentation into separate views.
-- [ ] Implement isolated mode for components.
 
 
 ## Changelog
 
-* `0.4.1` is the latest release.
+* `0.4.2` is the latest release.
 * See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 
