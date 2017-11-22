@@ -13,3 +13,6 @@ package-lock.json*
 *.ntvs*
 *.njsproj
 *.sln
+
+# Ignore compiled tokens
+src/assets/tokens/
