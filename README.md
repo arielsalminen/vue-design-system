@@ -19,7 +19,7 @@ Even though this is a system prototyping tool first and foremost, it has all the
 * Global design tokens that can be used inside any component.
 * Simple and sane SVG icon and @font-face defaults.
 * Live reloading for both the app and the system documentation.
-* Automatic generation of documentation *(the very page you’re looking at).*
+* Automatic generation of documentation.
 * Documentation and the app logic are separated, so you can have public docs while the app itself is private.
 * Autoprefixing, SCSS, Webpack & CSS extraction included by default *(Extend with lint-on-save & unit tests).*
 * And more…
