@@ -16,21 +16,21 @@ export default {
      */
     type: {
       type: String,
-      default: "div"
-    }
-  }
-};
+      default: "div",
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-  .wrapper {
-    @include reset;
+.wrapper {
+  @include reset;
+  padding: $space-large;
+  width: 100%;
+  @media #{$media-query-large} {
     padding: $space-large;
-    width: 100%;
-    @media #{$media-query-large} {
-      padding: $space-large;
-    }
   }
+}
 </style>
 
 

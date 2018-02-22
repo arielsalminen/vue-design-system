@@ -16,7 +16,7 @@ export default {
      */
     type: {
       type: String,
-      default: "p"
+      default: "p",
     },
     /**
      * Style variation to give additional meaning.
@@ -24,42 +24,42 @@ export default {
      */
     variation: {
       type: String,
-      default: "default"
-    }
-  }
-};
+      default: "default",
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-  .text-style {
-    @include reset;
-    color: $color-rich-black;
-    font-family: $font-family-text;
-    font-weight: $font-weight-regular;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    margin-bottom: $space-small;
-    @media #{$media-query-large} {
-      // This is how you’d use design tokens with media queries
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &.disabled {
-      color: tint($color-rich-black, 50%);
-    }
-    &.strong {
-      font-weight: $font-weight-semi-bold;
-    }
-    &.positive {
-      color: shade($color-bleu-de-france, 50%);
-      font-style: italic;
-    }
-    &.negative {
-      color: $color-vermilion;
-      font-style: italic;
-    }
+.text-style {
+  @include reset;
+  color: $color-rich-black;
+  font-family: $font-family-text;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  margin-bottom: $space-small;
+  @media #{$media-query-large} {
+    // This is how you’d use design tokens with media queries
   }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &.disabled {
+    color: tint($color-rich-black, 50%);
+  }
+  &.strong {
+    font-weight: $font-weight-semi-bold;
+  }
+  &.positive {
+    color: shade($color-bleu-de-france, 50%);
+    font-style: italic;
+  }
+  &.negative {
+    color: $color-vermilion;
+    font-style: italic;
+  }
+}
 </style>
 
 

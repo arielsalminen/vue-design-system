@@ -4,8 +4,8 @@
 </template>
 
 <script>
-let cache = new Map();
-const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/);
+let cache = new Map()
+const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/)
 
 /**
  * @version `wip`
@@ -18,54 +18,54 @@ export default {
      */
     name: {
       required: true,
-      default: "settings"
+      default: "settings",
     },
     /**
      * The fill color of the SVG icon
      */
     fill: {
       type: String,
-      default: "#00264c"
+      default: "#00264c",
     },
     /**
      * Descriptive text to be read to screenreaders
      */
     ariaLabel: {
       type: String,
-      default: "icon"
+      default: "icon",
     },
     /**
      * The html element name used for the icon
      */
     type: {
       type: String,
-      default: "span"
+      default: "span",
     },
     /**
      * The size of the icon
      */
     size: {
       type: String,
-      default: "16px"
-    }
+      default: "16px",
+    },
   },
   async mounted() {
-    let currPath = req("./" + this.name + ".svg");
+    let currPath = req("./" + this.name + ".svg")
     if (!cache.has(currPath)) {
       try {
-        cache.set(currPath, fetch(currPath).then(r => r.text()));
+        cache.set(currPath, fetch(currPath).then(r => r.text()))
       } catch (e) {
-        cache.delete(currPath);
+        cache.delete(currPath)
       }
     }
     if (cache.has(currPath)) {
-      this.$el.innerHTML = await cache.get(currPath);
-      this.$el.children[0].style.fill = this.fill;
-      this.$el.children[0].style.width = this.size;
-      this.$el.children[0].style.height = this.size;
+      this.$el.innerHTML = await cache.get(currPath)
+      this.$el.children[0].style.fill = this.fill
+      this.$el.children[0].style.width = this.size
+      this.$el.children[0].style.height = this.size
     }
-  }
-};
+  },
+}
 </script>
 
 <docs>

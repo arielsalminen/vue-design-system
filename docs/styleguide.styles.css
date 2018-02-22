@@ -30,14 +30,17 @@ div[class^="rsg--root"] {
   position: relative;
 }
 
-section[class^="rsg--root"] > h1 a {
+div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] {
   display: block;
   width: 100%;
-  font-weight: 700;
-  letter-spacing: -1px;
   padding-bottom: 1rem;
   margin: 3rem 0 2rem;
   border-bottom: 1px solid #e8e8e8;
+}
+
+div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 @media (max-width: 400px) {
@@ -48,9 +51,8 @@ section[class^="rsg--root"] > h1 a {
   }
 }
 
-header[class^="rsg--header"] > h2 a,
-h2[class^="rsg--h2"],
-h2[class^="rsg--h2"] a {
+h2[class^="rsg--heading"],
+h2[class^="rsg--heading"] a {
   font-weight: 600 !important;
   letter-spacing: -0.5px;
   line-height: 1.3;
@@ -92,8 +94,9 @@ div[class^="rsg--search"] input::-webkit-input-placeholder {
   color: rgba(150, 200, 255, 0.3);
 }
 
-h1#tokens + div div[class^="rsg--preview"],
-h1#tokens + article + div div[class^="rsg--preview"] {
+#Color-container div[data-preview],
+#FontSize-container div[data-preview],
+#Spacing-container div[data-preview] {
   background: transparent;
   padding: 0;
   border: 0;
@@ -115,18 +118,27 @@ thead[class^="rsg--tableHead"] {
   }
 }
 
-h1#tokens + div .react-codemirror2,
-h1#tokens + div div[class^="rsg--tabs"],
-h1#tokens + article + div .react-codemirror2,
-h1#tokens + article + div div[class^="rsg--tabs"],
-h2#color div[class^="rsg--toolbar"],
-h2#fontsize div[class^="rsg--toolbar"],
-h2#spacing div[class^="rsg--toolbar"],
-section h1[class^="rsg--root"] div[class^="rsg--toolbar"] {
+#vue-design-system + div[class^="rsg--toolbar"],
+#principles + div[class^="rsg--toolbar"],
+#content + div[class^="rsg--toolbar"],
+#guidelines + div[class^="rsg--toolbar"],
+#tokens + div[class^="rsg--toolbar"],
+#color + div[class^="rsg--toolbar"],
+#fontsize + div[class^="rsg--toolbar"],
+#spacing + div[class^="rsg--toolbar"],
+#elements + div[class^="rsg--toolbar"],
+#patterns + div[class^="rsg--toolbar"],
+#templates + div[class^="rsg--toolbar"],
+#Spacing-container div[class^="rsg--tabs"],
+#Spacing-container .react-codemirror2,
+#FontSize-container div[class^="rsg--tabs"],
+#FontSize-container .react-codemirror2,
+#Color-container div[class^="rsg--tabs"],
+#Color-container .react-codemirror2 {
   display: none;
 }
 
-section > h1 + article[class^="rsg--root"] {
+section > div[class^="rsg--wrapper"] + article[class^="rsg--root"] {
   margin: 0 0 2.5rem !important;
 }
 
@@ -142,13 +154,14 @@ div[class^="rsg--sidebar"] a:hover {
 a[class^="rsg--link"].button {
   width: 100%;
   text-align: center;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   border: 1px solid #2389ee;
   background: #2389ee;
   border-radius: 3px;
   font-weight: 600;
   display: inline-block;
-  padding: 0.7rem 2rem;
+  padding: 0.85rem 2.1rem;
   margin: 0 0.2rem 0.4rem 0;
   color: #fff;
 }
@@ -174,7 +187,7 @@ a[class^="rsg--link"].button:first-child {
 @media (min-width: 600px) {
   a[class^="rsg--link"].button {
     width: auto;
-    margin: 1.5rem 0.2rem 1rem 0;
+    margin: 1.5rem 0.4rem 1rem 0;
   }
 }
 
@@ -184,8 +197,8 @@ a[class^="rsg--link"].button--secondary {
   color: #333;
 }
 
-strong[class^="rsg--strong"] a[class^="rsg--link"] {
-  font-weight: 600;
+strong a[class^="rsg--link"] {
+  font-weight: 600 !important;
 }
 
 /* Labels used for component statuses */
@@ -226,4 +239,17 @@ strong[class^="rsg--strong"] a[class^="rsg--link"] {
 .status-deprecated {
   background: #ed4b37;
   color: #fff;
+}
+
+.hide-private,
+.hide-private + div,
+a[href="#private-components"],
+a[href="#private-components"] + ul {
+  display: none !important;
+}
+
+/* Fix for Github button */
+iframe {
+  margin-right: 4px;
+  float: left;
 }

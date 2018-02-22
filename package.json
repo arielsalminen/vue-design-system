@@ -1,88 +1,131 @@
 {
   "name": "vue-design-system",
-  "version": "0.4.3",
-  "description":
-    "Vue Design System is an open-source tool for prototyping UI design systems.",
+  "version": "1.0.0",
+  "description": "Vue Design System is an open-source tool for prototyping UI design systems.",
   "author": "viljamis <me@viljamis.com>",
+  "main": "dist/system/system.min.js",
+  "homepage": "https://vueds.com",
   "private": false,
+  "license": "MIT",
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "start": "concurrently \"npm run styleguide\" \"onchange 'src/tokens/*.yml' -- npm run theo\" \"npm run theo\" \"npm run dev\"",
+    "build": "npm run theo && node build/build.js",
+    "build:system": "npm run theo && node build/build-system.js",
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "npm run theo && vue-styleguidist build",
+    "theo": "theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/assets/tokens",
+    "precommit": "pretty-quick --staged"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viljamis/vue-design-system.git"
   },
-  "keywords": ["vue", "design", "system"],
-  "homepage": "https://vueds.com",
-  "license": "MIT",
-  "scripts": {
-    "dev": "node build/dev-server.js",
-    "start":
-      "concurrently \"npm run styleguide\" \"onchange 'src/tokens/*.yml' -- theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/assets/tokens\" \"theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/assets/tokens\" \"npm run dev\"",
-    "build": "node build/build.js",
-    "styleguide": "vue-styleguidist server",
-    "styleguide:build": "vue-styleguidist build",
-    "theo":
-      "theo src/tokens/tokens.yml --transform web --format map.scss,scss,json --dest src/tokens/compiled"
+  "keywords": [
+    "vue",
+    "design",
+    "system"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ],
+      "stage-2"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          "env",
+          "stage-2"
+        ],
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
   },
   "dependencies": {
+    "ajv": "^6.1.1",
     "assemble": "^0.3.83",
-    "concurrently": "^3.5.0",
+    "concurrently": "^3.5.1",
     "grunt": "^0.4.5",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "magic-string": "^0.22.4",
-    "onchange": "^3.2.1",
+    "onchange": "^3.3.0",
+    "prerender-spa-plugin": "^2.1.0",
+    "prettier": "^1.10.2",
     "readline": "^1.3.0",
     "styles": "^0.2.1",
     "tinycolor2": "^1.4.1",
-    "vue": "^2.5.2",
+    "vue": "^2.5.13",
     "vue-lodash": "^1.0.4",
+    "vue-meta": "^1.4.3",
     "vue-router": "^3.0.1",
     "vuex": "^2.4.1",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^7.2.6",
     "babel-core": "^6.22.1",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
-    "chalk": "^2.0.1",
-    "connect-history-api-fallback": "^1.3.0",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.0",
+    "chalk": "^2.3.1",
+    "connect-history-api-fallback": "^1.5.0",
+    "copy-webpack-plugin": "^4.4.1",
+    "css-loader": "^0.28.9",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^1.1.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.9",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "http-proxy-middleware": "^0.17.3",
-    "node-sass": "^4.5.3",
-    "opn": "^5.1.0",
+    "husky": "^0.14.3",
+    "node-sass": "^4.7.2",
+    "opn": "^5.2.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
-    "ora": "^1.2.0",
+    "ora": "^1.4.0",
     "portfinder": "^1.0.13",
+    "pretty-quick": "^1.4.1",
     "rimraf": "^2.6.0",
     "sass-loader": "^6.0.6",
-    "semver": "^5.3.0",
+    "semver": "^5.5.0",
     "shelljs": "^0.7.6",
     "style-loader": "^0.18.2",
-    "theo": "^6.0.0-beta.7",
+    "theo": "^6.0.0",
     "url-loader": "^0.5.8",
-    "vue-docgen-api": "^2.1.1",
-    "vue-loader": "^13.3.0",
-    "vue-style-loader": "^3.0.1",
-    "vue-styleguidist": "^1.3.1",
-    "vue-template-compiler": "^2.5.2",
-    "webpack": "^3.8.1",
-    "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-middleware": "^1.12.0",
-    "webpack-hot-middleware": "^2.18.2",
-    "webpack-merge": "^4.1.0"
+    "vue-docgen-api": "^2.2.4",
+    "vue-loader": "^13.7.1",
+    "vue-style-loader": "^3.1.2",
+    "vue-styleguidist": "^1.4.8",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.11.0",
+    "webpack-bundle-analyzer": "^2.10.0",
+    "webpack-dev-middleware": "^1.12.2",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-merge": "^4.1.1"
   },
   "engines": {
-    "node": ">= 4.0.0",
+    "node": ">= 8.6.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not Explorer > 0",
+    "not ExplorerMobile > 0",
+    "not BlackBerry > 0",
+    "not OperaMini all",
+    "not OperaMobile > 0"
+  ]
 }

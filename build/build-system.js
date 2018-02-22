@@ -9,12 +9,12 @@ const path = require("path")
 const chalk = require("chalk")
 const webpack = require("webpack")
 const config = require("../config")
-const webpackConfig = require("./webpack.prod.conf")
+const webpackConfig = require("./webpack.system.conf")
 
-const spinner = ora("Building Vue Design System for production...")
+const spinner = ora("Building Design System Library...")
 spinner.start()
 
-rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
+rm(path.join(config.system.assetsRoot, config.system.assetsSubDirectory), err => {
   if (err) throw err
   webpack(webpackConfig, function(err, stats) {
     spinner.stop()
@@ -30,15 +30,15 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
     )
 
     if (stats.hasErrors()) {
-      console.log(chalk.red("  Vue Design System build failed with errors.\n"))
+      console.log(chalk.red("  Design System Library build failed with errors.\n"))
       process.exit(1)
     }
 
-    console.log(chalk.cyan("  Vue Design System build complete.\n"))
+    console.log(chalk.cyan("  Design System Library build complete.\n"))
     console.log(
       chalk.yellow(
-        "  Tip: built files are meant to be served over an HTTP server.\n" +
-          "  Opening index.html over file:// won't work.\n",
+        "  Tip: You can now publish your library as a private NPM module.\n" +
+          "  Users can import it as an ES6 module: import DesignSystem from 'system'\n",
       ),
     )
   })

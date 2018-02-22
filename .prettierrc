@@ -2,9 +2,21 @@
   "printWidth": 120,
   "singleQuote": false,
   "trailingComma": "all",
-  "bracketSpacing": false,
+  "bracketSpacing": true,
   "jsxBracketSameLine": false,
-  "parser": "babylon",
-  "semi": true,
-  "requirePragma": false
+  "semi": false,
+  "requirePragma": false,
+  "insertPragma": false,
+  "useTabs": false,
+  "tabWidth": 2,
+  "arrowParens": "avoid",
+  "proseWrap": "preserve",
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss"
+      }
+    }
+  ]
 }

@@ -1,4 +1,3 @@
-
 /* GLOBAL MIXINS
 --------------------------------------------- */
 
@@ -16,7 +15,7 @@
 */
 @mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
   $responsive-unitless: $responsive / ($responsive - $responsive + 1);
-  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $dimension: if(unit($responsive) == "vh", "height", "width");
   $min-breakpoint: $min / $responsive-unitless * 100;
 
   @media (max-#{$dimension}: #{$min-breakpoint}) {
