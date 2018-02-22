@@ -12,11 +12,8 @@ module.exports = {
     assetsSubDirectory: "static",
     assetsPublicPath: "/",
 
-    /**
-     * Source Maps
-     */
-
-    productionSourceMap: true,
+    // Source map
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: "#source-map",
 
@@ -42,11 +39,8 @@ module.exports = {
     assetsSubDirectory: "system",
     assetsPublicPath: "/",
 
-    /**
-     * Source Maps
-     */
-
-    productionSourceMap: true,
+    // Source map
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: "#source-map",
 
@@ -84,10 +78,6 @@ module.exports = {
     // in the browser.
     showEslintErrorsInOverlay: false,
 
-    /**
-     * Source Maps
-     */
-
     // https://webpack.js.org/configuration/devtool/#development
     devtool: "cheap-module-eval-source-map",
 
@@ -96,6 +86,7 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
+    // Source map
     cssSourceMap: true,
   },
 }
