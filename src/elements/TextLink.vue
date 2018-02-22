@@ -16,7 +16,7 @@ export default {
      */
     href: {
       default: "#",
-      required: true
+      required: true,
     },
     /**
      * Specifies where to display the linked URL.
@@ -24,22 +24,22 @@ export default {
      */
     target: {
       type: String,
-      default: "_self"
-    }
-  }
-};
+      default: "_self",
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-  .text-link {
-    @include reset;
-    font-family: $font-family-text;
-    color: $color-vermilion;
-    text-decoration: underline;
-    @media #{$media-query-large} {
-      // This is how you’d use design tokens with media queries
-    }
+.text-link {
+  @include reset;
+  font-family: $font-family-text;
+  color: $color-vermilion;
+  text-decoration: underline;
+  @media #{$media-query-large} {
+    // This is how you’d use design tokens with media queries
   }
+}
 </style>
 
 <docs>

@@ -7,61 +7,61 @@
 </template>
 
 <script>
-import designTokens from "@/assets/tokens/tokens.raw.json";
-import tinycolor from "tinycolor2";
-import _ from "lodash";
+import designTokens from "@/assets/tokens/tokens.raw.json"
+import tinycolor from "tinycolor2"
+import _ from "lodash"
 
 export default {
   name: "Color",
   props: {
     type: {
       type: String,
-      default: "div"
-    }
+      default: "div",
+    },
   },
   methods: {
     setTextColor: function(color) {
-      let background = tinycolor(color);
+      let background = tinycolor(color)
       if (background.isLight()) {
-        return "#000";
+        return "#000"
       } else {
-        return "#fff";
+        return "#fff"
       }
     },
     orderData: function(data) {
-      let byName = _.orderBy(data, "value", "asc");
-      let byCategoryAndName = _.orderBy(byName, "category");
-      return byCategoryAndName;
-    }
+      let byName = _.orderBy(data, "value", "asc")
+      let byCategoryAndName = _.orderBy(byName, "category")
+      return byCategoryAndName
+    },
   },
   data() {
     return {
-      tokens: this.orderData(designTokens.props)
-    };
-  }
-};
+      tokens: this.orderData(designTokens.props),
+    }
+  },
+}
 </script>
 
 <style lang="scss">
-  .colors {
-    overflow: hidden;
-    width: 100%;
+.colors {
+  overflow: hidden;
+  width: 100%;
+}
+.color {
+  font-size: $font-size-small;
+  font-family: $font-family-text;
+  color: $color-white;
+  height: $space-large;
+  line-height: $space-large;
+  text-align: center;
+  float: left;
+  width: 100%;
+  span {
+    margin-left: 10px;
+    font-style: italic;
+    opacity: 0.5;
   }
-  .color {
-    font-size: $font-size-small;
-    font-family: $font-family-text;
-    color: $color-white;
-    height: $space-large;
-    line-height: $space-large;
-    text-align: center;
-    float: left;
-    width: 100%;
-    span {
-      margin-left: 10px;
-      font-style: italic;
-      opacity: 0.5;
-    }
-  }
+}
 </style>
 
 <docs>
