@@ -25,7 +25,7 @@ GitHub.
 
 * A set of interconnected patterns & practices for you and your team.
 * Global design tokens that can be used inside any component.
-* Design System can used as an NPM dependency in another project.
+* Design System can be used as an NPM dependency in another project.
 * Simple and sane SVG icon and @font-face defaults.
 * Live reloading for both the app and the system documentation.
 * Automatic generation of documentation _(the very page you’re looking at)._
