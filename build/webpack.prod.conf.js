@@ -11,7 +11,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin")
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 
-const env = config.build.env
+const env = require("../config/prod.env")
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -21,7 +21,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       usePostCSS: true,
     }),
   },
-  devtool: config.build.productionSourceMap ? "#source-map" : false,
+  devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath("js/[name].[chunkhash].js"),
@@ -38,7 +38,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           warnings: false,
         },
       },
-      sourceMap: true,
+      sourceMap: config.build.productionSourceMap,
       parallel: true,
     }),
     // extract css into its own file
