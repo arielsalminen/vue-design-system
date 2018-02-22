@@ -1,7 +1,7 @@
 <template>
   <component :is="type" class="index">
     <nav-bar active="Index" :navItems="[
-      {name: 'Template', component: 'Index', href: '/'},
+      {name: 'Template', component: 'Index', href: '/#/'},
       {name: 'Style Guide', href: 'http://localhost:6060/'}
     ]"/>
     <wrapper>
