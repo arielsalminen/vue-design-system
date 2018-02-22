@@ -46,7 +46,7 @@ Even though this is a system prototyping tool first and foremost, it has all the
 
 ## Changelog
 
-* `0.4.3` is the latest release.
+* `1.0.0` is the latest release.
 * See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 ## Authors and License
