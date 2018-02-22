@@ -58,7 +58,6 @@
   "dependencies": {
     "ajv": "^6.1.1",
     "assemble": "^0.3.83",
-    "concurrently": "^3.5.1",
     "grunt": "^0.4.5",
     "lodash": "^4.17.5",
     "magic-string": "^0.22.4",
