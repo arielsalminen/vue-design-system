@@ -1,8 +1,6 @@
-"use strict";
-// Template version: 1.1.3
+"use strict"
 // see http://vuejs-templates.github.io/webpack for documentation.
-
-const path = require("path");
+const path = require("path")
 
 module.exports = {
   build: {
@@ -22,7 +20,17 @@ module.exports = {
     // View the bundle analyzer report after build finishes:
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
-    bundleAnalyzerReport: process.env.npm_config_report
+    bundleAnalyzerReport: process.env.npm_config_report,
+  },
+  system: {
+    env: require("./prod.env"),
+    assetsRoot: path.resolve(__dirname, "../dist"),
+    assetsSubDirectory: "system",
+    assetsPublicPath: "/",
+    productionSourceMap: true,
+    productionGzip: false,
+    productionGzipExtensions: ["js", "css"],
+    bundleAnalyzerReport: process.env.npm_config_report,
   },
   dev: {
     env: require("./dev.env"),
@@ -36,6 +44,6 @@ module.exports = {
     // (https://github.com/webpack/css-loader#sourcemaps)
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
-    cssSourceMap: false
-  }
-};
+    cssSourceMap: false,
+  },
+}
