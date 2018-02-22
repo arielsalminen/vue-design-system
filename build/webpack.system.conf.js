@@ -1,13 +1,17 @@
+"use strict"
 const path = require("path")
 const utils = require("./utils")
 const webpack = require("webpack")
 const config = require("../config")
 const merge = require("webpack-merge")
 const baseWebpackConfig = require("./webpack.base.conf")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin")
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 
-const env = config.system.env
+const env = require("../config/prod.env")
 
 baseWebpackConfig.entry = {
   system: ["./src/system.js"],
@@ -18,12 +22,13 @@ const webpackConfig = merge(baseWebpackConfig, {
     rules: utils.styleLoaders({
       sourceMap: config.system.productionSourceMap,
       extract: true,
+      usePostCSS: true,
     }),
   },
-  devtool: config.system.productionSourceMap ? "#source-map" : false,
+  devtool: config.build.productionSourceMap ? config.system.devtool : false,
   output: {
     path: config.system.assetsRoot,
-    filename: utils.assetsSystemPath("[name].min.js"),
+    filename: utils.assetsSystemPath("[name].js"),
     library: "[name]",
     libraryTarget: "umd",
   },
@@ -32,23 +37,29 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       "process.env": env,
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        compress: {
+          warnings: false,
+        },
       },
-      sourceMap: true,
+      sourceMap: config.system.productionSourceMap,
+      parallel: true,
     }),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsSystemPath("[name].min.css"),
+      filename: utils.assetsSystemPath("[name].css"),
+      allChunks: false,
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({
-      cssProcessorOptions: {
-        safe: true,
-      },
+      cssProcessorOptions: { safe: true },
     }),
+    // keep module.id stable when vendor modules does not change
+    new webpack.HashedModuleIdsPlugin(),
+    // enable scope hoisting
+    new webpack.optimize.ModuleConcatenationPlugin(),
   ],
 })
 
