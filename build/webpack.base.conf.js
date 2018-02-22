@@ -10,10 +10,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-  node: {
-    // See: https://github.com/webpack-contrib/css-loader/issues/447
-    fs: "empty",
-  },
+  context: path.resolve(__dirname, "../"),
   entry: {
     app: "./src/main.js",
   },
@@ -39,7 +36,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "babel-loader",
-        include: [resolve("src"), resolve("test")],
+        include: [resolve("src"), resolve("test"), resolve("node_modules/webpack-dev-server/client")],
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -68,4 +65,16 @@ module.exports = {
     ],
   },
   plugins: [new ExtractTextPlugin("style.css")],
+  node: {
+    // prevent webpack from injecting useless setImmediate polyfill because Vue
+    // source contains it (although only uses it if it's native).
+    setImmediate: false,
+    // prevent webpack from injecting mocks to Node native modules
+    // that does not make sense for the client
+    dgram: "empty",
+    fs: "empty",
+    net: "empty",
+    tls: "empty",
+    child_process: "empty",
+  },
 }
