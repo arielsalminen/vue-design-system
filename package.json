@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Vue Design System is an open-source tool for prototyping UI design systems.",
   "author": "viljamis <me@viljamis.com>",
-  "main": "dist/system/system.min.js",
+  "main": "dist/system/system.js",
+  "files": [
+    "dist/system"
+  ],
   "homepage": "https://vueds.com",
   "private": false,
   "license": "MIT",
