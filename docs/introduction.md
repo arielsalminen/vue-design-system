@@ -1,8 +1,3 @@
-<a class="github-button" href="https://github.com/viljamis/vue-design-system" data-icon="octicon-star" data-show-count="true" aria-label="Star viljamis/vue-design-system on GitHub">Star</a>
-![Build status](https://travis-ci.org/viljamis/vue-design-system.svg?branch=master)
-![Dependencies status](https://david-dm.org/viljamis/vue-design-system.svg)
-![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 Vue Design System is an open-source tool for prototyping UI design systems. It
 provides you and your team a set of organized tools, patterns & practices to
 build upon, so that you can get started with the actual design system faster.
