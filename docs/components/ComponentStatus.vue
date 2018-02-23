@@ -1,20 +1,14 @@
 <template>
-  <component :is="type" class="component-status">
+  <div class="component-status">
     <div v-for="component in components" class="component">
       {{component.name}} <span>{{component.version}}</span>
     </div>
-  </component>
+  </div>
 </template>
 
 <script>
 export default {
   name: "ComponentStatus",
-  props: {
-    type: {
-      type: String,
-      default: "div",
-    },
-  },
   methods: {
     getComponents: function() {
       const contexts = [
@@ -28,11 +22,9 @@ export default {
         context.keys().forEach(key => components.push(context(key).default))
       })
 
-      // return components.forEach(c => console.log(c.name + ", version: " + c.version))
       return components
     },
   },
-  mounted() {},
   data() {
     return {
       components: this.getComponents(),
@@ -41,8 +33,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .component-status {
+  .component {
+  }
 }
 </style>
 
