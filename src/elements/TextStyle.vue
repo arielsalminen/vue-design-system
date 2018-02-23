@@ -6,10 +6,11 @@
 
 <script>
 /**
- * @version `ready`
+ * Text style enhances text with additional visual meaning. For example, using subdued text to de-emphasize it from its surrounding text.
  */
 export default {
   name: "TextStyle",
+  version: "ready",
   props: {
     /**
      * The html element name used for the text
@@ -25,6 +26,9 @@ export default {
     variation: {
       type: String,
       default: "default",
+      validator: value => {
+        return value.match(/(default|disabled|strong|positive|negative)/)
+      },
     },
   },
 }

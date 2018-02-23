@@ -6,20 +6,7 @@
 
 <script>
 /**
- * Components in the system are labelled with status labels that reflect their
- * state of completion. This is achieved using JSDoc style comments inside the
- * <script/> block. See example @version below. All available statuses are:
- *
- * STATUS:        COLOR:     DESCRIPTION:
- *
- * deprecated     Red        Component is deprecated
- * prototype      Red        Do not implement!
- * wip            Yellow     Work-in-progress
- * ready          Green      Ready to be used
- */
-
-/**
- * @version `prototype`
+ * “Example Component” is used to visually communicate core parts of the product and available actions.
  */
 export default {
   /**
@@ -28,6 +15,18 @@ export default {
    * HTML elements are a single word. See example below:
    */
   name: "ExampleComponent",
+  /**
+   * Components in the system are labelled with status labels that reflect their
+   * state of completion. See example below. All available statuses are:
+   *
+   * STATUS:        COLOR:     DESCRIPTION:
+   *
+   * deprecated     Red        Component is deprecated
+   * prototype      Red        Do not implement!
+   * wip            Yellow     Work-in-progress
+   * ready          Green      Ready to be used
+   */
+  version: "prototype",
   /**
    * Prop definitions should be as detailed as possible, specifying at least
    * type(s). See examples below:
@@ -47,6 +46,9 @@ export default {
     variation: {
       type: String,
       default: "default",
+      validator: value => {
+        return value.match(/(default|disabled|strong|positive|negative|tiny)/)
+      },
     },
   },
 }
