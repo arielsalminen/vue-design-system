@@ -6,10 +6,11 @@
 
 <script>
 /**
- * @version `wip`
+ * Used to build the outer wrapper of a page, including the page title and associated actions.
  */
 export default {
   name: "Wrapper",
+  version: "wip",
   props: {
     /**
      * The html element name used for the wrapper
