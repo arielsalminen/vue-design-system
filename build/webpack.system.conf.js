@@ -73,7 +73,7 @@ if (config.system.productionGzip) {
       test: new RegExp("\\.(" + config.system.productionGzipExtensions.join("|") + ")$"),
       threshold: 10240,
       minRatio: 0.8,
-    }),
+    })
   )
 }
 

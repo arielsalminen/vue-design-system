@@ -26,7 +26,7 @@ rm(path.join(config.system.assetsRoot, config.system.assetsSubDirectory), err =>
         children: false,
         chunks: false,
         chunkModules: false,
-      }) + "\n\n",
+      }) + "\n\n"
     )
 
     if (stats.hasErrors()) {
@@ -38,8 +38,8 @@ rm(path.join(config.system.assetsRoot, config.system.assetsSubDirectory), err =>
     console.log(
       chalk.yellow(
         "  Tip: You can now publish your library as a private NPM module.\n" +
-          "  Users can import it as an ES6 module: import DesignSystem from 'system'\n",
-      ),
+          "  Users can import it as an ES6 module: import DesignSystem from 'system'\n"
+      )
     )
   })
 })
