@@ -8,10 +8,11 @@ let cache = new Map()
 const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/)
 
 /**
- * @version `wip`
+ * Icons are used to visually communicate core parts of the product and available actions.
  */
 export default {
   name: "SvgIcon",
+  version: "wip",
   props: {
     /**
      * The name of the icon to display

@@ -6,10 +6,11 @@
 
 <script>
 /**
- * @version `ready`
+ * Text links are used to embed actions or pathways to more information in a sentence.
  */
 export default {
   name: "TextLink",
+  version: "ready",
   props: {
     /**
      * The URL for the link
@@ -25,6 +26,9 @@ export default {
     target: {
       type: String,
       default: "_self",
+      validator: value => {
+        return value.match(/(_self|_blank|_parent|_top)/)
+      },
     },
   },
 }

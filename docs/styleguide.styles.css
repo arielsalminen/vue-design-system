@@ -66,6 +66,10 @@ h2[class^="rsg--heading"] a {
   }
 }
 
+div[class^="rsg--docs"] > p[class^="rsg--para"] {
+  margin-bottom: 2.5rem;
+}
+
 div[class^="rsg--logo"] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -109,7 +113,7 @@ thead[class^="rsg--tableHead"] {
 .CodeMirror {
   background: #001123;
   border-radius: 3px;
-  margin-bottom: 56px;
+  margin-bottom: 70px;
 }
 
 @media (max-width: 400px) {
@@ -149,6 +153,10 @@ div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
 
 div[class^="rsg--sidebar"] a:hover {
   color: #fff;
+}
+
+div[class^="rsg--toolbar"] {
+  margin-top: 6px;
 }
 
 a[class^="rsg--link"].button {
@@ -207,7 +215,7 @@ strong a[class^="rsg--link"] {
   font-weight: 400;
   float: right;
   position: absolute;
-  top: 12px;
+  top: 14px;
   line-height: 1;
   right: 30px;
   background: #eee;
@@ -217,12 +225,6 @@ strong a[class^="rsg--link"] {
   font-size: 11px;
   border-radius: 50px;
   color: #333;
-}
-
-@media (max-width: 400px) {
-  .status {
-    top: 8px;
-  }
 }
 
 .status-ready {
@@ -239,6 +241,13 @@ strong a[class^="rsg--link"] {
 .status-deprecated {
   background: #ed4b37;
   color: #fff;
+}
+
+/* Hide status labels from token examples */
+#Color-container .status,
+#FontSize-container .status,
+#Spacing-container .status {
+  display: none;
 }
 
 .hide-private,

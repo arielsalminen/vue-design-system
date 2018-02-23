@@ -13,10 +13,11 @@
 
 <script>
 /**
- * @version `prototype`
+ * Shows how to layout and structure a home page.
  */
 export default {
   name: "Index",
+  version: "deprecated",
   metaInfo: {
     title: "Vue Design System",
     htmlAttrs: {

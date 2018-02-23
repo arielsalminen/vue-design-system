@@ -6,10 +6,11 @@
 
 <script>
 /**
- * @version `ready`
+ * Used as main page navigation in templates.
  */
 export default {
   name: "NavBar",
+  version: "ready",
   model: {
     prop: "active",
   },

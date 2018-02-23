@@ -6,10 +6,11 @@
 
 <script>
 /**
- * @version `prototype`
+ * Headings are used as the titles of each major section of a page in the interface. For example, templates generally use headings as their title.
  */
 export default {
   name: "Heading",
+  version: "prototype",
   props: {
     /**
      * The heading level used for the heading.
@@ -18,6 +19,9 @@ export default {
     level: {
       type: String,
       default: "h1",
+      validator: value => {
+        return value.match(/(h1|h2|h3|h4|h5|h6)/)
+      },
     },
   },
 }

@@ -13,7 +13,7 @@
 
 <script>
 /**
- * @version `prototype`
+ * Shows how to layout and structure an error page.
  */
 export default {
   name: "NotFound",

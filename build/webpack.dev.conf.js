@@ -85,7 +85,7 @@ module.exports = new Promise((resolve, reject) => {
           // should the console be cleared between each compilation?
           // default is true
           clearConsole: true,
-        }),
+        })
       )
 
       resolve(devWebpackConfig)
