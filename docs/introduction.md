@@ -49,6 +49,8 @@ GitHub.
   Clear labels that reflect the state of completion.
 * [Component QA](https://github.com/viljamis/vue-design-system/wiki/Component-QA):
   How to review new components and keep the quality high.
+* [Contributing](https://github.com/viljamis/vue-design-system/blob/master/CONTRIBUTING.md): A set of guidelines for contributing to the system.
+* [Code of Conduct](https://github.com/viljamis/vue-design-system/blob/master/CODE_OF_CONDUCT.md): By participating you agree to abide by its terms.
 * <a href="https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ)">Frequently Asked Questions</a>:
   How to use icons, how to use font-face, etc.
 

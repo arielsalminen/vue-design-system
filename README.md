@@ -34,6 +34,8 @@ Even though this is a system prototyping tool first and foremost, it has all the
 * [Editing Living Documentation](https://github.com/viljamis/vue-design-system/wiki/editing-living-documentation): How to customize the living system documentation.
 * [Component Status](https://github.com/viljamis/vue-design-system/wiki/Component-Status): Clear labels that reflect the state of completion.
 * [Component QA](https://github.com/viljamis/vue-design-system/wiki/Component-QA): How to review new components and keep the quality high.
+* [Contributing](https://github.com/viljamis/vue-design-system/blob/master/CONTRIBUTING.md): A set of guidelines for contributing to the system.
+* [Code of Conduct](https://github.com/viljamis/vue-design-system/blob/master/CODE_OF_CONDUCT.md): By participating you agree to abide by its terms.
 * [Frequently Asked Questions](<https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ)>): How to use icons, how to use font-face, etc.
 
 ## Examples
