@@ -40,7 +40,7 @@ Even though this is a system prototyping tool first and foremost, it has all the
 
 ## Examples
 
-* **[Vue Design System website](https://vueds.com)**
+* **[Official example](https://vueds.com/example)**
 
 ## Roadmap
 
