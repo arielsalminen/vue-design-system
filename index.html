@@ -142,10 +142,8 @@
     max-width: 500px;
     text-align: left;
   }
-  h1, h2, h3, h4 {
-    font-weight: 400;
-  }
-  svg, .img div, .logo { display: none }
+  h1,h2,h3,h4 { font-weight: 400 }
+  svg,.img div,.logo { display: none }
   img {
     width: 100%;
     height: auto;
@@ -497,9 +495,7 @@
       width: 86%;
     }
     @media (max-width: 700px) {
-      .intro {
-        margin: -13rem auto 0;
-      }
+      .intro { margin: -13rem auto 0 }
     }
 
     /**
@@ -576,7 +572,7 @@
     @media (max-width: 700px) {
       .feature-icon svg { height: calc(var(--space) / 1.4) }
     }
-    a.grid-item:hover svg { transform: translateZ(0) scale(1.1) }
+    .features a.grid-item:hover svg { transform: translateZ(0) scale(1.1) }
     .features a { color: var(--color-text) }
 
 
@@ -592,7 +588,7 @@
       display: inline-block;
       line-height: 1;
       vertical-align: middle;
-      margin: -2px 0 0 2px;
+      margin: -3px 0 0 2px;
       padding: 0.42rem 0.8rem;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -629,21 +625,20 @@
     }
     .img.example {
       border: 2px dashed var(--color-section-border);
-      color: var(--color-section-border);
       background: rgba(0,0,0, 0.015);
-      text-align: center;
       box-shadow: none;
-      font-size: 12vw;
     }
-    @media (max-width: 700px) {
-      .img.example { font-size: 25vw }
-    }
-    .img.example div {
-      transform: translateY(-50%);
+    .img.example svg {
+      fill: var(--color-section-border);
+      transform: translateY(-50%) translateX(-50%);
       position: absolute;
       display: block;
-      width: 100%;
+      width: 11%;
+      left: 50%;
       top: 50%;
+    }
+    @media (max-width: 700px) {
+      .img.example svg { width: 13% }
     }
 
     /**
@@ -655,6 +650,11 @@
       font-size: var(--font-tiny);
       text-align: center;
       position: relative;
+    }
+    @media (max-width: 700px) {
+      footer {
+        padding: var(--space-tiny);
+      }
     }
     footer a {
       color: var(--color-text);
@@ -771,7 +771,9 @@
             <h3>Vue Design System</h3>
           </a>
           <a href="https://github.com/viljamis/vue-design-system/issues/new" class="grid-item">
-            <div class="img example"><div>+</div></div>
+            <div class="img example">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M436 238H242V44c0-6.6-5.4-12-12-12h-12c-6.6 0-12 5.4-12 12v194H12c-6.6 0-12 5.4-12 12v12c0 6.6 5.4 12 12 12h194v194c0 6.6 5.4 12 12 12h12c6.6 0 12-5.4 12-12V274h194c6.6 0 12-5.4 12-12v-12c0-6.6-5.4-12-12-12z"/></svg>
+            </div>
             <h3>Got something to add?</h3>
           </a>
         </div>
@@ -780,7 +782,7 @@
   </main>
 
   <footer>
-    <p>Created by <a href="https://viljamis.com">Viljami Salminen</a> and <a href="https://github.com/viljamis/vue-design-system/graphs/contributors">contributors</a> &nbsp; | &nbsp; <a href="https://github.com/viljamis/vue-design-system/wiki">Docs</a> &nbsp; | &nbsp; <a href="https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ)">FAQ</a> &nbsp; | &nbsp; <a href="https://github.com/viljamis/vue-design-system">GitHub</a> &nbsp; | &nbsp; <a href="https://twitter.com/viljamis">Twitter</a> &nbsp; | &nbsp; <a href="https://github.com/viljamis/vue-design-system/issues/new">Found a Bug?</a></p>
+    <p>Created by <a href="https://viljamis.com">Viljami Salminen</a> and <a href="https://github.com/viljamis/vue-design-system/graphs/contributors">contributors</a> &nbsp; | &nbsp; <a href="https://github.com/viljamis/vue-design-system/wiki">Docs</a> &nbsp; | &nbsp; <a href="https://github.com/viljamis/vue-design-system/wiki/frequently-asked-questions-(FAQ)">FAQ</a> &nbsp; | &nbsp; <a href="https://github.com/viljamis/vue-design-system">GitHub</a> &nbsp; | &nbsp; <a href="https://twitter.com/viljamis">Twitter</a> &nbsp; | &nbsp; <a href="https://github.com/viljamis/vue-design-system/issues/new">Found&nbsp;a&nbsp;Bug?</a></p>
   </footer>
 
 </body>
