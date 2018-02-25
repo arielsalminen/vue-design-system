@@ -1,6 +1,6 @@
 {
   "name": "vue-design-system",
-  "version": "1.11.0",
+  "version": "1.11.2",
   "description": "Vue Design System is an open-source tool for prototyping UI design systems.",
   "author": "viljamis <me@viljamis.com>",
   "main": "dist/system/system.js",
