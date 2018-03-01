@@ -11,7 +11,7 @@
 export default {
   name: "Wrapper",
   version: "review",
-  addedInVersion: "1.0.0",
+  release: "1.0.0",
   props: {
     /**
      * The html element name used for the wrapper

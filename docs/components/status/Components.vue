@@ -26,7 +26,7 @@
       <thead>
         <tr>
           <th>Component Name</th>
-          <th>Added In</th>
+          <th>Released in</th>
           <th>Status</th>
         </tr>
       </thead>
@@ -34,7 +34,7 @@
         <tr v-for="component in components" class="component">
           <td v-if="component.name">{{component.name}}</td>
           <td v-else>N/A</td>
-          <td v-if="component.addedInVersion">{{component.addedInVersion}}</td>
+          <td v-if="component.release">{{component.release}}</td>
           <td v-else>N/A</td>
           <td v-if="component.version">
             <svg-icon

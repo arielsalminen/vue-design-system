@@ -27,7 +27,7 @@ export default {
    * ready          Green      Ready to be used
    */
   version: "prototype",
-  addedInVersion: "1.0.0",
+  release: "1.0.0",
   /**
    * Prop definitions should be as detailed as possible, specifying at least
    * type(s). See examples below:
