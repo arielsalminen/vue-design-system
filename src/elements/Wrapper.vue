@@ -10,7 +10,8 @@
  */
 export default {
   name: "Wrapper",
-  version: "wip",
+  version: "review",
+  addedInVersion: "1.0.0",
   props: {
     /**
      * The html element name used for the wrapper

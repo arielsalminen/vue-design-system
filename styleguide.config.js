@@ -39,8 +39,9 @@ module.exports = {
   require: [path.join(__dirname, "docs/styleguide.helper.js"), path.join(__dirname, "docs/styleguide.styles.css")],
   sections: [
     {
-      name: "Vue Design System",
-      content: "docs/introduction.md",
+      name: "Overview",
+      content: "docs/overview.md",
+      components: "docs/components/status/**/[A-Z]*.vue",
     },
     {
       name: "Principles",
@@ -49,7 +50,7 @@ module.exports = {
     {
       name: "Tokens",
       content: "docs/tokens.md",
-      components: "docs/components/**/[A-Z]*.vue",
+      components: "docs/components/tokens/**/[A-Z]*.vue",
     },
     {
       name: "Elements",
