@@ -1,7 +1,7 @@
 **Principles** are a set of established design principles that are at the heart
 of the design system. They should guide us when working with _Tokens_,
 _Elements_, _Patterns_ and _Templates_. _(Everything you see here is user
-editable, to change or remove this text, see `/docs/principles.md`. The
+editable, to change or remove this text, see [/docs/principles.md](https://github.com/viljamis/vue-design-system/blob/master/docs/principles.md). The
 principles below are just an example, you should replace them.)_
 
 1. **Design is how it works**

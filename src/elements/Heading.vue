@@ -11,6 +11,7 @@
 export default {
   name: "Heading",
   version: "prototype",
+  addedInVersion: "1.0.0",
   props: {
     /**
      * The heading level used for the heading.

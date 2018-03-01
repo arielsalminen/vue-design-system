@@ -100,7 +100,8 @@ div[class^="rsg--search"] input::-webkit-input-placeholder {
 
 #Color-container div[data-preview],
 #FontSize-container div[data-preview],
-#Spacing-container div[data-preview] {
+#Spacing-container div[data-preview],
+#Components-container div[data-preview] {
   background: transparent;
   padding: 0;
   border: 0;
@@ -125,7 +126,8 @@ thead[class^="rsg--tableHead"] {
 #vue-design-system + div[class^="rsg--toolbar"],
 #principles + div[class^="rsg--toolbar"],
 #content + div[class^="rsg--toolbar"],
-#guidelines + div[class^="rsg--toolbar"],
+#overview + div[class^="rsg--toolbar"],
+#components + div[class^="rsg--toolbar"],
 #tokens + div[class^="rsg--toolbar"],
 #color + div[class^="rsg--toolbar"],
 #fontsize + div[class^="rsg--toolbar"],
@@ -133,6 +135,8 @@ thead[class^="rsg--tableHead"] {
 #elements + div[class^="rsg--toolbar"],
 #patterns + div[class^="rsg--toolbar"],
 #templates + div[class^="rsg--toolbar"],
+#Components-container div[class^="rsg--tabs"],
+#Components-container .react-codemirror2,
 #Spacing-container div[class^="rsg--tabs"],
 #Spacing-container .react-codemirror2,
 #FontSize-container div[class^="rsg--tabs"],
@@ -245,6 +249,7 @@ strong a[class^="rsg--link"] {
 
 /* Hide status labels from token examples */
 #Color-container .status,
+#Components-container .status,
 #FontSize-container .status,
 #Spacing-container .status {
   display: none;
