@@ -12,8 +12,12 @@ export default {
         label.className = "status"
 
         if (value) {
-          label.innerHTML = value
           label.className += " status-" + value
+          if (value === "review") {
+            label.innerHTML = "under review"
+          } else {
+            label.innerHTML = value
+          }
         }
         container.appendChild(label)
       }

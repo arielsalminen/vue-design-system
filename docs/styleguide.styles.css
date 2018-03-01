@@ -236,12 +236,17 @@ strong a[class^="rsg--link"] {
   color: #fff;
 }
 
-.status-wip {
+.status-review,
+.status-under-review {
   background: #ffbb08;
   color: #000;
 }
 
-.status-prototype,
+.status-prototype {
+  background: rgb(37, 138, 239);
+  color: #fff;
+}
+
 .status-deprecated {
   background: #ed4b37;
   color: #fff;
