@@ -1,7 +1,7 @@
 export default {
   mounted() {
     const id = this.$options.name + "-container"
-    const value = this.$options.version
+    const value = this.$options.status
 
     if (id) {
       const container = document.getElementById(id)

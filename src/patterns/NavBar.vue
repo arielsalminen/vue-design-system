@@ -10,7 +10,7 @@
  */
 export default {
   name: "NavBar",
-  version: "ready",
+  status: "ready",
   release: "1.0.0",
   model: {
     prop: "active",

@@ -10,7 +10,7 @@
  */
 export default {
   name: "Wrapper",
-  version: "review",
+  status: "review",
   release: "1.0.0",
   props: {
     /**

@@ -10,7 +10,7 @@
  */
 export default {
   name: "TextLink",
-  version: "ready",
+  status: "ready",
   release: "1.0.0",
   props: {
     /**

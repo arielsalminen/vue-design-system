@@ -36,27 +36,27 @@
           <td v-else>N/A</td>
           <td v-if="component.release">{{component.release}}</td>
           <td v-else>N/A</td>
-          <td v-if="component.version">
+          <td v-if="component.status">
             <svg-icon
-              v-if="component.version === 'ready'"
+              v-if="component.status === 'ready'"
               name="ready"
               fill="#7cb518"
               size="16px"
             />
             <svg-icon
-              v-if="component.version === 'under-review' || component.version === 'review'"
+              v-if="component.status === 'under-review' || component.status === 'review'"
               name="review"
               :fill="tokens.color_ucla_gold.value"
               size="16px"
             />
             <svg-icon
-              v-if="component.version === 'prototype'"
+              v-if="component.status === 'prototype'"
               name="prototype"
               :fill="tokens.color_bleu_de_france.value"
               size="16px"
             />
             <svg-icon
-              v-if="component.version === 'deprecated'"
+              v-if="component.status === 'deprecated'"
               name="deprecated"
               :fill="tokens.color_vermilion.value"
               size="16px"

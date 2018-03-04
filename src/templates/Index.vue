@@ -17,7 +17,7 @@
  */
 export default {
   name: "Index",
-  version: "deprecated",
+  status: "deprecated",
   release: "1.0.0",
   metaInfo: {
     title: "Vue Design System",

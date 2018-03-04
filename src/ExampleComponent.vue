@@ -22,11 +22,11 @@ export default {
    * STATUS:        COLOR:     DESCRIPTION:
    *
    * deprecated     Red        Component is deprecated
-   * prototype      Yellow     Prototype, do not implement!
+   * prototype      Blue       Prototype, do not implement!
    * under-review   Yellow     Component is currently being reviewed
    * ready          Green      Ready to be used
    */
-  version: "prototype",
+  status: "prototype",
   release: "1.0.0",
   /**
    * Prop definitions should be as detailed as possible, specifying at least
