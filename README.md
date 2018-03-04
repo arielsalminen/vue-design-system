@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/github/tag/viljamis/vue-design-system.svg) ![Build status](https://travis-ci.org/viljamis/vue-design-system.svg?branch=master) ![Dependencies status](https://david-dm.org/viljamis/vue-design-system.svg) ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Build status](https://travis-ci.org/viljamis/vue-design-system.svg?branch=master) ![Dependencies status](https://david-dm.org/viljamis/vue-design-system.svg) ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 # Vue Design System
 
