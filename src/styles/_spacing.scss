@@ -1,0 +1,150 @@
+// --------------------------------------------------------
+//  VUE DESIGN SYSTEM SPACING HELPERS
+//  Based on the x-height of a given typeface
+//
+//  * INSET-SPACE: For interface containers
+//  * INSET-SQUISH-SPACE: For buttons, form elements, cells
+//  * STACK-SPACE: For vertically stacked content
+//  * INLINE-SPACE: For things displayed inline
+// --------------------------------------------------------
+
+$x-height: 1ex;
+$ratio: 1.618;
+
+$space-xxl: $x-height * ($ratio * 3);
+$space-xl: $x-height * ($ratio * 2);
+$space-l: $x-height * $ratio;
+$space: $x-height;
+$space-s: $x-height * ($ratio / 2);
+$space-xs: $x-height * ($ratio / 3);
+$space-xxs: $x-height * ($ratio / 4);
+
+$spaces: (
+  xxl: $space-xxl,
+  xl: $space-xl,
+  l: $space-l,
+  m: $space,
+  s: $space-s,
+  xs: $space-xs,
+  xxs: $space-xxs
+);
+
+// For demo purposes only
+$color-inset-space: pink;
+$color-main-inset-space: purple;
+$color-inset-squish-space: yellow;
+$color-stack-space: blue;
+$color-inline-space: orange;
+
+@mixin inset-space($value, $alternative: false) {
+  // Box-shadow for demo purposes only
+  @if $alternative == false {
+    box-shadow: inset 0 0 0 $value $color-inset-space;
+  } @else {
+    box-shadow: inset 0 0 0 $value $color-main-inset-space;
+  }
+  padding: $value;
+}
+
+@mixin inset-squish-space($value) {
+  // Box-shadow for demo purposes only
+  box-shadow: inset 0 0 0 ($value * 0.5) $color-inset-squish-space, inset $value 0 0 0 $color-inset-squish-space,
+    inset -#{$value} 0 0 0 $color-inset-squish-space;
+  padding: ($value * 0.5) $value;
+}
+
+@mixin stack-space($value) {
+  margin: 0 0 $value;
+  &:last-child:not(:only-child) {
+    margin-bottom: 0;
+    // Pseudo element for demo purposes only
+    &::after {
+      display: none;
+    }
+  }
+  // Pseudo element for demo purposes only
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -$value;
+    height: $value;
+    background: $color-stack-space;
+    width: 100%;
+  }
+}
+
+@mixin inline-space($value) {
+  margin: 0 $value 0 0;
+  &:last-child:not(:only-child) {
+    margin-right: 0;
+    // Pseudo element for demo purposes only
+    &::after {
+      display: none;
+    }
+  }
+  // Pseudo element for demo purposes only
+  &::after {
+    content: "";
+    position: absolute;
+    right: -$value;
+    top: 0;
+    height: 100%;
+    background: $color-inline-space;
+    width: $value;
+  }
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  @include inset-space($space-xl, true);
+  font-family: $font-family-text;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  @include inset-space($space-l);
+  @include stack-space($space-l);
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include stack-space($space-s);
+  line-height: $space-xl;
+}
+
+p {
+  @include stack-space($space);
+  line-height: $space-xl;
+}
+
+.inline {
+  @include inset-squish-space($space-xl);
+  @include inline-space($space);
+  background: transparent;
+  font-family: $font-family-text;
+  font-size: 100%;
+  color: black;
+  border: 0;
+}
