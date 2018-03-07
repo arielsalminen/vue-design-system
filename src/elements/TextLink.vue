@@ -41,7 +41,7 @@ export default {
   font-family: $font-family-text;
   color: $color-vermilion;
   text-decoration: underline;
-  @media #{$media-query-large} {
+  @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
   }
 }

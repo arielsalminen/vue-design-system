@@ -58,19 +58,19 @@ $color-nav-link-active: $color-bleu-de-france;
 
 .nav {
   font-family: $font-family-text;
-  font-size: $font-size-small;
+  font-size: $font-size-s;
   line-height: $line-height-base;
   color: $color-white;
-  margin: $space-base 0;
+  margin: $space 0;
   text-align: center;
   width: 100%;
-  @media #{$media-query-large} {
+  @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
   }
   a {
     color: $color-nav-link;
-    padding: $space-tiny 0;
-    margin: 0 $space-tiny;
+    padding: $space-xs 0;
+    margin: 0 $space-xs;
     text-decoration: none;
     display: inline-block;
     &:hover {

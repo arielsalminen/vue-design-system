@@ -48,11 +48,11 @@ export default {
   width: 100%;
 }
 .color {
-  font-size: $font-size-small;
+  font-size: $font-size-s;
   font-family: $font-family-text;
   color: $color-white;
-  height: $space-large;
-  line-height: $space-large;
+  height: $space-l;
+  line-height: $space-l;
   text-align: center;
   float: left;
   width: 100%;

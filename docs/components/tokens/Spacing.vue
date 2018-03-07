@@ -38,8 +38,8 @@ export default {
 }
 .space {
   box-shadow: $box-shadow-tiny-inset;
-  margin-bottom: $space-tiny;
-  font-size: $font-size-tiny;
+  margin-bottom: $space-xs;
+  font-size: $font-size-xs;
   font-family: $font-family-text;
   color: $color-rich-black;
   background: #f4f6f8;

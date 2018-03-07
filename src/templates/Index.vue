@@ -46,7 +46,7 @@ $color-template-text: $color-white;
 $color-template-link: $color-bleu-de-france;
 
 .index {
-  min-height: $space-xx-large * 4;
+  min-height: $space-xxl * 4;
   background: $color-template-background;
   background: linear-gradient(0deg, $color-template-background-bottom, $color-template-background-top 100%);
   text-align: center;
@@ -64,7 +64,7 @@ $color-template-link: $color-bleu-de-france;
     color: $color-template-link;
   }
   .wrapper {
-    max-width: $space-xx-large * 4.5;
+    max-width: $space-xxl * 4.5;
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
     left: 50%;

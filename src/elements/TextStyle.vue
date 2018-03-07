@@ -41,10 +41,10 @@ export default {
   color: $color-rich-black;
   font-family: $font-family-text;
   font-weight: $font-weight-regular;
-  font-size: $font-size-base;
+  font-size: $font-size;
   line-height: $line-height-base;
-  margin-bottom: $space-small;
-  @media #{$media-query-large} {
+  margin-bottom: $space-s;
+  @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
   }
   &:last-child {

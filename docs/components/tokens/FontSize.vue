@@ -42,7 +42,7 @@ export default {
   font-weight: $font-weight-bold;
   line-height: $line-height-heading;
   color: $color-rich-black;
-  margin-bottom: $space-small;
+  margin-bottom: $space-s;
   font-style: normal;
   span {
     margin-left: 10px;
