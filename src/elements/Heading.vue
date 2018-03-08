@@ -34,8 +34,8 @@ export default {
   font-family: $font-family-heading;
   line-height: $line-height-heading;
   color: $color-rich-black;
-  margin-bottom: $space;
-  @media #{$media-query-l} {
+  margin-bottom: $space-base;
+  @media #{$media-query-large} {
     // This is how you’d use design tokens with media queries
   }
   &:last-child {
@@ -43,32 +43,32 @@ export default {
   }
 }
 h1 {
-  letter-spacing: $letter-spacing-tiny;
-  font-size: $font-size-xl;
+  letter-spacing: $letter-spacing-x-small;
+  font-size: $font-size-x-large;
   font-weight: $font-weight-bold;
-  @media #{$media-query-l} {
-    font-size: $font-size-xxl;
+  @media #{$media-query-large} {
+    font-size: $font-size-xx-large;
   }
 }
 h2 {
   letter-spacing: $letter-spacing-small;
-  font-size: $font-size-xl;
+  font-size: $font-size-x-large;
   font-weight: $font-weight-bold;
 }
 h3 {
-  font-size: $font-size-l;
+  font-size: $font-size-large;
   font-weight: $font-weight-bold;
 }
 h4 {
-  font-size: $font-size;
+  font-size: $font-size-base;
   font-weight: $font-weight-semi-bold;
 }
 h5 {
-  font-size: $font-size-s;
+  font-size: $font-size-small;
   font-weight: $font-weight-regular;
 }
 h6 {
-  font-size: $font-size-xs;
+  font-size: $font-size-x-small;
   font-weight: $font-weight-regular;
 }
 </style>

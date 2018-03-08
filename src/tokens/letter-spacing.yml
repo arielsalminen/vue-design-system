@@ -12,7 +12,7 @@ props:
     value: "0"
   letter_spacing_small:
     value: "-0.5px"
-  letter_spacing_tiny:
+  letter_spacing_x_small:
     value: "-1px"
 global:
   type: number

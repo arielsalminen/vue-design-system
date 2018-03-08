@@ -104,47 +104,54 @@
       "originalValue": "hsla({!vermilion}, 53%, 1)",
       "name": "color_vermilion"
     },
-    "font_size_xxl": {
+    "font_size_xx_large": {
       "type": "number",
       "category": "font-size",
       "value": "64px",
       "originalValue": "64px",
-      "name": "font_size_xxl"
+      "name": "font_size_xx_large"
     },
-    "font_size_xl": {
+    "font_size_x_large": {
       "type": "number",
       "category": "font-size",
       "value": "48px",
       "originalValue": "48px",
-      "name": "font_size_xl"
+      "name": "font_size_x_large"
     },
-    "font_size_l": {
+    "font_size_large": {
       "type": "number",
       "category": "font-size",
       "value": "24px",
       "originalValue": "24px",
-      "name": "font_size_l"
+      "name": "font_size_large"
     },
-    "font_size": {
+    "font_size_base": {
       "type": "number",
       "category": "font-size",
       "value": "16px",
       "originalValue": "16px",
-      "name": "font_size"
+      "name": "font_size_base"
     },
-    "font_size_s": {
+    "font_size_small": {
       "type": "number",
       "category": "font-size",
       "value": "13px",
       "originalValue": "13px",
-      "name": "font_size_s"
+      "name": "font_size_small"
     },
-    "font_size_xs": {
+    "font_size_x_small": {
       "type": "number",
       "category": "font-size",
       "value": "11px",
       "originalValue": "11px",
-      "name": "font_size_xs"
+      "name": "font_size_x_small"
+    },
+    "font_size_xx_small": {
+      "type": "number",
+      "category": "font-size",
+      "value": "8px",
+      "originalValue": "8px",
+      "name": "font_size_xx_small"
     },
     "font_family_heading": {
       "type": "...",
@@ -230,33 +237,33 @@
       "originalValue": "100",
       "name": "z_index_sticky"
     },
-    "media_query_m": {
+    "media_query_medium": {
       "type": "...",
       "category": "media-query",
       "value": "(min-width: 768px)",
       "originalValue": "(min-width: 768px)",
-      "name": "media_query_m"
+      "name": "media_query_medium"
     },
-    "media_query_l": {
+    "media_query_large": {
       "type": "...",
       "category": "media-query",
       "value": "(min-width: 1024px)",
       "originalValue": "(min-width: 1024px)",
-      "name": "media_query_l"
+      "name": "media_query_large"
     },
-    "box_shadow_tiny": {
+    "box_shadow_small": {
       "type": "...",
       "category": "box-shadow",
       "value": "0 0 0 1px rgba(92,106,196,.1)",
       "originalValue": "0 0 0 1px rgba(92,106,196,.1)",
-      "name": "box_shadow_tiny"
+      "name": "box_shadow_small"
     },
-    "box_shadow_tiny_inset": {
+    "box_shadow_small_inset": {
       "type": "...",
       "category": "box-shadow",
       "value": "inset 0 0 0 1px rgba(0,0,0,.05)",
       "originalValue": "inset 0 0 0 1px rgba(0,0,0,.05)",
-      "name": "box_shadow_tiny_inset"
+      "name": "box_shadow_small_inset"
     },
     "letter_spacing_x_large": {
       "type": "number",
@@ -286,12 +293,12 @@
       "originalValue": "-0.5px",
       "name": "letter_spacing_small"
     },
-    "letter_spacing_tiny": {
+    "letter_spacing_x_small": {
       "type": "number",
       "category": "letter-spacing",
       "value": "-1px",
       "originalValue": "-1px",
-      "name": "letter_spacing_tiny"
+      "name": "letter_spacing_x_small"
     },
     "border_radius_default": {
       "type": "number",
@@ -307,47 +314,54 @@
       "originalValue": "50%",
       "name": "border_radius_circle"
     },
-    "space_xxl": {
+    "space_xx_large": {
       "type": "number",
       "category": "space",
       "value": "128px",
       "originalValue": "128px",
-      "name": "space_xxl"
+      "name": "space_xx_large"
     },
-    "space_xl": {
+    "space_x_large": {
       "type": "number",
       "category": "space",
       "value": "64px",
       "originalValue": "64px",
-      "name": "space_xl"
+      "name": "space_x_large"
     },
-    "space_l": {
+    "space_large": {
       "type": "number",
       "category": "space",
       "value": "48px",
       "originalValue": "48px",
-      "name": "space_l"
+      "name": "space_large"
     },
-    "space": {
+    "space_base": {
       "type": "number",
       "category": "space",
       "value": "24px",
       "originalValue": "24px",
-      "name": "space"
+      "name": "space_base"
     },
-    "space_s": {
+    "space_small": {
       "type": "number",
       "category": "space",
       "value": "16px",
       "originalValue": "16px",
-      "name": "space_s"
+      "name": "space_small"
     },
-    "space_xs": {
+    "space_x_small": {
       "type": "number",
       "category": "space",
       "value": "8px",
       "originalValue": "8px",
-      "name": "space_xs"
+      "name": "space_x_small"
+    },
+    "space_xx_small": {
+      "type": "number",
+      "category": "space",
+      "value": "4px",
+      "originalValue": "4px",
+      "name": "space_xx_small"
     },
     "line-height-base": {
       "type": "number",

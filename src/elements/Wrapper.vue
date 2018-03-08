@@ -27,10 +27,10 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   @include reset;
-  padding: $space-l;
+  padding: $space-large;
   width: 100%;
-  @media #{$media-query-l} {
-    padding: $space-l;
+  @media #{$media-query-large} {
+    padding: $space-large;
   }
 }
 </style>
