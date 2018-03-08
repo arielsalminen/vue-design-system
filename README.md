@@ -49,7 +49,7 @@ means to turn into your organization’s actual design system in the end.
 
 ## Changelog
 
-* `1.2.1` is the latest release.
+* `1.3.0` is the latest release.
 * See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 ## Authors and License
