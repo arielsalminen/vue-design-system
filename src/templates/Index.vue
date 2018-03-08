@@ -46,6 +46,8 @@ $color-template-text: $color-white;
 $color-template-link: $color-bleu-de-france;
 
 .index {
+  @include reset;
+  @include inset-space($space-base);
   min-height: $space-xx-large * 4;
   background: $color-template-background;
   background: linear-gradient(0deg, $color-template-background-bottom, $color-template-background-top 100%);

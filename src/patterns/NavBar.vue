@@ -57,11 +57,11 @@ $color-nav-link: $color-bleu-de-france;
 $color-nav-link-active: $color-bleu-de-france;
 
 .nav {
+  @include stack-space($space-base);
   font-family: $font-family-text;
   font-size: $font-size-small;
   line-height: $line-height-base;
   color: $color-white;
-  margin: $space-base 0;
   text-align: center;
   width: 100%;
   @media #{$media-query-large} {

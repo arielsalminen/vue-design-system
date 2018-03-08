@@ -63,9 +63,9 @@ export default {
  */
 .example-component {
   @include reset;
-  margin: $space-small;
+  @include stack-space($space-small);
   @media #{$media-query-medium} {
-    margin: $space-base;
+    @include stack-space($space-base);
   }
 }
 </style>

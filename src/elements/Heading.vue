@@ -31,15 +31,12 @@ export default {
 <style lang="scss" scoped>
 .heading {
   @include reset;
+  @include stack-space($space-base);
   font-family: $font-family-heading;
   line-height: $line-height-heading;
   color: $color-rich-black;
-  margin-bottom: $space-base;
   @media #{$media-query-large} {
     // This is how you’d use design tokens with media queries
-  }
-  &:last-child {
-    margin-bottom: 0;
   }
 }
 h1 {

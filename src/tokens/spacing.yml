@@ -16,8 +16,6 @@ props:
     value: "16px"
   space_x_small:
     value: "8px"
-  space_xx_small:
-    value: "4px"
 global:
   type: number
   category: space

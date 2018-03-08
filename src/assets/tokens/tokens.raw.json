@@ -146,13 +146,6 @@
       "originalValue": "11px",
       "name": "font_size_x_small"
     },
-    "font_size_xx_small": {
-      "type": "number",
-      "category": "font-size",
-      "value": "8px",
-      "originalValue": "8px",
-      "name": "font_size_xx_small"
-    },
     "font_family_heading": {
       "type": "...",
       "category": "font",
@@ -355,13 +348,6 @@
       "value": "8px",
       "originalValue": "8px",
       "name": "space_x_small"
-    },
-    "space_xx_small": {
-      "type": "number",
-      "category": "space",
-      "value": "4px",
-      "originalValue": "4px",
-      "name": "space_xx_small"
     },
     "line-height-base": {
       "type": "number",
