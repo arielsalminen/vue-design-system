@@ -14,7 +14,7 @@ props:
     value: "16px"
   font_size_small:
     value: "13px"
-  font_size_tiny:
+  font_size_x_small:
     value: "11px"
 global:
   type: number

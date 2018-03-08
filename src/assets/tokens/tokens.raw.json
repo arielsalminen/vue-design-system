@@ -139,12 +139,12 @@
       "originalValue": "13px",
       "name": "font_size_small"
     },
-    "font_size_tiny": {
+    "font_size_x_small": {
       "type": "number",
       "category": "font-size",
       "value": "11px",
       "originalValue": "11px",
-      "name": "font_size_tiny"
+      "name": "font_size_x_small"
     },
     "font_family_heading": {
       "type": "...",
@@ -244,19 +244,19 @@
       "originalValue": "(min-width: 1024px)",
       "name": "media_query_large"
     },
-    "box_shadow_tiny": {
+    "box_shadow_small": {
       "type": "...",
       "category": "box-shadow",
       "value": "0 0 0 1px rgba(92,106,196,.1)",
       "originalValue": "0 0 0 1px rgba(92,106,196,.1)",
-      "name": "box_shadow_tiny"
+      "name": "box_shadow_small"
     },
-    "box_shadow_tiny_inset": {
+    "box_shadow_small_inset": {
       "type": "...",
       "category": "box-shadow",
       "value": "inset 0 0 0 1px rgba(0,0,0,.05)",
       "originalValue": "inset 0 0 0 1px rgba(0,0,0,.05)",
-      "name": "box_shadow_tiny_inset"
+      "name": "box_shadow_small_inset"
     },
     "letter_spacing_x_large": {
       "type": "number",
@@ -286,12 +286,12 @@
       "originalValue": "-0.5px",
       "name": "letter_spacing_small"
     },
-    "letter_spacing_tiny": {
+    "letter_spacing_x_small": {
       "type": "number",
       "category": "letter-spacing",
       "value": "-1px",
       "originalValue": "-1px",
-      "name": "letter_spacing_tiny"
+      "name": "letter_spacing_x_small"
     },
     "border_radius_default": {
       "type": "number",
@@ -342,12 +342,12 @@
       "originalValue": "16px",
       "name": "space_small"
     },
-    "space_tiny": {
+    "space_x_small": {
       "type": "number",
       "category": "space",
       "value": "8px",
       "originalValue": "8px",
-      "name": "space_tiny"
+      "name": "space_x_small"
     },
     "line-height-base": {
       "type": "number",

@@ -37,9 +37,9 @@ export default {
   width: 100%;
 }
 .space {
-  box-shadow: $box-shadow-tiny-inset;
-  margin-bottom: $space-tiny;
-  font-size: $font-size-tiny;
+  box-shadow: $box-shadow-small-inset;
+  margin-bottom: $space-x-small;
+  font-size: $font-size-x-small;
   font-family: $font-family-text;
   color: $color-rich-black;
   background: #f4f6f8;

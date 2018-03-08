@@ -33,6 +33,7 @@ means to turn into your organization’s actual design system in the end.
 * [Directory Structure](https://github.com/viljamis/vue-design-system/wiki/directory-structure): What goes where and why.
 * [Working with the System](https://github.com/viljamis/vue-design-system/wiki/working-with-the-system): Concrete examples on how to work with `Tokens`, `Elements` , `Patterns` and `Templates`.
 * [Editing Living Documentation](https://github.com/viljamis/vue-design-system/wiki/editing-living-documentation): How to customize the living system documentation.
+* [Spacing](https://github.com/viljamis/vue-design-system/wiki/spacing): A framework for creating a predictable and harmonious spacing.
 * [Component Status](https://github.com/viljamis/vue-design-system/wiki/Component-Status): Clear labels that reflect the state of completion.
 * [Component QA](https://github.com/viljamis/vue-design-system/wiki/Component-QA): How to review new components and keep the quality high.
 * [Contributing](https://github.com/viljamis/vue-design-system/blob/master/CONTRIBUTING.md): A set of guidelines for contributing to the system.
@@ -49,7 +50,7 @@ means to turn into your organization’s actual design system in the end.
 
 ## Changelog
 
-* `1.2.1` is the latest release.
+* `1.3.0` is the latest release.
 * See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 ## Authors and License
