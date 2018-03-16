@@ -8,7 +8,7 @@
     "dist/system"
   ],
   "homepage": "https://vueds.com",
-  "private": false,
+  "private": true,
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --inline --config build/webpack.dev.conf.js",
@@ -38,7 +38,7 @@
       [
         "env",
         {
-          "modules": false
+          "modules": "umd"
         }
       ],
       "stage-2"
