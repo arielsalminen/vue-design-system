@@ -1,7 +1,11 @@
 import instance from "@/utils/vueInstance"
 
 // Defines contexts to require
-const contexts = [require.context("@/elements/", true, /\.vue$/), require.context("@/patterns/", true, /\.vue$/)]
+const contexts = [
+  require.context("@/elements/", true, /\.vue$/),
+  require.context("@/patterns/", true, /\.vue$/),
+  require.context("@/templates/", true, /\.vue$/),
+]
 
 const components = []
 contexts.forEach(context => {
