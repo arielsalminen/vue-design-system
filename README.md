@@ -6,10 +6,9 @@
 
 The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist), [Vue Webpack Template](http://vuejs-templates.github.io/webpack/) & [Theo](https://github.com/salesforce-ux/theo) and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
-Even though this is a system prototyping tool first and foremost, it has all the
-means to turn into your organization’s actual design system in the end.
+Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
 
-**Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See also [the official website](https://vueds.com) of Vue Design System.**
+**Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See also [the official website](https://vueds.com) of Vue Design System and [read my article](https://viljamis.com/2018/vue-design-system/) on to the processes and workflow I use to get started with a new design system project.**
 
 [![Screenshot](./preview.gif)](https://vueds.com/)
 
@@ -50,7 +49,7 @@ means to turn into your organization’s actual design system in the end.
 
 ## Changelog
 
-* `1.3.0` is the latest release.
+* `1.3.1` is the latest release.
 * See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 ## Authors and License
