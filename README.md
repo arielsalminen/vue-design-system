@@ -6,23 +6,23 @@
 
 The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist), [Vue Webpack Template](http://vuejs-templates.github.io/webpack/) & [Theo](https://github.com/salesforce-ux/theo) and is aimed for designers and front-end developers who have at least basic knowledge of component based workflows + HTML, SCSS & JavaScript.
 
-Even though this is a system prototyping tool first and foremost, it has all the means to turn into your organization’s actual design system in the end.
-
 **Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See also [the official website](https://vueds.com) of Vue Design System and [read my article](https://viljamis.com/2018/vue-design-system/) on the processes and workflow I use to get started with a new design system project.**
 
 [![Screenshot](./preview.gif)](https://vueds.com/)
 
 ## Features
 
-* A set of interconnected patterns & practices for you and your team.
-* Global design tokens that can be used inside any component.
-* Design System can be used as an NPM dependency in another project.
-* Simple and sane SVG icon and @font-face defaults.
-* Live reloading for both the app and the system documentation.
-* Automatic generation of documentation.
+* A set of interconnected patterns & practices for you and your team with comprehensive documentation.
+* A well thought-out terminology, naming conventions, and hierarchy for the whole design system to save time.
+* Get an automated overview of how your design system progresses over time and what’s still left to do.
+* Global design tokens in YAML format that you can use inside any component. In both CSS and JavaScript.
+* Automatic generation of living, user editable documentation using custom version of Vue Styleguidist.
+* Easily export and use your Design System as an NPM dependency in another Vue.js project (or anywhere really).
+* Create a token, an element, or a pattern, and it’s immediately available across all your Vue.js components.
+* Pre-configured Prettier setup for auto-formatting code on both save and before committing changes to Git.
+* Live Reloading, Autoprefixing, SCSS, and helper functions + simple and sane defaults for SVG and Webfont usage out-of-the-box.
 * Documentation and the app logic are separated, so you can have public docs while the app itself is private.
-* Autoprefixing, SCSS, Webpack & CSS extraction included by default _(Extend with lint-on-save & unit tests)._
-* And more…
+* [And more…](https://vueds.com/)
 
 ## Documentation
 
