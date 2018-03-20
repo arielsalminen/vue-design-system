@@ -6,7 +6,7 @@
     ]"/>
     <wrapper>
       <heading level="h1">Vue Design System</heading>
-      <text-style><text-link href="https://vueds.com">Vue Design System</text-link> is an open-source tool for prototyping UI design systems. It provides you and your team a set of organized tools, patterns &amp; practices to build upon, so that you can get started with the actual design system faster.</text-style>
+      <text-style><text-link href="https://vueds.com">Vue Design System</text-link> is an open-source tool for building design systems with Vue.js. It provides you and your team a set of organized tools, patterns &amp; practices. It works as the foundation for your application development.</text-style>
     </wrapper>
   </component>
 </template>
