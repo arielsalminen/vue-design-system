@@ -1,6 +1,8 @@
 /* VUE DESIGN SYSTEM SPACING HELPERS
 --------------------------------------------- */
 
+$spacing-ratio: 1.618;
+
 /*
   INSET-SPACE: For interface containers.
   INSET-SQUISH-SPACE: For buttons, form elements, cells.
@@ -19,14 +21,14 @@
 //
 // @param  {Number} inset-squish-space to set
 @mixin inset-squish-space($value) {
-  padding: ($value * 0.5) $value;
+  padding: round($value / $spacing-ratio) $value;
 }
 
 // Create stack-space
 //
 // @param  {Number} stack-space to set
 @mixin stack-space($value) {
-  margin: 0 0 $value;
+  margin-bottom: $value;
   &:last-child:not(:only-child) {
     margin-bottom: 0;
   }
@@ -36,8 +38,8 @@
 //
 // @param  {Number} inline-space to set
 @mixin inline-space($value) {
-  margin: 0 $value 0 0;
-  &:last-child:not(:only-child) {
+  margin-right: $value;
+  &:last-child {
     margin-right: 0;
   }
 }
