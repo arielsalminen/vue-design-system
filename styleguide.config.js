@@ -26,7 +26,9 @@ module.exports = {
       },
     },
   },
-  highlightTheme: "night",
+  editorConfig: {
+    theme: "night",
+  },
   assetsDir: path.join(__dirname, "static"),
   showCode: true,
   showUsage: true,
