@@ -1,3 +1,7 @@
+<template>
+  <div />
+</template>
+
 <script>
 /**
  * Used to trigger “mounted” inside empty styleguide sections

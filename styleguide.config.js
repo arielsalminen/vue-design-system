@@ -7,7 +7,7 @@ module.exports = {
   navigation: true,
   theme: {
     maxWidth: "100%",
-    sidebarWidth: 210,
+    sidebarWidth: 240,
     color: {
       link: "#2389ee",
       linkHover: "#1960a7",
@@ -52,7 +52,7 @@ module.exports = {
       components: "docs/utils/section.vue",
     },
     {
-      name: "Tokens",
+      name: "Design Tokens",
       content: "docs/tokens.md",
       components: "docs/components/tokens/**/[A-Z]*.vue",
     },

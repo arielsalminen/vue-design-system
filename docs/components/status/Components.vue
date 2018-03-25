@@ -123,6 +123,7 @@ export default {
     font-size: $font-size-small;
     font-weight: $font-weight-bold;
     color: $color-oxford-blue;
+    border-radius: $border-radius-default;
     text-align: left;
   }
   tr {

@@ -28,6 +28,10 @@ export default {
 .wrapper {
   @include reset;
   @include inset-space($space-large);
+  font-family: $font-family-text;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
   width: 100%;
   @media #{$media-query-large} {
     @include inset-space($space-x-large);
