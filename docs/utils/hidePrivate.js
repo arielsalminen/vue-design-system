@@ -6,12 +6,13 @@
 export default {
   mounted() {
     if (!document.querySelector(".hide-private")) {
-      const contentHeading = document.getElementById("private-components")
-      const navHeading = document.querySelector("a[href='#private-components']")
-
-      if (contentHeading && navHeading) {
-        contentHeading.parentNode.classList.add("hide-private")
+      const navHeading = document.querySelector("ul a[href='/#!/Private Components']")
+      const gettingStarted = document.querySelector("ul a[href='/#!/Getting Started']")
+      if (navHeading && navHeading.parentNode) {
         navHeading.parentNode.classList.add("hide-private")
+      }
+      if (gettingStarted && gettingStarted.parentNode) {
+        gettingStarted.parentNode.querySelector("ul").classList.add("hide-private")
       }
     }
   },

@@ -4,6 +4,7 @@ const merge = require("webpack-merge")
 
 module.exports = {
   title: "Vue Design System",
+  navigation: true,
   theme: {
     maxWidth: "100%",
     sidebarWidth: 210,
@@ -41,12 +42,12 @@ module.exports = {
   require: [path.join(__dirname, "docs/styleguide.helper.js"), path.join(__dirname, "docs/styleguide.styles.css")],
   sections: [
     {
-      name: "Overview",
-      content: "docs/overview.md",
+      name: "Getting Started",
+      content: "docs/getting-started.md",
       components: "docs/components/status/**/[A-Z]*.vue",
     },
     {
-      name: "Principles",
+      name: "Design Principles",
       content: "docs/principles.md",
     },
     {
@@ -68,6 +69,14 @@ module.exports = {
       name: "Templates",
       content: "docs/templates.md",
       components: "src/templates/**/[A-Z]*.vue",
+    },
+    {
+      name: "Downloads",
+      content: "docs/downloads.md",
+    },
+    {
+      name: "FAQ",
+      content: "docs/faq.md",
     },
     {
       /**
