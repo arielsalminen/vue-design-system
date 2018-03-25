@@ -273,6 +273,6 @@ iframe {
   float: left;
 }
 
-.vueds-collapse {
-  display: none;
+a.vueds-active {
+  color: #fff !important;
 }
