@@ -49,6 +49,7 @@ module.exports = {
     {
       name: "Design Principles",
       content: "docs/principles.md",
+      components: "docs/utils/section.vue",
     },
     {
       name: "Tokens",
@@ -73,10 +74,12 @@ module.exports = {
     {
       name: "Downloads",
       content: "docs/downloads.md",
+      components: "docs/utils/section.vue",
     },
     {
       name: "FAQ",
       content: "docs/faq.md",
+      components: "docs/utils/section.vue",
     },
     {
       /**

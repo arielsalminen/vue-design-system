@@ -5,8 +5,9 @@
 export default {
   mounted() {
     const currentURL = window.location.hash
-    const navLinks = document.querySelectorAll("div[class^='rsg--sidebar'] div[class^='rsg--root'] > ul > li > a")
-    const currentPage = document.querySelector("div[class^='rsg--sidebar'] a[href='/" + currentURL + "']")
+    const sidebar = document.querySelector("div[class^='rsg--sidebar']")
+    const navLinks = sidebar.querySelectorAll("div[class^='rsg--root'] > ul > li > a")
+    const currentPage = sidebar.querySelector("div[class^='rsg--root'] > ul > li > a[href='/" + currentURL + "']")
     if (currentURL && currentPage) {
       currentPage.classList.add("vueds-active")
     }

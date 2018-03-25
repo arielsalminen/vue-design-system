@@ -1,6 +1,124 @@
+/**
+ * These are style overrides for Vue Styleguidist
+ * (the odd formatting hence most of the ID’s are dynamic)
+ */
+
+/* BASE
+--------------------------------------------- */
+
 div.rsg--root-1 {
   background: #fff;
 }
+
+div[class^="rsg--root"] {
+  position: relative;
+}
+
+main[class^="rsg--content"] {
+  padding: 16px 32px;
+}
+
+section > div[class^="rsg--wrapper"] + article[class^="rsg--root"] {
+  margin: 0 0 2.5rem !important;
+}
+
+/* TYPOGRAPHY
+--------------------------------------------- */
+
+/* Main headings */
+div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] {
+  display: block;
+  width: 100%;
+  padding: 32px 32px;
+  width: calc(100% + 64px);
+  margin: -16px -32px 2rem;
+  background: #e9f3fd;
+}
+div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
+  font-weight: 400;
+  color: rgb(0, 38, 77);
+  letter-spacing: -1px;
+}
+div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a:hover {
+  text-decoration: none;
+  cursor: default;
+}
+@media (max-width: 400px) {
+  section[class^="rsg--root"] > h1 a {
+    margin: 1rem 0 1rem;
+    padding-bottom: 0.3rem;
+    font-size: 42px;
+  }
+}
+
+/* Heading, level 2 */
+h2[class^="rsg--heading"],
+h2[class^="rsg--heading"] a {
+  font-weight: 600 !important;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+}
+@media (max-width: 400px) {
+  header[class^="rsg--header"] > h2 a,
+  h2[class^="rsg--h2"],
+  h2[class^="rsg--h2"] a {
+    font-size: 28px;
+  }
+}
+
+/* Paragraphs */
+div[class^="rsg--docs"] > p[class^="rsg--para"] {
+  margin-bottom: 2.5rem;
+}
+
+/* Bold needs !important to work */
+strong a[class^="rsg--link"] {
+  font-weight: 600 !important;
+}
+
+/* SIDEBAR
+--------------------------------------------- */
+
+/* Sidebar logo */
+div[class^="rsg--logo"] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+div[class^="rsg--logo"] h1 {
+  font-weight: 400;
+}
+
+/* Sidebar search */
+div[class^="rsg--search"] input {
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.8rem 0.58rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+div[class^="rsg--search"] input:focus {
+  border: 1px solid #2389ee;
+}
+div[class^="rsg--search"] input::-webkit-input-placeholder {
+  color: rgba(150, 200, 255, 0.3);
+}
+
+/* Sidebar 1st level section links */
+ul[class^="rsg--list"] a[class*=" rsg--heading"],
+div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
+  font-weight: 600;
+}
+
+/* Sidebar active link */
+a.vueds-active {
+  color: rgb(235, 59, 36) !important;
+}
+
+/* Sidebar hover */
+div[class^="rsg--sidebar"] a:hover {
+  color: #fff;
+}
+
+/* CODE PREVIEWS
+--------------------------------------------- */
 
 pre[class^="rsg--pre"],
 div[class^="rsg--preview"] {
@@ -13,89 +131,9 @@ div[class^="rsg--preview"] {
   overflow-x: auto;
 }
 
-div[class^="rsg--tabButtons"],
-div[class^="rsg--controls"],
-div[class^="rsg--pathline"],
-footer[class^="rsg--footer"] {
-  display: none;
-}
-
-div[class^="rsg--tabs"],
-table[class^="rsg--table"] {
-  margin-bottom: 16px;
-  overflow-x: auto;
-}
-
-div[class^="rsg--root"] {
-  position: relative;
-}
-
-div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] {
-  display: block;
-  width: 100%;
-  padding-bottom: 1rem;
-  margin: 3rem 0 2rem;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-
-@media (max-width: 400px) {
-  section[class^="rsg--root"] > h1 a {
-    margin: 1rem 0 1rem;
-    padding-bottom: 0.3rem;
-    font-size: 42px;
-  }
-}
-
-h2[class^="rsg--heading"],
-h2[class^="rsg--heading"] a {
-  font-weight: 600 !important;
-  letter-spacing: -0.5px;
-  line-height: 1.3;
-}
-
-@media (max-width: 400px) {
-  header[class^="rsg--header"] > h2 a,
-  h2[class^="rsg--h2"],
-  h2[class^="rsg--h2"] a {
-    font-size: 28px;
-  }
-}
-
-div[class^="rsg--docs"] > p[class^="rsg--para"] {
-  margin-bottom: 2.5rem;
-}
-
-div[class^="rsg--logo"] {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-div[class^="rsg--logo"] h1 {
-  font-weight: 400;
-}
-
-div[class^="rsg--search"] input {
-  color: #fff;
-  border: 1px solid transparent;
-  padding: 0.5rem 0.8rem 0.58rem;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-div[class^="rsg--search"] input:focus {
-  border: 1px solid #2389ee;
-}
-
 h1#templates + div div[class^="rsg--preview"],
 h1#templates + article + div div[class^="rsg--preview"] {
   padding: 0;
-}
-
-div[class^="rsg--search"] input::-webkit-input-placeholder {
-  color: rgba(150, 200, 255, 0.3);
 }
 
 #Color-container div[data-preview],
@@ -107,113 +145,34 @@ div[class^="rsg--search"] input::-webkit-input-placeholder {
   border: 0;
 }
 
+/* Code tabs and table */
+div[class^="rsg--tabs"],
+table[class^="rsg--table"] {
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
 thead[class^="rsg--tableHead"] {
   border: 0;
 }
+div[class^="rsg--toolbar"] {
+  margin-top: 6px;
+}
 
+/* Codemirror */
 .CodeMirror {
   background: #001123;
   border-radius: 3px;
   margin-bottom: 70px;
 }
-
 @media (max-width: 400px) {
   .CodeMirror {
     margin-bottom: 16px;
   }
 }
 
-#vue-design-system + div[class^="rsg--toolbar"],
-#principles + div[class^="rsg--toolbar"],
-#content + div[class^="rsg--toolbar"],
-#overview + div[class^="rsg--toolbar"],
-#components + div[class^="rsg--toolbar"],
-#tokens + div[class^="rsg--toolbar"],
-#color + div[class^="rsg--toolbar"],
-#fontsize + div[class^="rsg--toolbar"],
-#spacing + div[class^="rsg--toolbar"],
-#elements + div[class^="rsg--toolbar"],
-#patterns + div[class^="rsg--toolbar"],
-#templates + div[class^="rsg--toolbar"],
-#Components-container div[class^="rsg--tabs"],
-#Components-container .react-codemirror2,
-#Spacing-container div[class^="rsg--tabs"],
-#Spacing-container .react-codemirror2,
-#FontSize-container div[class^="rsg--tabs"],
-#FontSize-container .react-codemirror2,
-#Color-container div[class^="rsg--tabs"],
-#Color-container .react-codemirror2 {
-  display: none;
-}
+/* COMPONENT STATUS LABELS
+--------------------------------------------- */
 
-section > div[class^="rsg--wrapper"] + article[class^="rsg--root"] {
-  margin: 0 0 2.5rem !important;
-}
-
-ul[class^="rsg--list"] a[class*=" rsg--heading"],
-div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
-  font-weight: 600;
-}
-
-div[class^="rsg--sidebar"] a:hover {
-  color: #fff;
-}
-
-div[class^="rsg--toolbar"] {
-  margin-top: 6px;
-}
-
-a[class^="rsg--link"].button {
-  width: 100%;
-  text-align: center;
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  border: 1px solid #2389ee;
-  background: #2389ee;
-  border-radius: 3px;
-  font-weight: 600;
-  display: inline-block;
-  padding: 0.85rem 2.1rem;
-  margin: 0 0.2rem 0.4rem 0;
-  color: #fff;
-}
-
-a[class^="rsg--link"].button:hover {
-  border: 1px solid #1960a7;
-  background: #1960a7;
-}
-
-a[class^="rsg--link"].button--secondary:hover {
-  border: 1px solid #ddd;
-  background: #ddd;
-}
-
-a[class^="rsg--link"].button:active {
-  opacity: 0.8;
-}
-
-a[class^="rsg--link"].button:first-child {
-  margin-top: 1.5rem;
-}
-
-@media (min-width: 600px) {
-  a[class^="rsg--link"].button {
-    width: auto;
-    margin: 1.5rem 0.4rem 1rem 0;
-  }
-}
-
-a[class^="rsg--link"].button--secondary {
-  background: transparent;
-  border: 1px solid #ccc;
-  color: #333;
-}
-
-strong a[class^="rsg--link"] {
-  font-weight: 600 !important;
-}
-
-/* Labels used for component statuses */
 .status {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -252,27 +211,55 @@ strong a[class^="rsg--link"] {
   color: #fff;
 }
 
-/* Hide status labels from token examples */
+/* HIDDEN STYLEGUIDIST FUNCTIONALITY
+--------------------------------------------- */
+
+div[class^="rsg--tabButtons"],
+div[class^="rsg--controls"],
+div[class^="rsg--pathline"],
+footer[class^="rsg--footer"] {
+  display: none;
+}
+
+#vue-design-system + div[class^="rsg--toolbar"],
+#principles + div[class^="rsg--toolbar"],
+#content + div[class^="rsg--toolbar"],
+#overview + div[class^="rsg--toolbar"],
+#components + div[class^="rsg--toolbar"],
+#tokens + div[class^="rsg--toolbar"],
+#color + div[class^="rsg--toolbar"],
+#fontsize + div[class^="rsg--toolbar"],
+#spacing + div[class^="rsg--toolbar"],
+#elements + div[class^="rsg--toolbar"],
+#patterns + div[class^="rsg--toolbar"],
+#templates + div[class^="rsg--toolbar"],
+#Components-container div[class^="rsg--tabs"],
+#Components-container .react-codemirror2,
+#Spacing-container div[class^="rsg--tabs"],
+#Spacing-container .react-codemirror2,
+#FontSize-container div[class^="rsg--tabs"],
+#FontSize-container .react-codemirror2,
+#Color-container div[class^="rsg--tabs"],
+#Color-container .react-codemirror2,
+#VuedsSection-container {
+  display: none !important;
+}
+
+/* HIDDEN VUE DESIGN SYSTEM FUNCTIONALITY
+--------------------------------------------- */
+
+/* Hide status labels from tokens as they don’t make much sense */
 #Color-container .status,
 #Components-container .status,
 #FontSize-container .status,
 #Spacing-container .status {
-  display: none;
+  display: none !important;
 }
 
+/* Hide private components */
 .hide-private,
 .hide-private + div,
 a[href="#private-components"],
 a[href="#private-components"] + ul {
   display: none !important;
-}
-
-/* Fix for Github button */
-iframe {
-  margin-right: 4px;
-  float: left;
-}
-
-a.vueds-active {
-  color: #fff !important;
 }

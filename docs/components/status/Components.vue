@@ -146,6 +146,10 @@ export default {
     flex-direction: row;
     align-items: center;
     display: flex;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     li {
       margin: 0 $space-base 0 0;
       color: tint($color-rich-black, 30%);
