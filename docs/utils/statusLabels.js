@@ -1,3 +1,8 @@
+/**
+ * This is Vue Design System’s helper util that
+ * creates component status labels.
+ */
+
 export default {
   mounted() {
     const id = this.$options.name + "-container"

@@ -1,3 +1,7 @@
+/**
+ * System.js creates the Design System Library.
+ * Used both in dev environment and when exporting the system.
+ */
 import instance from "@/utils/vueInstance"
 
 // Defines contexts to require

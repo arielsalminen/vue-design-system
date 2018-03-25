@@ -1,5 +1,6 @@
 /**
- * Provides collapsible nav for Vue Styleguidist
+ * This is Vue Design System’s helper util that
+ * highlights the currently active nav item.
  */
 
 export default {
