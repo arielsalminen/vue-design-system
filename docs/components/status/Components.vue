@@ -123,8 +123,15 @@ export default {
     font-size: $font-size-small;
     font-weight: $font-weight-bold;
     color: $color-oxford-blue;
-    border-radius: $border-radius-default;
     text-align: left;
+    &:first-child {
+      border-top-left-radius: $border-radius-default;
+      border-bottom-left-radius: $border-radius-default;
+    }
+    &:last-child {
+      border-top-right-radius: $border-radius-default;
+      border-bottom-right-radius: $border-radius-default;
+    }
   }
   tr {
     border-bottom: 1px solid #dfe3e6;

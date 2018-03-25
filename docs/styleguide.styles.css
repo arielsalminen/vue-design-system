@@ -17,6 +17,11 @@ div[class^="rsg--root"] {
 main[class^="rsg--content"] {
   padding: 16px 60px;
 }
+@media (max-width: 600px) {
+  main[class^="rsg--content"] {
+    padding: 16px 32px;
+  }
+}
 
 header[class^="rsg--header"] > div[class^="rsg--wrapper"],
 section > div[class^="rsg--wrapper"] + article[class^="rsg--root"],
@@ -44,6 +49,19 @@ div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] {
   width: calc(100% + 120px);
   margin: -16px -60px 40px;
   background: #eff6fd;
+  font-size: 48px;
+}
+@media (max-width: 800px) {
+  div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] {
+    font-size: 36px;
+  }
+}
+@media (max-width: 600px) {
+  div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] {
+    width: calc(100% + 64px);
+    padding: 32px 32px;
+    margin: -16px -32px 32px;
+  }
 }
 header[class^="rsg--header"] {
   margin: 0;
@@ -56,13 +74,6 @@ div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
 div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a:hover {
   text-decoration: none;
   cursor: default;
-}
-@media (max-width: 400px) {
-  section[class^="rsg--root"] > h1 a {
-    margin: 1rem 0 1rem;
-    padding-bottom: 0.3rem;
-    font-size: 42px;
-  }
 }
 
 /* Heading, level 2 */
@@ -79,10 +90,9 @@ h2[class^="rsg--heading"] a {
   font-size: 36px;
   line-height: 1.3;
 }
-@media (max-width: 400px) {
-  header[class^="rsg--header"] > h2 a,
-  h2[class^="rsg--h2"],
-  h2[class^="rsg--h2"] a {
+@media (max-width: 800px) {
+  h2[class^="rsg--heading"],
+  h2[class^="rsg--heading"] a {
     font-size: 28px;
   }
 }
@@ -96,6 +106,12 @@ h3[class^="rsg--heading"] a {
   margin: 0 0 40px;
   font-size: 24px;
   color: #4d5865;
+}
+@media (max-width: 800px) {
+  h3[class^="rsg--heading"],
+  h3[class^="rsg--heading"] a {
+    font-size: 21px;
+  }
 }
 
 /* Heading, level 4 */
@@ -182,10 +198,10 @@ div[class^="rsg--sidebar"] .vueds-active > a:hover {
 pre[class^="rsg--pre"],
 div[class^="rsg--preview"] {
   padding: 30px;
-  border: 0;
-  box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  background: #f9fcff;
-  margin-bottom: 24px;
+  background-color: #fafbfc;
+  border: 1px solid #e1e4e8;
+  box-shadow: inset 0 0 10px rgba(27, 31, 35, 0.05);
+  margin: 16px 0 24px;
   border-radius: 3px;
   overflow: hidden;
   overflow-x: auto;
@@ -246,6 +262,11 @@ div[class^="rsg--toolbar"] {
   border-radius: 3px;
   color: #333;
 }
+@media (max-width: 800px) {
+  .status {
+    top: 48px;
+  }
+}
 
 .status-ready {
   background: #7cb518;
@@ -278,7 +299,7 @@ table[class^="rsg--table"] {
   width: 100%;
 }
 
-table[class^="rsg--table"] th[class^="rsg--cellHeading"] {
+table[class^="rsg--table"] th {
   padding: 16px 48px 16px 16px;
   font-size: 13px;
   font-weight: 700;
@@ -287,16 +308,14 @@ table[class^="rsg--table"] th[class^="rsg--cellHeading"] {
   color: #00264d;
   text-align: left;
 }
-table[class^="rsg--table"] th[class^="rsg--cellHeading"]:first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-table[class^="rsg--table"] th[class^="rsg--cellHeading"]:last-child {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+
+table[class^="rsg--table"] th[class^="rsg--cellHeading"],
+table[class^="rsg--table"] td {
+  padding: 16px 48px 16px 0;
+  background: transparent;
 }
 
-table[class^="rsg--table"] tbody tr {
+table[class^="rsg--table"] tr {
   border-bottom: 1px solid #dfe3e6;
 }
 
@@ -307,6 +326,10 @@ table[class^="rsg--table"] tbody tr:last-child {
 table[class^="rsg--table"] td {
   font-size: 13px;
   padding: 16px 48px 16px 16px;
+}
+
+td[class^="rsg--cell"] {
+  padding-left: 0 !important;
 }
 
 table[class^="rsg--table"] td:first-child {
