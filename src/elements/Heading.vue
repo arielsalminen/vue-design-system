@@ -41,31 +41,31 @@ export default {
 }
 h1 {
   letter-spacing: $letter-spacing-x-small;
-  font-size: $font-size-x-large;
+  font-size: $font-size-xx-large;
   font-weight: $font-weight-bold;
   @media #{$media-query-large} {
-    font-size: $font-size-xx-large;
+    font-size: $font-size-xxx-large;
   }
 }
 h2 {
   letter-spacing: $letter-spacing-small;
-  font-size: $font-size-x-large;
+  font-size: $font-size-xx-large;
   font-weight: $font-weight-bold;
 }
 h3 {
-  font-size: $font-size-large;
+  font-size: $font-size-x-large;
   font-weight: $font-weight-bold;
 }
 h4 {
-  font-size: $font-size-base;
+  font-size: $font-size-large;
   font-weight: $font-weight-semi-bold;
 }
 h5 {
-  font-size: $font-size-small;
+  font-size: $font-size-base;
   font-weight: $font-weight-regular;
 }
 h6 {
-  font-size: $font-size-x-small;
+  font-size: $font-size-small;
   font-weight: $font-weight-regular;
 }
 </style>
