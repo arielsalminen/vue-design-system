@@ -4,10 +4,12 @@
 #
 
 props:
-  font_size_xx_large:
+  font_size_xxx_large:
     value: "64px"
-  font_size_x_large:
+  font_size_xx_large:
     value: "48px"
+  font_size_x_large:
+    value: "36px"
   font_size_large:
     value: "24px"
   font_size_base:

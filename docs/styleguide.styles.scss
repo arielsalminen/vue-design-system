@@ -1,0 +1,396 @@
+/**
+ * These are style overrides for Vue Styleguidist
+ * (the odd formatting hence most of the ID’s are dynamic)
+ */
+
+@import "../src/assets/tokens/tokens.scss";
+@import "../src/assets/tokens/tokens.map.scss";
+@import "../src/styles/styles.scss";
+
+/* LOCAL TOKENS
+--------------------------------------------- */
+
+$styleguide-grey: #c4cdd5;
+$styleguide-grey-dark: #4d5865;
+$status-ready: #7cb518;
+
+/* BASE
+--------------------------------------------- */
+
+div.rsg--root-1 {
+  background: $color-white;
+}
+
+div[class^="rsg--root"] {
+  position: relative;
+  a[class^="rsg--link"] {
+    color: $color-bleu-de-france;
+    &:hover {
+      color: $color-bleu-de-france-dark;
+    }
+  }
+}
+
+main[class^="rsg--content"] {
+  padding: $space-small $space-x-large;
+  @media (max-width: 600px) {
+    padding: $space-small $space-base;
+  }
+}
+
+header[class^="rsg--header"] > div[class^="rsg--wrapper"],
+section > div[class^="rsg--wrapper"] + article[class^="rsg--root"],
+article[class^="rsg--root"] div[class^="rsg--root"] {
+  margin: 0 !important;
+}
+
+main section section > div > div[class^="rsg--root"] {
+  display: flex;
+  flex-direction: column;
+}
+
+div[class^="rsg--root"] div[class^="rsg--tabs"] {
+  order: 2;
+}
+
+/* TYPOGRAPHY
+--------------------------------------------- */
+
+// Main headings
+div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] {
+  display: block;
+  width: 100%;
+  padding: $space-large $space-x-large;
+  width: calc(100% + #{$space-x-large * 2});
+  margin: -#{$space-small} -#{$space-x-large} $space-large -#{$space-x-large};
+  background: tint($color-bleu-de-france, 94%);
+  font-size: $font-size-xx-large;
+  @media (max-width: 800px) {
+    font-size: $font-size-x-large / 1.3;
+  }
+  @media (max-width: 600px) {
+    width: calc(100% + $space-x-large);
+    padding: $space-large $space-large;
+    margin: -#{$space-small} -#{$space-large} $space-base;
+  }
+}
+header[class^="rsg--header"] {
+  margin: 0;
+}
+div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
+  font-weight: $font-weight-regular;
+  color: $color-oxford-blue;
+  letter-spacing: -1px;
+  &:hover {
+    text-decoration: none;
+    cursor: default;
+  }
+}
+
+// Heading, level 2
+h2[class^="rsg--heading"] {
+  border-bottom: 1px solid $styleguide-grey;
+  padding-bottom: $space-small;
+  margin: $space-large 0;
+  width: 100%;
+  &,
+  a {
+    font-weight: $font-weight-regular;
+    letter-spacing: -0.5px;
+    font-size: $font-size-x-large;
+    line-height: $line-height-small;
+    color: $color-oxford-blue;
+    @media (max-width: 800px) {
+      font-size: $font-size-x-large / 1.3;
+    }
+  }
+}
+
+// Heading, level 3
+h3[class^="rsg--heading"],
+h3[class^="rsg--heading"] a {
+  -webkit-font-smoothing: antialiased;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
+  margin: 0 0 $space-large;
+  font-size: $font-size-large;
+  color: tint($color-rich-black, 35%);
+  @media (max-width: 800px) {
+    font-size: $font-size-large / 1.3;
+    margin: 0 0 $space-base;
+  }
+}
+
+// Heading, level 4
+h4[class^="rsg--heading"],
+h4[class^="rsg--heading"] a {
+  font-weight: $font-weight-semi-bold;
+  letter-spacing: 0;
+  margin: $space-large 0 $space-base;
+  font-size: $font-size-large;
+  line-height: $line-height-small;
+}
+
+// Paragraphs
+p[class^="rsg--para"] {
+  color: tint($color-rich-black, 20%);
+  margin-bottom: $space-small;
+  line-height: $line-height-base;
+  strong a[class^="rsg--link"] {
+    font-weight: $font-weight-semi-bold;
+  }
+}
+
+/* SIDEBAR
+--------------------------------------------- */
+
+div[class^="rsg--sidebar"] {
+  background: $color-rich-black;
+  border: 0;
+  a[class^="rsg--link"] {
+    color: $color-bleu-de-france;
+    &:hover {
+      color: $color-bleu-de-france-light;
+    }
+    &:active {
+      color: $color-bleu-de-france-dark;
+    }
+  }
+  .vueds-active > a,
+  .vueds-active > a:hover {
+    color: tint($color-bleu-de-france, 60%);
+  }
+  ul[class^="rsg--list"] {
+    padding-left: $space-base;
+    ul {
+      padding-left: $space-small;
+    }
+  }
+  li[class^="rsg--item"] {
+    margin: 0;
+    a[class^="rsg--link"] {
+      display: block;
+      padding: $space-xx-small 0;
+    }
+  }
+}
+
+// Sidebar logo
+div[class^="rsg--logo"] {
+  border-bottom: 1px solid rgba($color-white, 0.15);
+  h1 {
+    color: $color-white;
+    font-weight: $font-weight-regular;
+  }
+}
+
+// Sidebar search
+div[class^="rsg--search"] input {
+  color: $color-white;
+  border: 1px solid transparent;
+  padding: $space-x-small $space-small;
+  background: rgba($color-white, 0.1);
+  &:focus {
+    border: 1px solid $color-bleu-de-france;
+  }
+  &::-webkit-input-placeholder {
+    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.3);
+  }
+}
+
+// Sidebar 1st level section links
+ul[class^="rsg--list"] a[class*=" rsg--heading"],
+div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
+  font-weight: $font-weight-semi-bold;
+}
+
+/* CODE PREVIEWS
+--------------------------------------------- */
+
+pre[class^="rsg--pre"],
+div[class^="rsg--preview"] {
+  padding: $space-base;
+  background-color: tint($styleguide-grey, 90%);
+  border: 1px solid tint($styleguide-grey, 50%);
+  box-shadow: inset 0 0 $space-x-small rgba(27, 31, 35, 0.05);
+  margin: $space-small 0 $space-base;
+  border-radius: 3px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+#Color-container,
+#FontSize-container,
+#Spacing-container,
+#Components-container {
+  div[data-preview] {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border: 0;
+  }
+}
+
+// Code tabs and table
+div[class^="rsg--tabs"],
+table[class^="rsg--table"] {
+  margin-bottom: $space-small;
+  overflow-x: auto;
+}
+thead[class^="rsg--tableHead"] {
+  border: 0;
+}
+div[class^="rsg--toolbar"] {
+  margin-top: $space-x-small;
+}
+
+// Codemirror
+.react-codemirror2 .CodeMirror.CodeMirror {
+  background: $color-rich-black;
+  border-radius: 3px;
+  margin-bottom: $space-base;
+  padding: $space-base;
+}
+
+/* COMPONENT STATUS LABELS
+--------------------------------------------- */
+
+.status {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-weight: $font-weight-regular;
+  float: right;
+  position: absolute;
+  top: $space-x-large;
+  line-height: $line-height-heading;
+  right: 0;
+  background: tint($styleguide-grey, 50%);
+  padding: $space-x-small $space-small $space-x-small/1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: $font-size-x-small;
+  border-radius: 3px;
+  color: $color-rich-black;
+  @media (max-width: 800px) {
+    top: $space-x-large / 1.15;
+  }
+  &-ready {
+    background: $status-ready;
+    color: $color-white;
+  }
+  &-review,
+  &-under-review {
+    background: $color-ucla-gold;
+    color: $color-rich-black;
+  }
+  &-prototype {
+    background: $color-bleu-de-france;
+    color: $color-white;
+  }
+  &-deprecated {
+    background: $color-vermilion;
+    color: $color-white;
+  }
+}
+
+/* TABLES
+--------------------------------------------- */
+
+table[class^="rsg--table"] {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  width: 100%;
+  th {
+    padding: $space-small $space-large $space-small $space-small;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    border-radius: 0;
+    background: tint($color-bleu-de-france, 90%);
+    color: $color-oxford-blue;
+    text-align: left;
+  }
+  th[class^="rsg--cellHeading"],
+  td {
+    padding: $space-small $space-large $space-small 0;
+    background: transparent;
+  }
+  td {
+    font-size: $font-size-small;
+    padding: $space-small $space-large $space-small $space-small;
+    &[class^="rsg--cell"] {
+      padding-left: 0;
+    }
+    &:first-child {
+      font-weight: $font-weight-bold;
+      white-space: nowrap;
+    }
+  }
+  tr {
+    border-bottom: 1px solid tint($styleguide-grey, 50%);
+  }
+  tbody tr:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* HIDDEN STYLEGUIDIST FUNCTIONALITY
+--------------------------------------------- */
+
+div[class^="rsg--tabButtons"],
+div[class^="rsg--controls"],
+div[class^="rsg--pathline"],
+footer[class^="rsg--footer"] {
+  display: none !important;
+}
+
+#vue-design-system + div[class^="rsg--toolbar"],
+#principles + div[class^="rsg--toolbar"],
+#content + div[class^="rsg--toolbar"],
+#overview + div[class^="rsg--toolbar"],
+#components + div[class^="rsg--toolbar"],
+#tokens + div[class^="rsg--toolbar"],
+#color + div[class^="rsg--toolbar"],
+#fontsize + div[class^="rsg--toolbar"],
+#spacing + div[class^="rsg--toolbar"],
+#elements + div[class^="rsg--toolbar"],
+#patterns + div[class^="rsg--toolbar"],
+#templates + div[class^="rsg--toolbar"],
+#Components-container div[class^="rsg--tabs"],
+#Components-container .react-codemirror2,
+#Spacing-container div[class^="rsg--tabs"],
+#Spacing-container .react-codemirror2,
+#FontSize-container div[class^="rsg--tabs"],
+#FontSize-container .react-codemirror2,
+#Color-container div[class^="rsg--tabs"],
+#Color-container .react-codemirror2,
+#VuedsSection-container {
+  display: none !important;
+}
+
+/* HIDDEN VUE DESIGN SYSTEM FUNCTIONALITY
+--------------------------------------------- */
+
+// Hide status labels from tokens as they don’t make much sense
+#Color-container,
+#Components-container,
+#FontSize-container,
+#Spacing-container {
+  .status {
+    display: none !important;
+  }
+}
+
+// Hide private components
+.hide-private,
+.hide-private + div,
+a[href="#private-components"],
+a[href="#private-components"] + ul {
+  display: none !important;
+}
+
+// Hide Private components and placeholder sections
+ul a[href*="?id=section"],
+ul a[href*="?id=components"],
+ul a[href*="/#!/Private Components"] {
+  display: none !important;
+}

@@ -104,18 +104,25 @@
       "originalValue": "hsla({!vermilion}, 53%, 1)",
       "name": "color_vermilion"
     },
-    "font_size_xx_large": {
+    "font_size_xxx_large": {
       "type": "number",
       "category": "font-size",
       "value": "64px",
       "originalValue": "64px",
+      "name": "font_size_xxx_large"
+    },
+    "font_size_xx_large": {
+      "type": "number",
+      "category": "font-size",
+      "value": "48px",
+      "originalValue": "48px",
       "name": "font_size_xx_large"
     },
     "font_size_x_large": {
       "type": "number",
       "category": "font-size",
-      "value": "48px",
-      "originalValue": "48px",
+      "value": "36px",
+      "originalValue": "36px",
       "name": "font_size_x_large"
     },
     "font_size_large": {
@@ -349,19 +356,33 @@
       "originalValue": "8px",
       "name": "space_x_small"
     },
-    "line-height-base": {
+    "space_xx_small": {
+      "type": "number",
+      "category": "space",
+      "value": "4px",
+      "originalValue": "4px",
+      "name": "space_xx_small"
+    },
+    "line_height_base": {
       "type": "number",
       "category": "line-height",
       "value": "1.6",
       "originalValue": "1.6",
-      "name": "line-height-base"
+      "name": "line_height_base"
     },
-    "line-height-heading": {
+    "line_height_small": {
+      "type": "number",
+      "category": "line-height",
+      "value": "1.3",
+      "originalValue": "1.3",
+      "name": "line_height_small"
+    },
+    "line_height_heading": {
       "type": "number",
       "category": "line-height",
       "value": "1",
       "originalValue": "1",
-      "name": "line-height-heading"
+      "name": "line_height_heading"
     }
   }
 }

@@ -11,8 +11,9 @@ $tokens-map: (
   "color-rich-black": (rgb(0, 17, 35)),
   "color-oxford-blue": (rgb(0, 38, 77)),
   "color-vermilion": (rgb(235, 59, 36)),
-  "font-size-xx-large": (64px),
-  "font-size-x-large": (48px),
+  "font-size-xxx-large": (64px),
+  "font-size-xx-large": (48px),
+  "font-size-x-large": (36px),
   "font-size-large": (24px),
   "font-size-base": (16px),
   "font-size-small": (13px),
@@ -46,6 +47,8 @@ $tokens-map: (
   "space-base": (24px),
   "space-small": (16px),
   "space-x-small": (8px),
+  "space-xx-small": (4px),
   "line-height-base": (1.6),
+  "line-height-small": (1.3),
   "line-height-heading": (1)
 );

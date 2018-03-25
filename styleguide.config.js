@@ -6,34 +6,20 @@ module.exports = {
   /**
    * Name of your design system. Changes both page title and sidebar logo.
    */
-  title: "Foo Design System",
+  title: "Vue Design System",
   /**
    * Enabling the following option splits sections into separate views.
    */
   navigation: true,
   /**
-   * Most of the styles are defined in /docs/styleguide.styles.css
+   * Most of the styles are defined in /docs/styleguide.styles.scss
    */
   theme: {
     maxWidth: "100%",
     sidebarWidth: 240,
-    color: {
-      link: "#2389ee",
-      linkHover: "#1960a7",
-      sidebarBackground: "#001123",
-      baseBackground: "#fff",
-      light: "#aaa",
-    },
     fontFamily: {
       base: ['"Fira Sans"', "Helvetica", "Arial", "sans-serif"],
       monospace: ["Consolas", '"Liberation Mono"', "Menlo", "monospace"],
-    },
-  },
-  styles: {
-    Logo: {
-      logo: {
-        color: "#fff",
-      },
     },
   },
   /**
@@ -53,9 +39,9 @@ module.exports = {
    */
   skipComponentsWithoutExample: false,
   /**
-   * We’re defining below JS and CSS requires for the documentation.
+   * We’re defining below JS and SCSS requires for the documentation.
    */
-  require: [path.join(__dirname, "docs/styleguide.helper.js"), path.join(__dirname, "docs/styleguide.styles.css")],
+  require: [path.join(__dirname, "docs/styleguide.helper.js"), path.join(__dirname, "docs/styleguide.styles.scss")],
   sections: [
     {
       name: "Getting Started",
@@ -132,7 +118,7 @@ module.exports = {
       rules: [
         {
           test: /\.(css?|scss)(\?.*)?$/,
-          loader: "style-loader!css-loader",
+          loader: "style-loader!css-loader!sass-loader",
         },
       ],
     },

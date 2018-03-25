@@ -1,7 +1,7 @@
 {
   "name": "vue-design-system",
   "version": "2.0.0",
-  "description": "Vue Design System is an open-source tool for prototyping UI design systems.",
+  "description": "Vue Design System is an open-source tool for building Design Systems with Vue.js",
   "author": "viljamis <me@viljamis.com>",
   "main": "dist/system/system.js",
   "files": [
@@ -15,11 +15,11 @@
     "start": "npm-run-all --parallel styleguide theo:onchange theo dev",
     "build": "npm-run-all theo node:build",
     "build:system": "npm-run-all theo node:build:system",
+    "build:styleguide": "npm-run-all theo styleguide:build",
     "node:build": "node build/build.js",
     "node:build:system": "node build/build-system.js",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build",
-    "build:styleguide": "npm-run-all theo styleguide:build",
     "theo": "theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/assets/tokens",
     "theo:onchange": "onchange \"src/tokens/*.yml\" -- npm run theo",
     "precommit": "pretty-quick --staged"

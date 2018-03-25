@@ -26,7 +26,7 @@ Definitely possible, see instructions in [Getting Started guide](https://github.
 
 **Long(er) answer:** The reason for choosing Vue.js over React or some other library is how easy it is to learn. If you know HTML, CSS, and a bit of JavaScript you’re ready to start using this tool and getting involved. This becomes especially important when we want to involve designers more into the process and move further away from static design tools. In addition, static site generators like Jekyll give you a bit too much freedom, which makes it harder for people to follow specific guidelines or a workflow.
 
-#### Where are molecules and pages _(from Atomic Design)?_
+#### Where are molecules and pages from Atomic Design?
 
 Compared to Atomic Design, this setup doesn’t include molecule/page levels. They’re omitted to help reduce the complexity of the system for its end-users.
 
