@@ -3,8 +3,17 @@ const baseConfig = require("./build/webpack.base.conf.js")
 const merge = require("webpack-merge")
 
 module.exports = {
-  title: "Vue Design System",
+  /**
+   * Name of your design system. Changes both page title and sidebar logo.
+   */
+  title: "Foo Design System",
+  /**
+   * Enabling the following option splits sections into separate views.
+   */
   navigation: true,
+  /**
+   * Most of the styles are defined in /docs/styleguide.styles.css
+   */
   theme: {
     maxWidth: "100%",
     sidebarWidth: 240,
@@ -27,18 +36,25 @@ module.exports = {
       },
     },
   },
+  /**
+   * Define a custom code highlighting theme.
+   */
   editorConfig: {
     theme: "night",
   },
+  /**
+   * Path to static assets directory
+   */
   assetsDir: path.join(__dirname, "static"),
   showCode: true,
   showUsage: true,
+  /**
+   * Enabling the below option will break things in Vue Desing System!
+   */
   skipComponentsWithoutExample: false,
-  getComponentPathLine(componentPath) {
-    const name = path.basename(componentPath, ".vue")
-    const dir = path.dirname(componentPath)
-    return `import ${name} from '${dir}/${name}';`
-  },
+  /**
+   * We’re defining below JS and CSS requires for the documentation.
+   */
   require: [path.join(__dirname, "docs/styleguide.helper.js"), path.join(__dirname, "docs/styleguide.styles.css")],
   sections: [
     {
@@ -49,6 +65,10 @@ module.exports = {
     {
       name: "Design Principles",
       content: "docs/principles.md",
+      /**
+       * section.vue component is an util that needs to be loaded into
+       * all sections, even when not showing any real components.
+       */
       components: "docs/utils/section.vue",
     },
     {
@@ -91,7 +111,13 @@ module.exports = {
       components: "src/**/[_]*.vue",
     },
   ],
+  /**
+   * Custom wrapper template for the documentation.
+   */
   template: "docs/styleguide.template.html",
+  /**
+   * Ignore app.vue, tests, and example component.
+   */
   ignore: [
     "**/App.vue",
     "**/__tests__/**",
