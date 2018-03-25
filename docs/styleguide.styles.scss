@@ -17,12 +17,20 @@ $status-ready: #7cb518;
 /* BASE
 --------------------------------------------- */
 
+::-moz-selection {
+  background: $color-bleu-de-france;
+  color: $color-white;
+}
+::selection {
+  background: $color-bleu-de-france;
+  color: $color-white;
+}
+
 div.rsg--root-1 {
   background: $color-white;
 }
 
 div[class^="rsg--root"] {
-  position: relative;
   a[class^="rsg--link"] {
     color: $color-bleu-de-france;
     &:hover {
@@ -47,10 +55,6 @@ article[class^="rsg--root"] div[class^="rsg--root"] {
 main section section > div > div[class^="rsg--root"] {
   display: flex;
   flex-direction: column;
-}
-
-div[class^="rsg--root"] div[class^="rsg--tabs"] {
-  order: 2;
 }
 
 /* TYPOGRAPHY
@@ -210,11 +214,13 @@ div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
 pre[class^="rsg--pre"],
 div[class^="rsg--preview"] {
   padding: $space-base;
+  min-height: $space-xx-large;
   background-color: tint($styleguide-grey, 90%);
   border: 1px solid tint($styleguide-grey, 50%);
   box-shadow: inset 0 0 $space-x-small rgba(27, 31, 35, 0.05);
-  margin: $space-small 0 $space-base;
-  border-radius: 3px;
+  margin: $space-small 0 0;
+  border-top-left-radius: $border-radius-default;
+  border-top-right-radius: $border-radius-default;
   overflow: hidden;
   overflow-x: auto;
 }
@@ -246,8 +252,9 @@ div[class^="rsg--toolbar"] {
 
 // Codemirror
 .react-codemirror2 .CodeMirror.CodeMirror {
-  background: $color-rich-black;
-  border-radius: 3px;
+  background: mix($color-bleu-de-france, $color-rich-black, 10%);
+  border-bottom-left-radius: $border-radius-default;
+  border-bottom-right-radius: $border-radius-default;
   margin-bottom: $space-base;
   padding: $space-base;
 }
@@ -255,23 +262,32 @@ div[class^="rsg--toolbar"] {
 /* COMPONENT STATUS LABELS
 --------------------------------------------- */
 
+div[class^="rsg--docs"],
+header[class^="rsg--header"],
+article[class^="rsg--root"] {
+  order: 2;
+}
+
+div[class^="rsg--root"] div[class^="rsg--tabs"] {
+  order: 3;
+}
+
 .status {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: $font-weight-regular;
-  float: right;
-  position: absolute;
-  top: $space-x-large;
+  order: 1;
+  align-self: flex-end;
+  transform: translateY($space-x-large * 1.35);
   line-height: $line-height-heading;
-  right: 0;
   background: tint($styleguide-grey, 50%);
   padding: $space-x-small $space-small $space-x-small/1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: $font-size-x-small;
-  border-radius: 3px;
+  border-radius: $border-radius-default;
   color: $color-rich-black;
   @media (max-width: 800px) {
-    top: $space-x-large / 1.15;
+    transform: translateY($space-x-large * 1.25);
   }
   &-ready {
     background: $status-ready;
