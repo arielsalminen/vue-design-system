@@ -351,6 +351,7 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
   font-weight: $font-weight-regular;
   order: 1;
   align-self: flex-end;
+  cursor: help;
   transform: translateY($space-x-large * 1.35);
   line-height: $line-height-heading;
   background: tint($styleguide-grey, 50%);

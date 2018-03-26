@@ -15,6 +15,10 @@ export default {
       if (container) {
         const currentLabels = container.querySelectorAll("label.status")
         label.innerHTML = "version missing"
+        label.setAttribute(
+          "title",
+          "This label shows component’s current working status. For a full list see “Getting Started” view."
+        )
         label.className = "status"
 
         if (value) {
