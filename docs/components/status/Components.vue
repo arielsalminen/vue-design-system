@@ -154,7 +154,7 @@ export default {
     flex-direction: row;
     align-items: center;
     display: flex;
-    @media (max-width: 600px) {
+    @media (max-width: 1000px) {
       flex-direction: column;
       align-items: flex-start;
     }

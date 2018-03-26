@@ -1,6 +1,6 @@
 #### What is the Vue Design System?
 
-[Vue Design System](https://vueds.com) is an open source tool for building UI Design Systems with [Vue.js](https://vuejs.org). It provides you and your team a set of organized tools, patterns & practices that work as the foundation for your application development.
+Vue Design System is an open source tool for building UI Design Systems with [Vue.js](https://vuejs.org). It provides you and your team a set of organized tools, patterns & practices that work as the foundation for your application development. [Read more about it](https://viljamis.com/2018/vue-design-system/).
 
 #### What browsers are supported?
 
@@ -42,13 +42,13 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 Definitely. See [Theo’s docs](https://github.com/salesforce-ux/theo). It allows you to convert the tokens to almost any format you can think of. The formats used are being configured in [package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L20).
 
-#### Is it possible to get Vue Design System working on Windows?
+#### Is it possible to use Vue Design System on Windows?
 
-It is, but currently you’ll have to use Git Bash or something else that can run shell scripts. See instructions in [Getting Started](https://github.com/viljamis/vue-design-system/wiki/getting-started#getting-started-on-windows).
+It is, follow the [getting started guide](https://github.com/viljamis/vue-design-system/wiki/getting-started) to get things up and running.
 
 #### Any plan to support visualization of different component states?
 
-Vue Design System uses a customized version of [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) for the styleguide part which already supports something similar. You can for example define multiple examples in markdown format in the component’s `<docs>` section. See the [documentation for Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) and React Styleguidist’s [explanation on the differences between Storybook and Styleguidist](https://react-styleguidist.js.org/docs/cookbook.html#whats-the-difference-between-styleguidist-and-storybook).
+Vue Design System uses a customized version of [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) for the styleguide part which already supports something similar. You can for example define multiple examples in markdown format in the component’s `<docs>` section. I’ve added an example of this in the documentation’s [Elements section](/#!/Elements?id=forminput). See the [documentation for Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) and React Styleguidist’s [explanation on the differences between Storybook and Styleguidist](https://react-styleguidist.js.org/docs/cookbook.html#whats-the-difference-between-styleguidist-and-storybook).
 
 #### I’m trying to use the default `Icon` element included, but can’t figure out what icons are available?
 
