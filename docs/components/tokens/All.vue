@@ -68,11 +68,6 @@ export default {
     border-spacing: 0;
     width: 100%;
   }
-  thead {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-  }
   thead th {
     padding: $space-small $space-large $space-small $space-small;
     background: $color-cloud;
@@ -85,6 +80,10 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
+    // Chrome has a bug related to thead, this only works on th:
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
     &:first-child {
       border-top-left-radius: $border-radius-default;
       border-bottom-left-radius: $border-radius-default;
