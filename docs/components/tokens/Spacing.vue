@@ -9,6 +9,9 @@
 <script>
 import designTokens from "@/assets/tokens/tokens.raw.json"
 
+/**
+ * A framework for creating a predictable and harmonious spacing system. These tokens are used for padding, margins, and position together with Vue Design System’s [spacing utilities](https://github.com/viljamis/vue-design-system/wiki/spacing).
+ */
 export default {
   name: "Spacing",
   methods: {
@@ -39,7 +42,7 @@ export default {
   font-size: $font-size-small;
   font-family: $font-family-text;
   color: $color-rich-black;
-  background: tint($color-cloud, 50%);
+  background: tint(#c4cdd5, 85%);
   text-align: center;
   position: relative;
   float: left;

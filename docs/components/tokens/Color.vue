@@ -14,6 +14,9 @@ import designTokens from "@/assets/tokens/tokens.raw.json"
 import tinycolor from "tinycolor2"
 import _ from "lodash"
 
+/**
+ * The color palette comes with 5 different weights for each hue. These hues should be used purposefully to communicate how things function in the interface.
+ */
 export default {
   name: "Color",
   methods: {

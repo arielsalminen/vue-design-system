@@ -34,6 +34,9 @@
 import designTokens from "@/assets/tokens/tokens.raw.json"
 import _ from "lodash"
 
+/**
+ * A list of all available design tokens in Vue Design System. Use these tokens in place of hard-coded values in order to maintain a scalable and consistent system.
+ */
 export default {
   name: "All",
   methods: {

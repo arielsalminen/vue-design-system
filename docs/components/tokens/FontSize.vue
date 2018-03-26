@@ -9,6 +9,9 @@
 <script>
 import designTokens from "@/assets/tokens/tokens.raw.json"
 
+/**
+ * This typographic scale makes it easier to achieve visual harmony in the interface. It’s purposefully designed to keep the number of separate font sizes to a minimum.
+ */
 export default {
   name: "FontSize",
   methods: {
