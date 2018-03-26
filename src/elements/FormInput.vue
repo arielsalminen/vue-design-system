@@ -152,16 +152,16 @@ $color-placeholder: tint($color-silver, 50%);
     border: 0;
     box-shadow: inset 0 1px 0 0 rgba($color-rich-black, 0.07), 0 0 0 1px tint($color-rich-black, 80%);
     &::-webkit-input-placeholder {
-      color: $color-placeholder;
-    }
-    &::-moz-placeholder {
+      -webkit-font-smoothing: antialiased;
       color: $color-placeholder;
     }
     &:-ms-input-placeholder {
       color: $color-placeholder;
     }
-    &:-moz-placeholder {
+    &::-moz-placeholder {
       color: $color-placeholder;
+      -moz-osx-font-smoothing: grayscale;
+      opacity: 1;
     }
     &:hover,
     &[hover] {

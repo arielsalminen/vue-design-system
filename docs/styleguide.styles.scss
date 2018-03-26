@@ -236,6 +236,13 @@ div[class^="rsg--search"] input {
   &::-webkit-input-placeholder {
     color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.3);
   }
+  &:-ms-input-placeholder {
+    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.3);
+  }
+  &::-moz-placeholder {
+    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.3);
+    opacity: 1;
+  }
 }
 
 // Sidebar 1st level section links
