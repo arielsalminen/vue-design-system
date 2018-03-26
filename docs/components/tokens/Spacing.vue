@@ -36,7 +36,7 @@ export default {
   font-size: $font-size-x-small;
   font-family: $font-family-text;
   color: $color-rich-black;
-  background: #f4f6f8;
+  background: tint($color-cloud, 50%);
   text-align: center;
   position: relative;
   float: left;

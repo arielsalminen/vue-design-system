@@ -17,7 +17,7 @@
 
 <script>
 /**
- * Form Inputs are used to allow users to provide text input when the expected input is short. Form Input has a range of options and supports several text formats including numbers. For longer input, use the “Form Textarea” element.
+ * Form Inputs are used to allow users to provide text input when the expected input is short. Form Input has a range of options and supports several text formats including numbers. For longer input, use the `FormTextarea` element.
  */
 export default {
   name: "FormInput",
