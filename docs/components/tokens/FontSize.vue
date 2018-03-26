@@ -10,7 +10,7 @@
 import designTokens from "@/assets/tokens/tokens.raw.json"
 
 /**
- * This typographic scale makes it easier to achieve visual harmony in the interface. It’s purposefully designed to keep the number of separate font sizes to a minimum.
+ * This typographic scale makes it easier to achieve visual harmony in the interface. It’s purposefully designed to keep the number of separate font sizes to a minimum. To edit font-sizes, see [/src/tokens/font-size.yml](https://github.com/viljamis/vue-design-system/blob/master/src/tokens/font-size.yml).
  */
 export default {
   name: "FontSize",
