@@ -31,9 +31,12 @@ export default {
   width: 100%;
 }
 .space {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: $border-radius-default;
   box-shadow: $box-shadow-small-inset;
   margin-bottom: $space-x-small;
-  font-size: $font-size-x-small;
+  font-size: $font-size-small;
   font-family: $font-family-text;
   color: $color-rich-black;
   background: tint($color-cloud, 50%);

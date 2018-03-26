@@ -256,10 +256,13 @@ div[class^="rsg--preview"] {
   margin: $space-small 0 0;
   border-radius: 0;
   display: block;
-  float: left;
   width: 100%;
   border-top-left-radius: $border-radius-default;
   border-top-right-radius: $border-radius-default;
+}
+
+div[class^="rsg--preview"] {
+  float: left;
 }
 
 #Color-container,
