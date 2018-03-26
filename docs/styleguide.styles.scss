@@ -164,6 +164,18 @@ h4[class^="rsg--heading"] {
   }
 }
 
+pre + p[class^="rsg--para"] {
+  margin-top: $space-small;
+}
+
+p[class^="rsg--para"] code {
+  background: tint($styleguide-grey, 75%);
+  color: shade($color-silver, 20%);
+  padding: $space-xx-small;
+  border-radius: $border-radius-default;
+  font-size: 87.5%;
+}
+
 /* SIDEBAR
 --------------------------------------------- */
 
@@ -366,6 +378,13 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
 /* TABLES
 --------------------------------------------- */
 
+tr {
+  transition: background-color 0.1s ease;
+  &:hover {
+    background: rgba($color-cloud, 0.3);
+  }
+}
+
 table[class^="rsg--table"] {
   border-collapse: collapse;
   border-spacing: 0;
@@ -404,16 +423,12 @@ table[class^="rsg--table"] {
   tr {
     border-bottom: 1px solid tint($styleguide-grey, 50%);
   }
-  thead tr {
-    border: 0;
-  }
   tbody tr:last-child {
     border-bottom: 0;
   }
 }
 
 thead[class^="rsg--thead"] {
-  border: 0;
   th:first-child {
     border-top-left-radius: $border-radius-default;
     border-bottom-left-radius: $border-radius-default;

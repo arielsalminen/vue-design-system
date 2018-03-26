@@ -92,6 +92,11 @@ h3 {
   text-align: left;
   float: left;
   width: 100%;
+  &:hover {
+    span {
+      color: shade($color-silver, 40%);
+    }
+  }
   span {
     margin-bottom: $space-x-small;
     line-height: 1.3;

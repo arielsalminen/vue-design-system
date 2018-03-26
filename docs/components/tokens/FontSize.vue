@@ -39,8 +39,9 @@ export default {
   margin-bottom: $space-small;
   font-style: normal;
   span {
+    letter-spacing: -0.02em;
     margin-left: 10px;
-    font-style: italic;
+    font-weight: $font-weight-regular;
     color: $color-silver;
   }
 }

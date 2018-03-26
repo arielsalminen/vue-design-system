@@ -43,7 +43,6 @@ export default {
   width: 100%;
   span {
     margin-left: 5px;
-    font-style: italic;
     color: $color-silver;
   }
 }
