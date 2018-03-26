@@ -7,7 +7,7 @@ export default {
   methods: {
     clearActiveLinks() {
       const activeLinks = document.querySelectorAll(".vueds-active")
-      ;[].forEach.call(activeLinks, function(element) {
+      activeLinks.forEach(function(element) {
         element.classList.remove("vueds-active")
       })
     },
@@ -25,7 +25,7 @@ export default {
     }
 
     if (navLinks) {
-      ;[].forEach.call(navLinks, function(element) {
+      navLinks.forEach(function(element) {
         element.addEventListener("click", function() {
           self.clearActiveLinks()
           this.parentNode.classList.add("vueds-active")
@@ -34,7 +34,7 @@ export default {
     }
 
     if (subNavLinks) {
-      ;[].forEach.call(subNavLinks, function(element) {
+      subNavLinks.forEach(function(element) {
         element.addEventListener("click", function() {
           self.clearActiveLinks()
           this.parentNode.parentNode.parentNode.classList.add("vueds-active")

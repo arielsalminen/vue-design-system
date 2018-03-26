@@ -11,6 +11,7 @@ export default {
     if (id) {
       const container = document.getElementById(id)
       const label = document.createElement("label")
+      const currentLabels = container.querySelectorAll("label.status")
 
       if (container) {
         label.innerHTML = "version missing"
@@ -24,6 +25,13 @@ export default {
             label.innerHTML = value
           }
         }
+
+        if (currentLabels) {
+          currentLabels.forEach(function(element) {
+            element.parentNode.removeChild(element)
+          })
+        }
+
         container.appendChild(label)
       }
     }
