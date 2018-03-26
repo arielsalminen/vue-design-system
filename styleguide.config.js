@@ -44,12 +44,12 @@ module.exports = {
   require: [path.join(__dirname, "docs/styleguide.helper.js"), path.join(__dirname, "docs/styleguide.styles.scss")],
   sections: [
     {
-      name: "Getting Started",
+      name: "Getting-Started",
       content: "docs/getting-started.md",
       components: "docs/components/status/**/[A-Z]*.vue",
     },
     {
-      name: "Design Principles",
+      name: "Design-Principles",
       content: "docs/principles.md",
       /**
        * section.vue component is an util that needs to be loaded into
@@ -58,7 +58,7 @@ module.exports = {
       components: "docs/utils/section.vue",
     },
     {
-      name: "Design Tokens",
+      name: "Design-Tokens",
       content: "docs/tokens.md",
       components: () => [
         "docs/components/tokens/Color.vue",
