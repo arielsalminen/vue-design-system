@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" class="spacing">
+  <component is="div" class="spacing">
     <div v-for="prop in tokens" class="space" v-if="prop.category === 'space'" :style="{ lineHeight: prop.value, height: prop.value }">
       ${{prop.name.replace(/_/g, "-")}} <span>({{prop.value}})</span>
     </div>
@@ -11,12 +11,6 @@ import designTokens from "@/assets/tokens/tokens.raw.json"
 
 export default {
   name: "Spacing",
-  props: {
-    type: {
-      type: String,
-      default: "div",
-    },
-  },
   methods: {
     orderData: function(data) {
       let order = _.orderBy(data, "category", "asc")

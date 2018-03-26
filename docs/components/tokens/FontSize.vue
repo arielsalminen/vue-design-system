@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" class="font-sizes">
+  <component is="div" class="font-sizes">
     <div v-for="prop in tokens" class="font" v-if="prop.category === 'font-size'" :style="{ fontSize: prop.value }">
       ${{prop.name.replace(/_/g, "-")}} <span>({{prop.value}})</span>
     </div>
@@ -11,12 +11,6 @@ import designTokens from "@/assets/tokens/tokens.raw.json"
 
 export default {
   name: "FontSize",
-  props: {
-    type: {
-      type: String,
-      default: "div",
-    },
-  },
   methods: {
     orderData: function(data) {
       let order = _.orderBy(data, "value", "desc")

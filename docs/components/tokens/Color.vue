@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" class="colors">
+  <component is="div" class="colors">
     <div v-for="prop in tokens" class="color" :class="prop.category" v-if="prop.type === 'color'" :style="{ backgroundColor: prop.value, color: setTextColor(prop.value) }">
       ${{prop.name.replace(/_/g, "-")}} <span>{{prop.value}}</span>
     </div>
@@ -13,12 +13,6 @@ import _ from "lodash"
 
 export default {
   name: "Color",
-  props: {
-    type: {
-      type: String,
-      default: "div",
-    },
-  },
   methods: {
     setTextColor: function(color) {
       let background = tinycolor(color)
