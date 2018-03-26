@@ -32,9 +32,15 @@
       </thead>
       <tbody>
         <tr v-for="component in components" class="component">
-          <td v-if="component.name">{{component.name}}</td>
+          <td v-if="component.name">
+            <code class="name">
+              {{component.name}}
+            </code>
+          </td>
           <td v-else>N/A</td>
-          <td v-if="component.release">{{component.release}}</td>
+          <td v-if="component.release">
+            {{component.release}}
+          </td>
           <td v-else>N/A</td>
           <td v-if="component.status">
             <svg-icon
