@@ -6,7 +6,7 @@
 
 <script>
 /**
- * Text style enhances text with additional visual meaning. For example, using subdued text to de-emphasize it from its surrounding text.
+ * Text style enhances text with additional visual meaning. For example, using disabled text to de-emphasize it from its surrounding text. Don’t use text styles only for aesthetic effect.
  */
 export default {
   name: "TextStyle",
@@ -36,6 +36,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// Design Tokens with local scope
+$positive-text: #7cb518;
+
 .text-style {
   @include reset;
   @include stack-space($space-small);
@@ -49,17 +52,16 @@ export default {
   }
   &.disabled {
     color: tint($color-rich-black, 50%);
+    text-decoration: line-through;
   }
   &.strong {
     font-weight: $font-weight-semi-bold;
   }
   &.positive {
-    color: shade($color-bleu-de-france, 50%);
-    font-style: italic;
+    color: shade($positive-text, 20%);
   }
   &.negative {
     color: $color-vermilion;
-    font-style: italic;
   }
 }
 </style>
@@ -67,6 +69,10 @@ export default {
 
 <docs>
   ```jsx
-  <text-style variation="default">Design isn’t just about the look and feel. Design is how it works, and we believe the best way to focus on this is to work as close to the end result as possible. That’s why we start all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.</text-style>
+  <div>
+    <text-style variation="default">Design isn’t just about the look and feel. Design is how it works.</text-style>
+    <text-style variation="disabled">Design isn’t just about the look and feel. Design is how it works.</text-style>
+    <text-style variation="strong">Design isn’t just about the look and feel. Design is how it works.</text-style>
+  </div>
   ```
 </docs>
