@@ -71,8 +71,8 @@ $positive-text: #7cb518;
   ```jsx
   <div>
     <text-style variation="default">Design isn’t just about the look and feel. Design is how it works.</text-style>
-    <text-style variation="disabled">Design isn’t just about the look and feel. Design is how it works.</text-style>
-    <text-style variation="strong">Design isn’t just about the look and feel. Design is how it works.</text-style>
+    <text-style variation="disabled">Design isn’t just about the look and feel.</text-style>
+    <text-style variation="strong">Design isn’t just about</text-style>
   </div>
   ```
 </docs>

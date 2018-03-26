@@ -120,7 +120,7 @@ export default {
 
 <style lang="scss" scoped>
 // Design Tokens with local scope
-$color-placeholder: tint($color-rich-black, 75%);
+$color-placeholder: tint($color-silver, 50%);
 
 .input {
   @include stack-space($space-small);
@@ -190,7 +190,7 @@ $color-placeholder: tint($color-rich-black, 75%);
     <form-input label="Input" placeholder="Write your text" />
     <form-input label=":hover" hover placeholder="Write your text" />
     <form-input label=":focus" focus placeholder="Write your text" />
-    <form-input label="[disabled]" disabled placeholder="I’m disabled" />
+    <form-input label="[disabled]" disabled placeholder="Disabled input" />
   </div>
   ```
 </docs>

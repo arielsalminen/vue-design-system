@@ -119,10 +119,15 @@ export default {
   }
   thead th {
     padding: $space-small $space-large $space-small $space-small;
-    background: tint($color-bleu-de-france, 90%);
+    background: $color-cloud;
     font-size: $font-size-small;
     font-weight: $font-weight-bold;
     color: $color-oxford-blue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: $font-weight-semi-bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-align: left;
     &:first-child {
       border-top-left-radius: $border-radius-default;
@@ -160,7 +165,7 @@ export default {
     }
     li {
       margin: 0 $space-base 0 0;
-      color: tint($color-rich-black, 30%);
+      color: $color-silver;
       font-size: $font-size-small;
       align-items: center;
       display: flex;

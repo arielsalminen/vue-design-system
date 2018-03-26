@@ -14,6 +14,8 @@ props:
     value: "600"
   font_weight_regular:
     value: "400"
+  font_weight_light:
+    value: "300"
 global:
   type: ...
   category: font

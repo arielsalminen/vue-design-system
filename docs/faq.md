@@ -50,7 +50,7 @@ It is, follow the [getting started guide](https://github.com/viljamis/vue-design
 
 Vue Design System uses a customized version of [Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) for the styleguide part which already supports something similar. You can for example define multiple examples in markdown format in the component’s `<docs>` section. I’ve added an example of this in the documentation’s [Elements section](/#!/Elements?id=forminput). See the [documentation for Vue Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) and React Styleguidist’s [explanation on the differences between Storybook and Styleguidist](https://react-styleguidist.js.org/docs/cookbook.html#whats-the-difference-between-styleguidist-and-storybook).
 
-#### I’m trying to use the default `Icon` element included, but can’t figure out what icons are available?
+#### I’m trying to use the default icon element included, but can’t figure out what icons are available?
 
 Icons are inside `src/assets/icons` directory, so you can just add any icons that you need. Use for example SVG files from [Font Awesome](https://github.com/encharm/Font-Awesome-SVG-PNG/tree/master/black/svg).
 
