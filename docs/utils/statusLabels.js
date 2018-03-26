@@ -11,9 +11,9 @@ export default {
     if (id) {
       const container = document.getElementById(id)
       const label = document.createElement("label")
-      const currentLabels = container.querySelectorAll("label.status")
 
       if (container) {
+        const currentLabels = container.querySelectorAll("label.status")
         label.innerHTML = "version missing"
         label.className = "status"
 
