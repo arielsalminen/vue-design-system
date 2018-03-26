@@ -118,10 +118,18 @@ export default {
   color: $color-rich-black;
   margin-bottom: $space-small;
   font-style: normal;
+  @media (max-width: 1000px) {
+    overflow-x: auto;
+  }
   table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
+  }
+  thead {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
   }
   thead th {
     padding: $space-small $space-large $space-small $space-small;

@@ -404,8 +404,23 @@ table[class^="rsg--table"] {
   tr {
     border-bottom: 1px solid tint($styleguide-grey, 50%);
   }
+  thead tr {
+    border: 0;
+  }
   tbody tr:last-child {
     border-bottom: 0;
+  }
+}
+
+thead[class^="rsg--thead"] {
+  border: 0;
+  th:first-child {
+    border-top-left-radius: $border-radius-default;
+    border-bottom-left-radius: $border-radius-default;
+  }
+  th:last-child {
+    border-top-right-radius: $border-radius-default;
+    border-bottom-right-radius: $border-radius-default;
   }
 }
 

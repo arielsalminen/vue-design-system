@@ -6,7 +6,6 @@
           <th>Token Name</th>
           <th>Value</th>
           <th>Category</th>
-          <th>Type</th>
         </tr>
       </thead>
       <tbody>
@@ -24,8 +23,6 @@
           </td>
           <td v-else>N/A</td>
           <td v-if="token.category">{{token.category}}</td>
-          <td v-else>N/A</td>
-          <td v-if="token.type">{{token.type}}</td>
           <td v-else>N/A</td>
         </tr>
       </tbody>
@@ -54,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .all-tokens {
   @include reset;
   font-family: $font-family-heading;
@@ -62,12 +59,19 @@ export default {
   line-height: $line-height-heading;
   color: $color-rich-black;
   margin-bottom: $space-small;
-  overflow-x: auto;
   font-style: normal;
+  @media (max-width: 1000px) {
+    overflow-x: auto;
+  }
   table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
+  }
+  thead {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
   }
   thead th {
     padding: $space-small $space-large $space-small $space-small;
@@ -105,7 +109,7 @@ export default {
     }
   }
   .type {
-    white-space: nowrap;
+    line-height: $line-height-base;
   }
 }
 </style>
