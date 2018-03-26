@@ -44,7 +44,7 @@ export default {
   span {
     margin-left: 5px;
     font-style: italic;
-    opacity: 0.5;
+    color: $color-silver;
   }
 }
 </style>

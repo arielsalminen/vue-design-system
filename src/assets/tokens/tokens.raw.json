@@ -27,6 +27,34 @@
       "originalValue": "hsla({!ucla_gold}, 52%, 1)",
       "name": "color_ucla_gold"
     },
+    "color_ucla_gold_darker": {
+      "type": "color",
+      "category": "color_group_2",
+      "value": "rgb(179, 128, 0)",
+      "originalValue": "hsla({!ucla_gold}, 35%, 1)",
+      "name": "color_ucla_gold_darker"
+    },
+    "color_vermilion_lighter": {
+      "type": "color",
+      "category": "color_group_1",
+      "value": "rgb(244, 151, 138)",
+      "originalValue": "hsla({!vermilion}, 75%, 1)",
+      "name": "color_vermilion_lighter"
+    },
+    "color_vermilion_darker": {
+      "type": "color",
+      "category": "color_group_1",
+      "value": "rgb(154, 31, 14)",
+      "originalValue": "hsla({!vermilion}, 33%, 1)",
+      "name": "color_vermilion_darker"
+    },
+    "color_ucla_gold_lighter": {
+      "type": "color",
+      "category": "color_group_2",
+      "value": "rgb(255, 219, 128)",
+      "originalValue": "hsla({!ucla_gold}, 75%, 1)",
+      "name": "color_ucla_gold_lighter"
+    },
     "color_bleu_de_france_dark": {
       "type": "color",
       "category": "color_group_3",
@@ -41,6 +69,13 @@
       "originalValue": "hsla({!bleu_de_france}, 64%, 1)",
       "name": "color_bleu_de_france_light"
     },
+    "color_silver": {
+      "type": "color",
+      "category": "color_group_4",
+      "value": "rgb(127, 136, 145)",
+      "originalValue": "#7F8891",
+      "name": "color_silver"
+    },
     "color_white": {
       "type": "color",
       "category": "color_group_4",
@@ -54,6 +89,20 @@
       "value": "rgb(37, 138, 239)",
       "originalValue": "hsla({!bleu_de_france}, 54%, 1)",
       "name": "color_bleu_de_france"
+    },
+    "color_bleu_de_france_darker": {
+      "type": "color",
+      "category": "color_group_3",
+      "value": "rgb(12, 87, 161)",
+      "originalValue": "hsla({!bleu_de_france}, 34%, 1)",
+      "name": "color_bleu_de_france_darker"
+    },
+    "color_bleu_de_france_lighter": {
+      "type": "color",
+      "category": "color_group_3",
+      "value": "rgb(132, 189, 246)",
+      "originalValue": "hsla({!bleu_de_france}, 74%, 1)",
+      "name": "color_bleu_de_france_lighter"
     },
     "color_ucla_gold_dark": {
       "type": "color",
@@ -89,6 +138,13 @@
       "value": "rgb(0, 17, 35)",
       "originalValue": "{!rich_black}",
       "name": "color_rich_black"
+    },
+    "color_cloud": {
+      "type": "color",
+      "category": "color_group_4",
+      "value": "rgb(233, 243, 253)",
+      "originalValue": "#E9F3FD",
+      "name": "color_cloud"
     },
     "color_oxford_blue": {
       "type": "color",
@@ -187,6 +243,13 @@
       "value": "400",
       "originalValue": "400",
       "name": "font_weight_regular"
+    },
+    "font_weight_light": {
+      "type": "...",
+      "category": "font",
+      "value": "300",
+      "originalValue": "300",
+      "name": "font_weight_light"
     },
     "opacity_disabled": {
       "type": "number",

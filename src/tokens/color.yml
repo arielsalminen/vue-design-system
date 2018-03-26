@@ -21,34 +21,52 @@ aliases:
   white:
     value: "#fff"
 props:
-  color_vermilion:
-    value: "hsla({!vermilion}, 53%, 1)"
+  color_vermilion_darker:
+    value: "hsla({!vermilion}, 33%, 1)"
     category: color_group_1
   color_vermilion_dark:
     value: "hsla({!vermilion}, 43%, 1)"
     category: color_group_1
+  color_vermilion:
+    value: "hsla({!vermilion}, 53%, 1)"
+    category: color_group_1
   color_vermilion_light:
     value: "hsla({!vermilion}, 63%, 1)"
     category: color_group_1
+  color_vermilion_lighter:
+    value: "hsla({!vermilion}, 75%, 1)"
+    category: color_group_1
 
-  color_ucla_gold:
-    value: "hsla({!ucla_gold}, 52%, 1)"
+  color_ucla_gold_darker:
+    value: "hsla({!ucla_gold}, 35%, 1)"
     category: color_group_2
   color_ucla_gold_dark:
     value: "hsla({!ucla_gold}, 45%, 1)"
     category: color_group_2
+  color_ucla_gold:
+    value: "hsla({!ucla_gold}, 52%, 1)"
+    category: color_group_2
   color_ucla_gold_light:
     value: "hsla({!ucla_gold}, 65%, 1)"
     category: color_group_2
+  color_ucla_gold_lighter:
+    value: "hsla({!ucla_gold}, 75%, 1)"
+    category: color_group_2
 
+  color_bleu_de_france_darker:
+    value: "hsla({!bleu_de_france}, 34%, 1)"
+    category: color_group_3
+  color_bleu_de_france_dark:
+    value: "hsla({!bleu_de_france}, 44%, 1)"
+    category: color_group_3
   color_bleu_de_france:
     value: "hsla({!bleu_de_france}, 54%, 1)"
     category: color_group_3
   color_bleu_de_france_light:
     value: "hsla({!bleu_de_france}, 64%, 1)"
     category: color_group_3
-  color_bleu_de_france_dark:
-    value: "hsla({!bleu_de_france}, 44%, 1)"
+  color_bleu_de_france_lighter:
+    value: "hsla({!bleu_de_france}, 74%, 1)"
     category: color_group_3
 
   color_oxford_blue:
@@ -59,6 +77,12 @@ props:
     category: color_group_4
   color_white:
     value: "{!white}"
+    category: color_group_4
+  color_silver:
+    value: "#7F8891"
+    category: color_group_4
+  color_cloud:
+    value: "#E9F3FD"
     category: color_group_4
 global:
   type: color

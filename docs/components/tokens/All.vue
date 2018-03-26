@@ -62,6 +62,7 @@ export default {
   line-height: $line-height-heading;
   color: $color-rich-black;
   margin-bottom: $space-small;
+  overflow-x: auto;
   font-style: normal;
   table {
     border-collapse: collapse;
@@ -70,10 +71,15 @@ export default {
   }
   thead th {
     padding: $space-small $space-large $space-small $space-small;
-    background: tint($color-bleu-de-france, 90%);
+    background: $color-cloud;
     font-size: $font-size-small;
     font-weight: $font-weight-bold;
     color: $color-oxford-blue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: $font-weight-semi-bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-align: left;
     &:first-child {
       border-top-left-radius: $border-radius-default;
@@ -97,6 +103,9 @@ export default {
       font-weight: $font-weight-bold;
       white-space: nowrap;
     }
+  }
+  .type {
+    white-space: nowrap;
   }
 }
 </style>
