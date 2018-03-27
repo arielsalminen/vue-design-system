@@ -13,15 +13,20 @@ export default {
     },
   },
   mounted() {
-    const currentURL = window.location.hash
+    const currentURL = window.location.hash.split("?")[0]
     const sidebar = document.querySelector("div[class^='rsg--sidebar']")
     const navLinks = sidebar.querySelectorAll("div[class^='rsg--root'] > ul > li > a")
     const subNavLinks = sidebar.querySelectorAll("div[class^='rsg--root'] > ul > li ul a")
     const currentPage = sidebar.querySelector("div[class^='rsg--root'] > ul > li > a[href='/" + currentURL + "']")
+    const search = sidebar.querySelector("div[class^='rsg--search'] input")
     const self = this
 
     if (currentURL && currentPage) {
       currentPage.parentNode.classList.add("vueds-active")
+    }
+
+    if (search && !search.classList.contains("set")) {
+      search.setAttribute("placeholder", "Type to filter")
     }
 
     if (navLinks) {
