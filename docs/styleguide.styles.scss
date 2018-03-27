@@ -424,15 +424,12 @@ table[class^="rsg--table"] {
   }
   th[class^="rsg--cellHeading"],
   td {
-    padding: $space-small $space-large $space-small 0;
+    padding: $space-small $space-large $space-small $space-small;
     background: transparent;
   }
   td {
     font-size: $font-size-small;
     padding: $space-small $space-large $space-small $space-small;
-    &[class^="rsg--cell"] {
-      padding-left: 0;
-    }
     &:first-child {
       font-weight: $font-weight-bold;
       white-space: nowrap;
