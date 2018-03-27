@@ -184,25 +184,36 @@ p[class^="rsg--para"] code {
 --------------------------------------------- */
 
 div[class^="rsg--sidebar"] {
-  background: $color-rich-black;
+  background: mix($color-bleu-de-france, $color-rich-black, 5%);
   border: 0;
   a[class^="rsg--link"] {
     color: $color-bleu-de-france;
     &:hover {
-      color: $color-bleu-de-france-light;
+      color: $color-bleu-de-france-lighter;
     }
     &:active {
       color: $color-bleu-de-france-dark;
     }
   }
-  .vueds-active > a,
-  .vueds-active > a:hover {
-    color: tint($color-bleu-de-france, 60%);
+  .vueds-active {
+    ul[class^="rsg--list"] {
+      display: block;
+    }
+    & > a,
+    & > a:hover {
+      color: tint($color-bleu-de-france, 80%);
+    }
   }
   ul[class^="rsg--list"] {
-    padding-left: $space-base;
+    padding-left: 0;
     ul {
       padding-left: $space-small;
+      // Second level links
+      a[class*="rsg--link"] {
+        font-size: $font-size-small;
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+      }
     }
   }
   li[class^="rsg--item"] {
@@ -210,6 +221,15 @@ div[class^="rsg--sidebar"] {
     a[class^="rsg--link"] {
       display: block;
       padding: $space-xx-small 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    // First level links
+    a[class*="rsg--link"] {
+      padding: $space-xx-small $space-base;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   }
 }
@@ -217,9 +237,10 @@ div[class^="rsg--sidebar"] {
 // Sidebar logo
 div[class^="rsg--logo"] {
   @include inset-squish-space($space-base);
-  border-bottom: 1px solid rgba($color-white, 0.15);
+  border-bottom: 1px solid rgba($color-white, 0.1);
   h1 {
     color: $color-white;
+    color: tint($color-bleu-de-france, 90%);
     font-weight: $font-weight-regular;
   }
 }
@@ -229,18 +250,24 @@ div[class^="rsg--search"] input {
   @include inset-squish-space($space-small);
   color: $color-white;
   border: 1px solid transparent;
-  background: rgba($color-white, 0.1);
+  background: mix($color-bleu-de-france, $color-rich-black, 20%);
   &:focus {
     border: 1px solid $color-bleu-de-france;
+    &::-webkit-textfield-decoration-container {
+      display: none !important;
+    }
+    &::-webkit-contacts-auto-fill-button {
+      display: none !important;
+    }
   }
   &::-webkit-input-placeholder {
-    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.3);
+    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.35);
   }
   &:-ms-input-placeholder {
-    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.3);
+    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.35);
   }
   &::-moz-placeholder {
-    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.3);
+    color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.35);
     opacity: 1;
   }
 }
