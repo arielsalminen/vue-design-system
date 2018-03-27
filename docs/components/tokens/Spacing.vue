@@ -31,6 +31,7 @@ export default {
 <style lang="scss" scoped>
 .spacing {
   overflow: hidden;
+  max-width: 1176px;
   width: 100%;
 }
 .space {
