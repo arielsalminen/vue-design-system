@@ -17,6 +17,7 @@
           </td>
           <td v-else>N/A</td>
           <td v-if="token.value">
+            <div v-if="token.type === 'color'" class="type-color" :style="{ backgroundColor: token.value }" />
             <code class="type">
               {{token.value}}
             </code>
@@ -84,7 +85,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
     // Chrome has a bug related to thead, this only works on th:
-    position: -webkit-sticky;
     position: sticky;
     top: -1px;
     &:first-child {
@@ -112,6 +112,15 @@ export default {
   }
   .type {
     line-height: $line-height-base;
+    &-color {
+      @include inline-space($space-x-small);
+      border-radius: $border-radius-default;
+      box-shadow: $box-shadow-small-inset;
+      vertical-align: middle;
+      width: $space-small;
+      height: $space-small;
+      display: inline-block;
+    }
   }
 }
 </style>
