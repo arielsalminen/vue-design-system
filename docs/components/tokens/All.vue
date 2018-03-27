@@ -17,7 +17,9 @@
           </td>
           <td v-else>N/A</td>
           <td v-if="token.value">
-            <div v-if="token.type === 'color'" class="type-color" :style="{ backgroundColor: token.value }" />
+            <div v-if="token.type === 'color'" class="example" :style="{ backgroundColor: token.value }" />
+            <div v-if="token.category === 'border-radius'" class="example" :style="{ borderRadius: token.value }" />
+            <div v-if="token.category === 'box-shadow'" class="example" :style="{ boxShadow: token.value }" />
             <code class="type">
               {{token.value}}
             </code>
@@ -112,15 +114,16 @@ export default {
   }
   .type {
     line-height: $line-height-base;
-    &-color {
-      @include inline-space($space-x-small);
-      border-radius: $border-radius-default;
-      box-shadow: $box-shadow-small-inset;
-      vertical-align: middle;
-      width: $space-small;
-      height: $space-small;
-      display: inline-block;
-    }
+  }
+  .example {
+    @include inline-space($space-x-small);
+    border-radius: $border-radius-default;
+    background: $color-white;
+    box-shadow: $box-shadow-small-inset, $box-shadow-small-inset, $box-shadow-small-inset;
+    vertical-align: middle;
+    width: $space-small;
+    height: $space-small;
+    display: inline-block;
   }
 }
 </style>
