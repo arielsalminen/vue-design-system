@@ -4,6 +4,8 @@ Vue Design System is an open source tool for building UI Design Systems with [Vu
 
 ## What browsers are supported?
 
+The development environment supports the following browsers. To tweak browsers supported in production you will want to edit the [browsers list in package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L124-L132).
+
 | BROWSER         | VERSION |
 | --------------- | ------- |
 | Google Chrome   | Latest  |
@@ -104,3 +106,9 @@ Once done, you can utilize tokens inside `<template>` like this:
 ## How to disable browser from auto opening a new window?
 
 Change the `autoOpenBrowser` [setting in config](https://github.com/viljamis/vue-design-system/blob/master/config/index.js#L69) to `false`.
+
+## How do I use static image assets?
+
+You can put your assets under `src/assets`. It’s ok to create new directories under that directory as well. Since Webpack is used to include all static assets on the Vue app side, you’ll have to define the path like this in order for it to work on both the app and the styleguide: `<img src="@/assets/img/example.jpg" />`.
+
+For component’s `<docs>` section things work a bit differently. Using `<img src="img/example.jpg" />` without `@/assets/` works there. This is because [Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) handles the assets directory a bit differently.
