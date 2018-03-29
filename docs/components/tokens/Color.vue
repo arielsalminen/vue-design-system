@@ -1,7 +1,10 @@
 <template>
-  <component :is="type" class="colors">
-    <div v-for="prop in tokens" class="color" :class="prop.category" v-if="prop.type === 'color'" :style="{ backgroundColor: prop.value, color: setTextColor(prop.value) }">
-      ${{prop.name.replace(/_/g, "-")}} <span>{{prop.value}}</span>
+  <component is="div" class="colors">
+    <div v-for="prop in tokens" class="color" :class="prop.category" v-if="prop.type === 'color'">
+      <div class="swatch" :style="{ backgroundColor: prop.value }" />
+      <h3>{{prop.name.replace(/_/g, " ").replace(/color/g, "")}}</h3>
+      <span>RGB: {{prop.value}}</span>
+      <span>SCSS: ${{prop.name.replace(/_/g, "-")}}</span>
     </div>
   </component>
 </template>
@@ -11,14 +14,11 @@ import designTokens from "@/assets/tokens/tokens.raw.json"
 import tinycolor from "tinycolor2"
 import _ from "lodash"
 
+/**
+ * The color palette comes with 5 different weights for each hue. These hues should be used purposefully to communicate how things function in the interface. Keep in mind that `vermilion` is only used in special cases like destructive actions and error messages. To edit the colors, see [/src/tokens/color.yml](https://github.com/viljamis/vue-design-system/blob/master/src/tokens/color.yml).
+ */
 export default {
   name: "Color",
-  props: {
-    type: {
-      type: String,
-      default: "div",
-    },
-  },
   methods: {
     setTextColor: function(color) {
       let background = tinycolor(color)
@@ -29,7 +29,8 @@ export default {
       }
     },
     orderData: function(data) {
-      let byName = _.orderBy(data, "value", "asc")
+      // let byValue = _.orderBy(data, "value", "asc")
+      let byName = _.orderBy(data, "name", "asc")
       let byCategoryAndName = _.orderBy(byName, "category")
       return byCategoryAndName
     },
@@ -42,24 +43,71 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .colors {
-  overflow: hidden;
+  display: grid;
+  align-content: stretch;
+  justify-content: left;
+  grid-template-columns:
+    calc(20% - #{$space-base}) calc(20% - #{$space-base}) calc(20% - #{$space-base}) calc(20% - #{$space-base})
+    calc(20% - #{$space-base});
+  grid-column-gap: $space-base;
+  max-width: 1200px;
   width: 100%;
+  @media (max-width: 1300px) {
+    grid-template-columns: calc(25% - #{$space-base}) calc(25% - #{$space-base}) calc(25% - #{$space-base}) calc(
+        25% - #{$space-base}
+      );
+  }
+  @media (max-width: 1100px) {
+    grid-template-columns: calc(33.333% - #{$space-base}) calc(33.333% - #{$space-base}) calc(33.333% - #{$space-base});
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: calc(50% - #{$space-base}) calc(50% - #{$space-base});
+  }
+}
+.swatch {
+  @include stack-space($space-x-small);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  height: $space-xx-large;
+  margin: -#{$space-small} -#{$space-small} 0;
+  width: calc(100% + #{$space-large});
+  float: left;
+}
+h3 {
+  @include stack-space($space-x-small);
+  text-transform: capitalize;
+  line-height: 1.2;
+  width: 100%;
+  float: left;
 }
 .color {
+  @include reset;
+  @include inset-space($space-small);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: $space-large;
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
   font-size: $font-size-small;
   font-family: $font-family-text;
-  color: $color-white;
-  height: $space-large;
-  line-height: $space-large;
-  text-align: center;
+  color: $color-rich-black;
+  border-radius: $border-radius-default;
+  overflow: hidden;
+  text-align: left;
   float: left;
   width: 100%;
+  &:hover {
+    span {
+      color: shade($color-silver, 40%);
+    }
+  }
   span {
-    margin-left: 10px;
-    font-style: italic;
-    opacity: 0.5;
+    margin-bottom: $space-x-small;
+    line-height: 1.3;
+    color: $color-silver;
+    font-size: $font-size-small;
+    width: 100%;
+    float: left;
   }
 }
 </style>

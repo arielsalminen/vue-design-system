@@ -6,7 +6,7 @@
     ]"/>
     <wrapper>
       <heading level="h1">Vue Design System</heading>
-      <text-style><text-link href="https://vueds.com">Vue Design System</text-link> is an open-source tool for building design systems with Vue.js. It provides you and your team a set of organized tools, patterns &amp; practices. It works as the foundation for your application development.</text-style>
+      <text-style><a href="https://vueds.com">Vue Design System</a> is an open-source tool for building design systems with Vue.js. It provides you and your team a set of organized tools, patterns &amp; practices. It works as the foundation for your application development.</text-style>
     </wrapper>
   </component>
 </template>
@@ -27,7 +27,7 @@ export default {
   },
   props: {
     /**
-     * The html element name used for the component
+     * The html element name used for the component.
      */
     type: {
       type: String,
@@ -56,6 +56,9 @@ $color-template-link: $color-bleu-de-france;
   float: left;
   height: 100%;
   width: 100%;
+  @media #{$media-query-large} {
+    // This is how you’d use design tokens with media queries
+  }
   .heading {
     color: $color-template-text;
   }
@@ -71,6 +74,11 @@ $color-template-link: $color-bleu-de-france;
     position: absolute;
     left: 50%;
     top: 50%;
+  }
+  a {
+    font-family: $font-family-text;
+    color: $color-bleu-de-france;
+    text-decoration: underline;
   }
 }
 </style>

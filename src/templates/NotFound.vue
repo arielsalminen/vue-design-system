@@ -25,7 +25,7 @@ export default {
   },
   props: {
     /**
-     * The html element name used for the component
+     * The html element name used for the component.
      */
     type: {
       type: String,

@@ -6,7 +6,7 @@
 
 <script>
 /**
- * Headings are used as the titles of each major section of a page in the interface. For example, templates generally use headings as their title.
+ * Headings are used as the titles of each major section of a page in the interface. For example, templates generally use headings as their title. Heading element provides an option to change the level of the heading.
  */
 export default {
   name: "Heading",
@@ -41,37 +41,42 @@ export default {
 }
 h1 {
   letter-spacing: $letter-spacing-x-small;
-  font-size: $font-size-x-large;
+  font-size: $font-size-xx-large;
   font-weight: $font-weight-bold;
   @media #{$media-query-large} {
-    font-size: $font-size-xx-large;
+    font-size: $font-size-xxx-large;
   }
 }
 h2 {
   letter-spacing: $letter-spacing-small;
-  font-size: $font-size-x-large;
+  font-size: $font-size-xx-large;
   font-weight: $font-weight-bold;
 }
 h3 {
-  font-size: $font-size-large;
+  font-size: $font-size-x-large;
   font-weight: $font-weight-bold;
 }
 h4 {
-  font-size: $font-size-base;
+  font-size: $font-size-large;
   font-weight: $font-weight-semi-bold;
 }
 h5 {
-  font-size: $font-size-small;
+  font-size: $font-size-base;
   font-weight: $font-weight-regular;
 }
 h6 {
-  font-size: $font-size-x-small;
+  font-size: $font-size-small;
   font-weight: $font-weight-regular;
 }
 </style>
 
 <docs>
   ```jsx
-  <heading level="h1">The quick brown fox</heading>
+  <div>
+    <heading level="h1">The quick brown fox</heading>
+    <heading level="h2">The quick brown fox</heading>
+    <heading level="h3">The quick brown fox</heading>
+    <heading level="h4">The quick brown fox</heading>
+  </div>
   ```
 </docs>

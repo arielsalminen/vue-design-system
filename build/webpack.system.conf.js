@@ -60,6 +60,25 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.HashedModuleIdsPlugin(),
     // enable scope hoisting
     new webpack.optimize.ModuleConcatenationPlugin(),
+    // Copy Sass tokens and system utilities as well
+    new CopyWebpackPlugin([
+      {
+        from: "./src/assets/tokens/tokens.scss",
+        to: utils.assetsSystemPath("scss/tokens.scss"),
+      },
+      {
+        from: "./src/styles/_spacing.scss",
+        to: utils.assetsSystemPath("scss/spacing.scss"),
+      },
+      {
+        from: "./src/styles/_mixins.scss",
+        to: utils.assetsSystemPath("scss/mixins.scss"),
+      },
+      {
+        from: "./src/styles/_functions.scss",
+        to: utils.assetsSystemPath("scss/functions.scss"),
+      },
+    ]),
   ],
 })
 

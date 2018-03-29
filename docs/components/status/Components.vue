@@ -32,9 +32,15 @@
       </thead>
       <tbody>
         <tr v-for="component in components" class="component">
-          <td v-if="component.name">{{component.name}}</td>
+          <td v-if="component.name">
+            <code class="name">
+              {{component.name}}
+            </code>
+          </td>
           <td v-else>N/A</td>
-          <td v-if="component.release">{{component.release}}</td>
+          <td v-if="component.release">
+            {{component.release}}
+          </td>
           <td v-else>N/A</td>
           <td v-if="component.status">
             <svg-icon
@@ -112,6 +118,9 @@ export default {
   color: $color-rich-black;
   margin-bottom: $space-small;
   font-style: normal;
+  @media (max-width: 1000px) {
+    overflow-x: auto;
+  }
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -119,11 +128,27 @@ export default {
   }
   thead th {
     padding: $space-small $space-large $space-small $space-small;
-    background: tint($color-bleu-de-france, 90%);
+    background: $color-cloud;
     font-size: $font-size-small;
     font-weight: $font-weight-bold;
     color: $color-oxford-blue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: $font-weight-semi-bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-align: left;
+    // Chrome has a bug related to thead, this only works on th:
+    position: sticky;
+    top: -1px;
+    &:first-child {
+      border-top-left-radius: $border-radius-default;
+      border-bottom-left-radius: $border-radius-default;
+    }
+    &:last-child {
+      border-top-right-radius: $border-radius-default;
+      border-bottom-right-radius: $border-radius-default;
+    }
   }
   tr {
     border-bottom: 1px solid #dfe3e6;
@@ -146,9 +171,13 @@ export default {
     flex-direction: row;
     align-items: center;
     display: flex;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     li {
       margin: 0 $space-base 0 0;
-      color: tint($color-rich-black, 30%);
+      color: $color-silver;
       font-size: $font-size-small;
       align-items: center;
       display: flex;

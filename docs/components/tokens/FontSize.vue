@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" class="font-sizes">
+  <component is="div" class="font-sizes">
     <div v-for="prop in tokens" class="font" v-if="prop.category === 'font-size'" :style="{ fontSize: prop.value }">
       ${{prop.name.replace(/_/g, "-")}} <span>({{prop.value}})</span>
     </div>
@@ -9,14 +9,11 @@
 <script>
 import designTokens from "@/assets/tokens/tokens.raw.json"
 
+/**
+ * This typographic scale makes it easier to achieve visual harmony in the interface. It’s purposefully designed to keep the number of separate font sizes to a minimum. To edit font-sizes, see [/src/tokens/font-size.yml](https://github.com/viljamis/vue-design-system/blob/master/src/tokens/font-size.yml).
+ */
 export default {
   name: "FontSize",
-  props: {
-    type: {
-      type: String,
-      default: "div",
-    },
-  },
   methods: {
     orderData: function(data) {
       let order = _.orderBy(data, "value", "desc")
@@ -45,9 +42,10 @@ export default {
   margin-bottom: $space-small;
   font-style: normal;
   span {
+    letter-spacing: -0.02em;
     margin-left: 10px;
-    font-style: italic;
-    opacity: 0.5;
+    font-weight: $font-weight-regular;
+    color: $color-silver;
   }
 }
 </style>
