@@ -14,6 +14,7 @@ $styleguide-grey: #c4cdd5;
 $styleguide-grey-dark: #4d5865;
 $status-ready: #7cb518;
 $breakpoint: 800px;
+$breakpoint-2: 600px;
 $color-heading: rgb(30, 30, 30);
 $color-text: shade($color-silver, 50%);
 
@@ -208,11 +209,23 @@ div[class^="rsg--sidebar"] {
     padding-left: 0;
     ul {
       padding-left: $space-small;
+      @media (max-width: #{$breakpoint-2}) {
+        padding: 0 0 0 $space-large;
+        width: 90%;
+        li {
+          display: inline;
+          line-height: $line-height-base;
+        }
+      }
       // Second level links
       a[class*="rsg--link"] {
         font-size: $font-size-small;
         -webkit-font-smoothing: subpixel-antialiased;
         -moz-osx-font-smoothing: auto;
+        @media (max-width: #{$breakpoint-2}) {
+          float: left;
+          padding: 0 $space-x-small 0 0;
+        }
       }
     }
   }

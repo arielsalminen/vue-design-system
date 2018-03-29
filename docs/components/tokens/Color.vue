@@ -11,7 +11,6 @@
 
 <script>
 import designTokens from "@/assets/tokens/tokens.raw.json"
-import tinycolor from "tinycolor2"
 import _ from "lodash"
 
 /**
@@ -20,14 +19,6 @@ import _ from "lodash"
 export default {
   name: "Color",
   methods: {
-    setTextColor: function(color) {
-      let background = tinycolor(color)
-      if (background.isLight()) {
-        return "#000"
-      } else {
-        return "#fff"
-      }
-    },
     orderData: function(data) {
       // let byValue = _.orderBy(data, "value", "asc")
       let byName = _.orderBy(data, "name", "asc")
@@ -65,9 +56,11 @@ export default {
   @media (max-width: 900px) {
     grid-template-columns: calc(50% - #{$space-base}) calc(50% - #{$space-base});
   }
+  @media (max-width: 400px) {
+    grid-template-columns: 100%;
+  }
 }
 .swatch {
-  @include stack-space($space-x-small);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   height: $space-xx-large;
   margin: -#{$space-small} -#{$space-small} 0;
