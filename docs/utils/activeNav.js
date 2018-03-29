@@ -13,7 +13,7 @@ export default {
     },
   },
   mounted() {
-    const currentURL = window.location.hash.split("?")[0]
+    const currentURL = window.location.hash.split("?")[0].replace("%20", " ")
     const sidebar = document.querySelector("div[class^='rsg--sidebar']")
     const navLinks = sidebar.querySelectorAll("div[class^='rsg--root'] > ul > li > a")
     const subNavLinks = sidebar.querySelectorAll("div[class^='rsg--root'] > ul > li ul a")
