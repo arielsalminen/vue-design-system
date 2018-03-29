@@ -31,7 +31,7 @@ module.exports = {
   /**
    * Path to static assets directory
    */
-  assetsDir: path.join(__dirname, "static"),
+  assetsDir: path.join(__dirname, "src/assets"),
   showCode: true,
   showUsage: true,
   /**
@@ -128,4 +128,13 @@ module.exports = {
       ],
     },
   }),
+  /**
+   * Configure docs server to redirect asset queries
+   */
+  // configureServer(app) {
+  //   // `app` is the instance of the express server running Styleguidist
+  //   app.get("/assets/:file", (req, res) => {
+  //     res.redirect(req.params.file)
+  //   })
+  // },
 }
