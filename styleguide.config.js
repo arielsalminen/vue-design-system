@@ -105,7 +105,7 @@ module.exports = {
   /**
    * Custom wrapper template for the documentation.
    */
-  template: "docs/styleguide.template.html",
+  //template: "docs/styleguide.template.html",
   /**
    * Ignore app.vue, tests, and example component.
    */
