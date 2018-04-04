@@ -8,7 +8,7 @@ The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](http
 
 **Made by [@viljamis](https://twitter.com/viljamis) and other contributors. See also [the official website](https://vueds.com) of Vue Design System and [read my article](https://viljamis.com/2018/vue-design-system/) on the processes and workflow I use to get started with a new design system project.**
 
-[![Screenshot](./preview.gif)](https://vueds.com/)
+[![Screenshot](./docs/preview.gif)](https://vueds.com/)
 
 ## Features
 
