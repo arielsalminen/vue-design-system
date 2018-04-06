@@ -1,5 +1,5 @@
 <template>
-  <component is="div" class="all-tokens">
+  <component :is="div" class="all-tokens">
     <table>
       <thead>
         <tr>
@@ -9,7 +9,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="token in tokens" class="token">
+        <tr v-for="token in tokens" :key="token" class="token">
           <td v-if="token.name">
             <code class="name">
               ${{token.name.replace(/_/g, "-")}}

@@ -1,13 +1,19 @@
 <template>
-  <component is="div" class="spacing">
-    <div v-for="prop in tokens" class="space" v-if="prop.category === 'space'" :style="{ lineHeight: prop.value, height: prop.value }">
-      ${{prop.name.replace(/_/g, "-")}} <span>({{prop.value}})</span>
+  <component :is="div" class="spacing">
+    <div
+      v-for="prop in tokens"
+      :key="prop"
+      class="space"
+      v-if="prop.category === 'space'"
+      :style="{ lineHeight: prop.value, height: prop.value }">
+        ${{prop.name.replace(/_/g, "-")}} <span>({{prop.value}})</span>
     </div>
   </component>
 </template>
 
 <script>
 import designTokens from "@/assets/tokens/tokens.raw.json"
+import _ from "lodash"
 
 /**
  * A framework for creating a predictable and harmonious spacing system. These tokens are used for padding, margins, and position together with [spacing utilities](https://github.com/viljamis/vue-design-system/wiki/spacing). To edit spacing, see [/src/tokens/spacing.yml](https://github.com/viljamis/vue-design-system/blob/master/src/tokens/spacing.yml).

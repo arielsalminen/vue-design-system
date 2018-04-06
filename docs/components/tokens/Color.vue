@@ -1,10 +1,15 @@
 <template>
-  <component is="div" class="colors">
-    <div v-for="prop in tokens" class="color" :class="prop.category" v-if="prop.type === 'color'">
-      <div class="swatch" :style="{ backgroundColor: prop.value }" />
-      <h3>{{prop.name.replace(/_/g, " ").replace(/color/g, "")}}</h3>
-      <span>RGB: {{prop.value}}</span>
-      <span>SCSS: ${{prop.name.replace(/_/g, "-")}}</span>
+  <component :is="div" class="colors">
+    <div
+      v-for="prop in tokens"
+      :key="prop"
+      class="color"
+      :class="prop.category"
+      v-if="prop.type === 'color'">
+        <div class="swatch" :style="{ backgroundColor: prop.value }" />
+        <h3>{{prop.name.replace(/_/g, " ").replace(/color/g, "")}}</h3>
+        <span>RGB: {{prop.value}}</span>
+        <span>SCSS: ${{prop.name.replace(/_/g, "-")}}</span>
     </div>
   </component>
 </template>

@@ -31,7 +31,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="component in components" class="component">
+        <tr v-for="component in components" :key="component.name" class="component">
           <td v-if="component.name">
             <code class="name">
               {{component.name}}
