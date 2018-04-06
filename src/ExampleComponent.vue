@@ -1,6 +1,8 @@
 <template>
   <component :is="type" :class="['example-component ', variation]">
-    <slot/>
+    <div id="example-container">
+      <slot/>
+    </div>
   </component>
 </template>
 
@@ -14,7 +16,7 @@ export default {
    * This prevents conflicts with existing and future HTML elements, since all
    * HTML elements are a single word. See example below:
    */
-  name: "ExampleComponent",
+  name: "example",
   /**
    * Components in the system are labelled with status labels that reflect their
    * state of completion. See example below. All available statuses are:
