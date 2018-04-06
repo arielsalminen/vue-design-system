@@ -32,3 +32,5 @@ jobs:
         - npm run build:docs
         - npm run build:system
         - npm run build:app
+        # Try dev environment
+        - npm start
