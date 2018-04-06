@@ -1,8 +1,8 @@
 <template>
   <div class="colors">
     <div
-      v-for="prop in tokens"
-      :key="prop"
+      v-for="(prop, index) in tokens"
+      :key="index"
       class="color"
       :class="prop.category"
       v-if="prop.type === 'color'">

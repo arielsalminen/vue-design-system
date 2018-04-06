@@ -31,7 +31,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="component in components" :key="component.name" class="component">
+        <tr v-for="(component, index) in components" :key="index" class="component">
           <td v-if="component.name">
             <code class="name">
               {{component.name}}
@@ -78,6 +78,10 @@
 <script>
 import designTokens from "@/assets/tokens/tokens.raw.json"
 import orderBy from "lodash/orderBy"
+
+if (typeof require.content !== "function") {
+  require.context = (d, c) => c(require)
+}
 
 export default {
   name: "Components",

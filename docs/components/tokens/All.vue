@@ -9,7 +9,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="token in tokens" :key="token" class="token">
+        <tr v-for="(token, index) in tokens" :key="index" class="token">
           <td v-if="token.name">
             <code class="name">
               ${{token.name.replace(/_/g, "-")}}
