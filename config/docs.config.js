@@ -128,6 +128,7 @@ module.exports = {
       ],
     },
   }),
+  styleguideDir: "../dist/docs",
   /**
    * Configure docs server to redirect asset queries
    */
