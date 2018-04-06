@@ -17,7 +17,7 @@ contexts.forEach(context => {
 })
 
 export default {
-  install(Vue, options) {
+  install(Vue) {
     components.forEach(c => Vue.component(c.name, c))
   },
 }

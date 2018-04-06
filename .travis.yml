@@ -2,3 +2,35 @@ language: node_js
 node_js:
   - "8.6.0"
   - "node"
+env:
+  - WEBPACK_VERSION= # Current, from package.json
+  - WEBPACK_VERSION=3
+install:
+  # Use npm 5.7.x since it has introduced `npm ci`
+  - if [[ `npm -v` != 5.7* ]]; then npm install -g npm@'>=5.7.1'; fi
+  # Take care of styleguidist from a fork for now (will be replaced soonish)
+  - npm install git+https://git@github.com/viljamis/vue-styleguidist.git
+  - npm ci
+before_script:
+  # Install Webpack version
+  - if [[ -n "$WEBPACK_VERSION" ]]; then npm install --no-save webpack@$WEBPACK_VERSION; fi
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+stages:
+  - lint
+  - integration
+jobs:
+  include:
+    - stage: lint
+      script:
+        # Run linter
+        - npm run lint
+    - stage: integration
+      script:
+        # Build all
+        - npm run build:docs
+        - npm run build:system
+        - npm run build:app
+        # Try dev environment
+        - npm start

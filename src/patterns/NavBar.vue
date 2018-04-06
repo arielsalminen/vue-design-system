@@ -1,6 +1,12 @@
 <template>
   <component :is="type" class="nav">
-    <a v-for="item in navItems" :href="item.href" :class="{active: localActive === item.component}" v-html="item.name"></a>
+    <a
+      v-for="item in navItems"
+      :key="item.name"
+      :href="item.href"
+      :class="{active: localActive === item.component}"
+      v-html="item.name">
+    </a>
   </component>
 </template>
 
@@ -88,10 +94,10 @@ $color-nav-link-active: $color-bleu-de-france;
 <docs>
   ```jsx
   <nav-bar active="Dashboard" :navItems="[
-    {name: 'Dashboard', component: 'Dashboard', href: '/'},
-    {name: 'Posts', component: 'Posts', href: '/posts'},
-    {name: 'Users', component: 'Users', href: '/users'},
-    {name: 'Settings', component: 'Settings', href: '/settings'}
+    {name: 'Dashboard', component: 'Dashboard', href: '/example/'},
+    {name: 'Posts', component: 'Posts', href: '/example/'},
+    {name: 'Users', component: 'Users', href: '/example/'},
+    {name: 'Settings', component: 'Settings', href: '/example/'}
   ]"/>
   ```
 </docs>

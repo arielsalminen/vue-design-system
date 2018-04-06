@@ -2,7 +2,7 @@
   <component :is="type" class="index">
     <nav-bar active="Index" :navItems="[
       {name: 'Template', component: 'Index', href: '/#/'},
-      {name: 'Style Guide', href: 'http://localhost:6060/'}
+      {name: 'Living Docs', href: 'http://localhost:6060/'}
     ]"/>
     <wrapper>
       <heading level="h1">Vue Design System</heading>

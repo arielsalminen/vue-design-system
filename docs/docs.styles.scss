@@ -10,8 +10,8 @@
 /* LOCAL TOKENS
 --------------------------------------------- */
 
-$styleguide-grey: #c4cdd5;
-$styleguide-grey-dark: #4d5865;
+$docs-grey: #c4cdd5;
+$docs-grey-dark: #4d5865;
 $status-ready: #7cb518;
 $breakpoint: 800px;
 $breakpoint-2: 600px;
@@ -98,7 +98,7 @@ div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
 
 // Heading, level 2
 h2[class^="rsg--heading"] {
-  border-bottom: 1px solid $styleguide-grey;
+  border-bottom: 1px solid $docs-grey;
   padding-bottom: $space-small;
   margin: $space-large 0 $space-base;
   width: 100%;
@@ -174,7 +174,7 @@ pre + p[class^="rsg--para"] {
 }
 
 p[class^="rsg--para"] code {
-  background: tint($styleguide-grey, 75%);
+  background: tint($docs-grey, 75%);
   color: shade($color-silver, 20%);
   padding: $space-xx-small;
   border-radius: $border-radius-default;
@@ -297,8 +297,8 @@ div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
 pre[class^="rsg--pre"],
 div[class^="rsg--preview"] {
   padding: $space-base;
-  background-color: tint($styleguide-grey, 90%);
-  border: 1px solid tint($styleguide-grey, 50%);
+  background-color: tint($docs-grey, 90%);
+  border: 1px solid tint($docs-grey, 50%);
   box-shadow: inset 0 0 $space-x-small rgba($color-rich-black, 0.05);
   margin: $space-small 0 0;
   border-radius: 0;
@@ -377,7 +377,7 @@ code.name {
 }
 span[class^="rsg--type"] code[class^="rsg--code"],
 code.type {
-  background: tint($styleguide-grey, 75%);
+  background: tint($docs-grey, 75%);
   color: shade($color-silver, 20%);
   padding: $space-xx-small;
   border-radius: $border-radius-default;
@@ -404,7 +404,7 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
   cursor: help;
   transform: translateY($space-x-large * 1.35);
   line-height: $line-height-heading;
-  background: tint($styleguide-grey, 50%);
+  background: tint($docs-grey, 50%);
   padding: $space-x-small $space-small $space-x-small/1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -476,7 +476,7 @@ table[class^="rsg--table"] {
     }
   }
   tr {
-    border-bottom: 1px solid tint($styleguide-grey, 50%);
+    border-bottom: 1px solid tint($docs-grey, 50%);
   }
   tbody tr:last-child {
     border-bottom: 0;

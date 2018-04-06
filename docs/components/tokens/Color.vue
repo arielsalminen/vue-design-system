@@ -1,17 +1,22 @@
 <template>
-  <component is="div" class="colors">
-    <div v-for="prop in tokens" class="color" :class="prop.category" v-if="prop.type === 'color'">
-      <div class="swatch" :style="{ backgroundColor: prop.value }" />
-      <h3>{{prop.name.replace(/_/g, " ").replace(/color/g, "")}}</h3>
-      <span>RGB: {{prop.value}}</span>
-      <span>SCSS: ${{prop.name.replace(/_/g, "-")}}</span>
+  <div class="colors">
+    <div
+      v-for="prop in tokens"
+      :key="prop"
+      class="color"
+      :class="prop.category"
+      v-if="prop.type === 'color'">
+        <div class="swatch" :style="{ backgroundColor: prop.value }" />
+        <h3>{{prop.name.replace(/_/g, " ").replace(/color/g, "")}}</h3>
+        <span>RGB: {{prop.value}}</span>
+        <span>SCSS: ${{prop.name.replace(/_/g, "-")}}</span>
     </div>
-  </component>
+  </div>
 </template>
 
 <script>
 import designTokens from "@/assets/tokens/tokens.raw.json"
-import _ from "lodash"
+import orderBy from "lodash/orderBy"
 
 /**
  * The color palette comes with 5 different weights for each hue. These hues should be used purposefully to communicate how things function in the interface. Keep in mind that `vermilion` is only used in special cases like destructive actions and error messages. To edit the colors, see [/src/tokens/color.yml](https://github.com/viljamis/vue-design-system/blob/master/src/tokens/color.yml).
@@ -20,9 +25,9 @@ export default {
   name: "Color",
   methods: {
     orderData: function(data) {
-      // let byValue = _.orderBy(data, "value", "asc")
-      let byName = _.orderBy(data, "name", "asc")
-      let byCategoryAndName = _.orderBy(byName, "category")
+      // let byValue = orderBy(data, "value", "asc")
+      let byName = orderBy(data, "name", "asc")
+      let byCategoryAndName = orderBy(byName, "category")
       return byCategoryAndName
     },
   },
