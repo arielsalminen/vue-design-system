@@ -1,5 +1,5 @@
 <template>
-  <component :is="div" class="colors">
+  <div class="colors">
     <div
       v-for="prop in tokens"
       :key="prop"
@@ -11,7 +11,7 @@
         <span>RGB: {{prop.value}}</span>
         <span>SCSS: ${{prop.name.replace(/_/g, "-")}}</span>
     </div>
-  </component>
+  </div>
 </template>
 
 <script>

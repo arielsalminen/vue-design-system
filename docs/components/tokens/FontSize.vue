@@ -1,5 +1,5 @@
 <template>
-  <component :is="div" class="font-sizes">
+  <div class="font-sizes">
     <div
       v-for="prop in tokens"
       :key="prop"
@@ -8,7 +8,7 @@
       :style="{ fontSize: prop.value }">
         ${{prop.name.replace(/_/g, "-")}} <span>({{prop.value}})</span>
     </div>
-  </component>
+  </div>
 </template>
 
 <script>

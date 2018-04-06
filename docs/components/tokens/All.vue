@@ -1,5 +1,5 @@
 <template>
-  <component :is="div" class="all-tokens">
+  <div class="all-tokens">
     <table>
       <thead>
         <tr>
@@ -30,7 +30,7 @@
         </tr>
       </tbody>
     </table>
-  </component>
+  </div>
 </template>
 
 <script>

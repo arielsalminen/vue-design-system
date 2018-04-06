@@ -1,5 +1,5 @@
 <template>
-  <component :is="div" class="spacing">
+  <div class="spacing">
     <div
       v-for="prop in tokens"
       :key="prop"
@@ -8,7 +8,7 @@
       :style="{ lineHeight: prop.value, height: prop.value }">
         ${{prop.name.replace(/_/g, "-")}} <span>({{prop.value}})</span>
     </div>
-  </component>
+  </div>
 </template>
 
 <script>
