@@ -1,5 +1,5 @@
 const path = require("path")
-const baseConfig = require("./build/webpack.base.conf.js")
+const baseConfig = require("../build/webpack.base.conf.js")
 const merge = require("webpack-merge")
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
    */
   navigation: true,
   /**
-   * Most of the styles are defined in /docs/styleguide.styles.scss
+   * Most of the styles are defined in /docs/docs.styles.scss
    */
   theme: {
     maxWidth: "100%",
@@ -31,7 +31,7 @@ module.exports = {
   /**
    * Path to static assets directory
    */
-  assetsDir: path.join(__dirname, "src/assets"),
+  assetsDir: path.join(__dirname, "../src/assets"),
   showCode: true,
   showUsage: true,
   /**
@@ -41,71 +41,71 @@ module.exports = {
   /**
    * We’re defining below JS and SCSS requires for the documentation.
    */
-  require: [path.join(__dirname, "docs/styleguide.helper.js"), path.join(__dirname, "docs/styleguide.styles.scss")],
+  require: [path.join(__dirname, "../docs/docs.helper.js"), path.join(__dirname, "../docs/docs.styles.scss")],
   sections: [
     {
       name: "Getting Started",
-      content: "docs/getting-started.md",
-      components: "docs/components/status/**/[A-Z]*.vue",
+      content: "../docs/getting-started.md",
+      components: "../docs/components/status/**/[A-Z]*.vue",
     },
     {
       name: "Design Principles",
-      content: "docs/principles.md",
+      content: "../docs/principles.md",
       /**
        * section.vue component is an util that needs to be loaded into
        * all sections, even when not showing any real components.
        */
-      components: "docs/utils/section.vue",
+      components: "../docs/utils/section.vue",
     },
     {
       name: "Design Tokens",
-      content: "docs/tokens.md",
+      content: "../docs/tokens.md",
       components: () => [
-        "docs/components/tokens/Color.vue",
-        "docs/components/tokens/FontSize.vue",
-        "docs/components/tokens/Spacing.vue",
-        "docs/components/tokens/All.vue",
+        "../docs/components/tokens/Color.vue",
+        "../docs/components/tokens/FontSize.vue",
+        "../docs/components/tokens/Spacing.vue",
+        "../docs/components/tokens/All.vue",
       ],
     },
     {
       name: "Elements",
-      content: "docs/elements.md",
-      components: "src/elements/**/[A-Z]*.vue",
+      content: "../docs/elements.md",
+      components: "../src/elements/**/[A-Z]*.vue",
     },
     {
       name: "Patterns",
-      content: "docs/patterns.md",
-      components: "src/patterns/**/[A-Z]*.vue",
+      content: "../docs/patterns.md",
+      components: "../src/patterns/**/[A-Z]*.vue",
     },
     {
       name: "Templates",
-      content: "docs/templates.md",
-      components: "src/templates/**/[A-Z]*.vue",
+      content: "../docs/templates.md",
+      components: "../src/templates/**/[A-Z]*.vue",
     },
     {
       name: "Downloads",
-      content: "docs/downloads.md",
-      components: "docs/utils/section.vue",
+      content: "../docs/downloads.md",
+      components: "../docs/utils/section.vue",
     },
     {
       name: "FAQ",
-      content: "docs/faq.md",
-      components: "docs/utils/section.vue",
+      content: "../docs/faq.md",
+      components: "../docs/utils/section.vue",
     },
     {
       /**
-       * Private components have to be loaded into the styleguide as well,
+       * Private components have to be loaded into the documentation as well,
        * otherwise anything using them will be broken. We’re loading them in
        * their own section, which then gets hidden in util/docs/hidePrivate.js
        */
       name: "Private Components",
-      components: "src/**/[_]*.vue",
+      components: "../src/**/[_]*.vue",
     },
   ],
   /**
    * Custom wrapper template for the documentation.
    */
-  template: "docs/styleguide.template.html",
+  template: "../docs/docs.template.html",
   /**
    * Ignore app.vue, tests, and example component.
    */
@@ -132,7 +132,7 @@ module.exports = {
    * Configure docs server to redirect asset queries
    */
   // configureServer(app) {
-  //   // `app` is the instance of the express server running Styleguidist
+  //   // `app` is the instance of the express server running the docs
   //   app.get("/assets/:file", (req, res) => {
   //     res.redirect(req.params.file)
   //   })
