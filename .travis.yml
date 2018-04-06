@@ -8,6 +8,8 @@ env:
 install:
   # Use npm 5.7.x since it has introduced `npm ci`
   - if [[ `npm -v` != 5.7* ]]; then npm install -g npm@'>=5.7.1'; fi
+  # Take care of styleguidist from a fork for now (will be replaced soonish)
+  - npm install git+https://git@github.com/viljamis/vue-styleguidist.git
   - npm ci
 before_script:
   # Install Webpack version
