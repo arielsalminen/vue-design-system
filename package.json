@@ -22,8 +22,8 @@
     "node:build:system": "node ./build/build-system.js",
     "styleguide": "vue-styleguidist server --config ./config/docs.config.js",
     "styleguide:build": "vue-styleguidist build --config ./config/docs.config.js",
-    "theo": "theo src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest src/assets/tokens",
-    "theo:onchange": "onchange \"src/tokens/*.yml\" -- npm run theo",
+    "theo": "theo ./src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest ./src/assets/tokens",
+    "theo:onchange": "onchange \"./src/tokens/*.yml\" -- npm run theo",
     "precommit": "pretty-quick --staged"
   },
   "repository": {
@@ -173,6 +173,7 @@
     "> 1%",
     "last 2 versions",
     "not Explorer > 0",
+    "IE 11",
     "not ExplorerMobile > 0",
     "not BlackBerry > 0",
     "not OperaMini all",
