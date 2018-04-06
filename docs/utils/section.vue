@@ -4,7 +4,7 @@
 
 <script>
 /**
- * Used to trigger “mounted” inside empty styleguide sections.
+ * Used to trigger “mounted” inside empty docs sections.
  */
 export default {
   name: "VuedsSection",
