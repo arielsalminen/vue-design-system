@@ -77,7 +77,7 @@
 
 <script>
 import designTokens from "@/assets/tokens/tokens.raw.json"
-import _ from "lodash"
+import orderBy from "lodash/orderBy"
 
 export default {
   name: "Components",
@@ -97,7 +97,7 @@ export default {
       return components
     },
     orderData: function(data) {
-      return _.orderBy(data, "name", "asc")
+      return orderBy(data, "name", "asc")
     },
   },
   data() {
