@@ -19,6 +19,7 @@ branches:
     - /^v\d+\.\d+\.\d+$/
 stages:
   - lint
+  - test
   - integration
 jobs:
   include:
@@ -26,6 +27,10 @@ jobs:
       script:
         # Run linter
         - npm run lint
+    - stage: test
+      script:
+        # Run tests
+        - npm run test
     - stage: integration
       script:
         # Build all
