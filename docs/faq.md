@@ -4,7 +4,7 @@ Vue Design System is an open source tool for building UI Design Systems with [Vu
 
 ## What browsers are supported?
 
-The development environment supports the following browsers. To tweak browsers supported in production you will want to edit the [browsers list in package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L124-L132).
+The development environment supports the following browsers. To tweak browsers supported in production you will want to edit the [browsers list in package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L172-L180).
 
 | BROWSER         | VERSION |
 | --------------- | ------- |
@@ -42,7 +42,7 @@ Vue Design System is not a front-end component library and never will be. Instea
 
 ## Can I convert YAML tokens to more than just SCSS and JSON?
 
-Definitely. See [Theo’s docs](https://github.com/salesforce-ux/theo). It allows you to convert the tokens to almost any format you can think of. The formats used are being configured in [package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L20).
+Definitely. See [Theo’s docs](https://github.com/salesforce-ux/theo). It allows you to convert the tokens to almost any format you can think of. The formats used are being configured in [package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L25).
 
 ## Does Vue Design System work on Windows?
 
