@@ -105,7 +105,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.5",
-    "require-context": "^1.1.0",
     "tinycolor2": "^1.4.1",
     "vue": "^2.5.16",
     "vue-lodash": "^2.0.0",
