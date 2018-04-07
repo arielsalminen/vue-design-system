@@ -1,5 +1,5 @@
 import Vue from "vue"
-import FontSize from "docs/components/tokens/Fontsize"
+import FontSize from "docs/components/tokens/Fontsize.vue"
 
 describe("FontSize.vue", () => {
   it("should render correct contents", () => {

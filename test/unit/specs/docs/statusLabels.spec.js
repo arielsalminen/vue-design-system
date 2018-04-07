@@ -1,6 +1,6 @@
 import { createLocalVue, mount } from "@vue/test-utils"
-import ExampleComponent from "@/ExampleComponent"
-import statusLabels from "docs/utils/statusLabels"
+import ExampleComponent from "@/ExampleComponent.vue"
+import statusLabels from "docs/utils/statusLabels.js"
 
 // create an extended `Vue` constructor
 const localVue = createLocalVue()
