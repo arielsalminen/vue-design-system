@@ -32,7 +32,6 @@ jobs:
     - stage: build
       script:
         # Build all
-        # Take care of styleguidist from a fork for now (will be replaced soonish)
-        - npm install git+https://git@github.com/viljamis/vue-styleguidist.git & npm run build:docs
+        - npm run build:docs
         - npm run build:system
         - npm run build:app
