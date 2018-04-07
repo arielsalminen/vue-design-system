@@ -79,10 +79,6 @@
 import designTokens from "@/assets/tokens/tokens.raw.json"
 import orderBy from "lodash/orderBy"
 
-if (typeof require.content !== "function") {
-  require.context = (d, c) => c(require)
-}
-
 export default {
   name: "Components",
   methods: {
