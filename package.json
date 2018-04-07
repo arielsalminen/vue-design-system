@@ -25,7 +25,7 @@
     "styleguide:build": "vue-styleguidist build --config ./config/docs.config.js",
     "theo": "theo ./src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest ./src/assets/tokens",
     "theo:onchange": "onchange \"./src/tokens/*.yml\" -- npm run theo",
-    "test": "npm run unit",
+    "test": "npm-run-all theo unit",
     "precommit": "pretty-quick --staged"
   },
   "repository": {
