@@ -2,6 +2,7 @@
 .eslintcache
 node_modules/
 dist/
+test/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
