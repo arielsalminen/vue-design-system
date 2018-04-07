@@ -14,13 +14,13 @@ export default {
   },
   mounted() {
     let currentURL = ""
-    if (process.env.NODE_ENV === "test") {
+    const sidebar = document.querySelector("div[class^='rsg--sidebar']")
+
+    if (process && process.env && process.env.NODE_ENV === "test") {
       currentURL = "/example/"
     } else {
       currentURL = window.location.pathname + window.location.hash.split("?")[0].replace("%20", " ")
     }
-
-    const sidebar = document.querySelector("div[class^='rsg--sidebar']")
 
     if (sidebar) {
       const navLinks = sidebar.querySelectorAll("div[class^='rsg--root'] > ul > li > a")
