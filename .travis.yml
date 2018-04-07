@@ -28,7 +28,7 @@ jobs:
     - stage: test
       script:
         # Run tests
-        - npm run test
+        - npm run theo && npm run test
     - stage: build
       script:
         # Build all
