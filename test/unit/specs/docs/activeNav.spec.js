@@ -1,5 +1,5 @@
 import { createLocalVue, mount } from "@vue/test-utils"
-import activeNav from "§/utils/activeNav"
+import activeNav from "docs/utils/activeNav"
 
 // create an extended `Vue` constructor
 const localVue = createLocalVue()

@@ -1,5 +1,5 @@
 import Vue from "vue"
-import Spacing from "§/components/tokens/Spacing"
+import Spacing from "docs/components/tokens/Spacing"
 
 describe("Spacing.vue", () => {
   it("should render correct contents", () => {

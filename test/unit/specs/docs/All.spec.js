@@ -1,5 +1,5 @@
 import Vue from "vue"
-import All from "§/components/tokens/All"
+import All from "docs/components/tokens/All"
 
 describe("All.vue", () => {
   it("should render correct contents", () => {

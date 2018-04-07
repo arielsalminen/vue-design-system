@@ -1,5 +1,5 @@
 import Vue from "vue"
-import Color from "§/components/tokens/Color"
+import Color from "docs/components/tokens/Color"
 
 describe("Color.vue", () => {
   it("should render correct contents", () => {
