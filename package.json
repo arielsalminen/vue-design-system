@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --config ./build/webpack.dev.conf.js",
     "start": "npm-run-all --parallel styleguide theo:onchange theo dev",
+    "unit": "jest --config ./test/unit/jest.conf.js --coverage",
     "build": "npm-run-all theo node:build",
     "build:app": "npm run build",
     "build:system": "npm-run-all theo node:build:system",
@@ -24,6 +25,7 @@
     "styleguide:build": "vue-styleguidist build --config ./config/docs.config.js",
     "theo": "theo ./src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest ./src/assets/tokens",
     "theo:onchange": "onchange \"./src/tokens/*.yml\" -- npm run theo",
+    "test": "npm-run-all theo unit",
     "precommit": "pretty-quick --staged"
   },
   "repository": {
@@ -112,10 +114,14 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.13",
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
+    "babel-jest": "^22.4.3",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
@@ -135,6 +141,9 @@
     "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.18.0",
     "husky": "^0.14.3",
+    "jest": "^22.0.4",
+    "jest-serializer-vue": "^1.0.0",
+    "vue-jest": "^2.3.0",
     "node-sass": "^4.8.3",
     "node-notifier": "^5.2.1",
     "npm-run-all": "^4.1.2",

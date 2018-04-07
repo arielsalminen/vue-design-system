@@ -1,8 +1,8 @@
 <template>
   <div class="font-sizes">
     <div
-      v-for="prop in tokens"
-      :key="prop"
+      v-for="(prop, index) in tokens"
+      :key="index"
       class="font"
       v-if="prop.category === 'font-size'"
       :style="{ fontSize: prop.value }">
