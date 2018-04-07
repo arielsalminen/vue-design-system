@@ -24,6 +24,11 @@ describe("statusLabels.js", () => {
     expect(wrapper.contains("label")).toBe(true)
   })
 
+  it("should render correct text value inside label", () => {
+    const el = wrapper.find("label")
+    expect(el.text()).toBe("prototype")
+  })
+
   it("should remove existing labels", () => {
     const wrapper2 = mount(MockComponent, {
       attachToDocument: true,
