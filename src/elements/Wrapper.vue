@@ -6,7 +6,8 @@
 
 <script>
 /**
- * Used to build the outer wrapper of a page, including the page title and associated actions. Wrapper doesn’t provide customizable options.
+ * Used to build the outer wrapper of a page, including the page title and
+ * associated actions. Wrapper doesn’t provide customizable options.
  */
 export default {
   name: "Wrapper",
