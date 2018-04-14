@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Local component variables
+// Design Tokens with local scope
 $color-template-background: $color-rich-black;
 $color-template-background-top: tint($color-template-background, 5%);
 $color-template-background-bottom: shade($color-template-background, 5%);

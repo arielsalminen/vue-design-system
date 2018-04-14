@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Local component variables
+// Design Tokens with local scope
 $color-nav-link: $color-bleu-de-france;
 $color-nav-link-active: $color-bleu-de-france;
 

@@ -38,7 +38,10 @@ import designTokens from "@/assets/tokens/tokens.raw.json"
 import orderBy from "lodash/orderBy"
 
 /**
- * A list of available tokens in Vue Design System. Use these tokens in place of hard-coded values in order to maintain a scalable and consistent system. To edit these tokens and add more, see [/src/tokens/](https://github.com/viljamis/vue-design-system/blob/master/src/tokens).
+ * A list of available tokens in Vue Design System. Use these tokens in place
+ * of hard-coded values in order to maintain a scalable and consistent system.
+ * To edit these tokens and add more, see
+ * [/src/tokens/](https://github.com/viljamis/vue-design-system/blob/master/src/tokens).
  */
 export default {
   name: "All",
@@ -58,6 +61,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../docs.tokens.scss";
+
+/* STYLES
+--------------------------------------------- */
+
 .all-tokens {
   @include reset;
   font-family: $font-family-heading;

@@ -1,0 +1,66 @@
+/* LOCAL DEFAULTS FOR GLOBAL DESIGN TOKENS
+
+  Here to avoid docs breaking early when renaming global tokens.
+  Remove this file if you want docs to use your renamed global tokens.
+--------------------------------------------- */
+
+$color-ucla-gold: rgb(255, 186, 10) !default;
+$color-ucla-gold-darker: rgb(179, 128, 0) !default;
+$color-vermilion-lighter: rgb(244, 151, 138) !default;
+$color-vermilion-darker: rgb(154, 31, 14) !default;
+$color-ucla-gold-lighter: rgb(255, 219, 128) !default;
+$color-bleu-de-france-dark: rgb(16, 112, 209) !default;
+$color-bleu-de-france-light: rgb(84, 163, 242) !default;
+$color-silver: rgb(127, 136, 145) !default;
+$color-white: rgb(255, 255, 255) !default;
+$color-bleu-de-france: rgb(37, 138, 239) !default;
+$color-bleu-de-france-darker: rgb(12, 87, 161) !default;
+$color-bleu-de-france-lighter: rgb(132, 189, 246) !default;
+$color-ucla-gold-dark: rgb(230, 164, 0) !default;
+$color-vermilion-light: rgb(239, 101, 82) !default;
+$color-vermilion-dark: rgb(201, 40, 19) !default;
+$color-ucla-gold-light: rgb(255, 204, 77) !default;
+$color-rich-black: rgb(0, 17, 35) !default;
+$color-cloud: rgb(233, 243, 253) !default;
+$color-oxford-blue: rgb(0, 38, 77) !default;
+$color-vermilion: rgb(235, 59, 36) !default;
+
+$font-size-xxx-large: 64px !default;
+$font-size-xx-large: 48px !default;
+$font-size-x-large: 36px !default;
+$font-size-large: 24px !default;
+$font-size-base: 16px !default;
+$font-size-small: 13px !default;
+$font-size-x-small: 11px !default;
+
+$font-family-heading: "Fira Sans", Helvetica, Arial, sans-serif !default;
+$font-family-text: "Fira Sans", Helvetica, Arial, sans-serif !default;
+
+$font-weight-bold: 700 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-regular: 400 !default;
+$font-weight-light: 300 !default;
+
+$box-shadow-small: 0 0 0 1px rgba(92, 106, 196, 0.1) !default;
+$box-shadow-small-inset: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !default;
+
+$letter-spacing-x-large: 2px !default;
+$letter-spacing-large: 1px !default;
+$letter-spacing-base: 0 !default;
+$letter-spacing-small: -0.5px !default;
+$letter-spacing-x-small: -1px !default;
+
+$border-radius-default: 3px !default;
+$border-radius-circle: 50% !default;
+
+$space-xx-large: 128px !default;
+$space-x-large: 64px !default;
+$space-large: 48px !default;
+$space-base: 24px !default;
+$space-small: 16px !default;
+$space-x-small: 8px !default;
+$space-xx-small: 4px !default;
+
+$line-height-base: 1.6 !default;
+$line-height-small: 1.3 !default;
+$line-height-heading: 1 !default;

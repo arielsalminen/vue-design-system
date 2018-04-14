@@ -110,6 +110,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../docs.tokens.scss";
+
+/* STYLES
+--------------------------------------------- */
+
 .component-status {
   @include reset;
   font-family: $font-family-heading;

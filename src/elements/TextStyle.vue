@@ -6,7 +6,9 @@
 
 <script>
 /**
- * Text style enhances text with additional visual meaning. For example, using disabled text to de-emphasize it from its surrounding text. Don’t use text styles only for aesthetic effect.
+ * Text style enhances text with additional visual meaning. For example, using
+ * disabled text to de-emphasize it from its surrounding text. Don’t use text
+ * styles only for aesthetic effect.
  */
 export default {
   name: "TextStyle",
