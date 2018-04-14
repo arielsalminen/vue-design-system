@@ -4,19 +4,19 @@
  */
 
 @import "../src/assets/tokens/tokens.scss";
-@import "../src/assets/tokens/tokens.map.scss";
+@import "./docs.tokens.scss";
 @import "../src/styles/styles.scss";
 
-/* LOCAL TOKENS
+/* LOCAL DESIGN TOKENS
 --------------------------------------------- */
 
 $docs-grey: #c4cdd5;
 $docs-grey-dark: #4d5865;
-$status-ready: #7cb518;
-$breakpoint: 800px;
-$breakpoint-2: 600px;
-$color-heading: rgb(30, 30, 30);
-$color-text: shade($color-silver, 50%);
+$docs-status-ready: #7cb518;
+$docs-breakpoint: 800px;
+$docs-breakpoint-small: 600px;
+$docs-color-heading: rgb(30, 30, 30);
+$docs-color-text: shade($color-silver, 50%);
 
 /* BASE
 --------------------------------------------- */
@@ -45,7 +45,7 @@ div[class^="rsg--root"] {
 
 main[class^="rsg--content"] {
   padding: $space-small $space-x-large;
-  @media (max-width: #{$breakpoint}) {
+  @media (max-width: #{$docs-breakpoint}) {
     padding: $space-small $space-base;
   }
 }
@@ -76,7 +76,7 @@ div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] {
   @media (max-width: 1300px) {
     padding: $space-large $space-x-large;
   }
-  @media (max-width: #{$breakpoint}) {
+  @media (max-width: #{$docs-breakpoint}) {
     font-size: $font-size-x-large / 1.3;
     width: calc(100% + #{$space-x-large});
     padding: $space-large $space-base;
@@ -108,8 +108,8 @@ h2[class^="rsg--heading"] {
     letter-spacing: -0.5px;
     font-size: $font-size-x-large;
     line-height: $line-height-small;
-    color: $color-heading;
-    @media (max-width: #{$breakpoint}) {
+    color: $docs-color-heading;
+    @media (max-width: #{$docs-breakpoint}) {
       font-size: $font-size-x-large / 1.3;
     }
   }
@@ -123,8 +123,8 @@ h3[class^="rsg--heading"] a {
   line-height: $line-height-base;
   margin: 0 0 $space-large;
   font-size: $font-size-large;
-  color: $color-text;
-  @media (max-width: #{$breakpoint}) {
+  color: $docs-color-text;
+  @media (max-width: #{$docs-breakpoint}) {
     font-size: $font-size-large / 1.3;
     margin: 0 0 $space-base;
   }
@@ -138,12 +138,12 @@ h4[class^="rsg--heading"] a {
   margin: $space-large 0 $space-base;
   font-size: $font-size-large;
   line-height: $line-height-small;
-  color: $color-heading;
+  color: $docs-color-heading;
 }
 
 // Paragraphs
 p[class^="rsg--para"] {
-  color: $color-text;
+  color: $docs-color-text;
   margin-bottom: $space-small;
   line-height: $line-height-base;
   strong a[class^="rsg--link"] {
@@ -209,7 +209,7 @@ div[class^="rsg--sidebar"] {
     padding-left: 0;
     ul {
       padding-left: $space-small;
-      @media (max-width: #{$breakpoint-2}) {
+      @media (max-width: #{$docs-breakpoint-small}) {
         padding: 0 0 0 $space-large;
         width: 90%;
         li {
@@ -222,7 +222,7 @@ div[class^="rsg--sidebar"] {
         font-size: $font-size-small;
         -webkit-font-smoothing: subpixel-antialiased;
         -moz-osx-font-smoothing: auto;
-        @media (max-width: #{$breakpoint-2}) {
+        @media (max-width: #{$docs-breakpoint-small}) {
           float: left;
           padding: 0 $space-x-small 0 0;
         }
@@ -361,7 +361,7 @@ div[class^="rsg--toolbar"] {
   color: $color-ucla-gold-light !important;
 }
 .cm-s-night span.cm-string {
-  color: lighten($status-ready, 20%) !important;
+  color: lighten($docs-status-ready, 20%) !important;
 }
 
 span[class^="rsg--type"],
@@ -411,11 +411,11 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
   font-size: $font-size-x-small;
   border-radius: $border-radius-default;
   color: $color-rich-black;
-  @media (max-width: #{$breakpoint}) {
+  @media (max-width: #{$docs-breakpoint}) {
     transform: translateY($space-x-large * 1.25);
   }
   &-ready {
-    background: $status-ready;
+    background: $docs-status-ready;
     color: $color-white;
   }
   &-review,
