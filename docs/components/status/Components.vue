@@ -132,7 +132,7 @@ export default {
     width: 100%;
   }
   thead th {
-    padding: $space-small $space-large $space-small $space-small;
+    padding: $space-small;
     background: $color-cloud;
     font-size: $font-size-small;
     font-weight: $font-weight-bold;
@@ -163,7 +163,7 @@ export default {
   }
   td {
     font-size: $font-size-small;
-    padding: $space-small $space-large $space-small $space-small;
+    padding: $space-small;
     &:first-child {
       font-weight: $font-weight-bold;
       white-space: nowrap;
@@ -171,14 +171,14 @@ export default {
   }
   .status-list {
     margin: 0 0 $space-small;
+    overflow: hidden;
     padding: 0;
     list-style: none;
     flex-direction: row;
     align-items: center;
     display: flex;
     @media (max-width: 1000px) {
-      flex-direction: column;
-      align-items: flex-start;
+      display: block;
     }
     li {
       margin: 0 $space-base 0 0;
@@ -186,9 +186,19 @@ export default {
       font-size: $font-size-small;
       align-items: center;
       display: flex;
+      @media (max-width: 1000px) {
+        width: 50%;
+        float: left;
+        margin: 0;
+      }
       svg,
       span {
         margin: -2px calc(#{$space-small} / 2) 0 0;
+      }
+      p {
+        @media (max-width: 1000px) {
+          margin: $space-x-small;
+        }
       }
     }
   }

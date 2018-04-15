@@ -103,6 +103,9 @@ h3 {
   text-align: left;
   float: left;
   width: 100%;
+  @media (max-width: 400px) {
+    margin-bottom: $space-base;
+  }
   &:hover {
     span {
       color: shade($color-silver, 40%);
