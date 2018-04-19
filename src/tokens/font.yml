@@ -5,9 +5,9 @@
 
 props:
   font_family_heading:
-    value: "'Fira Sans', Helvetica, Arial, sans-serif"
+    value: "'lobster-custom', sans-serif"
   font_family_text:
-    value: "'Fira Sans', Helvetica, Arial, sans-serif"
+    value: "'lobster-custom', sans-serif"
   font_weight_bold:
     value: "700"
   font_weight_semi_bold:

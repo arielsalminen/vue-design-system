@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "lobster-custom";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./lobster.ttf") format("truetype");
+}
