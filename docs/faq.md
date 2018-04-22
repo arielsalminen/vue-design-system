@@ -4,7 +4,7 @@ Vue Design System is an open source tool for building UI Design Systems with [Vu
 
 ## What browsers are supported?
 
-The development environment supports the following browsers. To tweak browsers supported in production you will want to edit the [browsers list in package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L172-L180).
+The development environment supports the following browsers. To tweak browsers supported in production you will want to edit the [browsers list in package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L172-L180). To see what browsers are selected by the browser list, run `npx browserslist --config="package.json"` in the root directory of this project.
 
 | BROWSER         | VERSION |
 | --------------- | ------- |
@@ -59,6 +59,8 @@ Icons are inside `src/assets/icons` directory, so you can just add any icons tha
 ## How do I change the default typeface/font?
 
 Vue Design System uses Typekit’s [Web Font Loader](https://github.com/typekit/webfontloader) which is easy to configure. To load your own font files, see [Getting Started with WebFontLoader](https://github.com/typekit/webfontloader#get-started). Currently, the app is loading _Fira Sans_ and a few different weights from Google Fonts. See `src/utils/webFontLoader.js` for an example.
+
+If you want to bundle your fonts into the project itself, that’s possible as well. I’ve created a separate branch with an example of this. See the needed changes in [this commit](https://github.com/viljamis/vue-design-system/commit/a7b3badb618fb5e0e1c999940b8ea82e86aea190).
 
 ## How to use design tokens in JavaScript?
 
