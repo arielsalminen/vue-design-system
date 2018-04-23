@@ -149,7 +149,7 @@ $color-placeholder: tint($color-silver, 50%);
     font-family: $font-family-text;
     background: $color-white;
     border-radius: $border-radius-default;
-    color: $color-rich-black;
+    color: set-text-color($color-rich-black, $color-white);
     margin: 0;
     border: 0;
     box-shadow: inset 0 1px 0 0 rgba($color-rich-black, 0.07), 0 0 0 1px tint($color-rich-black, 80%);

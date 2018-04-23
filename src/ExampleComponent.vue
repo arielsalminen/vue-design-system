@@ -66,6 +66,7 @@ export default {
 .example-component {
   @include reset;
   @include stack-space($space-small);
+  color: set-text-color($color-rich-black, $color-white);
   @media #{$media-query-medium} {
     @include stack-space($space-base);
   }

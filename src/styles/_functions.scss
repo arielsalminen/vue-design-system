@@ -19,14 +19,38 @@
   @return mix(black, $color, $percentage);
 }
 
+// Calculate color difference
+// See https://www.w3.org/TR/AERT/#color-contrast for algorithm
+//
+// @param  {Color} $color of foreground
+// @param  {Color} $color of background
+// @return {Boolean}
+@function color-difference($foreground, $background) {
+  $r: (max(red($foreground), red($background))) - (min(red($foreground), red($background)));
+  $g: (max(green($foreground), green($background))) - (min(green($foreground), green($background)));
+  $b: (max(blue($foreground), blue($background))) - (min(blue($foreground), blue($background)));
+  $sum-rgb: $r + $g + $b;
+
+  @if $sum-rgb < 350 {
+    @return "false";
+  } @else {
+    @return "true";
+  }
+}
+
 // Set text color based on contrast
 //
 // @param  {Color}  $color to set
-@function set-text-color($color) {
-  @if (lightness($color) > 58) {
-    @return #000;
+// @param  {Color}  $background color to test
+// @param  {Color}  $fallback color to set in case contrast check fails
+@function set-text-color($color, $background, $fallback: null) {
+  @if $fallback == null {
+    $fallback: #000;
+  }
+  @if (color-difference($color, $background) == "false") {
+    @return $fallback;
   } @else {
-    @return #fff;
+    @return $color;
   }
 }
 
@@ -57,7 +81,7 @@
   } @else if $unit == "em" {
     @return $unit / 1em * 1rem;
   } @else {
-    @error 'Value must be in px, em, or rem.';
+    @error "Value must be in px, em, or rem.";
   }
 }
 
@@ -74,7 +98,7 @@
   } @else if $unit == "rem" {
     @return ($value / 1rem) * $font-size-base;
   } @else {
-    @error 'Value must be in rem, em, or px.';
+    @error "Value must be in rem, em, or px.";
   }
 }
 
