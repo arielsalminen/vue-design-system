@@ -1,9 +1,11 @@
 "use strict"
+const path = require("path")
 const utils = require("./utils")
 const webpack = require("webpack")
 const config = require("../config")
 const merge = require("webpack-merge")
 const baseWebpackConfig = require("./webpack.base.conf")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 const MergeWebpackPlugin = require("webpack-merge-and-include-globally")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin")
@@ -69,6 +71,14 @@ const webpackConfig = merge(baseWebpackConfig, {
         ],
       },
     }),
+    // copy custom static assets
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, "../src/assets"),
+        to: config.system.assetsSubDirectory,
+        ignore: [".*"],
+      },
+    ]),
   ],
 })
 
