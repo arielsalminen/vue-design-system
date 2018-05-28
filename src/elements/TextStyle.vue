@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" :class="['text-style ', variation]">
+  <component :is="type" :class="['text-style', variation]">
     <slot/>
   </component>
 </template>

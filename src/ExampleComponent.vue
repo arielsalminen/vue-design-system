@@ -1,14 +1,13 @@
 <template>
-  <component :is="type" :class="['example-component ', variation]">
-    <div id="example-container">
-      <slot/>
-    </div>
+  <component :is="type" :class="['example', variation]">
+    <slot/>
   </component>
 </template>
 
 <script>
 /**
- * “Example Component” is used to visually communicate core parts of the product and available actions.
+ * “Example Component” is used to visually communicate core parts of the product
+ * and available actions.
  */
 export default {
   /**
@@ -36,7 +35,7 @@ export default {
    */
   props: {
     /**
-     * The html element name used for the container
+     * The html element name used for the container of “example” component.
      */
     type: {
       type: String,
@@ -44,13 +43,13 @@ export default {
     },
     /**
      * Style variation to give additional meaning.
-     * `default, disabled, strong, positive, negative, tiny`
+     * `default, strong, positive, negative`
      */
     variation: {
       type: String,
       default: "default",
       validator: value => {
-        return value.match(/(default|disabled|strong|positive|negative|tiny)/)
+        return value.match(/(default|strong|positive|negative)/)
       },
     },
   },
@@ -63,7 +62,7 @@ export default {
  * but all other components should always be scoped (using either scoped
  * attribute or class based scoping).
  */
-.example-component {
+.example {
   @include reset;
   @include stack-space($space-small);
   color: set-text-color($color-rich-black, $color-white);
@@ -75,8 +74,8 @@ export default {
 
 <docs>
   ```jsx
-  <example-component>
+  <example>
     Docs section should have an example that is shown in the documentation.
-  </example-component>
+  </example>
   ```
 </docs>
