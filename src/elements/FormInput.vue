@@ -10,7 +10,8 @@
       :value="value"
       :placeholder="placeholder"
       :class="['input', {'input-expand': width === 'expand'}]"
-      @input="input($event.target.value)"
+      @input="onInput($event.target.value)"
+      @focus="onFocus($event.target.value)"
       />
   </component>
 </template>
@@ -42,21 +43,21 @@ export default {
      */
     value: {
       type: String,
-      default: "",
+      default: null,
     },
     /**
      * The placeholder value for the form input field.
      */
     placeholder: {
       type: String,
-      default: "",
+      default: null,
     },
     /**
      * The label of the form input field.
      */
     label: {
       type: String,
-      default: "",
+      default: null,
     },
     /**
      * The html element name used for the wrapper.
@@ -74,7 +75,7 @@ export default {
      */
     id: {
       type: String,
-      default: "",
+      default: null,
     },
     /**
      * The width of the form input field.
@@ -113,8 +114,11 @@ export default {
     },
   },
   methods: {
-    input(value) {
+    onInput(value) {
       this.$emit("change", value)
+    },
+    onFocus(value) {
+      this.$emit("focus", value)
     },
   },
 }
