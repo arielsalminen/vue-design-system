@@ -96,7 +96,7 @@ module.exports = {
       /**
        * Private components have to be loaded into the documentation as well,
        * otherwise anything using them will be broken. We’re loading them in
-       * their own section, which then gets hidden in util/docs/hidePrivate.js
+       * their own section, which then gets hidden in docs/docs.styles.scss
        */
       name: "Private Components",
       components: "../src/**/[_]*.vue",
