@@ -5,6 +5,7 @@
 import instance from "@/utils/vueInstance"
 
 // Defines contexts to require
+// (you should remove templates from this if not used in production)
 const contexts = [
   require.context("@/elements/", true, /\.vue$/),
   require.context("@/patterns/", true, /\.vue$/),
