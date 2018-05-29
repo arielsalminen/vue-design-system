@@ -75,13 +75,16 @@ export default {
   }
 }
 .swatch {
+  @include stack-space($space-small);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   height: $space-xx-large;
-  margin: -#{$space-small} -#{$space-small} 0;
+  margin-left: -#{$space-small};
+  margin-top: -#{$space-small};
   width: calc(100% + #{$space-large});
   float: left;
 }
 h3 {
+  @include reset;
   @include stack-space($space-x-small);
   text-transform: capitalize;
   line-height: 1.2;
