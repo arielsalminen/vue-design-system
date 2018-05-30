@@ -1,7 +1,7 @@
 "use strict"
 const path = require("path")
 const config = require("../config")
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const packageConfig = require("../package.json")
 
 exports.assetsPath = function(_path) {
@@ -33,7 +33,21 @@ exports.cssLoaders = function(options) {
 
   // generate loader string to be used with extract text plugin
   function generateLoaders(loader, loaderOptions) {
-    const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
+    const loaders = []
+
+    // Extract CSS when that option is specified
+    // (which is the case during production build)
+    if (options.extract) {
+      loaders.push(MiniCssExtractPlugin.loader)
+    } else {
+      loaders.push("vue-style-loader")
+    }
+
+    loaders.push(cssLoader)
+
+    if (options.usePostCSS) {
+      loaders.push(postcssLoader)
+    }
 
     if (loader) {
       loaders.push({
@@ -44,21 +58,21 @@ exports.cssLoaders = function(options) {
       })
     }
 
-    // Extract CSS when that option is specified
-    // (which is the case during production build)
-    if (options.extract) {
-      return ExtractTextPlugin.extract({
-        use: loaders,
-        fallback: "vue-style-loader",
-      })
-    } else {
-      return ["vue-style-loader"].concat(loaders)
-    }
+    return loaders
   }
 
-  var sassOptions = {
-    includePaths: ["./src/assets/tokens/", "./src/styles"],
-    data: "@import 'tokens.scss'; @import 'tokens.map.scss'; @import 'styles.scss';",
+  const sassResourcesConfig = {
+    loader: "sass-resources-loader",
+    options: {
+      resources: [
+        path.resolve(__dirname, "../src/assets/tokens/tokens.scss"),
+        path.resolve(__dirname, "../src/assets/tokens/tokens.map.scss"),
+        path.resolve(__dirname, "../src/styles/styles.scss"),
+      ],
+    },
+  }
+
+  const sassOptions = {
     outputStyle: "compressed",
   }
 
@@ -66,8 +80,8 @@ exports.cssLoaders = function(options) {
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    sass: generateLoaders("sass", Object.assign({ indentedSyntax: true }, sassOptions)),
-    scss: generateLoaders("sass", sassOptions),
+    sass: generateLoaders("sass", Object.assign({ indentedSyntax: true }, sassOptions)).concat(sassResourcesConfig),
+    scss: generateLoaders("sass", sassOptions).concat(sassResourcesConfig),
   }
 }
 

@@ -3,13 +3,15 @@ const path = require("path")
 const utils = require("./utils")
 const config = require("../config")
 const vueLoaderConfig = require("./vue-loader.conf")
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const { VueLoaderPlugin } = require("vue-loader")
 
 function resolve(dir) {
   return path.join(__dirname, "..", dir)
 }
 
 module.exports = {
+  mode: process.env.NODE_ENV === "production" ? config.build.mode : config.dev.mode,
   context: path.resolve(__dirname, "../"),
   entry: {
     app: "./src/main.js",
@@ -64,7 +66,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ExtractTextPlugin("style.css")],
+  plugins: [new VueLoaderPlugin(), new MiniCssExtractPlugin("style.css")],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).
