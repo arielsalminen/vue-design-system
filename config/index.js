@@ -4,6 +4,9 @@ const path = require("path")
 
 module.exports = {
   build: {
+    // Webpack mode
+    mode: "production",
+
     // Template for index.html
     index: path.resolve(__dirname, "../dist/index.html"),
 
@@ -31,6 +34,9 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report,
   },
   system: {
+    // Webpack mode
+    mode: "production",
+
     // Template for index.html
     index: path.resolve(__dirname, "../dist/index.html"),
 
@@ -58,6 +64,9 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report,
   },
   dev: {
+    // Webpack mode
+    mode: "development",
+
     // Paths
     assetsSubDirectory: "assets",
     assetsPublicPath: "/",
