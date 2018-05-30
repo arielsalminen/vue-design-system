@@ -52,10 +52,10 @@ module.exports = {
       name: "Design Principles",
       content: "../docs/principles.md",
     },
-    //{
-    //  name: "Tone of Voice",
-    //  content: "../docs/tone-of-voice.md",
-    //},
+    {
+      name: "Tone of Voice",
+      content: "../docs/tone-of-voice.md",
+    },
     {
       name: "Design Tokens",
       content: "../docs/tokens.md",
