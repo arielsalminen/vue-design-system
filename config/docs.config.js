@@ -51,12 +51,11 @@ module.exports = {
     {
       name: "Design Principles",
       content: "../docs/principles.md",
-      /**
-       * section.vue component is an util that needs to be loaded into
-       * all sections, even when not showing any real components.
-       */
-      components: "../docs/utils/section.vue",
     },
+    //{
+    //  name: "Tone of Voice",
+    //  content: "../docs/tone-of-voice.md",
+    //},
     {
       name: "Design Tokens",
       content: "../docs/tokens.md",
@@ -85,12 +84,10 @@ module.exports = {
     {
       name: "Downloads",
       content: "../docs/downloads.md",
-      components: "../docs/utils/section.vue",
     },
     {
       name: "FAQ",
       content: "../docs/faq.md",
-      components: "../docs/utils/section.vue",
     },
     {
       /**
@@ -105,7 +102,26 @@ module.exports = {
   /**
    * Custom wrapper template for the documentation.
    */
-  template: "../docs/docs.template.html",
+  template: {
+    title: "Example — Vue Design System",
+    lang: "en",
+    trimWhitespace: true,
+    head: {
+      meta: [
+        {
+          name: "viewport",
+          content: "width=device-width,initial-scale=1.0",
+        },
+        {
+          name: "format-detection",
+          content: "telephone=no",
+        },
+      ],
+    },
+    body: {
+      raw: "<div id='rsg-root'></div>",
+    },
+  },
   /**
    * Ignore app.vue, tests, and example component.
    */
@@ -123,7 +139,21 @@ module.exports = {
       rules: [
         {
           test: /\.(css?|scss)(\?.*)?$/,
-          loader: "style-loader!css-loader!sass-loader",
+          use: [
+            "style-loader",
+            "css-loader",
+            "sass-loader",
+            {
+              loader: "sass-resources-loader",
+              options: {
+                resources: [
+                  path.join(__dirname, "../src/assets/tokens/tokens.scss"),
+                  path.join(__dirname, "../src/assets/tokens/tokens.map.scss"),
+                  path.join(__dirname, "../src/styles/styles.scss"),
+                ],
+              },
+            },
+          ],
         },
       ],
     },
