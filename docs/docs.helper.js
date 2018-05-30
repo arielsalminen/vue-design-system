@@ -13,11 +13,11 @@ Vue.config.productionTip = false
 Vue.mixin(statusLabels)
 
 document.addEventListener("DOMContentLoaded", () => {
-  filterSearch.init()
-  activeNav.init()
+  filterSearch.methods.init()
+  activeNav.methods.init()
 })
 
 window.addEventListener("hashchange", () => {
-  filterSearch.init()
-  activeNav.init()
+  filterSearch.methods.init()
+  activeNav.methods.init()
 })
