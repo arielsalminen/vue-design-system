@@ -46,16 +46,17 @@ module.exports = {
     {
       name: "Getting Started",
       content: "../docs/getting-started.md",
+      // Needs to be loaded in somewhere as this is also shown in
+      // element, Pattern & Template overviews.
       components: "../docs/components/status/**/[A-Z]*.vue",
     },
     {
       name: "Design Principles",
       content: "../docs/principles.md",
-      /**
-       * section.vue component is an util that needs to be loaded into
-       * all sections, even when not showing any real components.
-       */
-      components: "../docs/utils/section.vue",
+    },
+    {
+      name: "Voice & Tone",
+      content: "../docs/voice-and-tone.md",
     },
     {
       name: "Design Tokens",
@@ -85,12 +86,10 @@ module.exports = {
     {
       name: "Downloads",
       content: "../docs/downloads.md",
-      components: "../docs/utils/section.vue",
     },
     {
       name: "FAQ",
       content: "../docs/faq.md",
-      components: "../docs/utils/section.vue",
     },
     {
       /**
@@ -105,7 +104,26 @@ module.exports = {
   /**
    * Custom wrapper template for the documentation.
    */
-  template: "../docs/docs.template.html",
+  template: {
+    title: "Example — Vue Design System",
+    lang: "en",
+    trimWhitespace: true,
+    head: {
+      meta: [
+        {
+          name: "viewport",
+          content: "width=device-width,initial-scale=1.0",
+        },
+        {
+          name: "format-detection",
+          content: "telephone=no",
+        },
+      ],
+    },
+    body: {
+      raw: "<div id='rsg-root'></div>",
+    },
+  },
   /**
    * Ignore app.vue, tests, and example component.
    */
@@ -123,7 +141,21 @@ module.exports = {
       rules: [
         {
           test: /\.(css?|scss)(\?.*)?$/,
-          loader: "style-loader!css-loader!sass-loader",
+          use: [
+            "style-loader",
+            "css-loader",
+            "sass-loader",
+            {
+              loader: "sass-resources-loader",
+              options: {
+                resources: [
+                  path.join(__dirname, "../src/assets/tokens/tokens.scss"),
+                  path.join(__dirname, "../src/assets/tokens/tokens.map.scss"),
+                  path.join(__dirname, "../src/styles/styles.scss"),
+                ],
+              },
+            },
+          ],
         },
       ],
     },

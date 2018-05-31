@@ -6,7 +6,7 @@ const config = require("../config")
 const merge = require("webpack-merge")
 const baseWebpackConfig = require("./webpack.base.conf")
 const MergeWebpackPlugin = require("webpack-merge-and-include-globally")
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin")
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
@@ -47,9 +47,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       parallel: true,
     }),
     // extract css into its own file
-    new ExtractTextPlugin({
-      filename: utils.assetsSystemPath("[name].css"),
-      allChunks: false,
+    new MiniCssExtractPlugin({
+      filename: utils.assetsPath("[name].css"),
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
