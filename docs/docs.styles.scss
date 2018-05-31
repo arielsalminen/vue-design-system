@@ -206,6 +206,9 @@ p[class^="rsg--para"] code {
 div[class^="rsg--sidebar"] {
   background: mix($color-bleu-de-france, $color-rich-black, 5%);
   border: 0;
+  @media (max-width: #{$docs-breakpoint}) {
+    padding-bottom: $space-large;
+  }
   a[class^="rsg--link"] {
     font-weight: $font-weight-semi-bold;
     color: $color-bleu-de-france;
@@ -258,6 +261,7 @@ div[class^="rsg--sidebar"] {
   }
   li[class^="rsg--item"] {
     margin: 0;
+    display: block;
     a[class^="rsg--link"] {
       display: block;
       padding: $space-xx-small 0;
