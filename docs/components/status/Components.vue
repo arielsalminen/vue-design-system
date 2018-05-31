@@ -166,6 +166,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
     // Chrome has a bug related to thead, this only works on th:
+    position: -webkit-sticky;
     position: sticky;
     top: -1px;
     &:first-child {
