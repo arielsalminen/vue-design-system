@@ -340,7 +340,10 @@ div[class^="rsg--preview"] {
 div[data-preview="Overview"],
 div[data-preview="Getting Started"],
 div[data-preview="Design Tokens"],
-div[data-preview="Tokens"] {
+div[data-preview="Tokens"],
+div[data-preview="Elements"],
+div[data-preview="Patterns"],
+div[data-preview="Templates"] {
   background: transparent;
   box-shadow: none;
   padding: 0;

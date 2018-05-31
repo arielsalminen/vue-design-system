@@ -25,7 +25,10 @@
     <table>
       <thead>
         <tr>
-          <th>Component Name</th>
+          <th v-if="show === 'all'">Component Name</th>
+          <th v-if="show === 'elements'">Element Name</th>
+          <th v-if="show === 'patterns'">Pattern Name</th>
+          <th v-if="show === 'templates'">Template Name</th>
           <th>Released in</th>
           <th>Status</th>
         </tr>
@@ -81,13 +84,32 @@ import orderBy from "lodash/orderBy"
 
 export default {
   name: "Components",
+  props: {
+    show: {
+      type: String,
+      default: "all",
+      validator: value => {
+        return value.match(/(all|patterns|templates|elements)/)
+      },
+    },
+  },
   methods: {
     getComponents: function() {
-      const contexts = [
-        require.context("@/elements/", true, /\.vue$/),
-        require.context("@/patterns/", true, /\.vue$/),
-        require.context("@/templates/", true, /\.vue$/),
-      ]
+      let contexts
+
+      if (this.show === "all") {
+        contexts = [
+          require.context("@/elements/", true, /\.vue$/),
+          require.context("@/patterns/", true, /\.vue$/),
+          require.context("@/templates/", true, /\.vue$/),
+        ]
+      } else if (this.show === "elements") {
+        contexts = [require.context("@/elements/", true, /\.vue$/)]
+      } else if (this.show === "patterns") {
+        contexts = [require.context("@/patterns/", true, /\.vue$/)]
+      } else if (this.show === "templates") {
+        contexts = [require.context("@/templates/", true, /\.vue$/)]
+      }
 
       const components = []
       contexts.forEach(context => {

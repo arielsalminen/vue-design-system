@@ -46,6 +46,8 @@ module.exports = {
     {
       name: "Getting Started",
       content: "../docs/getting-started.md",
+      // Needs to be loaded in somewhere as this is also shown in
+      // element, Pattern & Template overviews.
       components: "../docs/components/status/**/[A-Z]*.vue",
     },
     {
