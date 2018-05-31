@@ -442,7 +442,6 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
   order: 1;
   align-self: flex-end;
   cursor: help;
-  transform: translateY($space-x-large / 1.1);
   line-height: $line-height-heading;
   background: tint($docs-grey, 50%);
   padding: $space-x-small $space-small $space-x-small/1.2;
@@ -452,12 +451,15 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
   border-radius: $border-radius-default;
   color: $color-rich-black;
   position: absolute;
+  right: $space-x-large;
+  top: $space-x-large * 1.2;
   z-index: 2;
   @media (max-width: 1300px) {
-    transform: translateY($space-x-large / 1.5);
+    top: $space-x-large;
   }
   @media (max-width: #{$docs-breakpoint}) {
-    transform: translateY($space-large / 1.5);
+    top: $space-large * 1.2;
+    right: $space-base;
   }
   &-ready {
     background: $docs-status-ready;

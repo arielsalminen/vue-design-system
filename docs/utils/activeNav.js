@@ -7,9 +7,11 @@ export default {
   methods: {
     clearActiveLinks() {
       const activeLinks = document.querySelectorAll(".vueds-active")
-      activeLinks.forEach(function(element) {
-        element.classList.remove("vueds-active")
-      })
+      if (activeLinks) {
+        activeLinks.forEach(function(element) {
+          element.classList.remove("vueds-active")
+        })
+      }
     },
     init() {
       let currentURL = ""

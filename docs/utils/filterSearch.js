@@ -7,45 +7,51 @@ export default {
   methods: {
     showLinks() {
       const links = document.querySelectorAll("div[class^='rsg--sidebar'] ul ul[class^='rsg--list']")
-      links.forEach(function(element) {
-        element.classList.add("vueds-visible")
-      })
+      if (links) {
+        links.forEach(function(element) {
+          element.classList.add("vueds-visible")
+        })
+      }
     },
     hideLinks() {
       const activeLinks = document.querySelectorAll(".vueds-visible")
-      activeLinks.forEach(function(element) {
-        element.classList.remove("vueds-visible")
-      })
+      if (activeLinks) {
+        activeLinks.forEach(function(element) {
+          element.classList.remove("vueds-visible")
+        })
+      }
     },
     init() {
       const search = document.querySelector("div[class^='rsg--search'] input")
       let writing = false
-      search.addEventListener("input", () => {
-        if (!writing || search.value) {
-          writing = true
-          if (this.showLinks) {
-            this.showLinks()
+      if (search) {
+        search.addEventListener("input", () => {
+          if (!writing || search.value) {
+            writing = true
+            if (this.showLinks) {
+              this.showLinks()
+            } else {
+              this.methods.showLinks()
+            }
           } else {
-            this.methods.showLinks()
+            if (this.hideLinks) {
+              this.hideLinks()
+            } else {
+              this.methods.hideLinks()
+            }
+            writing = false
           }
-        } else {
-          if (this.hideLinks) {
-            this.hideLinks()
-          } else {
-            this.methods.hideLinks()
+        })
+        search.addEventListener("blur", event => {
+          if (event.target && event.target.value === "") {
+            if (this.hideLinks) {
+              this.hideLinks()
+            } else {
+              this.methods.hideLinks()
+            }
           }
-          writing = false
-        }
-      })
-      search.addEventListener("blur", event => {
-        if (event.target && event.target.value === "") {
-          if (this.hideLinks) {
-            this.hideLinks()
-          } else {
-            this.methods.hideLinks()
-          }
-        }
-      })
+        })
+      }
     },
   },
   mounted() {
