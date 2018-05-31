@@ -2,7 +2,6 @@
 const path = require("path")
 const utils = require("./utils")
 const config = require("../config")
-const vueLoaderConfig = require("./vue-loader.conf")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { VueLoaderPlugin } = require("vue-loader")
 
@@ -33,7 +32,15 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: "vue-loader",
-        options: vueLoaderConfig,
+        options: {
+          cacheBusting: config.dev.cacheBusting,
+          transformAssetUrls: {
+            video: ["src", "poster"],
+            source: "src",
+            img: "src",
+            image: "xlink:href",
+          },
+        },
       },
       {
         test: /\.js$/,
