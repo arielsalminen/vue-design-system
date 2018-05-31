@@ -120,9 +120,6 @@ module.exports = {
         },
       ],
     },
-    body: {
-      raw: "<div id='rsg-root'></div>",
-    },
   },
   /**
    * Ignore app.vue, tests, and example component.
