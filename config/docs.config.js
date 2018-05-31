@@ -53,8 +53,8 @@ module.exports = {
       content: "../docs/principles.md",
     },
     {
-      name: "Tone of Voice",
-      content: "../docs/tone-of-voice.md",
+      name: "Voice & Tone",
+      content: "../docs/voice-and-tone.md",
     },
     {
       name: "Design Tokens",
