@@ -41,7 +41,7 @@ export default previewComponent => {
         "</" +
         this.$el.localName +
         ">"
-      const elemText = format(div, 0).innerHTML
+      const elemText = format(div, 0).innerHTML.replace(/ class=""/g, "")
       const elem = document.createElement("pre")
       const parent = this.$el.parentNode.parentNode.parentNode.parentNode.querySelector("div[class^='rsg--tab']")
       elem.className = "rsg--pre-58 vueds-html"
