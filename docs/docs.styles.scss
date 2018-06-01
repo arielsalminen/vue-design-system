@@ -392,6 +392,9 @@ div[class^="rsg--toolbar"] {
   margin-bottom: $space-base;
   color: $color-white;
   padding: $space-base;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
 }
 
 // Code tabs
@@ -403,8 +406,8 @@ div[class^="rsg--tab"] {
     box-shadow: 0 2px 8px rgba($color-rich-black, 0.8);
     overflow: hidden;
     position: absolute;
-    top: $space-small;
-    right: $space-small;
+    top: $space-base;
+    right: $space-base;
     .vueds-tab {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
