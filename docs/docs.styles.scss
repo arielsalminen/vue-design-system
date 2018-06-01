@@ -380,7 +380,7 @@ div[class^="rsg--toolbar"] {
 
 // Codemirror
 .react-codemirror2 .CodeMirror.CodeMirror,
-pre.vueds-html {
+.rsg--tab-46 pre {
   background: mix($color-bleu-de-france, $color-rich-black, 10%);
   border-bottom-left-radius: $border-radius-default;
   border-bottom-right-radius: $border-radius-default;
@@ -391,6 +391,31 @@ pre.vueds-html {
   margin-bottom: $space-base;
   color: $color-white;
   padding: $space-base;
+}
+
+// Code tabs
+div[class^="rsg--tab"] {
+  position: relative;
+  .vueds-tabs {
+    z-index: 5;
+    position: absolute;
+    top: $space-small;
+    right: $space-small;
+    .vueds-tab {
+      border: 0;
+      cursor: pointer;
+      background: white;
+      &--active {
+        background: red;
+        color: white;
+        border: 0;
+      }
+    }
+  }
+}
+
+.vueds-hidden {
+  display: none !important;
 }
 
 .CodeMirror-scroll.CodeMirror-scroll {

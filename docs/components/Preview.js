@@ -18,6 +18,19 @@ function format(node, level) {
   return node
 }
 
+function initTabs() {
+  const tabs = document.querySelectorAll(".vueds-tab")
+  if (tabs) {
+    tabs.forEach(function(element) {
+      element.addEventListener("click", event => {
+        event.preventDefault()
+        document.querySelector(".vueds-tab--active").classList.remove("vueds-tab--active")
+        element.classList.add("vueds-tab--active")
+      })
+    })
+  }
+}
+
 export default previewComponent => {
   // https://vuejs.org/v2/guide/render-function.html
   return {
@@ -26,9 +39,17 @@ export default previewComponent => {
     },
     mounted() {
       const oldElem = document.querySelector(".vueds-html")
-      if (oldElem) {
+      const oldTabs = document.querySelector(".vueds-tabs")
+      if (oldElem || oldTabs) {
         oldElem.parentNode.removeChild(oldElem)
+        oldTabs.parentNode.removeChild(oldTabs)
       }
+
+      const tabs = document.createElement("div")
+      tabs.className = "vueds-tabs"
+      tabs.innerHTML =
+        "<button class='vueds-tab vue vueds-tab--active'>Vue.js</button><button class='vueds-tab html'>HTML</button>"
+
       const strDiv = this.$el.innerHTML.replace(/<!---->/g, "").replace(/data-v-\w*=""/g, "")
       const div = document.createElement("div")
       div.innerHTML =
@@ -41,15 +62,20 @@ export default previewComponent => {
         "</" +
         this.$el.localName +
         ">"
+
       const elemText = format(div, 0).innerHTML.replace(/ class=""/g, "")
-      const elem = document.createElement("pre")
-      const parent = this.$el.parentNode.parentNode.parentNode.parentNode.querySelector("div[class^='rsg--tab']")
-      elem.className = "rsg--pre-58 vueds-html"
-      elem.appendChild(document.createTextNode(elemText.trim()))
+      const elem = document.createElement("div")
+      const pre = document.createElement("pre")
+      const parent = document.querySelector("article div[class^='rsg--tab']")
+      elem.className = "vueds-html"
+      pre.appendChild(document.createTextNode(elemText.trim()))
+      elem.appendChild(pre)
       if (parent) {
         // Allow some time to pass to make sure codemirror is visible first
         setTimeout(() => {
           parent.appendChild(elem)
+          parent.appendChild(tabs)
+          initTabs()
         }, 100)
       }
     },
