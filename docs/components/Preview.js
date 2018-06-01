@@ -43,9 +43,15 @@ export default previewComponent => {
         ">"
       const elemText = format(div, 0).innerHTML
       const elem = document.createElement("pre")
+      const parent = this.$el.parentNode.parentNode.parentNode.parentNode.querySelector("div[class^='rsg--tab']")
       elem.className = "rsg--pre-58 vueds-html"
       elem.appendChild(document.createTextNode(elemText.trim()))
-      this.$el.parentNode.appendChild(elem)
+      if (parent) {
+        // Allow some time to pass to make sure codemirror is visible first
+        setTimeout(() => {
+          parent.appendChild(elem)
+        }, 100)
+      }
     },
   }
 }

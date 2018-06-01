@@ -379,11 +379,17 @@ div[class^="rsg--toolbar"] {
 }
 
 // Codemirror
-.react-codemirror2 .CodeMirror.CodeMirror {
+.react-codemirror2 .CodeMirror.CodeMirror,
+pre.vueds-html {
   background: mix($color-bleu-de-france, $color-rich-black, 10%);
   border-bottom-left-radius: $border-radius-default;
   border-bottom-right-radius: $border-radius-default;
+  box-sizing: border-box;
+  border: 0;
+  font-family: Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: $font-size-small;
   margin-bottom: $space-base;
+  color: $color-white;
   padding: $space-base;
 }
 
