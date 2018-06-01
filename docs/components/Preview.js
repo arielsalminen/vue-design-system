@@ -25,10 +25,18 @@ export default previewComponent => {
       return createElement(previewComponent)
     },
     mounted() {
-      console.log(this.$el.innerHTML)
       const strDiv = this.$el.innerHTML.replace(/<!---->/g, "").replace(/data-v-\w*=""/g, "")
       const div = document.createElement("div")
-      div.innerHTML = strDiv.trim()
+      div.innerHTML =
+        "<" +
+        this.$el.localName +
+        " class='" +
+        this.$el.className +
+        "'>" +
+        strDiv.trim() +
+        "</" +
+        this.$el.localName +
+        ">"
       const elemText = format(div, 0).innerHTML
       const elem = document.createElement("pre")
       elem.className = "rsg--pre-58"
