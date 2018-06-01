@@ -1,3 +1,5 @@
+import CodeMirror from "codemirror"
+
 function format(node, level) {
   const indentBefore = new Array(level++ + 1).join("  ")
   const indentAfter = new Array(level - 1).join("  ")
@@ -75,14 +77,28 @@ export default previewComponent => {
       const elem = document.createElement("div")
       const pre = document.createElement("pre")
       const parent = document.querySelector("article div[class^='rsg--tab']")
-      elem.className = "vueds-html vueds-hidden"
-      pre.appendChild(document.createTextNode(elemText.trim()))
+      pre.appendChild(document.createTextNode(elemText))
       elem.appendChild(pre)
       if (parent) {
         // Allow some time to pass to make sure codemirror is visible first
         setTimeout(() => {
           parent.appendChild(elem)
           parent.appendChild(tabs)
+
+          CodeMirror(
+            function(code) {
+              elem.parentNode.replaceChild(code, elem)
+              code.className += " vueds-html vueds-hidden"
+            },
+            {
+              value: pre.innerText || pre.textContent,
+              mode: "jsx",
+              readOnly: true,
+              dragDrop: false,
+              theme: "night",
+            }
+          )
+
           initTabs()
         }, 100)
       }
