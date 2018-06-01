@@ -77,7 +77,7 @@ export default previewComponent => {
       const elem = document.createElement("div")
       const pre = document.createElement("pre")
       const parent = document.querySelector("article div[class^='rsg--tab']")
-      pre.appendChild(document.createTextNode(elemText))
+      pre.appendChild(document.createTextNode(elemText.trim()))
       elem.appendChild(pre)
       if (parent) {
         // Allow some time to pass to make sure codemirror is visible first
@@ -93,6 +93,7 @@ export default previewComponent => {
             {
               value: pre.innerText || pre.textContent,
               mode: "jsx",
+              lineNumbers: false,
               readOnly: true,
               dragDrop: false,
               theme: "night",
@@ -100,7 +101,7 @@ export default previewComponent => {
           )
 
           initTabs()
-        }, 100)
+        }, 150)
       }
     },
   }
