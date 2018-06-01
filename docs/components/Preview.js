@@ -26,6 +26,14 @@ function initTabs() {
         event.preventDefault()
         document.querySelector(".vueds-tab--active").classList.remove("vueds-tab--active")
         element.classList.add("vueds-tab--active")
+        document.querySelector(".vueds-hidden").classList.remove("vueds-hidden")
+        if (event.target.classList.contains("html")) {
+          const container = document.querySelector("article div[class^='rsg--tab']")
+          container.querySelectorAll("div")[0].classList.add("vueds-hidden")
+        } else {
+          const container = document.querySelector("article div[class^='rsg--tab']")
+          document.querySelector(".vueds-html").classList.add("vueds-hidden")
+        }
       })
     })
   }
@@ -48,7 +56,7 @@ export default previewComponent => {
       const tabs = document.createElement("div")
       tabs.className = "vueds-tabs"
       tabs.innerHTML =
-        "<button class='vueds-tab vue vueds-tab--active'>Vue.js</button><button class='vueds-tab html'>HTML</button>"
+        "<button class='vueds-tab vue vueds-tab--active'>VUE</button><button class='vueds-tab html'>HTML</button>"
 
       const strDiv = this.$el.innerHTML.replace(/<!---->/g, "").replace(/data-v-\w*=""/g, "")
       const div = document.createElement("div")
@@ -67,7 +75,7 @@ export default previewComponent => {
       const elem = document.createElement("div")
       const pre = document.createElement("pre")
       const parent = document.querySelector("article div[class^='rsg--tab']")
-      elem.className = "vueds-html"
+      elem.className = "vueds-html vueds-hidden"
       pre.appendChild(document.createTextNode(elemText.trim()))
       elem.appendChild(pre)
       if (parent) {
