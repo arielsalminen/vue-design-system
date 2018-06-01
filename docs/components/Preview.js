@@ -25,6 +25,10 @@ export default previewComponent => {
       return createElement(previewComponent)
     },
     mounted() {
+      const oldElem = document.querySelector(".vueds-html")
+      if (oldElem) {
+        oldElem.parentNode.removeChild(oldElem)
+      }
       const strDiv = this.$el.innerHTML.replace(/<!---->/g, "").replace(/data-v-\w*=""/g, "")
       const div = document.createElement("div")
       div.innerHTML =
@@ -39,7 +43,7 @@ export default previewComponent => {
         ">"
       const elemText = format(div, 0).innerHTML
       const elem = document.createElement("pre")
-      elem.className = "rsg--pre-58"
+      elem.className = "rsg--pre-58 vueds-html"
       elem.appendChild(document.createTextNode(elemText.trim()))
       this.$el.parentNode.appendChild(elem)
     },
