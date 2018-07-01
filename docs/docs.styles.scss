@@ -421,13 +421,13 @@ div[class^="rsg--tab"] {
       line-height: $line-height-small;
       @include inset-squish-space($space-small);
       cursor: pointer;
-      background: mix($color-bleu-de-france, $color-rich-black, 34%);
+      background: mix($color-bleu-de-france, $color-rich-black, 50%);
       color: $color-white;
       &:active {
         opacity: 0.8;
       }
       &--active {
-        background: mix($color-bleu-de-france, $color-rich-black, 50%);
+        background: mix($color-bleu-de-france, $color-rich-black, 32%);
       }
     }
   }
