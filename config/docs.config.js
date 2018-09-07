@@ -8,10 +8,6 @@ module.exports = {
    */
   title: "Vue Design System",
   /**
-   * Enabling the following option splits sections into separate views.
-   */
-  navigation: true,
-  /**
    * Most of the styles are defined in /docs/docs.styles.scss
    */
   theme: {
@@ -32,8 +28,6 @@ module.exports = {
    * Path to static assets directory
    */
   assetsDir: path.join(__dirname, "../src/assets"),
-  showCode: true,
-  showUsage: true,
   /**
    * Enabling the below option will break things in Vue Desing System!
    */
@@ -42,6 +36,10 @@ module.exports = {
    * We’re defining below JS and SCSS requires for the documentation.
    */
   require: [path.join(__dirname, "../docs/docs.helper.js"), path.join(__dirname, "../docs/docs.styles.scss")],
+  /**
+   * Enabling the following option splits sections into separate views.
+   */
+  pagePerSection: true,
   sections: [
     {
       name: "Getting Started",
@@ -49,6 +47,9 @@ module.exports = {
       // Needs to be loaded in somewhere as this is also shown in
       // element, Pattern & Template overviews.
       components: "../docs/components/status/**/[A-Z]*.vue",
+      sectionDepth: 1,
+      exampleMode: "hide",
+      usageMode: "hide",
     },
     {
       name: "Design Principles",
@@ -61,6 +62,9 @@ module.exports = {
     {
       name: "Design Tokens",
       content: "../docs/tokens.md",
+      sectionDepth: 1,
+      exampleMode: "hide",
+      usageMode: "hide",
       components: () => [
         "../docs/components/tokens/Color.vue",
         "../docs/components/tokens/FontSize.vue",
@@ -72,24 +76,35 @@ module.exports = {
       name: "Elements",
       content: "../docs/elements.md",
       components: "../src/elements/**/[A-Z]*.vue",
+      exampleMode: "expand",
+      usageMode: "expand",
+      sectionDepth: 2,
     },
     {
       name: "Patterns",
       content: "../docs/patterns.md",
       components: "../src/patterns/**/[A-Z]*.vue",
+      exampleMode: "expand",
+      usageMode: "expand",
+      sectionDepth: 2,
     },
     {
       name: "Templates",
       content: "../docs/templates.md",
       components: "../src/templates/**/[A-Z]*.vue",
+      exampleMode: "expand",
+      usageMode: "expand",
+      sectionDepth: 2,
     },
     {
       name: "Downloads",
       content: "../docs/downloads.md",
+      sectionDepth: 1,
     },
     {
       name: "FAQ",
       content: "../docs/faq.md",
+      sectionDepth: 1,
     },
     {
       /**

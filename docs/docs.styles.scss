@@ -374,9 +374,6 @@ table[class^="rsg--table"] {
 thead[class^="rsg--tableHead"] {
   border: 0;
 }
-div[class^="rsg--toolbar"] {
-  margin-top: $space-x-small;
-}
 
 // Codemirror
 .react-codemirror2 .CodeMirror.CodeMirror {
@@ -550,7 +547,8 @@ thead[class^="rsg--thead"] {
 div[class^="rsg--tabButtons"],
 div[class^="rsg--controls"],
 div[class^="rsg--pathline"],
-footer[class^="rsg--footer"] {
+footer[class^="rsg--footer"],
+div[class^="rsg--toolbar"] {
   display: none !important;
 }
 
@@ -566,12 +564,11 @@ a[href="#private-components"] + ul {
 }
 
 // Hide Private components and placeholder sections
-ul a[href*="?id=section"],
-ul a[href*="?id=components"],
-ul a[href*="?id=color"],
-ul a[href*="?id=spacing"],
-ul a[href*="?id=fontsize"],
-ul a[href*="?id=all"],
-ul a[href*="/#!/Private Components"] {
+ul a[href*="/#/Getting Started/Components"],
+ul a[href*="/#/Design Tokens/Color"],
+ul a[href*="/#/Design Tokens/Spacing"],
+ul a[href*="/#/Design Tokens/FontSize"],
+ul a[href*="/#/Design Tokens/All"],
+ul a[href*="/#/Private Components"] {
   display: none !important;
 }
