@@ -54,7 +54,7 @@ The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](http
 
 ## Need more help?
 
-About to get started with a new design system? I’m an independent designer and developer from Finland, specialized in helping companies to build [design systems](https://vueds.com). I also conduct [design system workshops](https://viljamis.com/2018/vue-design-system/) and do consulting. [Let’s talk!](https://twitter.com/viljamis)
+About to get started with a new design system? I’m an independent designer and developer, specialized in helping companies to build [design systems](https://vueds.com). I also conduct [design system workshops](https://viljamis.com/2018/vue-design-system/) and do consulting. [Let’s talk!](https://twitter.com/viljamis)
 
 ## Authors and License
 
