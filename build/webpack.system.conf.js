@@ -10,6 +10,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin")
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
+const SafeParser = require("postcss-safe-parser")
 
 const env = require("../config/prod.env")
 
@@ -53,7 +54,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({
-      cssProcessorOptions: { safe: true },
+      cssProcessorOptions: { parser: SafeParser },
     }),
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
