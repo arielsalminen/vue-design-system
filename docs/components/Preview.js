@@ -71,7 +71,7 @@ export default previewComponent => {
           )
 
           CodeTabs.init()
-        }, 150)
+        }, 300)
       }
     },
   }
