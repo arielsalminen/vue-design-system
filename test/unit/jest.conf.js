@@ -24,5 +24,7 @@ module.exports = {
     "!<rootDir>/src/system.js",
     "!<rootDir>/docs/docs.helper.js",
     "!<rootDir>/docs/components/status/*",
+    "!<rootDir>/docs/components/Preview.js",
+    "!<rootDir>/docs/utils/tabs.js",
   ],
 }
