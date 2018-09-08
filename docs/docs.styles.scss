@@ -382,6 +382,7 @@ thead[class^="rsg--tableHead"] {
   border-bottom-left-radius: $border-radius-default;
   border-bottom-right-radius: $border-radius-default;
   box-sizing: border-box;
+  height: auto;
   border: 0;
   font-family: Consolas, "Liberation Mono", Menlo, monospace;
   font-size: $font-size-small;
@@ -423,8 +424,11 @@ div[class^="rsg--tab"] {
       &:active {
         background: mix($color-bleu-de-france, $color-rich-black, 45%);
       }
+      &:focus {
+        outline: none;
+      }
       &--active {
-        background: mix($color-bleu-de-france, $color-rich-black, 45%);
+        background: mix($color-bleu-de-france, $color-rich-black, 40%);
         box-shadow: inset 0 2px 8px rgba($color-rich-black, 0.2);
       }
     }
