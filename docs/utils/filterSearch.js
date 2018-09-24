@@ -25,7 +25,7 @@ export default {
       const search = document.querySelector("div[class^='rsg--search'] input")
       let writing = false
       if (search) {
-        search.addEventListener("input", () => {
+        search.addEventListener("keydown", () => {
           if (!writing || search.value) {
             writing = true
             if (this.showLinks) {
