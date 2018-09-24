@@ -24,7 +24,7 @@ describe("filterSearch.js", () => {
     const input = wrapper.find("input")
     const parent = wrapper.find(".test")
     input.value = "test"
-    input.trigger("input")
+    input.trigger("keydown")
     expect(parent.classes()).toContain("vueds-visible")
   })
 
