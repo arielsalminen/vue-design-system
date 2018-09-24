@@ -109,9 +109,9 @@ h3 {
   border-radius: $border-radius-default;
   overflow: hidden;
   text-align: left;
-  float: left;
   @supports (display: grid) {
     width: 100%;
+    float: left;
   }
   @media (max-width: 400px) {
     margin-bottom: $space-base;
