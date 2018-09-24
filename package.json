@@ -87,6 +87,7 @@
         "error",
         "double"
       ],
+      "no-extra-semi": "off",
       "semi": [
         "error",
         "never"
