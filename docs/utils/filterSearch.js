@@ -8,7 +8,7 @@ export default {
     showLinks() {
       const links = document.querySelectorAll("div[class^='rsg--sidebar'] ul ul[class^='rsg--list']")
       if (links) {
-        links.forEach(function(element) {
+        ;[].forEach.call(links, function(element) {
           element.classList.add("vueds-visible")
         })
       }
@@ -16,7 +16,7 @@ export default {
     hideLinks() {
       const activeLinks = document.querySelectorAll(".vueds-visible")
       if (activeLinks) {
-        activeLinks.forEach(function(element) {
+        ;[].forEach.call(activeLinks, function(element) {
           element.classList.remove("vueds-visible")
         })
       }
