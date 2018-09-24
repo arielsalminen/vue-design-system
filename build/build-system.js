@@ -11,7 +11,7 @@ const webpack = require("webpack")
 const config = require("../config")
 const webpackConfig = require("./webpack.system.conf")
 
-const spinner = ora("Building Design System Library...")
+const spinner = ora("Building Design System...")
 spinner.start()
 
 rm(path.join(config.system.assetsRoot, config.system.assetsSubDirectory), err => {
@@ -30,15 +30,18 @@ rm(path.join(config.system.assetsRoot, config.system.assetsSubDirectory), err =>
     )
 
     if (stats.hasErrors()) {
-      console.log(chalk.red("  Design System Library build failed with errors.\n"))
+      console.log(chalk.red("  Design System build failed with errors.\n"))
       process.exit(1)
     }
 
-    console.log(chalk.cyan("  Design System Library build complete.\n"))
+    console.log(chalk.cyan("  Design System build complete.\n"))
     console.log(
       chalk.yellow(
-        "  Tip: You can now publish your library as a private NPM module.\n" +
-          "  Users can import it as an ES6 module: import DesignSystem from 'system'\n"
+        "  Tip: You can now publish the design system as a private NPM module.\n" +
+          "  Users can import it as an ES6 module:\n\n" +
+          "  import system from 'vue-design-system'\n" +
+          "  import 'vue-design-system/dist/system.css'\n\n" +
+          "  Vue.use(system)\n"
       )
     )
   })

@@ -31,7 +31,7 @@ export default {
         }
 
         if (currentLabels) {
-          currentLabels.forEach(function(element) {
+          ;[].forEach.call(currentLabels, function(element) {
             element.parentNode.removeChild(element)
           })
         }

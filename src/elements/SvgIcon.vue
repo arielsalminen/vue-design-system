@@ -1,10 +1,8 @@
 <template>
-  <component :is="type" :aria-label="ariaLabel" class="svg-icon">
-  </component>
+  <component :is="type" :aria-label="ariaLabel" class="svg-icon" v-html="svg" />
 </template>
 
 <script>
-let cache = new Map()
 const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/)
 
 /**
@@ -53,20 +51,12 @@ export default {
       default: "16px",
     },
   },
-  async mounted() {
-    let currPath = req("./" + this.name + ".svg")
-    if (!cache.has(currPath)) {
-      try {
-        cache.set(currPath, fetch(currPath).then(r => r.text()))
-      } catch (e) {
-        cache.delete(currPath)
-      }
-    }
-    if (cache.has(currPath)) {
-      this.$el.innerHTML = await cache.get(currPath)
-      this.$el.children[0].style.fill = this.fill
-      this.$el.children[0].style.width = this.size
-      this.$el.children[0].style.height = this.size
+  data() {
+    return {
+      svg: req("./" + this.name + ".svg").replace(
+        /^<svg /,
+        `<svg style="width: ${this.size}; height: ${this.size}; fill: ${this.fill}" `
+      ),
     }
   },
 }

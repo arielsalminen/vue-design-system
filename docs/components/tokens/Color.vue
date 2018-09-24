@@ -50,28 +50,33 @@ export default {
 --------------------------------------------- */
 
 .colors {
-  display: grid;
-  align-content: stretch;
-  justify-content: left;
-  grid-template-columns:
-    calc(20% - #{$space-base}) calc(20% - #{$space-base}) calc(20% - #{$space-base}) calc(20% - #{$space-base})
-    calc(20% - #{$space-base});
-  grid-column-gap: $space-base;
-  max-width: 1200px;
+  display: block;
   width: 100%;
-  @media (max-width: 1300px) {
-    grid-template-columns: calc(25% - #{$space-base}) calc(25% - #{$space-base}) calc(25% - #{$space-base}) calc(
-        25% - #{$space-base}
-      );
-  }
-  @media (max-width: 1100px) {
-    grid-template-columns: calc(33.333% - #{$space-base}) calc(33.333% - #{$space-base}) calc(33.333% - #{$space-base});
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: calc(50% - #{$space-base}) calc(50% - #{$space-base});
-  }
-  @media (max-width: 400px) {
-    grid-template-columns: 100%;
+  @supports (display: grid) {
+    display: grid;
+    max-width: 1200px;
+    align-content: stretch;
+    justify-content: left;
+    grid-template-columns:
+      calc(20% - #{$space-base}) calc(20% - #{$space-base}) calc(20% - #{$space-base}) calc(20% - #{$space-base})
+      calc(20% - #{$space-base});
+    grid-column-gap: $space-base;
+    @media (max-width: 1300px) {
+      grid-template-columns: calc(25% - #{$space-base}) calc(25% - #{$space-base}) calc(25% - #{$space-base}) calc(
+          25% - #{$space-base}
+        );
+    }
+    @media (max-width: 1100px) {
+      grid-template-columns: calc(33.333% - #{$space-base}) calc(33.333% - #{$space-base}) calc(
+          33.333% - #{$space-base}
+        );
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: calc(50% - #{$space-base}) calc(50% - #{$space-base});
+    }
+    @media (max-width: 400px) {
+      grid-template-columns: 100%;
+    }
   }
 }
 .swatch {
@@ -104,8 +109,10 @@ h3 {
   border-radius: $border-radius-default;
   overflow: hidden;
   text-align: left;
-  float: left;
-  width: 100%;
+  @supports (display: grid) {
+    width: 100%;
+    float: left;
+  }
   @media (max-width: 400px) {
     margin-bottom: $space-base;
   }
