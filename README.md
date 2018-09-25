@@ -42,6 +42,7 @@ The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](http
 ## Examples
 
 - **[Official example](https://vueds.com/example)**
+- [Using Vue Design System as NPM dependency](https://github.com/viljamis/vue-design-system-example)
 
 ## Roadmap
 
