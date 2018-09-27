@@ -18,6 +18,7 @@ module.exports = {
       monospace: ["Consolas", "'Liberation Mono'", "Menlo", "monospace"],
     },
   },
+  renderRootJsx: path.join(__dirname, "../docs/components/Preview.js"),
   /**
    * Define a custom code highlighting theme.
    */
