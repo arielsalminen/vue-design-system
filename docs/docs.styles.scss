@@ -391,10 +391,14 @@ thead[class^="rsg--tableHead"] {
   min-height: $space-xx-large / 1.5;
   margin-bottom: $space-base;
   color: $color-white;
-  padding: $space-base;
+  padding: $space-base $space-base * 7 $space-base $space-base;
   word-wrap: break-word;
   white-space: pre-wrap;
   word-break: normal;
+  .CodeMirror-scroll,
+  .CodeMirror-vscrollbar {
+    overflow: hidden;
+  }
 }
 
 // Code tabs
@@ -438,13 +442,9 @@ div[class^="rsg--tab"] {
 
 .vueds-hidden {
   opacity: 0;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
   visibility: hidden;
+  z-index: -1;
+  position: absolute !important;
 }
 
 .CodeMirror-scroll.CodeMirror-scroll {

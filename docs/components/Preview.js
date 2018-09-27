@@ -64,9 +64,11 @@ export default previewComponent => {
               value: pre.innerText || pre.textContent,
               mode: "jsx",
               lineNumbers: false,
+              lineWrapping: true,
               readOnly: true,
               dragDrop: false,
               theme: "night",
+              viewportMargin: Infinity,
             }
           )
 
