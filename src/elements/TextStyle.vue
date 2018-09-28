@@ -16,11 +16,15 @@ export default {
   release: "1.0.0",
   props: {
     /**
-     * The html element name used for the text
+     * The html element used for the text style.
+     * `span, em, i, strong`
      */
     type: {
       type: String,
-      default: "p",
+      default: "span",
+      validator: value => {
+        return value.match(/(span|em|i|strong)/)
+      },
     },
     /**
      * Style variation to give additional meaning.
@@ -43,13 +47,13 @@ $positive-text: #7cb518;
 
 .text-style {
   @include reset;
-  @include stack-space($space-small);
+  @include stack-space($space-s);
   color: $color-rich-black;
-  font-family: $font-family-text;
-  font-weight: $font-weight-regular;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  @media #{$media-query-large} {
+  font-family: $font-text;
+  font-weight: $weight-normal;
+  font-size: $size-m;
+  line-height: $line-height-m;
+  @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
   }
   &.disabled {
@@ -57,7 +61,7 @@ $positive-text: #7cb518;
     text-decoration: line-through;
   }
   &.strong {
-    font-weight: $font-weight-semi-bold;
+    font-weight: $weight-semi-bold;
   }
   &.positive {
     color: shade($positive-text, 20%);
@@ -72,9 +76,11 @@ $positive-text: #7cb518;
 <docs>
   ```jsx
   <div>
-    <text-style variation="default">Design isn’t just about the look and feel. Design is how it works.</text-style>
-    <text-style variation="disabled">Design isn’t just about the look and feel.</text-style>
-    <text-style variation="strong">Design isn’t just about</text-style>
+    <TextStyle variation="default">Design isn’t just about the look and feel. Design is how it works.</TextStyle>
+    <br />
+    <TextStyle variation="disabled">Design isn’t just about the look and feel.</TextStyle>
+    <br />
+    <TextStyle variation="strong">Design isn’t just about</TextStyle>
   </div>
   ```
 </docs>
