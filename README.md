@@ -50,7 +50,7 @@ The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](http
 
 ## Changelog
 
-- `3.2.0` is the latest release.
+- `3.5.0` is the latest release.
 - See [Releases page](https://github.com/viljamis/vue-design-system/releases) for the full changelog.
 
 ## Need more help?

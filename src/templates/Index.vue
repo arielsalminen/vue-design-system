@@ -1,13 +1,13 @@
 <template>
   <component :is="type" class="index">
-    <nav-bar active="Index" :navItems="[
+    <NavBar active="Index" :navItems="[
       {name: 'Template', component: 'Index', href: '/#/'},
-      {name: 'Living Docs', href: 'http://localhost:6060/'}
+      {name: 'Documentation', href: 'http://localhost:6060/'}
     ]"/>
-    <wrapper>
-      <heading level="h1">Vue Design System</heading>
-      <text-style><a href="https://vueds.com">Vue Design System</a> is an open-source tool for building design systems with Vue.js. It provides you and your team a set of organized tools, patterns &amp; practices. It works as the foundation for your application development.</text-style>
-    </wrapper>
+    <Wrapper>
+      <Heading>Vue Design System</Heading>
+      <Paragraph><a href="https://vueds.com">Vue Design System</a> is an open-source tool for building design systems with Vue.js. It provides you and your team a set of organized tools, patterns &amp; practices. It works as the foundation for your application development.</Paragraph>
+    </Wrapper>
   </component>
 </template>
 
@@ -47,8 +47,8 @@ $color-template-link: $color-bleu-de-france;
 
 .index {
   @include reset;
-  @include inset-space($space-base);
-  min-height: $space-xx-large * 4;
+  @include inset-space($space-m);
+  min-height: $space-xxl * 4;
   background: $color-template-background;
   background: linear-gradient(0deg, $color-template-background-bottom, $color-template-background-top 100%);
   text-align: center;
@@ -56,27 +56,29 @@ $color-template-link: $color-bleu-de-france;
   float: left;
   height: 100%;
   width: 100%;
-  @media #{$media-query-large} {
+  @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
   }
   .heading {
     color: $color-template-text;
   }
-  .text-style {
+  .paragraph {
     color: $color-template-text;
   }
   .text-link {
     color: $color-template-link;
   }
   .wrapper {
-    max-width: $space-xx-large * 4.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: $space-xxl * 4.5;
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
     left: 50%;
     top: 50%;
   }
   a {
-    font-family: $font-family-text;
+    font-family: $font-text;
     color: $color-bleu-de-france;
     text-decoration: underline;
   }
@@ -85,6 +87,6 @@ $color-template-link: $color-bleu-de-france;
 
 <docs>
   ```jsx
-  <index />
+  <Index />
   ```
 </docs>

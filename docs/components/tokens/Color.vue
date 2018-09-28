@@ -50,6 +50,7 @@ export default {
 --------------------------------------------- */
 
 .colors {
+  margin-top: $space-l;
   display: block;
   width: 100%;
   @supports (display: grid) {
@@ -58,21 +59,19 @@ export default {
     align-content: stretch;
     justify-content: left;
     grid-template-columns:
-      calc(20% - #{$space-base}) calc(20% - #{$space-base}) calc(20% - #{$space-base}) calc(20% - #{$space-base})
-      calc(20% - #{$space-base});
-    grid-column-gap: $space-base;
+      calc(20% - #{$space-m}) calc(20% - #{$space-m}) calc(20% - #{$space-m}) calc(20% - #{$space-m})
+      calc(20% - #{$space-m});
+    grid-column-gap: $space-m;
     @media (max-width: 1300px) {
-      grid-template-columns: calc(25% - #{$space-base}) calc(25% - #{$space-base}) calc(25% - #{$space-base}) calc(
-          25% - #{$space-base}
+      grid-template-columns: calc(25% - #{$space-m}) calc(25% - #{$space-m}) calc(25% - #{$space-m}) calc(
+          25% - #{$space-m}
         );
     }
     @media (max-width: 1100px) {
-      grid-template-columns: calc(33.333% - #{$space-base}) calc(33.333% - #{$space-base}) calc(
-          33.333% - #{$space-base}
-        );
+      grid-template-columns: calc(33.333% - #{$space-m}) calc(33.333% - #{$space-m}) calc(33.333% - #{$space-m});
     }
     @media (max-width: 900px) {
-      grid-template-columns: calc(50% - #{$space-base}) calc(50% - #{$space-base});
+      grid-template-columns: calc(50% - #{$space-m}) calc(50% - #{$space-m});
     }
     @media (max-width: 400px) {
       grid-template-columns: 100%;
@@ -80,17 +79,17 @@ export default {
   }
 }
 .swatch {
-  @include stack-space($space-small);
+  @include stack-space($space-s);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  height: $space-xx-large;
-  margin-left: -#{$space-small};
-  margin-top: -#{$space-small};
-  width: calc(100% + #{$space-large});
+  height: $space-xxl;
+  margin-left: -#{$space-s};
+  margin-top: -#{$space-s};
+  width: calc(100% + #{$space-l});
   float: left;
 }
 h3 {
   @include reset;
-  @include stack-space($space-x-small);
+  @include stack-space($space-xs);
   text-transform: capitalize;
   line-height: 1.2;
   width: 100%;
@@ -98,15 +97,15 @@ h3 {
 }
 .color {
   @include reset;
-  @include inset-space($space-small);
+  @include inset-space($space-s);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-bottom: $space-large;
+  margin-bottom: $space-m;
   box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
-  font-size: $font-size-small;
-  font-family: $font-family-text;
+  font-size: $size-s;
+  font-family: $font-text;
   color: $color-rich-black;
-  border-radius: $border-radius-default;
+  border-radius: $radius-default;
   overflow: hidden;
   text-align: left;
   @supports (display: grid) {
@@ -114,7 +113,7 @@ h3 {
     float: left;
   }
   @media (max-width: 400px) {
-    margin-bottom: $space-base;
+    margin-bottom: $space-m;
   }
   &:hover {
     span {
@@ -122,10 +121,10 @@ h3 {
     }
   }
   span {
-    margin-bottom: $space-x-small;
+    margin-bottom: $space-xs;
     line-height: 1.3;
     color: $color-silver;
-    font-size: $font-size-small;
+    font-size: $size-s;
     width: 100%;
     float: left;
   }

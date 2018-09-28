@@ -1,13 +1,13 @@
 <template>
   <component :is="type" class="not-found">
-    <nav-bar active="NotFound" :navItems="[
+    <NavBar active="NotFound" :navItems="[
       {name: 'Template', component: 'Index', href: '/#/'},
-      {name: 'Living Docs', href: 'http://localhost:6060/'}
+      {name: 'Documentation', href: 'http://localhost:6060/'}
     ]"/>
-    <wrapper>
-      <heading level="h1">404 Error</heading>
-      <text-style>Couldn’t find a component that would match the URL you entered. Double check configuration in router/index.js.</text-style>
-    </wrapper>
+    <Wrapper>
+      <Heading>404 Error</Heading>
+      <Paragraph>Couldn’t find a component that would match the URL you entered. Double check configuration in router/index.js.</Paragraph>
+    </Wrapper>
   </component>
 </template>
 
@@ -45,8 +45,8 @@ $color-template-link: $color-bleu-de-france;
 
 .not-found {
   @include reset;
-  @include inset-space($space-base);
-  min-height: $space-xx-large * 4;
+  @include inset-space($space-m);
+  min-height: $space-xxl * 4;
   background: $color-template-background;
   background: linear-gradient(0deg, $color-template-background-bottom, $color-template-background-top 100%);
   text-align: center;
@@ -57,14 +57,16 @@ $color-template-link: $color-bleu-de-france;
   .heading {
     color: $color-template-text;
   }
-  .text-style {
+  .paragraph {
     color: $color-template-text;
   }
   .text-link {
     color: $color-template-link;
   }
   .wrapper {
-    max-width: $space-xx-large * 4.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: $space-xxl * 4.5;
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
     left: 50%;
@@ -75,6 +77,6 @@ $color-template-link: $color-bleu-de-france;
 
 <docs>
   ```jsx
-  <not-found />
+  <NotFound />
   ```
 </docs>

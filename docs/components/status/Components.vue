@@ -2,19 +2,19 @@
   <div class="component-status">
     <ul class="status-list">
       <li>
-        <svg-icon name="ready" fill="#7cb518" size="16px" />
+        <Icon name="ready" fill="#7cb518" size="small" />
         <p>Ready</p>
       </li>
       <li>
-        <svg-icon name="review" :fill="tokens.color_ucla_gold.value" size="16px" />
+        <Icon name="review" :fill="tokens.color_ucla_gold.value" size="small" />
         <p>Under review</p>
       </li>
       <li>
-        <svg-icon name="deprecated" :fill="tokens.color_vermilion.value" size="16px" />
+        <Icon name="deprecated" :fill="tokens.color_vermilion.value" size="small" />
       <p>Deprecated</p>
       </li>
       <li>
-        <svg-icon name="prototype" :fill="tokens.color_bleu_de_france.value" size="16px" />
+        <Icon name="prototype" :fill="tokens.color_bleu_de_france.value" size="small" />
         <p>Prototype</p>
       </li>
       <li>
@@ -46,29 +46,29 @@
           </td>
           <td v-else>N/A</td>
           <td v-if="component.status">
-            <svg-icon
+            <Icon
               v-if="component.status === 'ready'"
               name="ready"
               fill="#7cb518"
-              size="16px"
+              size="small"
             />
-            <svg-icon
+            <Icon
               v-if="component.status === 'under-review' || component.status === 'review'"
               name="review"
               :fill="tokens.color_ucla_gold.value"
-              size="16px"
+              size="small"
             />
-            <svg-icon
+            <Icon
               v-if="component.status === 'prototype'"
               name="prototype"
               :fill="tokens.color_bleu_de_france.value"
-              size="16px"
+              size="small"
             />
-            <svg-icon
+            <Icon
               v-if="component.status === 'deprecated'"
               name="deprecated"
               :fill="tokens.color_vermilion.value"
-              size="16px"
+              size="small"
             />
           </td>
           <td v-else>—</td>
@@ -139,11 +139,11 @@ export default {
 
 .component-status {
   @include reset;
-  font-family: $font-family-heading;
-  font-weight: $font-weight-regular;
-  line-height: $line-height-heading;
+  font-family: $font-heading;
+  font-weight: $weight-normal;
+  line-height: $line-height-xs;
   color: $color-rich-black;
-  margin-bottom: $space-small;
+  margin-bottom: $space-s;
   font-style: normal;
   @media (max-width: 1000px) {
     overflow-x: auto;
@@ -154,14 +154,14 @@ export default {
     width: 100%;
   }
   thead th {
-    padding: $space-small;
+    padding: $space-s;
     background: $color-cloud;
-    font-size: $font-size-small;
-    font-weight: $font-weight-bold;
+    font-size: $size-s;
+    font-weight: $weight-bold;
     color: $color-oxford-blue;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: $font-weight-semi-bold;
+    font-weight: $weight-semi-bold;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
@@ -170,12 +170,12 @@ export default {
     position: sticky;
     top: -1px;
     &:first-child {
-      border-top-left-radius: $border-radius-default;
-      border-bottom-left-radius: $border-radius-default;
+      border-top-left-radius: $radius-default;
+      border-bottom-left-radius: $radius-default;
     }
     &:last-child {
-      border-top-right-radius: $border-radius-default;
-      border-bottom-right-radius: $border-radius-default;
+      border-top-right-radius: $radius-default;
+      border-bottom-right-radius: $radius-default;
     }
   }
   tr {
@@ -185,15 +185,15 @@ export default {
     }
   }
   td {
-    font-size: $font-size-small;
-    padding: $space-small;
+    font-size: $size-s;
+    padding: $space-s;
     &:first-child {
-      font-weight: $font-weight-bold;
+      font-weight: $weight-bold;
       white-space: nowrap;
     }
   }
   .status-list {
-    margin: 0 0 $space-small;
+    margin: 0 0 $space-m;
     overflow: hidden;
     padding: 0;
     list-style: none;
@@ -204,9 +204,9 @@ export default {
       display: block;
     }
     li {
-      margin: 0 $space-base 0 0;
+      margin: 0 $space-m 0 0;
       color: $color-silver;
-      font-size: $font-size-small;
+      font-size: $size-s;
       align-items: center;
       display: flex;
       @media (max-width: 1000px) {
@@ -216,11 +216,11 @@ export default {
       }
       svg,
       span {
-        margin: -2px calc(#{$space-small} / 2) 0 0;
+        margin: -2px calc(#{$space-s} / 2) 0 0;
       }
       p {
         @media (max-width: 1000px) {
-          margin: $space-x-small;
+          margin: $space-xs;
         }
       }
     }

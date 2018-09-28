@@ -1,59 +1,45 @@
 <template>
-  <component :is="wrapper" class="input">
-    <label v-if="label">{{ label }}</label>
-    <input
+  <component :is="wrapper" :class="['textarea', {'textarea-expand': width === 'expand'}]">
+    <label :for="id" v-if="label">{{ label }}</label>
+    <textarea
       :id="id"
       :disabled="disabled"
-      :type="type"
-      :hover="hover"
-      :focus="focus"
-      :value="value"
+      :class="state"
       :placeholder="placeholder"
-      :class="['input', {'input-expand': width === 'expand'}]"
       @input="onInput($event.target.value)"
       @focus="onFocus($event.target.value)"
-      />
+      v-model="value"
+    />
   </component>
 </template>
 
 <script>
 /**
- * Form Inputs are used to allow users to provide text input when the expected
- * input is short. Form Input has a range of options and supports several text
- * formats including numbers. For longer input, use the `FormTextarea` element.
+ * Textareas are used to allow users to provide text input when the expected
+ * input is long. Textarea has a range of options. For shorter input,
+ * use the `Input` element.
  */
 export default {
-  name: "FormInput",
+  name: "Textarea",
   status: "ready",
   release: "1.0.0",
   props: {
     /**
-     * The type of the form input field.
-     * `text, number, email`
-     */
-    type: {
-      type: String,
-      default: "text",
-      validator: value => {
-        return value.match(/(text|number|email)/)
-      },
-    },
-    /**
-     * Text value of the form input field.
+     * Text value of the form textarea.
      */
     value: {
       type: String,
       default: null,
     },
     /**
-     * The placeholder value for the form input field.
+     * The placeholder value for the form textarea.
      */
     placeholder: {
       type: String,
       default: null,
     },
     /**
-     * The label of the form input field.
+     * The label of the form textarea.
      */
     label: {
       type: String,
@@ -71,14 +57,14 @@ export default {
       },
     },
     /**
-     * Unique identifier of the form input field.
+     * Unique identifier of the form textarea.
      */
     id: {
       type: String,
       default: null,
     },
     /**
-     * The width of the form input field.
+     * The width of the form textarea.
      * `auto, expand`
      */
     width: {
@@ -89,7 +75,7 @@ export default {
       },
     },
     /**
-     * Whether the form input field is disabled or not.
+     * Whether the form textarea is disabled or not.
      * `true, false`
      */
     disabled: {
@@ -97,20 +83,15 @@ export default {
       default: false,
     },
     /**
-     * Manually trigger input field’s hover state.
-     * `true, false`
+     * Manually trigger various states of the textarea.
+     * `hover, active, focus`
      */
-    hover: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * Manually trigger input field’s focus state.
-     * `true, false`
-     */
-    focus: {
-      type: Boolean,
-      default: false,
+    state: {
+      type: String,
+      default: null,
+      validator: value => {
+        return value.match(/(hover|active|focus)/)
+      },
     },
   },
   methods: {
@@ -128,32 +109,37 @@ export default {
 // Design Tokens with local scope
 $color-placeholder: tint($color-silver, 50%);
 
-.input {
-  @include stack-space($space-small);
-  font-weight: $font-weight-regular;
-  font-family: $font-family-text;
-  font-size: $font-size-base;
-  line-height: $line-height-heading;
+.textarea {
+  @include stack-space($space-s);
+  font-weight: $weight-normal;
+  font-family: $font-text;
+  font-size: $size-m;
+  line-height: $line-height-xs;
   width: auto;
-  &.input-expand {
+  &-expand {
     width: 100%;
   }
   label {
+    cursor: pointer;
     display: block;
-    font-size: $font-size-small;
+    font-size: $size-s;
     color: tint($color-rich-black, 20%);
-    @include stack-space($space-x-small);
+    @include stack-space($space-xs);
   }
-  input {
+  textarea {
     @include reset;
-    @include inset-squish-space($space-small);
+    @include inset-squish-space($space-s);
     transition: all 0.2s ease;
     -webkit-appearance: none;
     appearance: none;
-    font-family: $font-family-text;
+    resize: vertical;
+    min-height: $space-xxl;
+    font-size: $size-m;
+    font-family: $font-text;
     background: $color-white;
-    border-radius: $border-radius-default;
+    border-radius: $radius-default;
     color: set-text-color($color-rich-black, $color-white);
+    width: 100%;
     margin: 0;
     border: 0;
     box-shadow: inset 0 1px 0 0 rgba($color-rich-black, 0.07), 0 0 0 1px tint($color-rich-black, 80%);
@@ -170,20 +156,22 @@ $color-placeholder: tint($color-silver, 50%);
       opacity: 1;
     }
     &:hover,
-    &[hover] {
+    &.hover {
       box-shadow: 0 1px 5px 0 rgba($color-rich-black, 0.07), 0 0 0 1px tint($color-rich-black, 60%);
     }
     &:focus,
-    &[focus] {
+    &.focus {
       transition: box-shadow 0.2s ease;
       box-shadow: inset 0 0 0 1px $color-bleu-de-france, 0 0 0 1px $color-bleu-de-france;
       outline: 0;
     }
     &[disabled] {
-      box-shadow: inset 0 1px 0 0 rgba($color-rich-black, 0.07), 0 0 0 1px tint($color-rich-black, 80%);
+      -webkit-font-smoothing: antialiased;
+      box-shadow: 0 0 0 1px tint($color-rich-black, 80%);
       background: lighten($color-placeholder, 42%);
+      color: tint($color-placeholder, 20%);
       cursor: not-allowed;
-      opacity: 0.5;
+      opacity: 0.7;
     }
   }
 }
@@ -193,10 +181,9 @@ $color-placeholder: tint($color-silver, 50%);
 <docs>
   ```jsx
   <div>
-    <form-input label="Input" placeholder="Write your text" />
-    <form-input label=":hover" hover placeholder="Write your text" />
-    <form-input label=":focus" focus placeholder="Write your text" />
-    <form-input label="[disabled]" disabled placeholder="Disabled input" />
+    <Textarea label="Default textarea" placeholder="Write your text" id="textarea-1" />
+    <Textarea label=":focus" state="focus" placeholder="Write your text" id="textarea-2" />
+    <Textarea label="[disabled]" disabled value="Write your text" id="textarea-3" />
   </div>
   ```
 </docs>

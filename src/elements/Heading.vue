@@ -33,52 +33,52 @@ export default {
 <style lang="scss" scoped>
 .heading {
   @include reset;
-  @include stack-space($space-base);
-  font-family: $font-family-heading;
-  line-height: $line-height-heading;
+  @include stack-space($space-m);
+  font-family: $font-heading;
+  line-height: $line-height-xs;
   color: $color-rich-black;
-  @media #{$media-query-large} {
+  @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
   }
 }
 h1 {
-  letter-spacing: $letter-spacing-x-small;
-  font-size: $font-size-xx-large;
-  font-weight: $font-weight-bold;
-  @media #{$media-query-large} {
-    font-size: $font-size-xxx-large;
+  letter-spacing: $spacing-xs;
+  font-size: $size-xxl;
+  font-weight: $weight-semi-bold;
+  @media #{$media-query-l} {
+    font-size: $size-xxxl;
   }
 }
 h2 {
-  letter-spacing: $letter-spacing-small;
-  font-size: $font-size-xx-large;
-  font-weight: $font-weight-bold;
+  letter-spacing: $spacing-s;
+  font-size: $size-xxl;
+  font-weight: $weight-semi-bold;
 }
 h3 {
-  font-size: $font-size-x-large;
-  font-weight: $font-weight-bold;
+  font-size: $size-xl;
+  font-weight: $weight-semi-bold;
 }
 h4 {
-  font-size: $font-size-large;
-  font-weight: $font-weight-semi-bold;
+  font-size: $size-l;
+  font-weight: $weight-semi-bold;
 }
 h5 {
-  font-size: $font-size-base;
-  font-weight: $font-weight-regular;
+  font-size: $size-m;
+  font-weight: $weight-normal;
 }
 h6 {
-  font-size: $font-size-small;
-  font-weight: $font-weight-regular;
+  font-size: $size-s;
+  font-weight: $weight-normal;
 }
 </style>
 
 <docs>
   ```jsx
   <div>
-    <heading level="h1">The quick brown fox</heading>
-    <heading level="h2">The quick brown fox</heading>
-    <heading level="h3">The quick brown fox</heading>
-    <heading level="h4">The quick brown fox</heading>
+    <Heading>The quick brown fox</Heading>
+    <Heading level="h2">The quick brown fox</Heading>
+    <Heading level="h3">The quick brown fox</Heading>
+    <Heading level="h4">The quick brown fox</Heading>
   </div>
   ```
 </docs>

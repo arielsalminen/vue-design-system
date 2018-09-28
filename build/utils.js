@@ -76,7 +76,7 @@ exports.cssLoaders = function(options) {
     outputStyle: "compressed",
   }
 
-  // https://vue-loader.vuejs.org/en/configurations/extract-css.html
+  // https://vue-loader.vuejs.org/guide/extract-css.html
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),

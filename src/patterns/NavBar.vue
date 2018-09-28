@@ -63,20 +63,20 @@ $color-nav-link: $color-bleu-de-france;
 $color-nav-link-active: $color-bleu-de-france;
 
 .nav {
-  @include stack-space($space-base);
-  font-family: $font-family-text;
-  font-size: $font-size-small;
-  line-height: $line-height-base;
+  @include stack-space($space-m);
+  font-family: $font-text;
+  font-size: $size-s;
+  line-height: $line-height-m;
   color: $color-white;
   text-align: center;
   width: 100%;
-  @media #{$media-query-large} {
+  @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
   }
   a {
     color: $color-nav-link;
-    padding: $space-x-small 0;
-    margin: 0 $space-x-small;
+    padding: $space-xs 0;
+    margin: 0 $space-xs;
     text-decoration: none;
     display: inline-block;
     &:hover {
@@ -84,7 +84,7 @@ $color-nav-link-active: $color-bleu-de-france;
     }
     &.active {
       border-bottom: 2px solid $color-nav-link;
-      font-weight: $font-weight-bold;
+      font-weight: $weight-bold;
       color: $color-nav-link;
     }
   }
@@ -93,7 +93,7 @@ $color-nav-link-active: $color-bleu-de-france;
 
 <docs>
   ```jsx
-  <nav-bar active="Dashboard" :navItems="[
+  <NavBar active="Dashboard" :navItems="[
     {name: 'Dashboard', component: 'Dashboard', href: '/example/'},
     {name: 'Posts', component: 'Posts', href: '/example/'},
     {name: 'Users', component: 'Users', href: '/example/'},

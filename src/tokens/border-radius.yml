@@ -4,9 +4,9 @@
 #
 
 props:
-  border_radius_default:
+  radius_default:
     value: "3px"
-  border_radius_circle:
+  radius_circle:
     value: "50%"
 global:
   type: number
