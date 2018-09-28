@@ -1,6 +1,6 @@
 <template>
   <component :is="type" class="wrapper">
-    <slot/>
+    <slot />
   </component>
 </template>
 
@@ -28,14 +28,14 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   @include reset;
-  @include inset-space($space-large);
-  font-family: $font-family-text;
-  font-weight: $font-weight-regular;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
+  @include inset-space($space-l);
+  font-family: $font-text;
+  font-weight: $weight-normal;
+  font-size: $size-m;
+  line-height: $line-height-m;
   width: 100%;
-  @media #{$media-query-large} {
-    @include inset-space($space-x-large);
+  @media #{$media-query-l} {
+    @include inset-space($space-xl);
   }
 }
 </style>
@@ -43,6 +43,6 @@ export default {
 
 <docs>
   ```jsx
-  <wrapper type="div">Wrapper can be used to wrap any components together.</wrapper>
+  <Wrapper>Wrapper can be used to wrap any components together.</Wrapper>
   ```
 </docs>
