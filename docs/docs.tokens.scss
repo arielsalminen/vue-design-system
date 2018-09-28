@@ -25,42 +25,42 @@ $color-cloud: rgb(233, 243, 253) !default;
 $color-oxford-blue: rgb(0, 38, 77) !default;
 $color-vermilion: rgb(235, 59, 36) !default;
 
-$font-size-xxx-large: 64px !default;
-$font-size-xx-large: 48px !default;
-$font-size-x-large: 36px !default;
-$font-size-large: 24px !default;
-$font-size-base: 16px !default;
-$font-size-small: 13px !default;
-$font-size-x-small: 11px !default;
+$size-xxxl: 64px !default;
+$size-xxl: 48px !default;
+$size-xl: 36px !default;
+$size-l: 24px !default;
+$size-m: 16px !default;
+$size-s: 13px !default;
+$size-xs: 11px !default;
 
-$font-family-heading: "Fira Sans", Helvetica, Arial, sans-serif !default;
-$font-family-text: "Fira Sans", Helvetica, Arial, sans-serif !default;
+$font-heading: "Fira Sans", Helvetica, Arial, sans-serif !default;
+$font-text: "Fira Sans", Helvetica, Arial, sans-serif !default;
 
-$font-weight-bold: 700 !default;
-$font-weight-semi-bold: 600 !default;
-$font-weight-regular: 400 !default;
-$font-weight-light: 300 !default;
+$weight-bold: 700 !default;
+$weight-semi-bold: 600 !default;
+$weight-normal: 400 !default;
+$weight-light: 300 !default;
 
-$box-shadow-small: 0 0 0 1px rgba(92, 106, 196, 0.1) !default;
-$box-shadow-small-inset: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !default;
+$shadow-s: 0 0 0 1px rgba(92, 106, 196, 0.1) !default;
+$shadow-s-inset: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !default;
 
-$letter-spacing-x-large: 2px !default;
-$letter-spacing-large: 1px !default;
-$letter-spacing-base: 0 !default;
-$letter-spacing-small: -0.5px !default;
-$letter-spacing-x-small: -1px !default;
+$spacing-xl: 2px !default;
+$spacing-l: 1px !default;
+$spacing-m: 0 !default;
+$spacing-s: -0.5px !default;
+$spacing-xs: -1px !default;
 
-$border-radius-default: 3px !default;
-$border-radius-circle: 50% !default;
+$radius-default: 3px !default;
+$radius-circle: 50% !default;
 
-$space-xx-large: 128px !default;
-$space-x-large: 64px !default;
-$space-large: 48px !default;
-$space-base: 24px !default;
-$space-small: 16px !default;
-$space-x-small: 8px !default;
+$space-xxl: 128px !default;
+$space-xl: 64px !default;
+$space-l: 48px !default;
+$space-m: 24px !default;
+$space-s: 16px !default;
+$space-xs: 8px !default;
 $space-xx-small: 4px !default;
 
-$line-height-base: 1.6 !default;
-$line-height-small: 1.3 !default;
-$line-height-heading: 1 !default;
+$line-height-m: 1.6 !default;
+$line-height-s: 1.3 !default;
+$line-height-xs: 1 !default;

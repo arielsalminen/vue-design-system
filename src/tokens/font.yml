@@ -4,17 +4,17 @@
 #
 
 props:
-  font_family_heading:
+  font_heading:
     value: "'Fira Sans', Helvetica, Arial, sans-serif"
-  font_family_text:
+  font_text:
     value: "'Fira Sans', Helvetica, Arial, sans-serif"
-  font_weight_bold:
+  weight_bold:
     value: "700"
-  font_weight_semi_bold:
+  weight_semi_bold:
     value: "600"
-  font_weight_regular:
+  weight_normal:
     value: "400"
-  font_weight_light:
+  weight_light:
     value: "300"
 global:
   type: ...

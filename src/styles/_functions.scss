@@ -77,7 +77,7 @@
   @if $unit == "rem" {
     @return $value;
   } @else if $unit == "px" {
-    @return $value / $font-size-base * 1rem;
+    @return $value / $size-m * 1rem;
   } @else if $unit == "em" {
     @return $unit / 1em * 1rem;
   } @else {
@@ -94,9 +94,9 @@
   @if $unit == "px" {
     @return $value;
   } @else if $unit == "em" {
-    @return ($value / 1em) * $font-size-base;
+    @return ($value / 1em) * $size-m;
   } @else if $unit == "rem" {
-    @return ($value / 1rem) * $font-size-base;
+    @return ($value / 1rem) * $size-m;
   } @else {
     @error "Value must be in rem, em, or px.";
   }

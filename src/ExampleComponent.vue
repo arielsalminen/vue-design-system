@@ -66,10 +66,10 @@ export default {
  */
 .example {
   @include reset;
-  @include stack-space($space-small);
+  @include stack-space($space-s);
   color: set-text-color($color-rich-black, $color-white);
-  @media #{$media-query-medium} {
-    @include stack-space($space-base);
+  @media #{$media-query-m} {
+    @include stack-space($space-m);
   }
 }
 </style>

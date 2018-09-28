@@ -1,7 +1,7 @@
 /* VUE DESIGN SYSTEM SPACING HELPERS
 --------------------------------------------- */
 
-$spacing-ratio: 1.618;
+$spacing-ratio: 1.7;
 
 /*
   INSET-SPACE: For interface containers.
@@ -21,7 +21,7 @@ $spacing-ratio: 1.618;
 //
 // @param  {Number} inset-squish-space to set
 @mixin inset-squish-space($value) {
-  padding: round($value / $spacing-ratio) $value;
+  padding: round($value / $spacing-ratio - 1px) $value round($value / $spacing-ratio);
 }
 
 // Create stack-space
