@@ -16,19 +16,10 @@ $docs-status-ready: #7cb518;
 $docs-breakpoint: 800px;
 $docs-breakpoint-small: 600px;
 $docs-color-heading: rgb(30, 30, 30);
-$docs-color-text: shade($color-silver, 50%);
+$docs-color-text: shade($color-silver, 70%);
 
 /* BASE
 --------------------------------------------- */
-
-::-moz-selection {
-  background: $color-bleu-de-france;
-  color: $color-white;
-}
-::selection {
-  background: $color-bleu-de-france;
-  color: $color-white;
-}
 
 div.rsg--root-1 {
   background: $color-white;
@@ -45,9 +36,9 @@ div[class^="rsg--root"] {
 
 main[class^="rsg--content"] {
   display: block; /* IE11 fix */
-  padding: $space-small $space-x-large;
+  padding: $space-s $space-xl;
   @media (max-width: #{$docs-breakpoint}) {
-    padding: $space-small $space-base;
+    padding: $space-s $space-m;
   }
 }
 
@@ -72,24 +63,24 @@ div[class^="rsg--wrapper"] > h2[class^="rsg--heading"] {
   display: block;
   width: 100%;
   border: 0;
-  line-height: $line-height-small;
-  padding: $space-x-large $space-x-large;
-  width: calc(100% + #{$space-x-large * 2});
-  margin: -#{$space-small} -#{$space-x-large} $space-large -#{$space-x-large};
+  line-height: $line-height-s;
+  padding: $space-xl $space-xl;
+  width: calc(100% + #{$space-xl * 2});
+  margin: -#{$space-s} -#{$space-xl} $space-l -#{$space-xl};
   background: $color-cloud;
-  font-size: $font-size-xx-large;
+  font-size: $size-xxl;
   a:hover {
     text-decoration: none;
     cursor: default;
   }
   @media (max-width: 1300px) {
-    padding: $space-large $space-x-large;
+    padding: $space-l $space-xl;
   }
   @media (max-width: #{$docs-breakpoint}) {
-    font-size: $font-size-x-large / 1.2;
-    width: calc(100% + #{$space-x-large});
-    padding: $space-large $space-base;
-    margin: -#{$space-small} -#{$space-base} $space-base;
+    font-size: $size-xl / 1.2;
+    width: calc(100% + #{$space-xl});
+    padding: $space-l $space-m;
+    margin: -#{$space-s} -#{$space-m} $space-m;
   }
 }
 
@@ -97,7 +88,7 @@ header[class^="rsg--header"] {
   margin: 0;
 }
 div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
-  font-weight: $font-weight-regular;
+  font-weight: $weight-normal;
   color: $color-oxford-blue;
   letter-spacing: -1px;
   &:hover {
@@ -109,18 +100,18 @@ div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
 // Heading, level 2
 h2[class^="rsg--heading"] {
   border-bottom: 1px solid $docs-grey;
-  padding-bottom: $space-small;
-  margin: $space-large 0 $space-base;
-  font-size: $font-size-x-large;
-  line-height: $line-height-small;
-  font-weight: $font-weight-regular;
+  padding-bottom: $space-s;
+  margin: $space-l 0 $space-m;
+  font-size: $size-xl;
+  line-height: $line-height-s;
+  font-weight: $weight-normal;
   letter-spacing: -0.5px;
   width: 100%;
   @media (max-width: #{$docs-breakpoint}) {
-    font-size: $font-size-x-large / 1.3;
+    font-size: $size-xl / 1.3;
   }
   @media (max-width: #{$docs-breakpoint-small}) {
-    font-size: $font-size-x-large / 1.6;
+    font-size: $size-xl / 1.6;
   }
   a {
     color: $docs-color-heading;
@@ -131,35 +122,36 @@ h2[class^="rsg--heading"] {
 h3[class^="rsg--heading"],
 h3[class^="rsg--heading"] a {
   -webkit-font-smoothing: subpixel-antialiased;
-  font-weight: $font-weight-light;
-  line-height: $line-height-base;
-  margin: 0 0 $space-large;
-  font-size: $font-size-large;
+  -moz-osx-font-smoothing: auto;
+  font-weight: $weight-light;
+  line-height: $line-height-m;
+  margin: 0 0 $space-l;
+  font-size: $size-l;
   color: $docs-color-text;
   @media (max-width: #{$docs-breakpoint}) {
-    font-size: $font-size-large / 1.2;
-    margin: 0 0 $space-base;
+    font-size: $size-l / 1.2;
+    margin: 0 0 $space-m;
   }
 }
 
 // Heading, level 4
 h4[class^="rsg--heading"],
 h4[class^="rsg--heading"] a {
-  font-weight: $font-weight-semi-bold;
+  font-weight: $weight-semi-bold;
   letter-spacing: 0;
-  margin: $space-large 0 $space-base;
-  font-size: $font-size-large;
-  line-height: $line-height-small;
+  margin: $space-l 0 $space-m;
+  font-size: $size-l;
+  line-height: $line-height-s;
   color: $docs-color-heading;
 }
 
 // Paragraphs
 p[class^="rsg--para"] {
   color: $docs-color-text;
-  margin-bottom: $space-small;
-  line-height: $line-height-base;
+  margin-bottom: $space-s;
+  line-height: $line-height-m;
   strong a[class^="rsg--link"] {
-    font-weight: $font-weight-semi-bold;
+    font-weight: $weight-semi-bold;
   }
   a {
     overflow-wrap: break-word;
@@ -190,14 +182,14 @@ td[class^="rsg--cell"] p {
 }
 
 pre + p[class^="rsg--para"] {
-  margin-top: $space-small;
+  margin-top: $space-s;
 }
 
 p[class^="rsg--para"] code {
   background: tint($docs-grey, 75%);
   color: shade($color-silver, 20%);
   padding: $space-xx-small;
-  border-radius: $border-radius-default;
+  border-radius: $radius-default;
   font-size: 87.5%;
 }
 
@@ -208,10 +200,10 @@ div[class^="rsg--sidebar"] {
   background: mix($color-bleu-de-france, $color-rich-black, 5%);
   border: 0;
   @media (max-width: #{$docs-breakpoint}) {
-    padding-bottom: $space-large;
+    padding-bottom: $space-l;
   }
   a[class^="rsg--link"] {
-    font-weight: $font-weight-semi-bold;
+    font-weight: $weight-semi-bold;
     color: $color-bleu-de-france;
     &:hover {
       color: $color-bleu-de-france-lighter;
@@ -238,24 +230,25 @@ div[class^="rsg--sidebar"] {
   ul[class^="rsg--list"] {
     padding-left: 0;
     ul {
-      padding-left: $space-small;
+      padding-left: $space-s;
+      line-height: $line-height-s;
       @media (max-width: #{$docs-breakpoint-small}) {
-        padding: 0 0 0 $space-large;
+        padding: 0 0 0 $space-l;
         width: 90%;
         li {
           display: inline;
-          line-height: $line-height-base;
+          line-height: $line-height-m;
         }
       }
       // Second level links
       a[class*="rsg--link"] {
-        font-size: $font-size-small;
-        font-weight: $font-weight-regular;
+        font-size: $size-s;
+        font-weight: $weight-normal;
         -webkit-font-smoothing: subpixel-antialiased;
         -moz-osx-font-smoothing: auto;
         @media (max-width: #{$docs-breakpoint-small}) {
           float: left;
-          padding: 0 $space-x-small 0 0;
+          padding: 0 $space-xs 0 0;
         }
       }
     }
@@ -272,27 +265,27 @@ div[class^="rsg--sidebar"] {
     }
     // First level links
     a[class*="rsg--link"] {
-      padding: $space-xx-small $space-base;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      padding: $space-xx-small $space-m;
     }
   }
 }
 
 // Sidebar logo
 div[class^="rsg--logo"] {
-  @include inset-space($space-base);
+  @include inset-space($space-m);
   border-bottom: 1px solid rgba($color-white, 0.1);
   h1 {
     color: $color-white;
     color: tint($color-bleu-de-france, 90%);
-    font-weight: $font-weight-regular;
+    font-weight: $weight-normal;
   }
 }
 
 // Sidebar search
 div[class^="rsg--search"] input {
-  @include inset-squish-space($space-small);
+  @include inset-squish-space($space-s);
   color: $color-white;
   border: 1px solid transparent;
   background: mix($color-bleu-de-france, $color-rich-black, 20%);
@@ -320,7 +313,7 @@ div[class^="rsg--search"] input {
 // Sidebar 1st level section links
 ul[class^="rsg--list"] a[class*=" rsg--heading"],
 div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
-  font-weight: $font-weight-semi-bold;
+  font-weight: $weight-semi-bold;
 }
 
 /* CODE PREVIEWS
@@ -328,16 +321,16 @@ div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
 
 pre[class^="rsg--pre"],
 div[class^="rsg--preview"] {
-  padding: $space-base;
+  padding: $space-l / 1.2;
   background-color: tint($docs-grey, 90%);
   border: 1px solid tint($docs-grey, 50%);
-  box-shadow: inset 0 0 $space-x-small rgba($color-rich-black, 0.05);
-  margin: $space-small 0 0;
+  box-shadow: inset 0 0 $space-xs rgba($color-rich-black, 0.05);
+  margin: $space-s 0 0;
   border-radius: 0;
   display: block;
   width: 100%;
-  border-top-left-radius: $border-radius-default;
-  border-top-right-radius: $border-radius-default;
+  border-top-left-radius: $radius-default;
+  border-top-right-radius: $radius-default;
 }
 
 // If you edit the section names you might have to edit
@@ -369,7 +362,7 @@ div[data-preview]:after {
 // Code tabs and table
 div[class^="rsg--tabs"],
 table[class^="rsg--table"] {
-  margin-bottom: $space-small;
+  margin-bottom: $space-s;
   overflow-x: auto;
 }
 thead[class^="rsg--tableHead"] {
@@ -380,18 +373,20 @@ thead[class^="rsg--tableHead"] {
 .vueds-html.cm-s-night.CodeMirror,
 .react-codemirror2 .CodeMirror.CodeMirror {
   background: mix($color-bleu-de-france, $color-rich-black, 10%);
-  border-bottom-left-radius: $border-radius-default;
-  border-bottom-right-radius: $border-radius-default;
+  border-bottom-left-radius: $radius-default;
+  border-bottom-right-radius: $radius-default;
   box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
   height: auto;
   border: 0;
   font-family: Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: $font-size-small;
+  font-size: $size-s;
   margin: 0;
-  min-height: $space-xx-large / 1.5;
-  margin-bottom: $space-base;
+  min-height: $space-xxl / 1.5;
+  margin-bottom: $space-m;
   color: $color-white;
-  padding: $space-base $space-base * 7 $space-base $space-base;
+  padding: $space-m $space-m * 7 $space-m $space-m;
   word-wrap: break-word;
   white-space: pre-wrap;
   word-break: normal;
@@ -400,29 +395,30 @@ thead[class^="rsg--tableHead"] {
     overflow: hidden;
   }
 }
+.vueds-html.cm-s-night.CodeMirror {
+  padding-left: $space-m - 4px;
+}
 
 // Code tabs
 div[class^="rsg--tab"] {
   position: relative;
   .vueds-tabs {
     z-index: 5;
-    border-radius: $border-radius-default;
+    border-radius: $radius-default;
     box-shadow: 0 2px 8px rgba($color-rich-black, 0.8);
     overflow: hidden;
     position: absolute;
-    top: $space-base;
-    right: $space-base;
+    top: $space-m;
+    right: $space-m;
     .vueds-tab {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       border: 0;
       margin: 0;
-      letter-spacing: $letter-spacing-large;
-      font-size: $font-size-small;
-      font-weight: $font-weight-semi-bold;
-      font-family: $font-family-text;
-      line-height: $line-height-small;
-      @include inset-squish-space($space-small);
+      letter-spacing: $spacing-l;
+      font-size: $size-s;
+      font-weight: $weight-normal;
+      font-family: $font-text;
+      line-height: $line-height-s;
+      @include inset-squish-space($space-s);
       cursor: pointer;
       background: mix($color-bleu-de-france, $color-rich-black, 50%);
       color: $color-white;
@@ -444,6 +440,8 @@ div[class^="rsg--tab"] {
   opacity: 0;
   visibility: hidden;
   z-index: -1;
+  top: -10000px;
+  left: 0;
   position: absolute !important;
 }
 
@@ -472,9 +470,7 @@ code[class^="rsg--code"] {
 }
 span[class^="rsg--name"] code[class^="rsg--code"],
 code.name {
-  font-weight: $font-weight-bold;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: $weight-bold;
   color: shade($color-silver, 50%);
 }
 span[class^="rsg--type"] code[class^="rsg--code"],
@@ -482,7 +478,7 @@ code.type {
   background: tint($docs-grey, 75%);
   color: shade($color-silver, 20%);
   padding: $space-xx-small;
-  border-radius: $border-radius-default;
+  border-radius: $radius-default;
 }
 
 /* COMPONENT STATUS LABELS
@@ -504,28 +500,28 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
 
 .status {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  font-weight: $font-weight-regular;
+  font-weight: $weight-normal;
   order: 1;
   align-self: flex-end;
   cursor: help;
-  line-height: $line-height-heading;
+  line-height: $line-height-xs;
   background: tint($docs-grey, 50%);
-  padding: $space-x-small $space-small $space-x-small/1.2;
+  padding: $space-xs $space-s $space-xs/1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: $font-size-x-small;
-  border-radius: $border-radius-default;
+  font-size: $size-xs;
+  border-radius: $radius-default;
   color: $color-rich-black;
   position: absolute;
-  right: $space-x-large;
-  top: $space-x-large * 1.2;
+  right: $space-xl;
+  top: $space-xl * 1.2;
   z-index: 2;
   @media (max-width: 1300px) {
-    top: $space-x-large;
+    top: $space-xl;
   }
   @media (max-width: #{$docs-breakpoint}) {
-    top: $space-large * 1.2;
-    right: $space-base;
+    top: $space-l * 1.2;
+    right: $space-m;
   }
   &-ready {
     background: $docs-status-ready;
@@ -561,14 +557,12 @@ table[class^="rsg--table"] {
   border-spacing: 0;
   width: 100%;
   th {
-    padding: $space-small $space-large $space-small $space-small;
-    font-size: $font-size-small;
-    font-weight: $font-weight-bold;
+    padding: $space-s $space-l $space-s $space-s;
+    font-size: $size-s;
+    font-weight: $weight-bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: $font-weight-semi-bold;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-weight: $weight-semi-bold;
     border-radius: 0;
     background: $color-cloud;
     color: tint($color-oxford-blue, 10%);
@@ -576,14 +570,14 @@ table[class^="rsg--table"] {
   }
   th[class^="rsg--cellHeading"],
   td {
-    padding: $space-small $space-large $space-small $space-small;
+    padding: $space-s $space-l $space-s $space-s;
     background: transparent;
   }
   td {
-    font-size: $font-size-small;
-    padding: $space-small $space-large $space-small $space-small;
+    font-size: $size-s;
+    padding: $space-s $space-l $space-s $space-s;
     &:first-child {
-      font-weight: $font-weight-bold;
+      font-weight: $weight-bold;
       white-space: nowrap;
     }
   }
@@ -597,12 +591,12 @@ table[class^="rsg--table"] {
 
 thead[class^="rsg--thead"] {
   th:first-child {
-    border-top-left-radius: $border-radius-default;
-    border-bottom-left-radius: $border-radius-default;
+    border-top-left-radius: $radius-default;
+    border-bottom-left-radius: $radius-default;
   }
   th:last-child {
-    border-top-right-radius: $border-radius-default;
-    border-bottom-right-radius: $border-radius-default;
+    border-top-right-radius: $radius-default;
+    border-bottom-right-radius: $radius-default;
   }
 }
 
