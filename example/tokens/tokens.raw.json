@@ -160,96 +160,96 @@
       "originalValue": "hsla({!vermilion}, 53%, 1)",
       "name": "color_vermilion"
     },
-    "font_size_xxx_large": {
+    "size_xxxl": {
       "type": "number",
       "category": "font-size",
       "value": "64px",
       "originalValue": "64px",
-      "name": "font_size_xxx_large"
+      "name": "size_xxxl"
     },
-    "font_size_xx_large": {
+    "size_xxl": {
       "type": "number",
       "category": "font-size",
       "value": "48px",
       "originalValue": "48px",
-      "name": "font_size_xx_large"
+      "name": "size_xxl"
     },
-    "font_size_x_large": {
+    "size_xl": {
       "type": "number",
       "category": "font-size",
       "value": "36px",
       "originalValue": "36px",
-      "name": "font_size_x_large"
+      "name": "size_xl"
     },
-    "font_size_large": {
+    "size_l": {
       "type": "number",
       "category": "font-size",
       "value": "24px",
       "originalValue": "24px",
-      "name": "font_size_large"
+      "name": "size_l"
     },
-    "font_size_base": {
+    "size_m": {
       "type": "number",
       "category": "font-size",
       "value": "16px",
       "originalValue": "16px",
-      "name": "font_size_base"
+      "name": "size_m"
     },
-    "font_size_small": {
+    "size_s": {
       "type": "number",
       "category": "font-size",
       "value": "13px",
       "originalValue": "13px",
-      "name": "font_size_small"
+      "name": "size_s"
     },
-    "font_size_x_small": {
+    "size_xs": {
       "type": "number",
       "category": "font-size",
       "value": "11px",
       "originalValue": "11px",
-      "name": "font_size_x_small"
+      "name": "size_xs"
     },
-    "font_family_heading": {
+    "font_heading": {
       "type": "...",
       "category": "font",
       "value": "'Fira Sans', Helvetica, Arial, sans-serif",
       "originalValue": "'Fira Sans', Helvetica, Arial, sans-serif",
-      "name": "font_family_heading"
+      "name": "font_heading"
     },
-    "font_family_text": {
+    "font_text": {
       "type": "...",
       "category": "font",
       "value": "'Fira Sans', Helvetica, Arial, sans-serif",
       "originalValue": "'Fira Sans', Helvetica, Arial, sans-serif",
-      "name": "font_family_text"
+      "name": "font_text"
     },
-    "font_weight_bold": {
+    "weight_bold": {
       "type": "...",
       "category": "font",
       "value": "700",
       "originalValue": "700",
-      "name": "font_weight_bold"
+      "name": "weight_bold"
     },
-    "font_weight_semi_bold": {
+    "weight_semi_bold": {
       "type": "...",
       "category": "font",
       "value": "600",
       "originalValue": "600",
-      "name": "font_weight_semi_bold"
+      "name": "weight_semi_bold"
     },
-    "font_weight_regular": {
+    "weight_normal": {
       "type": "...",
       "category": "font",
       "value": "400",
       "originalValue": "400",
-      "name": "font_weight_regular"
+      "name": "weight_normal"
     },
-    "font_weight_light": {
+    "weight_light": {
       "type": "...",
       "category": "font",
       "value": "300",
       "originalValue": "300",
-      "name": "font_weight_light"
+      "name": "weight_light"
     },
     "opacity_disabled": {
       "type": "number",
@@ -300,152 +300,145 @@
       "originalValue": "100",
       "name": "z_index_sticky"
     },
-    "media_query_medium": {
+    "media_query_m": {
       "type": "...",
       "category": "media-query",
       "value": "(min-width: 768px)",
       "originalValue": "(min-width: 768px)",
-      "name": "media_query_medium"
+      "name": "media_query_m"
     },
-    "media_query_large": {
+    "media_query_l": {
       "type": "...",
       "category": "media-query",
       "value": "(min-width: 1024px)",
       "originalValue": "(min-width: 1024px)",
-      "name": "media_query_large"
+      "name": "media_query_l"
     },
-    "box_shadow_small": {
+    "shadow_s": {
       "type": "...",
       "category": "box-shadow",
       "value": "0 0 0 1px rgba(92,106,196,.1)",
       "originalValue": "0 0 0 1px rgba(92,106,196,.1)",
-      "name": "box_shadow_small"
+      "name": "shadow_s"
     },
-    "box_shadow_small_inset": {
-      "type": "...",
-      "category": "box-shadow",
-      "value": "inset 0 0 0 1px rgba(0,0,0,.05)",
-      "originalValue": "inset 0 0 0 1px rgba(0,0,0,.05)",
-      "name": "box_shadow_small_inset"
-    },
-    "letter_spacing_x_large": {
+    "spacing_xl": {
       "type": "number",
       "category": "letter-spacing",
       "value": "2px",
       "originalValue": "2px",
-      "name": "letter_spacing_x_large"
+      "name": "spacing_xl"
     },
-    "letter_spacing_large": {
+    "spacing_l": {
       "type": "number",
       "category": "letter-spacing",
       "value": "1px",
       "originalValue": "1px",
-      "name": "letter_spacing_large"
+      "name": "spacing_l"
     },
-    "letter_spacing_base": {
+    "spacing_m": {
       "type": "number",
       "category": "letter-spacing",
       "value": "0",
       "originalValue": "0",
-      "name": "letter_spacing_base"
+      "name": "spacing_m"
     },
-    "letter_spacing_small": {
+    "spacing_s": {
       "type": "number",
       "category": "letter-spacing",
       "value": "-0.5px",
       "originalValue": "-0.5px",
-      "name": "letter_spacing_small"
+      "name": "spacing_s"
     },
-    "letter_spacing_x_small": {
+    "spacing_xs": {
       "type": "number",
       "category": "letter-spacing",
       "value": "-1px",
       "originalValue": "-1px",
-      "name": "letter_spacing_x_small"
+      "name": "spacing_xs"
     },
-    "border_radius_default": {
+    "radius_default": {
       "type": "number",
       "category": "border-radius",
       "value": "3px",
       "originalValue": "3px",
-      "name": "border_radius_default"
+      "name": "radius_default"
     },
-    "border_radius_circle": {
+    "radius_circle": {
       "type": "number",
       "category": "border-radius",
       "value": "50%",
       "originalValue": "50%",
-      "name": "border_radius_circle"
+      "name": "radius_circle"
     },
-    "space_xx_large": {
+    "space_xxl": {
       "type": "number",
       "category": "space",
       "value": "128px",
       "originalValue": "128px",
-      "name": "space_xx_large"
+      "name": "space_xxl"
     },
-    "space_x_large": {
+    "space_xl": {
       "type": "number",
       "category": "space",
       "value": "64px",
       "originalValue": "64px",
-      "name": "space_x_large"
+      "name": "space_xl"
     },
-    "space_large": {
+    "space_l": {
       "type": "number",
       "category": "space",
       "value": "48px",
       "originalValue": "48px",
-      "name": "space_large"
+      "name": "space_l"
     },
-    "space_base": {
+    "space_m": {
       "type": "number",
       "category": "space",
       "value": "24px",
       "originalValue": "24px",
-      "name": "space_base"
+      "name": "space_m"
     },
-    "space_small": {
+    "space_s": {
       "type": "number",
       "category": "space",
       "value": "16px",
       "originalValue": "16px",
-      "name": "space_small"
+      "name": "space_s"
     },
-    "space_x_small": {
+    "space_xs": {
       "type": "number",
       "category": "space",
       "value": "8px",
       "originalValue": "8px",
-      "name": "space_x_small"
+      "name": "space_xs"
     },
-    "space_xx_small": {
+    "space_xxs": {
       "type": "number",
       "category": "space",
       "value": "4px",
       "originalValue": "4px",
-      "name": "space_xx_small"
+      "name": "space_xxs"
     },
-    "line_height_base": {
+    "line_height_m": {
       "type": "number",
       "category": "line-height",
       "value": "1.6",
       "originalValue": "1.6",
-      "name": "line_height_base"
+      "name": "line_height_m"
     },
-    "line_height_small": {
+    "line_height_s": {
       "type": "number",
       "category": "line-height",
       "value": "1.3",
       "originalValue": "1.3",
-      "name": "line_height_small"
+      "name": "line_height_s"
     },
-    "line_height_heading": {
+    "line_height_xs": {
       "type": "number",
       "category": "line-height",
       "value": "1",
       "originalValue": "1",
-      "name": "line_height_heading"
+      "name": "line_height_xs"
     }
   }
 }
