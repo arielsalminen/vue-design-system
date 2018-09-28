@@ -8,7 +8,8 @@
       :placeholder="placeholder"
       @input="onInput($event.target.value)"
       @focus="onFocus($event.target.value)"
-    >{{value}}</textarea>
+      v-model="value"
+    />
   </component>
 </template>
 
