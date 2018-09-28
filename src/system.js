@@ -23,4 +23,4 @@ export default {
   },
 }
 
-export { components, instance }
+export { instance }
