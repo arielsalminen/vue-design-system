@@ -98,9 +98,9 @@ Once done, you can utilize tokens inside `<template>` like this:
 
 ```scss
 .wrapper {
-  padding: $space-large;
-  @media #{$media-query-large} {
-    padding: $space-x-large;
+  padding: $space-l;
+  @media #{$media-query-l} {
+    padding: $space-xl;
   }
 }
 ```
