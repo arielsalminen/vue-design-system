@@ -90,7 +90,7 @@ Once done, you can utilize tokens inside `<template>` like this:
 
 ```html
 <template>
-  <a-thing :style="{color: tokens.color_vermilion.value}" />
+  <Thing :style="{color: tokens.color_vermilion.value}" />
 </template>
 ```
 
