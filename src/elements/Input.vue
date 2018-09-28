@@ -16,9 +16,9 @@
 
 <script>
 /**
- * Inputs are used to allow users to provide text input when the expected
- * input is short. Input has a range of options and supports several text
- * formats including numbers. For longer input, use the `Textarea` element.
+ * Form Inputs are used to allow users to provide text input when the expected
+ * input is short. Form Input has a range of options and supports several text
+ * formats including numbers. For longer input, use the form `Textarea` element.
  */
 export default {
   name: "Input",
@@ -177,6 +177,7 @@ $color-placeholder: tint($color-silver, 50%);
     }
     &[disabled] {
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       box-shadow: 0 0 0 1px tint($color-rich-black, 80%);
       background: lighten($color-placeholder, 42%);
       color: tint($color-placeholder, 20%);

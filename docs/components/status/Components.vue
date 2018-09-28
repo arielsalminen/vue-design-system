@@ -193,7 +193,7 @@ export default {
     }
   }
   .status-list {
-    margin: 0 0 $space-s;
+    margin: 0 0 $space-m;
     overflow: hidden;
     padding: 0;
     list-style: none;

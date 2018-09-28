@@ -40,6 +40,8 @@ export default {
 .paragraph {
   @include reset;
   @include stack-space($space-m);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: color 0.3s ease;
   font-family: $font-text;
   font-weight: $weight-normal;

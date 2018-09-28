@@ -147,11 +147,17 @@ h4[class^="rsg--heading"] a {
 
 // Paragraphs
 p[class^="rsg--para"] {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: $docs-color-text;
   margin-bottom: $space-s;
   line-height: $line-height-m;
   strong a[class^="rsg--link"] {
     font-weight: $weight-semi-bold;
+  }
+  code {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
   }
   a {
     overflow-wrap: break-word;

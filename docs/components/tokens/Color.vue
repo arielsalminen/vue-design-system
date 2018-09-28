@@ -100,7 +100,7 @@ h3 {
   @include inset-space($space-s);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-bottom: $space-l;
+  margin-bottom: $space-m;
   box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
   font-size: $size-s;
   font-family: $font-text;
