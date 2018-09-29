@@ -42,12 +42,7 @@
   ],
   "babel": {
     "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "modules": "commonjs"
-        }
-      ]
+      "@babel/preset-env"
     ],
     "plugins": [
       "@babel/plugin-syntax-dynamic-import",
