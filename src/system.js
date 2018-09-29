@@ -1,11 +1,12 @@
 /**
  * System.js creates the Design System Library.
- * Used both in dev environment and when exporting the system.
+ * It’s used in the system itself and when exporting it.
+ *
+ * You should & can add your own dependencies here if needed.
  */
-import instance from "@/utils/vueInstance"
 
-// Defines contexts to require
-// (you should remove templates from this if not used in production)
+// Define contexts to require
+// (remove templates if not used in production)
 const contexts = [
   require.context("@/elements/", true, /\.vue$/),
   require.context("@/patterns/", true, /\.vue$/),
@@ -13,14 +14,16 @@ const contexts = [
 ]
 
 const components = []
+
 contexts.forEach(context => {
   context.keys().forEach(key => components.push(context(key).default))
 })
 
+export { components }
+
+// https://sebastiandedeyne.com/exposing-multiple-vue-components-as-a-plugin
 export default {
   install(Vue) {
-    components.forEach(c => Vue.component(c.name, c))
+    components.forEach(component => Vue.component(component.name, component))
   },
 }
-
-export { instance }
