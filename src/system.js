@@ -5,6 +5,8 @@
  * You should & can add your own dependencies here if needed.
  */
 
+import instance from "@/utils/vueInstance"
+
 // Define contexts to require
 // (remove templates if not used in production)
 const contexts = [
@@ -32,4 +34,4 @@ if (typeof window !== "undefined" && window.Vue) {
 }
 
 export default System
-export { components }
+export { instance, components }
