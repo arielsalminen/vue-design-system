@@ -21,7 +21,7 @@
     "lint": "eslint '**/*.{js,vue}' --cache",
     "node:build": "node ./build/build.js",
     "node:build:system": "node ./build/build-system.js",
-    "styleguide": "vue-styleguidist server --config ./config/docs.config.js",
+    "styleguide": "vue-styleguidist server --open --config ./config/docs.config.js",
     "styleguide:build": "vue-styleguidist build --config ./config/docs.config.js",
     "theo": "theo ./src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest ./src/assets/tokens",
     "theo:onchange": "onchange \"./src/tokens/*.yml\" -- npm run theo",
@@ -42,12 +42,7 @@
   ],
   "babel": {
     "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "modules": "commonjs"
-        }
-      ]
+      "@babel/preset-env"
     ],
     "plugins": [
       "@babel/plugin-syntax-dynamic-import",

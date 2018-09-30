@@ -82,7 +82,10 @@ module.exports = new Promise((resolve, reject) => {
       devWebpackConfig.plugins.push(
         new FriendlyErrorsPlugin({
           compilationSuccessInfo: {
-            messages: [`Vue Design System: http://${devWebpackConfig.devServer.host}:${port} \n`],
+            messages: [
+              `Design System Docs: http://${devWebpackConfig.devServer.host}:6060 \n`,
+              `Vue.js App: http://${devWebpackConfig.devServer.host}:${port} \n`,
+            ],
           },
           onErrors: config.dev.notifyOnErrors ? utils.createNotifierCallback() : undefined,
           // should the console be cleared between each compilation?
