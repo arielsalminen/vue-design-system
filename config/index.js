@@ -45,12 +45,13 @@ module.exports = {
     assetsSubDirectory: "system",
     assetsPublicPath: "/",
 
-    // The system.js library target, supports all targets
+    // The system.js library target, supports all
     // Webpack libraryTargets (umd, commonjs2, etc...)
+    //
     // In general you probably want this to be “umd”,
     // but for SSR/Nuxt.js you might want to use “commonjs2”
     // to avoid usage of window object.
-    libraryTarget: "commonjs2",
+    libraryTarget: "umd",
 
     // Enable or disable performance hints on build
     performanceHints: false,
