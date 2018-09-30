@@ -45,6 +45,13 @@ module.exports = {
     assetsSubDirectory: "system",
     assetsPublicPath: "/",
 
+    // The system.js library target, supports all targets
+    // Webpack libraryTargets (umd, commonjs2, etc...)
+    libraryTarget: "umd",
+
+    // Enable or disable performance hints on build
+    performanceHints: false,
+
     // Source map
     productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production

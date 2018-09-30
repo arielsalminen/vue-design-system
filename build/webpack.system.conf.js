@@ -31,7 +31,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     path: config.system.assetsRoot,
     filename: utils.assetsSystemPath("[name].js"),
     library: "[name]",
-    libraryTarget: "commonjs2",
+    libraryTarget: config.system.libraryTarget,
+  },
+  performance: {
+    hints: config.system.performanceHints,
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
