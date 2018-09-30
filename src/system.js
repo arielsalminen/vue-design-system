@@ -19,11 +19,17 @@ contexts.forEach(context => {
   context.keys().forEach(key => components.push(context(key).default))
 })
 
-export { components }
-
 // https://sebastiandedeyne.com/exposing-multiple-vue-components-as-a-plugin
-export default {
+const System = {
   install(Vue) {
     components.forEach(component => Vue.component(component.name, component))
   },
 }
+
+// Automatic installation if Vue has been added to the global scope.
+if (typeof window !== "undefined" && window.Vue) {
+  components.forEach(component => window.Vue.use(component))
+}
+
+export default System
+export { components }
