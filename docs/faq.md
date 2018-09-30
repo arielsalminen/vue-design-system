@@ -107,10 +107,18 @@ Once done, you can utilize tokens inside `<template>` like this:
 
 ## How to disable browser from auto opening a new window?
 
-Change the `autoOpenBrowser` [setting in config](https://github.com/viljamis/vue-design-system/blob/master/config/index.js#L69) to `false`.
+Remove `--open` option from [this line in package.json](https://github.com/viljamis/vue-design-system/blob/master/package.json#L24).
 
 ## How do I use static image assets?
 
 You can put your assets under `src/assets`. It’s ok to create new directories under that directory as well. Since Webpack is used to include all static assets on the Vue app side, you’ll have to define the path like this in order for it to work on both the app and the styleguide: `<img src="@/assets/img/example.jpg" />`.
 
 For component’s `<docs>` section things work a bit differently. Using `<img src="img/example.jpg" />` without `@/assets/` works there. This is because [Styleguidist](https://github.com/vue-styleguidist/vue-styleguidist) handles the assets directory a bit differently.
+
+## Does Vue Design System work with Nuxt.js?
+
+Currently not supported, but it kind of works still. There is a beta demo I’ve created, here: [github.com/viljamis/nuxt-design-system](https://github.com/viljamis/nuxt-design-system). If you want to help fix a few tiny errors and add the support please get in touch as my own calendar is currently rather full.
+
+## I can’t get Vue Design System working as an NPM dependency?
+
+Please see the official example first: [github.com/viljamis/vue-design-system-example](https://github.com/viljamis/vue-design-system-example). Vue Design System can’t be currently imported to a project using Vue 2.5.17+ due to some breaking changes they’ve introduced, so you need to use 2.5.16 or below for now. This will get hopefully fixed later on.
