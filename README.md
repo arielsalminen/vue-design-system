@@ -43,7 +43,7 @@ The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](http
 
 - **[Official example](https://vueds.com/example)**
 - [Using Vue Design System as NPM dependency](https://github.com/viljamis/vue-design-system-example)
-- [Using Vue Design System as an NPM Dependency on Nuxt.js project](https://github.com/viljamis/nuxt-design-system)
+- [Using Vue Design System as NPM Dependency on Nuxt.js project](https://github.com/viljamis/nuxt-design-system)
 
 ## Roadmap
 
