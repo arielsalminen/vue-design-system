@@ -68,18 +68,18 @@ export default {
  */
 .example {
   @include reset;
-  @include stack-space($space-s);
+  @include stack-space($space-m);
   color: set-text-color($color-rich-black, $color-white);
   @media #{$media-query-m} {
-    @include stack-space($space-m);
+    @include stack-space($space-xl);
   }
 }
 </style>
 
 <docs>
   ```jsx
-  <example>
+  <Example>
     Docs section should have an example that is shown in the documentation.
-  </example>
+  </Example>
   ```
 </docs>
