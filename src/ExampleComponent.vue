@@ -1,6 +1,6 @@
 <template>
   <component :is="type" :class="['example', variation]">
-    <div class="example-content">
+    <div id="Example-container">
       <slot />
     </div>
   </component>

@@ -11,7 +11,7 @@ localVue.mixin(statusLabels)
 const MockComponent = {
   name: "example",
   status: "prototype",
-  template: "<div id='example-container'><label class='status original'>undefined</label></div>",
+  template: "<div id='Example-container'><label class='status original'>undefined</label></div>",
 }
 
 const wrapper = mount(ExampleComponent, {
