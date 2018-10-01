@@ -1,7 +1,6 @@
 .DS_Store
 .eslintcache
 node_modules/
-dist/
 /test/unit/coverage/
 npm-debug.log*
 yarn-debug.log*
