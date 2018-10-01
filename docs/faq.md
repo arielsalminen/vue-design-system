@@ -117,7 +117,7 @@ For component’s `<docs>` section things work a bit differently. Using `<img sr
 
 ## Does Vue Design System work with Nuxt.js?
 
-Currently not supported, but it kind of works still. There is a beta demo we’ve created with help from [@daspete](https://github.com/daspete), here: [github.com/viljamis/nuxt-design-system](https://github.com/viljamis/nuxt-design-system). If you want to help fix a few tiny errors and add the support please get in touch!
+Yes! While we don’t currently have extensive documentation on this, there’s an official example and instructions provided, here: [github.com/viljamis/nuxt-design-system](https://github.com/viljamis/nuxt-design-system).
 
 ## I can’t get Vue Design System working as an NPM dependency?
 
