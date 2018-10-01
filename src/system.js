@@ -5,33 +5,30 @@
  * You should & can add your own dependencies here if needed.
  */
 
-import instance from "@/utils/vueInstance"
-
 // Define contexts to require
-// (remove templates if not used in production)
 const contexts = [
   require.context("@/elements/", true, /\.vue$/),
   require.context("@/patterns/", true, /\.vue$/),
   require.context("@/templates/", true, /\.vue$/),
 ]
 
+// Define components
 const components = []
-
 contexts.forEach(context => {
   context.keys().forEach(key => components.push(context(key).default))
 })
 
-// https://sebastiandedeyne.com/exposing-multiple-vue-components-as-a-plugin
+// Install the above defined components
 const System = {
   install(Vue) {
     components.forEach(component => Vue.component(component.name, component))
   },
 }
 
-// Automatic installation if Vue has been added to the global scope.
+// Automatic installation if Vue has been added to the global scope
 if (typeof window !== "undefined" && window.Vue) {
-  components.forEach(component => window.Vue.use(component))
+  window.Vue.use(System)
 }
 
+// Finally export as default
 export default System
-export { instance, components }
