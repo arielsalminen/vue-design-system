@@ -1,23 +1,21 @@
 <template>
   <component :is="type" :class="['example', variation]">
-    <div id="example-container">
-      <slot/>
+    <div class="example-content">
+      <slot />
     </div>
   </component>
 </template>
 
 <script>
 /**
- * “Example Component” is used to visually communicate core parts of the product
+ * Example component is used to visually communicate core parts of the product
  * and available actions.
  */
 export default {
   /**
-   * Component names should always be multi-word, except for root App components.
-   * This prevents conflicts with existing and future HTML elements, since all
-   * HTML elements are a single word. See example below:
+   * Component names should be short, pronounceable and Capitalized.
    */
-  name: "example",
+  name: "Example",
   /**
    * Components in the system are labelled with status labels that reflect their
    * state of completion. See example below. All available statuses are:
@@ -30,6 +28,10 @@ export default {
    * ready          Green      Ready to be used
    */
   status: "prototype",
+  /**
+   * Release indicates when this component was added into the system.
+   * (in which design system version)
+   */
   release: "1.0.0",
   /**
    * Prop definitions should be as detailed as possible, specifying at least
@@ -37,7 +39,7 @@ export default {
    */
   props: {
     /**
-     * The html element name used for the container of “example” component.
+     * The html element name used for the container of Example component.
      */
     type: {
       type: String,
