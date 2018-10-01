@@ -17,7 +17,7 @@ The tool is built on top of [Vue.js](https://vuejs.org), [Vue Styleguidist](http
 - Get an automated overview of how your design system progresses over time.
 - Global design tokens in YAML format that you can use inside any component.
 - Automatic generation of living, user editable documentation.
-- Easily export and use your Design System as an NPM dependency in another Vue.js project.
+- Easily export and use your Design System as an NPM dependency in another Vue.js or Nuxt.js project.
 - Create a token, an element, or a pattern, and it’s immediately available across all components.
 - Pre-configured Prettier setup for auto-formatting code on both save and before commit.
 - Live Reloading, Autoprefixing, SCSS, and helper functions + simple and sane defaults for SVG and Webfont usage out-of-the-box.
