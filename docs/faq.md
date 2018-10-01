@@ -121,4 +121,4 @@ Currently not supported, but it kind of works still. There is a beta demo we’v
 
 ## I can’t get Vue Design System working as an NPM dependency?
 
-Please see the official example first: [github.com/viljamis/vue-design-system-example](https://github.com/viljamis/vue-design-system-example). Vue Design System can’t be currently imported to a project using Vue 2.5.17+ due to some breaking changes they’ve introduced, so you need to use 2.5.16 or below for now. This will get hopefully fixed later on.
+Please see the official example first: [github.com/viljamis/vue-design-system-example](https://github.com/viljamis/vue-design-system-example). If you’re getting an error about `export 'default' was not found` you’re probably trying to import the provided UMD module as an ES Module.
