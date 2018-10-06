@@ -55,10 +55,16 @@ module.exports = {
     {
       name: "Design Principles",
       content: "../docs/principles.md",
+      sectionDepth: 1,
+      exampleMode: "hide",
+      usageMode: "hide",
     },
     {
       name: "Voice & Tone",
       content: "../docs/voice-and-tone.md",
+      sectionDepth: 1,
+      exampleMode: "hide",
+      usageMode: "hide",
     },
     {
       name: "Design Tokens",
@@ -100,11 +106,15 @@ module.exports = {
     {
       name: "Downloads",
       content: "../docs/downloads.md",
+      exampleMode: "hide",
+      usageMode: "hide",
       sectionDepth: 1,
     },
     {
       name: "FAQ",
       content: "../docs/faq.md",
+      exampleMode: "hide",
+      usageMode: "hide",
       sectionDepth: 1,
     },
     {
@@ -114,6 +124,8 @@ module.exports = {
        * their own section, which then gets hidden in docs/docs.styles.scss
        */
       name: "Private Components",
+      exampleMode: "hide",
+      usageMode: "hide",
       components: "../src/**/[_]*.vue",
     },
   ],
