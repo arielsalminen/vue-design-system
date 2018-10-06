@@ -127,13 +127,15 @@ Please see the official example first: [github.com/viljamis/vue-design-system-ex
 
 They are, but you need to add the following to the Webpack configuration for build:
 
-```js
-options: {
-  // enable CSS Modules
-  modules: true,
-  // customize generated class names
-  localIdentName: '[local]_[hash:base64:8]'
-}
-```
+<pre class="rsg--pre-42">
+  <code>
+  options: {
+    // enable CSS Modules
+    modules: true,
+    // customize generated class names
+    localIdentName: "[local]_[hash:base64:8]"
+  }
+  </code>
+</pre>
 
-For more detailed instructions, please see: [vue-loader.vuejs.org/guide/css-modules.html](https://vue-loader.vuejs.org/guide/css-modules.html)
+For more detailed instructions, please see: [vue-loader.vuejs.org/guide/css-modules.html](https://vue-loader.vuejs.org/guide/css-modules.html).
