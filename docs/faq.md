@@ -34,7 +34,7 @@ Compared to Atomic Design, this setup doesn’t include molecule/page levels. Th
 
 ## Is this tool only for Vue.js based applications?
 
-Organizations that have more than just Vue.js based applications can benefit from Vue Design System as well. Tokens which store visual design attributes are universal and can be used on any platform.
+Organizations that have more than just Vue.js based applications can benefit from Vue Design System as well. Tokens which store visual design attributes are universal and can be used on any platform. Vue Design System also renders all components in both Vue.js & HTML which allows you to use the components on any web based platform. Additionally, it’s possible to configure the build process to output Web Components instead of Vue.js Components.
 
 ## Why aren’t there more components by default?
 
@@ -123,19 +123,21 @@ Yes! While we don’t currently have extensive documentation on this, there’s 
 
 Please see the official example first: [github.com/viljamis/vue-design-system-example](https://github.com/viljamis/vue-design-system-example). If you’re getting an error about `export 'default' was not found` you’re probably trying to import the provided UMD module as an ES Module.
 
+## Can I use the components from the system on our static website?
+
+Yes you can. See the official example on GitHub: [github.com/viljamis/vue-design-system-example-website](https://github.com/viljamis/vue-design-system-example-website)
+
 ## I want to use CSS Modules, are those supported?
 
 They are, but you need to add the following to the Webpack configuration for build:
 
-<pre class="rsg--pre-42">
-  <code>
+<pre class="rsg--pre-42"><code>
   options: {
     // enable CSS Modules
     modules: true,
     // customize generated class names
     localIdentName: "[local]_[hash:base64:8]"
   }
-  </code>
-</pre>
+</code></pre>
 
 For more detailed instructions, please see: [vue-loader.vuejs.org/guide/css-modules.html](https://vue-loader.vuejs.org/guide/css-modules.html).
