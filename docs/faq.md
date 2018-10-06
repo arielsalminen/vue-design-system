@@ -122,3 +122,18 @@ Yes! While we don’t currently have extensive documentation on this, there’s 
 ## I can’t get Vue Design System working as an NPM dependency?
 
 Please see the official example first: [github.com/viljamis/vue-design-system-example](https://github.com/viljamis/vue-design-system-example). If you’re getting an error about `export 'default' was not found` you’re probably trying to import the provided UMD module as an ES Module.
+
+## I want to use CSS Modules, are those supported?
+
+They are, but you need to add the following to the Webpack configuration for build:
+
+```js
+options: {
+  // enable CSS Modules
+  modules: true,
+  // customize generated class names
+  localIdentName: '[local]_[hash:base64:8]'
+}
+```
+
+For more detailed instructions, please see: [vue-loader.vuejs.org/guide/css-modules.html](https://vue-loader.vuejs.org/guide/css-modules.html)
