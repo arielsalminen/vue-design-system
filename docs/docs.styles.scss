@@ -1,6 +1,6 @@
 /**
  * These are style overrides for Vue Styleguidist
- * (the odd formatting hence most of the ID’s are dynamic)
+ * (the odd formatting hence most of the classes are dynamic)
  */
 
 @import "../src/assets/tokens/tokens.scss";
@@ -21,19 +21,12 @@ $docs-color-text: shade($color-silver, 70%);
 /* BASE
 --------------------------------------------- */
 
+// Background of page
 div.rsg--root-1 {
   background: $color-white;
 }
 
-div[class^="rsg--root"] {
-  a[class^="rsg--link"] {
-    color: $color-bleu-de-france;
-    &:hover {
-      color: $color-bleu-de-france-dark;
-    }
-  }
-}
-
+// Main content
 main[class^="rsg--content"] {
   display: block; /* IE11 fix */
   padding: $space-s $space-xl;
@@ -42,12 +35,14 @@ main[class^="rsg--content"] {
   }
 }
 
+// Resetting margins for Styleguidist
 header[class^="rsg--header"] > div[class^="rsg--wrapper"],
 section > div[class^="rsg--wrapper"] + article[class^="rsg--root"],
 article[class^="rsg--root"] div[class^="rsg--root"] {
   margin: 0 !important;
 }
 
+// Display rsg--roots as flex
 main section section > div > div[class^="rsg--root"] {
   display: flex;
   flex-direction: column;
@@ -55,6 +50,14 @@ main section section > div > div[class^="rsg--root"] {
 
 /* TYPOGRAPHY
 --------------------------------------------- */
+
+// Link color
+div[class^="rsg--root"] a[class^="rsg--link"] {
+  color: $color-bleu-de-france;
+  &:hover {
+    color: $color-bleu-de-france-dark;
+  }
+}
 
 // Main headings
 // (includes h2 as well since in component views that’s the first heading)
@@ -84,9 +87,12 @@ div[class^="rsg--wrapper"] > h2[class^="rsg--heading"] {
   }
 }
 
+// Remove extra margins from all headers
 header[class^="rsg--header"] {
   margin: 0;
 }
+
+// Links inside h1
 div[class^="rsg--wrapper"] > h1[class^="rsg--heading"] a {
   font-weight: $weight-normal;
   color: $color-oxford-blue;
@@ -158,6 +164,11 @@ p[class^="rsg--para"] {
   code {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
+    background: tint($docs-grey, 75%);
+    color: shade($color-silver, 20%);
+    padding: $space-xx-small;
+    border-radius: $radius-default;
+    font-size: 87.5%;
   }
   a {
     overflow-wrap: break-word;
@@ -167,8 +178,12 @@ p[class^="rsg--para"] {
     -webkit-hyphens: auto;
     hyphens: auto;
   }
+  pre + & {
+    margin-top: $space-s;
+  }
 }
 
+// Type layout adjustments
 div[class^="rsg--docs"],
 p[class^="rsg--para"],
 h3[class^="rsg--heading"],
@@ -183,100 +198,13 @@ h4[class^="rsg--heading"] {
   }
 }
 
+// Paragraphs inside table cells
 td[class^="rsg--cell"] p {
   width: 100%;
 }
 
-pre + p[class^="rsg--para"] {
-  margin-top: $space-s;
-}
-
-p[class^="rsg--para"] code {
-  background: tint($docs-grey, 75%);
-  color: shade($color-silver, 20%);
-  padding: $space-xx-small;
-  border-radius: $radius-default;
-  font-size: 87.5%;
-}
-
 /* SIDEBAR
 --------------------------------------------- */
-
-div[class^="rsg--sidebar"] {
-  background: mix($color-bleu-de-france, $color-rich-black, 5%);
-  border: 0;
-  @media (max-width: #{$docs-breakpoint}) {
-    padding-bottom: $space-l;
-  }
-  a[class^="rsg--link"] {
-    font-weight: $weight-semi-bold;
-    color: $color-bleu-de-france;
-    &:hover {
-      color: $color-bleu-de-france-lighter;
-    }
-    &:active {
-      color: $color-bleu-de-france-dark;
-    }
-  }
-  ul ul[class^="rsg--list"] {
-    display: none;
-    &.vueds-visible {
-      display: block;
-    }
-  }
-  .vueds-active {
-    ul[class^="rsg--list"] {
-      display: block;
-    }
-    & > a,
-    & > a:hover {
-      color: tint($color-bleu-de-france, 80%);
-    }
-  }
-  ul[class^="rsg--list"] {
-    padding-left: 0;
-    ul {
-      padding-left: $space-s;
-      line-height: $line-height-s;
-      @media (max-width: #{$docs-breakpoint-small}) {
-        padding: 0 0 0 $space-l;
-        width: 90%;
-        li {
-          display: inline;
-          line-height: $line-height-m;
-        }
-      }
-      // Second level links
-      a[class*="rsg--link"] {
-        font-size: $size-s;
-        font-weight: $weight-normal;
-        -webkit-font-smoothing: subpixel-antialiased;
-        -moz-osx-font-smoothing: auto;
-        @media (max-width: #{$docs-breakpoint-small}) {
-          float: left;
-          padding: 0 $space-xs 0 0;
-        }
-      }
-    }
-  }
-  li[class^="rsg--item"] {
-    margin: 0;
-    display: block;
-    a[class^="rsg--link"] {
-      display: block;
-      padding: $space-xx-small 0;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    // First level links
-    a[class*="rsg--link"] {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      padding: $space-xx-small $space-m;
-    }
-  }
-}
 
 // Sidebar logo
 div[class^="rsg--logo"] {
@@ -316,16 +244,96 @@ div[class^="rsg--search"] input {
   }
 }
 
-// Sidebar 1st level section links
-ul[class^="rsg--list"] a[class*=" rsg--heading"],
-div[class^="rsg--root"] > ul[class^="rsg--list"] > li > a {
-  font-weight: $weight-semi-bold;
+// Sets sidebar background
+div[class^="rsg--sidebar"] {
+  background: mix($color-bleu-de-france, $color-rich-black, 5%);
+  border: 0;
+  @media (max-width: #{$docs-breakpoint}) {
+    padding-bottom: $space-l;
+  }
+
+  // Sidebar sub navigations
+  ul ul[class^="rsg--list"] {
+    display: none;
+    &.vueds-visible {
+      display: block;
+    }
+  }
+
+  // Sidebar list item
+  li[class^="rsg--item"] {
+    margin: 0;
+    display: block;
+  }
+
+  // Sidebar first level links
+  a[class^="rsg--link"] {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: $space-xx-small $space-m;
+    font-weight: $weight-semi-bold;
+    color: $color-bleu-de-france;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {
+      color: $color-bleu-de-france-lighter;
+    }
+    &:active {
+      color: $color-bleu-de-france-dark;
+    }
+  }
+
+  // Sidebar active link
+  .vueds-active {
+    ul[class^="rsg--list"] {
+      display: block;
+    }
+    & > a,
+    & > a:hover {
+      color: tint($color-bleu-de-france, 80%);
+    }
+  }
+
+  // Sidebar list
+  ul[class^="rsg--list"] {
+    padding-left: 0;
+
+    // Sidebar sub-list
+    ul {
+      padding-left: $space-s;
+      line-height: $line-height-s;
+      @media (max-width: #{$docs-breakpoint-small}) {
+        padding: 0 0 0 $space-l;
+        width: 90%;
+
+        // Sidebar sub-list item
+        li {
+          display: inline;
+          line-height: $line-height-m;
+        }
+      }
+
+      // Sidebar second level link
+      a[class*="rsg--link"] {
+        font-size: $size-s;
+        font-weight: $weight-normal;
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+        @media (max-width: #{$docs-breakpoint-small}) {
+          float: left;
+          padding: 0 $space-xs 0 0;
+        }
+      }
+    }
+  }
 }
 
-/* CODE PREVIEWS
+/* CODE & COMPONENT PREVIEWS
 --------------------------------------------- */
 
-pre[class^="rsg--pre"],
+// Previews of the components
 div[class^="rsg--preview"] {
   padding: $space-l / 1.2;
   background-color: tint($docs-grey, 90%);
@@ -339,12 +347,8 @@ div[class^="rsg--preview"] {
   border-top-right-radius: $radius-default;
 }
 
-// If you edit the section names you might have to edit
+// If you edit the component categories, you have to edit
 // these to match as well.
-div[data-preview="Overview"],
-div[data-preview="Getting Started"],
-div[data-preview="Design Tokens"],
-div[data-preview="Tokens"],
 div[data-preview="Elements"],
 div[data-preview="Patterns"],
 div[data-preview="Templates"] {
@@ -352,13 +356,14 @@ div[data-preview="Templates"] {
   box-shadow: none;
   padding: 0;
   border: 0;
+
   // This hides code previews from the above examples
   & + div + div[class^="rsg--tab"] {
     display: none !important;
   }
 }
 
-// Good old clearfix to take care of floated content inside previews
+// Clearfix to take care of floated content inside previews
 div[data-preview]:after {
   content: "";
   display: table;
@@ -375,7 +380,8 @@ thead[class^="rsg--tableHead"] {
   border: 0;
 }
 
-// Codemirror
+// Codemirror and markdown code blocks
+pre[class^="rsg--pre"],
 .vueds-html.cm-s-night.CodeMirror,
 .react-codemirror2 .CodeMirror.CodeMirror {
   background: mix($color-bleu-de-france, $color-rich-black, 10%);
@@ -400,12 +406,17 @@ thead[class^="rsg--tableHead"] {
   .CodeMirror-vscrollbar {
     overflow: hidden;
   }
+  code {
+    color: $color-white;
+  }
 }
+
+// HTML preview needs some padding adjustments to match Styleguidist
 .vueds-html.cm-s-night.CodeMirror {
   padding-left: $space-m - 4px;
 }
 
-// Code tabs
+// VUE & HTML Code tabs
 div[class^="rsg--tab"] {
   position: relative;
   .vueds-tabs {
@@ -442,6 +453,7 @@ div[class^="rsg--tab"] {
   }
 }
 
+// Hidden HTML/VUE code preview
 .vueds-hidden {
   opacity: 0;
   visibility: hidden;
@@ -451,25 +463,36 @@ div[class^="rsg--tab"] {
   position: absolute !important;
 }
 
+// Fixes a few layout bugs with CodeMirror
 .CodeMirror-scroll.CodeMirror-scroll {
   overflow: hidden !important;
 }
 
+// Code highlighting for both CodeMirror and Markdown files
+.hljs-variable,
+.hljs-selector-class,
 .cm-s-night span.cm-variable,
 .cm-s-night span.cm-variable-2,
 .cm-s-night span.cm-bracket,
-.cm-s-night span.cm-tag {
+.cm-s-night span.cm-tag,
+.hljs-tag,
+.hljs-name {
   color: $color-bleu-de-france-light !important;
 }
+.hljs-attribute,
+.hljs-keyword,
+.hljs-attr,
 .cm-s-night span.cm-operator,
 .cm-s-night span.cm-number,
 .cm-s-night span.cm-attribute {
   color: $color-ucla-gold-light !important;
 }
-.cm-s-night span.cm-string {
+.cm-s-night span.cm-string,
+.hljs-string {
   color: lighten($docs-status-ready, 20%) !important;
 }
 
+// Code highlighting elsewhere
 span[class^="rsg--type"],
 code[class^="rsg--code"] {
   color: $color-silver;
@@ -490,20 +513,20 @@ code.type {
 /* COMPONENT STATUS LABELS
 --------------------------------------------- */
 
+// Here we’re setting a custom order for Styleguidist’s pieces
 header[class^="rsg--header"] {
   order: 2;
 }
-
 div[class^="rsg--docs"],
 article[class^="rsg--root"],
 button[class^="rsg--button"] {
   order: 3;
 }
-
 div[class^="rsg--root"] div[class^="rsg--tabs"] {
   order: 4;
 }
 
+// Status label is shown in top right corner for each component
 .status {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: $weight-normal;
@@ -551,6 +574,7 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
 /* TABLES
 --------------------------------------------- */
 
+// Global tr setting so that vueds custom components use this as well
 tr {
   transition: background-color 0.1s ease;
   &:hover {
