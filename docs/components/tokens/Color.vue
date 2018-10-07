@@ -8,8 +8,8 @@
       v-if="prop.type === 'color'">
         <div class="swatch" :style="{ backgroundColor: prop.value }" />
         <h3>{{prop.name.replace(/_/g, " ").replace(/color/g, "")}}</h3>
-        <span>RGB: {{prop.value}}</span>
-        <span>SCSS: ${{prop.name.replace(/_/g, "-")}}</span>
+        <span><em>RGB: </em>{{prop.value}}</span>
+        <span><em>SCSS: </em>${{prop.name.replace(/_/g, "-")}}</span>
     </div>
   </div>
 </template>
@@ -117,7 +117,10 @@ h3 {
   }
   &:hover {
     span {
-      color: shade($color-silver, 40%);
+      color: $color-rich-black;
+      em {
+        color: $color-silver;
+      }
     }
   }
   span {
@@ -127,6 +130,10 @@ h3 {
     font-size: $size-s;
     width: 100%;
     float: left;
+    em {
+      user-select: none;
+      font-style: normal;
+    }
   }
 }
 </style>
