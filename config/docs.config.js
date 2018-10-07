@@ -1,6 +1,8 @@
 const path = require("path")
 const baseConfig = require("../build/webpack.base.conf.js")
 const merge = require("webpack-merge")
+const packageConfig = require("../package.json")
+const chalk = require("chalk")
 
 module.exports = {
   /**
@@ -10,6 +12,7 @@ module.exports = {
   /**
    * Most of the styles are defined in /docs/docs.styles.scss
    */
+  version: packageConfig.version,
   theme: {
     maxWidth: "100%",
     sidebarWidth: 240,
@@ -186,6 +189,17 @@ module.exports = {
     },
   }),
   styleguideDir: "../dist/docs",
+  printServerInstructions() {},
+  printBuildInstructions(config) {
+    console.log(chalk.cyan("\n  Design System Docs build finished succesfully!\n"))
+    console.log(
+      chalk.yellow(
+        "  Tip: You can now deploy the docs as a static website.\n" +
+          "  Copy the build files from " +
+          `${config.styleguideDir}\n`
+      )
+    )
+  },
   /**
    * Configure docs server to redirect asset queries
    */
