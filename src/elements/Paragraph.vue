@@ -8,7 +8,7 @@
 export default {
   name: "Paragraph",
   status: "prototype",
-  release: "1.0.0",
+  release: "3.5.0",
   props: {
     /**
      * The html element used for the text.
