@@ -217,6 +217,22 @@ div[class^="rsg--logo"] {
   }
 }
 
+// Sidebar version
+p[class^="rsg--version"] {
+  @include inset-squish-space($space-xs);
+  margin: $space-xs 0 0;
+  color: $color-bleu-de-france;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-weight: $weight-normal;
+  display: inline-block;
+  line-height: $line-height-xs;
+  border: 1px solid $color-bleu-de-france;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: $size-xs;
+  border-radius: $radius-default;
+}
+
 // Sidebar search
 div[class^="rsg--search"] input {
   @include inset-squish-space($space-s);
