@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin")
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
+const TerserPlugin = require("terser-webpack-plugin")
 const SafeParser = require("postcss-safe-parser")
 
 const env = require("../config/prod.env")
@@ -88,9 +88,10 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
     },
     runtimeChunk: "single",
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
+      new TerserPlugin({
+        terserOptions: {
           compress: {
             warnings: false,
           },

@@ -65,7 +65,7 @@
       var r = {
           name: "Button",
           status: "prototype",
-          release: "1.0.0",
+          release: "3.5.0",
           props: {
             type: {
               type: String,
@@ -105,32 +105,32 @@
             },
           },
         },
-        a = (n("807b"), n("KHd+")),
+        a = (n("kApE"), n("KHd+")),
         o = n("tcIX"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
-            var t = this,
-              e = t.$createElement
-            return (t._self._c || e)(
-              t.type,
+            var t = this.$createElement
+            return (this._self._c || t)(
+              this.type,
               {
                 tag: "component",
-                class: ["button", t.size, t.state, t.variation],
-                attrs: { href: t.href, type: t.submit },
+                class: ["button", this.size, this.state, this.variation],
+                attrs: { href: this.href, type: this.submit },
               },
-              [t._t("default")],
+              [this._t("default")],
               2
             )
           },
           [],
           !1,
           null,
-          "34c95418",
+          "c3690e8a",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "Button.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "Button.vue")
+      e.default = u.exports
     },
     "/thn": function(t, e) {
       t.exports =
@@ -139,7 +139,6 @@
     0: function(t, e, n) {
       t.exports = n("5m5j")
     },
-    "1ktO": function(t, e, n) {},
     "1phr": function(t, e) {},
     "2dpg": function(t, e, n) {
       "use strict"
@@ -160,18 +159,17 @@
         },
         a = (n("vJ+2"), n("KHd+")),
         o = n("gkHm"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
-            var t = this,
-              e = t.$createElement,
-              n = t._self._c || e
-            return n(
-              t.type,
+            var t = this.$createElement,
+              e = this._self._c || t
+            return e(
+              this.type,
               { tag: "component", staticClass: "not-found" },
               [
-                n("NavBar", {
+                e("NavBar", {
                   attrs: {
                     active: "NotFound",
                     navItems: [
@@ -180,14 +178,14 @@
                     ],
                   },
                 }),
-                t._v(" "),
-                n(
+                this._v(" "),
+                e(
                   "Wrapper",
                   [
-                    n("Heading", [t._v("404 Error")]),
-                    t._v(" "),
-                    n("Paragraph", [
-                      t._v(
+                    e("Heading", [this._v("404 Error")]),
+                    this._v(" "),
+                    e("Paragraph", [
+                      this._v(
                         "Couldn’t find a component that would match the URL you entered. Double check configuration in router/index.js."
                       ),
                     ]),
@@ -204,7 +202,8 @@
           "622af9fe",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "NotFound.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "NotFound.vue")
+      e.default = u.exports
     },
     "5m5j": function(t, e, n) {
       "use strict"
@@ -251,18 +250,17 @@
           },
         },
         o = (n("c5QI"), n("KHd+")),
-        u = n("1phr"),
-        i = n.n(u),
-        c = Object(o.a)(
+        i = n("1phr"),
+        u = n.n(i),
+        s = Object(o.a)(
           a,
           function() {
-            var t = this,
-              e = t.$createElement
-            return (t._self._c || e)(t.type, {
+            var t = this.$createElement
+            return (this._self._c || t)(this.type, {
               tag: "component",
-              class: ["icon", t.size],
-              attrs: { "aria-label": t.ariaLabel },
-              domProps: { innerHTML: t._s(t.svg) },
+              class: ["icon", this.size],
+              attrs: { "aria-label": this.ariaLabel },
+              domProps: { innerHTML: this._s(this.svg) },
             })
           },
           [],
@@ -271,16 +269,12 @@
           null,
           null
         )
-      "function" == typeof i.a && i()(c), (c.options.__file = "Icon.vue"), (e.default = c.exports)
+      "function" == typeof u.a && u()(s), (s.options.__file = "Icon.vue")
+      e.default = s.exports
     },
     "7DUr": function(t, e) {},
     "7dOS": function(t, e) {},
     "7kMZ": function(t, e) {},
-    "807b": function(t, e, n) {
-      "use strict"
-      var r = n("1ktO")
-      n.n(r).a
-    },
     "9+RL": function(t, e, n) {
       "use strict"
       var r = n("5wPu")
@@ -298,8 +292,8 @@
         },
         a = (n("frqv"), n("KHd+")),
         o = n("HpXA"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
             var t = this.$createElement
@@ -316,7 +310,8 @@
           "4b05eca0",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "Wrapper.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "Wrapper.vue")
+      e.default = u.exports
     },
     AAsE: function(t, e) {
       t.exports =
@@ -329,7 +324,7 @@
       var r = {
           name: "Paragraph",
           status: "prototype",
-          release: "1.0.0",
+          release: "3.5.0",
           props: {
             type: {
               type: String,
@@ -347,28 +342,28 @@
             },
           },
         },
-        a = (n("Nuxr"), n("KHd+")),
+        a = (n("TCTD"), n("KHd+")),
         o = n("ECTP"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
-            var t = this,
-              e = t.$createElement
-            return (t._self._c || e)(
-              t.type,
-              { tag: "component", class: ["paragraph", t.variation] },
-              [t._t("default")],
+            var t = this.$createElement
+            return (this._self._c || t)(
+              this.type,
+              { tag: "component", class: ["paragraph", this.variation] },
+              [this._t("default")],
               2
             )
           },
           [],
           !1,
           null,
-          "eecd5d66",
+          "c864d2b4",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "Paragraph.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "Paragraph.vue")
+      e.default = u.exports
     },
     H4RJ: function(t, e, n) {},
     HpXA: function(t, e) {},
@@ -386,27 +381,30 @@
       }
       function o(t) {
         var e = r[t]
-        if (e + 1) return e
-        var n = new Error("Cannot find module '" + t + "'")
-        throw ((n.code = "MODULE_NOT_FOUND"), n)
+        if (!(e + 1)) {
+          var n = new Error("Cannot find module '" + t + "'")
+          throw ((n.code = "MODULE_NOT_FOUND"), n)
+        }
+        return e
       }
       ;(a.keys = function() {
         return Object.keys(r)
       }),
         (a.resolve = o),
-        ((t.exports = a).id = "JtIp")
+        (t.exports = a),
+        (a.id = "JtIp")
     },
     "KHd+": function(t, e, n) {
       "use strict"
-      function r(t, e, n, r, a, o, u, i) {
-        var c,
-          l = "function" == typeof t ? t.options : t
+      function r(t, e, n, r, a, o, i, u) {
+        var s,
+          c = "function" == typeof t ? t.options : t
         if (
-          (e && ((l.render = e), (l.staticRenderFns = n), (l._compiled = !0)),
-          r && (l.functional = !0),
-          o && (l._scopeId = "data-v-" + o),
-          u
-            ? ((c = function(t) {
+          (e && ((c.render = e), (c.staticRenderFns = n), (c._compiled = !0)),
+          r && (c.functional = !0),
+          o && (c._scopeId = "data-v-" + o),
+          i
+            ? ((s = function(t) {
                 ;(t =
                   t ||
                   (this.$vnode && this.$vnode.ssrContext) ||
@@ -414,41 +412,42 @@
                   "undefined" == typeof __VUE_SSR_CONTEXT__ ||
                   (t = __VUE_SSR_CONTEXT__),
                   a && a.call(this, t),
-                  t && t._registeredComponents && t._registeredComponents.add(u)
+                  t && t._registeredComponents && t._registeredComponents.add(i)
               }),
-              (l._ssrRegister = c))
+              (c._ssrRegister = s))
             : a &&
-              (c = i
+              (s = u
                 ? function() {
                     a.call(this, this.$root.$options.shadowRoot)
                   }
                 : a),
-          c)
+          s)
         )
-          if (l.functional) {
-            l._injectStyles = c
-            var s = l.render
-            l.render = function(t, e) {
-              return c.call(e), s(t, e)
+          if (c.functional) {
+            c._injectStyles = s
+            var l = c.render
+            c.render = function(t, e) {
+              return s.call(e), l(t, e)
             }
           } else {
-            var f = l.beforeCreate
-            l.beforeCreate = f ? [].concat(f, c) : [c]
+            var f = c.beforeCreate
+            c.beforeCreate = f ? [].concat(f, s) : [s]
           }
-        return { exports: t, options: l }
+        return { exports: t, options: c }
       }
       n.d(e, "a", function() {
         return r
       })
     },
     KzwA: function(t, e, n) {},
-    Nuxr: function(t, e, n) {
+    PTKP: function(t, e, n) {},
+    TCTD: function(t, e, n) {
       "use strict"
-      var r = n("ONqy")
+      var r = n("U50v")
       n.n(r).a
     },
-    ONqy: function(t, e, n) {},
     Tof5: function(t, e) {},
+    U50v: function(t, e, n) {},
     UklV: function(t, e, n) {
       "use strict"
       n.r(e)
@@ -502,8 +501,8 @@
         },
         a = (n("9+RL"), n("KHd+")),
         o = n("7dOS"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
             var t = this,
@@ -533,7 +532,8 @@
           "698acc83",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "Input.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "Input.vue")
+      e.default = u.exports
     },
     UvfI: function(t, e, n) {},
     Xl01: function(t, e, n) {
@@ -553,22 +553,24 @@
       }
       function o(t) {
         var e = r[t]
-        if (e + 1) return e
-        var n = new Error("Cannot find module '" + t + "'")
-        throw ((n.code = "MODULE_NOT_FOUND"), n)
+        if (!(e + 1)) {
+          var n = new Error("Cannot find module '" + t + "'")
+          throw ((n.code = "MODULE_NOT_FOUND"), n)
+        }
+        return e
       }
       ;(a.keys = function() {
         return Object.keys(r)
       }),
         (a.resolve = o),
-        ((t.exports = a).id = "Xl01")
+        (t.exports = a),
+        (a.id = "Xl01")
     },
     Z0DB: function(t, e, n) {
       "use strict"
       var r = n("eUC7")
       n.n(r).a
     },
-    Zohg: function(t, e, n) {},
     bzL3: function(t, e, n) {
       var r = { "./deprecated.svg": "/thn", "./prototype.svg": "2dwG", "./ready.svg": "AAsE", "./review.svg": "eAtJ" }
       function a(t) {
@@ -577,15 +579,18 @@
       }
       function o(t) {
         var e = r[t]
-        if (e + 1) return e
-        var n = new Error("Cannot find module '" + t + "'")
-        throw ((n.code = "MODULE_NOT_FOUND"), n)
+        if (!(e + 1)) {
+          var n = new Error("Cannot find module '" + t + "'")
+          throw ((n.code = "MODULE_NOT_FOUND"), n)
+        }
+        return e
       }
       ;(a.keys = function() {
         return Object.keys(r)
       }),
         (a.resolve = o),
-        ((t.exports = a).id = "bzL3")
+        (t.exports = a),
+        (a.id = "bzL3")
     },
     c1KM: function(t, e, n) {
       var r = { "./Index.vue": "lF/O", "./NotFound.vue": "4K1/" }
@@ -595,15 +600,18 @@
       }
       function o(t) {
         var e = r[t]
-        if (e + 1) return e
-        var n = new Error("Cannot find module '" + t + "'")
-        throw ((n.code = "MODULE_NOT_FOUND"), n)
+        if (!(e + 1)) {
+          var n = new Error("Cannot find module '" + t + "'")
+          throw ((n.code = "MODULE_NOT_FOUND"), n)
+        }
+        return e
       }
       ;(a.keys = function() {
         return Object.keys(r)
       }),
         (a.resolve = o),
-        ((t.exports = a).id = "c1KM")
+        (t.exports = a),
+        (a.id = "c1KM")
     },
     c5QI: function(t, e, n) {
       "use strict"
@@ -621,9 +629,10 @@
       n.n(r).a
     },
     gkHm: function(t, e) {},
-    jGdK: function(t, e, n) {
+    jzLE: function(t, e, n) {},
+    kApE: function(t, e, n) {
       "use strict"
-      var r = n("Zohg")
+      var r = n("PTKP")
       n.n(r).a
     },
     "lF/O": function(t, e, n) {
@@ -638,18 +647,17 @@
         },
         a = (n("2dpg"), n("KHd+")),
         o = n("9I8L"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
-            var t = this,
-              e = t.$createElement,
-              n = t._self._c || e
-            return n(
-              t.type,
+            var t = this.$createElement,
+              e = this._self._c || t
+            return e(
+              this.type,
               { tag: "component", staticClass: "index" },
               [
-                n("NavBar", {
+                e("NavBar", {
                   attrs: {
                     active: "Index",
                     navItems: [
@@ -658,15 +666,15 @@
                     ],
                   },
                 }),
-                t._v(" "),
-                n(
+                this._v(" "),
+                e(
                   "Wrapper",
                   [
-                    n("Heading", [t._v("Vue Design System")]),
-                    t._v(" "),
-                    n("Paragraph", [
-                      n("a", { attrs: { href: "https://vueds.com" } }, [t._v("Vue Design System")]),
-                      t._v(
+                    e("Heading", [this._v("Vue Design System")]),
+                    this._v(" "),
+                    e("Paragraph", [
+                      e("a", { attrs: { href: "https://vueds.com" } }, [this._v("Vue Design System")]),
+                      this._v(
                         " is an open-source tool for building design systems with Vue.js. It provides you and your team a set of organized tools, patterns & practices. It works as the foundation for your application development."
                       ),
                     ]),
@@ -683,7 +691,8 @@
           "20191d76",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "Index.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "Index.vue")
+      e.default = u.exports
     },
     lK0x: function(t, e, n) {
       "use strict"
@@ -691,7 +700,7 @@
       var r = {
           name: "Textarea",
           status: "ready",
-          release: "1.0.0",
+          release: "3.5.0",
           props: {
             value: { type: String, default: null },
             placeholder: { type: String, default: null },
@@ -729,10 +738,10 @@
             },
           },
         },
-        a = (n("jGdK"), n("KHd+")),
+        a = (n("wzGU"), n("KHd+")),
         o = n("7DUr"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
             var t = this,
@@ -769,10 +778,11 @@
           [],
           !1,
           null,
-          "da564664",
+          "49700027",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "Textarea.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "Textarea.vue")
+      e.default = u.exports
     },
     nZfC: function(t, e, n) {
       "use strict"
@@ -805,8 +815,8 @@
         },
         a = (n("Ii/R"), n("KHd+")),
         o = n("Tof5"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
             var t = this,
@@ -831,7 +841,8 @@
           "0ee66408",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "NavBar.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "NavBar.vue")
+      e.default = u.exports
     },
     "oIR/": function(t, e, n) {
       "use strict"
@@ -852,8 +863,8 @@
         },
         a = (n("Z0DB"), n("KHd+")),
         o = n("woMB"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
             var t = this.$createElement
@@ -870,7 +881,8 @@
           "614943df",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "Heading.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "Heading.vue")
+      e.default = u.exports
     },
     oXgq: function(t, e, n) {},
     r6ov: function(t, e, n) {
@@ -899,16 +911,15 @@
         },
         a = (n("nZfC"), n("KHd+")),
         o = n("7kMZ"),
-        u = n.n(o),
-        i = Object(a.a)(
+        i = n.n(o),
+        u = Object(a.a)(
           r,
           function() {
-            var t = this,
-              e = t.$createElement
-            return (t._self._c || e)(
-              t.type,
-              { tag: "component", class: ["text-style", t.variation] },
-              [t._t("default")],
+            var t = this.$createElement
+            return (this._self._c || t)(
+              this.type,
+              { tag: "component", class: ["text-style", this.variation] },
+              [this._t("default")],
               2
             )
           },
@@ -918,7 +929,8 @@
           "7610f142",
           null
         )
-      "function" == typeof u.a && u()(i), (i.options.__file = "TextStyle.vue"), (e.default = i.exports)
+      "function" == typeof i.a && i()(u), (u.options.__file = "TextStyle.vue")
+      e.default = u.exports
     },
     tcIX: function(t, e) {},
     vAeE: function(t, e, n) {},
@@ -928,5 +940,10 @@
       n.n(r).a
     },
     woMB: function(t, e) {},
+    wzGU: function(t, e, n) {
+      "use strict"
+      var r = n("jzLE")
+      n.n(r).a
+    },
   })
 })
