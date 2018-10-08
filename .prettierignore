@@ -1,5 +1,4 @@
 package.json
 package-lock.json
 src/assets/tokens/*
-build/*
-build/system/*
+dist/*
