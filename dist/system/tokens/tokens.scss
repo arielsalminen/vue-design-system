@@ -1,3 +1,4 @@
+
 $color-ucla-gold: rgb(255, 186, 10);
 $color-ucla-gold-darker: rgb(179, 128, 0);
 $color-vermilion-lighter: rgb(244, 151, 138);
@@ -25,8 +26,8 @@ $size-l: 24px;
 $size-m: 16px;
 $size-s: 13px;
 $size-xs: 11px;
-$font-heading: "Fira Sans", Helvetica, Arial, sans-serif;
-$font-text: "Fira Sans", Helvetica, Arial, sans-serif;
+$font-heading: 'Fira Sans', Helvetica, Arial, sans-serif;
+$font-text: 'Fira Sans', Helvetica, Arial, sans-serif;
 $weight-bold: 700;
 $weight-semi-bold: 600;
 $weight-normal: 400;
@@ -38,13 +39,9 @@ $duration-quickly: 0.08s;
 $duration-slowly: 0.5s;
 $z-index-modal: 9999;
 $z-index-sticky: 100;
-$media-query-m: (
-  min-width: 768px,
-);
-$media-query-l: (
-  min-width: 1024px,
-);
-$shadow-s: 0 0 0 1px rgba(92, 106, 196, 0.1);
+$media-query-m: (min-width: 768px);
+$media-query-l: (min-width: 1024px);
+$shadow-s: 0 0 0 1px rgba(92,106,196,.1);
 $spacing-xl: 2px;
 $spacing-l: 1px;
 $spacing-m: 0;

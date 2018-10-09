@@ -56,8 +56,6 @@ module.exports = {
     // Enable or disable performance hints on build
     performanceHints: false,
 
-    // Source map
-    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: "#source-map",
 
