@@ -1,4 +1,5 @@
 [![Build status](https://travis-ci.org/viljamis/vue-design-system.svg?branch=master)](https://travis-ci.org/viljamis/vue-design-system/) ![Dependencies status](https://david-dm.org/viljamis/vue-design-system.svg) ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg) [![Gitter](https://badges.gitter.im/gitterHQ/gitter.svg)](https://gitter.im/vueds/Lobby)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fviljamis%2Fvue-design-system.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fviljamis%2Fvue-design-system?ref=badge_shield)
 
 # Vue Design System
 
@@ -64,3 +65,6 @@ About to get started with a new design system? I’m an independent designer and
 [Viljami Salminen](https://viljamis.com), [Artem Sapegin](http://sapegin.me), [Rafael Escala](https://github.com/rafaesc), [react-styleguidist contributors](https://github.com/styleguidist/react-styleguidist/graphs/contributors), [vue-styleguidist contributors](https://github.com/vue-styleguidist/vue-styleguidist/graphs/contributors), [Vue.js contributors](https://github.com/vuejs/vue/graphs/contributors), [vue-webpack-boilerplate contributors](https://github.com/vuejs-templates/webpack/graphs/contributors), [Theo contributors](https://github.com/salesforce-ux/theo/graphs/contributors), and [Polaris contributors](https://github.com/Shopify/polaris).
 
 Licensed under the [MIT license](https://github.com/viljamis/vue-design-system/blob/master/LICENSE).
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fviljamis%2Fvue-design-system.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fviljamis%2Fvue-design-system?ref=badge_large)
