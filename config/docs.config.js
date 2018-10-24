@@ -33,7 +33,7 @@ module.exports = {
    */
   assetsDir: path.join(__dirname, "../src/assets"),
   /**
-   * Enabling the below option will break things in Vue Desing System!
+   * Enabling the below option will break things in Vue Design System!
    */
   skipComponentsWithoutExample: false,
   /**
