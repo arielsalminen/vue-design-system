@@ -64,7 +64,6 @@ div[class^="rsg--root"] a[class^="rsg--link"] {
 div[class^="rsg--wrapper"] > h1[class^="rsg--heading"],
 div[class^="rsg--wrapper"] > h2[class^="rsg--heading"] {
   display: block;
-  width: 100%;
   border: 0;
   line-height: $line-height-s;
   padding: $space-xl $space-xl;
@@ -211,7 +210,6 @@ div[class^="rsg--logo"] {
   @include inset-space($space-m);
   border-bottom: 1px solid rgba($color-white, 0.1);
   h1 {
-    color: $color-white;
     color: tint($color-bleu-de-france, 90%);
     font-weight: $weight-normal;
   }
@@ -605,10 +603,9 @@ table[class^="rsg--table"] {
   th {
     padding: $space-s $space-l $space-s $space-s;
     font-size: $size-s;
-    font-weight: $weight-bold;
+    font-weight: $weight-semi-bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: $weight-semi-bold;
     border-radius: 0;
     background: $color-cloud;
     color: tint($color-oxford-blue, 10%);

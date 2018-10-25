@@ -1,9 +1,12 @@
 <template>
   <component :is="type" class="not-found">
-    <NavBar active="NotFound" :navItems="[
-      {name: 'Template', component: 'Index', href: '/#/'},
-      {name: 'Documentation', href: 'http://localhost:6060/'}
-    ]"/>
+    <NavBar
+      active="NotFound"
+      :navItems="[
+        {name: 'Template', component: 'Index', href: '/#/'},
+        {name: 'Documentation', href: 'http://localhost:6060/'}
+      ]"
+    />
     <Wrapper>
       <Heading>404 Error</Heading>
       <Paragraph>Couldn’t find a component that would match the URL you entered. Double check configuration in router/index.js.</Paragraph>
@@ -48,7 +51,11 @@ $color-template-link: $color-bleu-de-france;
   @include inset-space($space-m);
   min-height: $space-xxl * 4;
   background: $color-template-background;
-  background: linear-gradient(0deg, $color-template-background-bottom, $color-template-background-top 100%);
+  background: linear-gradient(
+    0deg,
+    $color-template-background-bottom,
+    $color-template-background-top 100%
+  );
   text-align: center;
   position: relative;
   float: left;

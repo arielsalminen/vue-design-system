@@ -6,7 +6,9 @@
 export default {
   methods: {
     showLinks() {
-      const links = document.querySelectorAll("div[class^='rsg--sidebar'] ul ul[class^='rsg--list']")
+      const links = document.querySelectorAll(
+        "div[class^='rsg--sidebar'] ul ul[class^='rsg--list']"
+      )
       if (links) {
         ;[].forEach.call(links, function(element) {
           element.classList.add("vueds-visible")

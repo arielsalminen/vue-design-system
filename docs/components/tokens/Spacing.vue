@@ -5,8 +5,10 @@
       :key="index"
       class="space"
       v-if="prop.category === 'space'"
-      :style="{ lineHeight: prop.value, height: prop.value }">
-        ${{prop.name.replace(/_/g, "-")}}<span> ({{prop.value}})</span>
+      :style="{ lineHeight: prop.value, height: prop.value }"
+    >
+      ${{prop.name.replace(/_/g, "-")}}
+      <span>({{prop.value}})</span>
     </div>
   </div>
 </template>

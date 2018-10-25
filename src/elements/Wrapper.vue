@@ -1,6 +1,6 @@
 <template>
   <component :is="type" class="wrapper">
-    <slot />
+    <slot/>
   </component>
 </template>
 

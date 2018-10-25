@@ -1,7 +1,7 @@
 <template>
   <component :is="type" :class="['example', variation]">
     <div id="Example-container">
-      <slot />
+      <slot/>
     </div>
   </component>
 </template>

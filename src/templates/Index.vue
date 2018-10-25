@@ -1,12 +1,17 @@
 <template>
   <component :is="type" class="index">
-    <NavBar active="Index" :navItems="[
-      {name: 'Template', component: 'Index', href: '/#/'},
-      {name: 'Documentation', href: 'http://localhost:6060/'}
-    ]"/>
+    <NavBar
+      active="Index"
+      :navItems="[
+        {name: 'Template', component: 'Index', href: '/#/'},
+        {name: 'Documentation', href: 'http://localhost:6060/'}
+      ]"
+    />
     <Wrapper>
       <Heading>Vue Design System</Heading>
-      <Paragraph><a href="https://vueds.com">Vue Design System</a> is an open-source tool for building design systems with Vue.js. It provides you and your team a set of organized tools, patterns &amp; practices. It works as the foundation for your application development.</Paragraph>
+      <Paragraph>
+        <a href="https://vueds.com">Vue Design System</a>is an open-source tool for building design systems with Vue.js. It provides you and your team a set of organized tools, patterns &amp; practices. It works as the foundation for your application development.
+      </Paragraph>
     </Wrapper>
   </component>
 </template>
@@ -50,7 +55,11 @@ $color-template-link: $color-bleu-de-france;
   @include inset-space($space-m);
   min-height: $space-xxl * 4;
   background: $color-template-background;
-  background: linear-gradient(0deg, $color-template-background-bottom, $color-template-background-top 100%);
+  background: linear-gradient(
+    0deg,
+    $color-template-background-bottom,
+    $color-template-background-top 100%
+  );
   text-align: center;
   position: relative;
   float: left;

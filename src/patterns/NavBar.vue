@@ -5,8 +5,8 @@
       :key="index"
       :href="item.href"
       :class="{active: localActive === item.component}"
-      v-html="item.name">
-    </a>
+      v-html="item.name"
+    />
   </component>
 </template>
 

@@ -5,11 +5,18 @@
       :key="index"
       class="color"
       :class="prop.category"
-      v-if="prop.type === 'color'">
-        <div class="swatch" :style="{ backgroundColor: prop.value }" />
-        <h3>{{prop.name.replace(/_/g, " ").replace(/color/g, "")}}</h3>
-        <span><em>RGB: </em>{{prop.value}}</span>
-        <span><em>SCSS: </em>${{prop.name.replace(/_/g, "-")}}</span>
+      v-if="prop.type === 'color'"
+    >
+      <div class="swatch" :style="{ backgroundColor: prop.value }"/>
+      <h3>{{prop.name.replace(/_/g, " ").replace(/color/g, "")}}</h3>
+      <span>
+        <em>RGB:</em>
+        {{prop.value}}
+      </span>
+      <span>
+        <em>SCSS:</em>
+        ${{prop.name.replace(/_/g, "-")}}
+      </span>
     </div>
   </div>
 </template>
@@ -59,19 +66,29 @@ export default {
     align-content: stretch;
     justify-content: left;
     grid-template-columns:
-      calc(20% - #{$space-m}) calc(20% - #{$space-m}) calc(20% - #{$space-m}) calc(20% - #{$space-m})
+      calc(20% - #{$space-m})
+      calc(20% - #{$space-m})
+      calc(20% - #{$space-m})
+      calc(20% - #{$space-m})
       calc(20% - #{$space-m});
     grid-column-gap: $space-m;
     @media (max-width: 1300px) {
-      grid-template-columns: calc(25% - #{$space-m}) calc(25% - #{$space-m}) calc(25% - #{$space-m}) calc(
-          25% - #{$space-m}
-        );
+      grid-template-columns:
+        calc(25% - #{$space-m})
+        calc(25% - #{$space-m})
+        calc(25% - #{$space-m})
+        calc(25% - #{$space-m});
     }
     @media (max-width: 1100px) {
-      grid-template-columns: calc(33.333% - #{$space-m}) calc(33.333% - #{$space-m}) calc(33.333% - #{$space-m});
+      grid-template-columns:
+        calc(33.333% - #{$space-m})
+        calc(33.333% - #{$space-m})
+        calc(33.333% - #{$space-m});
     }
     @media (max-width: 900px) {
-      grid-template-columns: calc(50% - #{$space-m}) calc(50% - #{$space-m});
+      grid-template-columns:
+        calc(50% - #{$space-m})
+        calc(50% - #{$space-m});
     }
     @media (max-width: 400px) {
       grid-template-columns: 100%;
