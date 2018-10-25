@@ -39,7 +39,10 @@ module.exports = {
   /**
    * We’re defining below JS and SCSS requires for the documentation.
    */
-  require: [path.join(__dirname, "../docs/docs.helper.js"), path.join(__dirname, "../docs/docs.styles.scss")],
+  require: [
+    path.join(__dirname, "../docs/docs.helper.js"),
+    path.join(__dirname, "../docs/docs.styles.scss"),
+  ],
   /**
    * Enabling the following option splits sections into separate views.
    */

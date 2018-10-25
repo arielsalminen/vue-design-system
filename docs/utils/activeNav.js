@@ -34,7 +34,8 @@ export default {
       if (process && process.env && process.env.NODE_ENV === "test") {
         currentURL = "/example/"
       } else {
-        currentURL = window.location.pathname + window.location.hash.split("?")[0].replace(/%20/g, " ")
+        currentURL =
+          window.location.pathname + window.location.hash.split("?")[0].replace(/%20/g, " ")
       }
 
       if (sidebar) {

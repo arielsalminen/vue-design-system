@@ -5,8 +5,10 @@
       :key="index"
       class="font"
       v-if="prop.category === 'font-size'"
-      :style="{ fontSize: prop.value }">
-        ${{prop.name.replace(/_/g, "-")}}<span> ({{prop.value}})</span>
+      :style="{ fontSize: prop.value }"
+    >
+      ${{prop.name.replace(/_/g, "-")}}
+      <span>({{prop.value}})</span>
     </div>
   </div>
 </template>

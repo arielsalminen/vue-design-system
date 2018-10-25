@@ -2,19 +2,19 @@
   <div class="component-status">
     <ul class="status-list">
       <li>
-        <Icon name="ready" fill="#7cb518" size="small" />
+        <Icon name="ready" fill="#7cb518" size="small"/>
         <p>Ready</p>
       </li>
       <li>
-        <Icon name="review" :fill="tokens.color_ucla_gold.value" size="small" />
+        <Icon name="review" :fill="tokens.color_ucla_gold.value" size="small"/>
         <p>Under review</p>
       </li>
       <li>
-        <Icon name="deprecated" :fill="tokens.color_vermilion.value" size="small" />
-      <p>Deprecated</p>
+        <Icon name="deprecated" :fill="tokens.color_vermilion.value" size="small"/>
+        <p>Deprecated</p>
       </li>
       <li>
-        <Icon name="prototype" :fill="tokens.color_bleu_de_france.value" size="small" />
+        <Icon name="prototype" :fill="tokens.color_bleu_de_france.value" size="small"/>
         <p>Prototype</p>
       </li>
       <li>
@@ -36,22 +36,13 @@
       <tbody>
         <tr v-for="(component, index) in components" :key="index" class="component">
           <td v-if="component.name">
-            <code class="name">
-              {{component.name}}
-            </code>
+            <code class="name">{{component.name}}</code>
           </td>
           <td v-else>N/A</td>
-          <td v-if="component.release">
-            {{component.release}}
-          </td>
+          <td v-if="component.release">{{component.release}}</td>
           <td v-else>N/A</td>
           <td v-if="component.status">
-            <Icon
-              v-if="component.status === 'ready'"
-              name="ready"
-              fill="#7cb518"
-              size="small"
-            />
+            <Icon v-if="component.status === 'ready'" name="ready" fill="#7cb518" size="small"/>
             <Icon
               v-if="component.status === 'under-review' || component.status === 'review'"
               name="review"

@@ -15,12 +15,22 @@
           </td>
           <td v-else>N/A</td>
           <td v-if="token.value">
-            <div v-if="token.type === 'color'" class="example color" :style="{ backgroundColor: token.value }" />
-            <div v-if="token.category === 'border-radius'" class="example border-radius" :style="{ borderRadius: token.value }" />
-            <div v-if="token.category === 'box-shadow'" class="example box-shadow" :style="{ boxShadow: token.value }" />
-            <code class="type">
-              {{token.value}}
-            </code>
+            <div
+              v-if="token.type === 'color'"
+              class="example color"
+              :style="{ backgroundColor: token.value }"
+            />
+            <div
+              v-if="token.category === 'border-radius'"
+              class="example border-radius"
+              :style="{ borderRadius: token.value }"
+            />
+            <div
+              v-if="token.category === 'box-shadow'"
+              class="example box-shadow"
+              :style="{ boxShadow: token.value }"
+            />
+            <code class="type">{{token.value}}</code>
           </td>
           <td v-else>N/A</td>
           <td v-if="token.category">{{token.category}}</td>

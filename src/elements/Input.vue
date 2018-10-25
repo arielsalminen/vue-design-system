@@ -10,7 +10,7 @@
       :placeholder="placeholder"
       @input="onInput($event.target.value)"
       @focus="onFocus($event.target.value)"
-    />
+    >
   </component>
 </template>
 
@@ -152,7 +152,8 @@ $color-placeholder: tint($color-silver, 50%);
     width: 100%;
     margin: 0;
     border: 0;
-    box-shadow: inset 0 1px 0 0 rgba($color-rich-black, 0.07), 0 0 0 1px tint($color-rich-black, 80%);
+    box-shadow: inset 0 1px 0 0 rgba($color-rich-black, 0.07),
+      0 0 0 1px tint($color-rich-black, 80%);
     &::-webkit-input-placeholder {
       -webkit-font-smoothing: antialiased;
       color: $color-placeholder;
