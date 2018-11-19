@@ -66,29 +66,25 @@ If you want to bundle your fonts into the project itself, that’s possible as w
 
 First, import tokens inside the component you want to use them in:
 
-```html
-<script>
-  import designTokens from "@/assets/tokens/tokens.raw.json";
-</script>
+```javascript
+import designTokens from "@/assets/tokens/tokens.raw.json"
 ```
 
 Then, pass the data:
 
-```html
-<script>
+```javascript
 export default {
   data() {
     return {
-      tokens: designTokens.props
-    };
-  }
-};
-</script>
+      tokens: designTokens.props,
+    }
+  },
+}
 ```
 
 Once done, you can utilize tokens inside `<template>` like this:
 
-```html
+```javascript
 <template>
   <Thing :style="{color: tokens.color_vermilion.value}" />
 </template>
@@ -131,13 +127,13 @@ Yes you can. See the official example on GitHub: [github.com/viljamis/vue-design
 
 They are, but you need to add the following to the Webpack configuration for build:
 
-<pre class="rsg--pre-42"><code>
-  options: {
-    // enable CSS Modules
-    modules: true,
-    // customize generated class names
-    localIdentName: "[local]_[hash:base64:8]"
-  }
-</code></pre>
+```javascript
+options: {
+  // enable CSS Modules
+  modules: true,
+  // customize generated class names
+  localIdentName: "[local]_[hash:base64:8]"
+}
+```
 
 For more detailed instructions, please see: [vue-loader.vuejs.org/guide/css-modules.html](https://vue-loader.vuejs.org/guide/css-modules.html).
