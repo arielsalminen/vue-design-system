@@ -84,7 +84,7 @@ export default {
 
 Once done, you can utilize tokens inside `<template>` like this:
 
-```javascript
+```html
 <template>
   <Thing :style="{color: tokens.color_vermilion.value}" />
 </template>
