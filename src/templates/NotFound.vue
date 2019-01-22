@@ -3,13 +3,16 @@
     <NavBar
       active="NotFound"
       :navItems="[
-        {name: 'Template', component: 'Index', href: '/#/'},
-        {name: 'Documentation', href: 'http://localhost:6060/'}
+        { name: 'Template', component: 'Index', href: '/#/' },
+        { name: 'Impressum', component: 'Impressum', href: '/#/Impressum/' },
       ]"
     />
     <Wrapper>
       <Heading>404 Error</Heading>
-      <Paragraph>Couldn’t find a component that would match the URL you entered. Double check configuration in router/index.js.</Paragraph>
+      <Paragraph
+        >Couldn’t find a component that would match the URL you entered. Double check configuration
+        in router/index.js.</Paragraph
+      >
     </Wrapper>
   </component>
 </template>
@@ -21,7 +24,7 @@
 export default {
   name: "NotFound",
   metaInfo: {
-    title: "Page Not Found | Vue Design System",
+    title: "Page Not Found | meDesigne",
     htmlAttrs: {
       lang: "en",
     },
