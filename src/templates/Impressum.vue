@@ -1,15 +1,15 @@
 <template>
   <component :is="type" :class="['impressum']">
     <NavBar
-      active="Impressum"
+      active="ImpressumPage"
       :navItems="[
-        { name: 'Template', component: 'Index', href: '/#/' },
-        { name: 'Impressum', component: 'Impressum', href: '/#/Impressum/' },
+        { name: 'Welcome', component: 'Index', href: '/#/' },
+        { name: 'Impressum', component: 'ImpressumPage', href: '/#/Impressum/' },
       ]"
     />
     <div id="ImpressumPage">
       <Wrapper>
-        {{ titel }}
+        <!-- {{ impressum }} -->
       </Wrapper>
     </div>
   </component>
@@ -123,6 +123,6 @@ $color-template-link: $color-bleu-de-france;
 
 <docs>
   ```jsx
-  <ImpressumPage />
+  <Impressum />
   ```
 </docs>
