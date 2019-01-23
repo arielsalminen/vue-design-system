@@ -1,10 +1,11 @@
 <template>
   <component :is="type" class="nav">
+    <img src="assets/logo_only.png" />
     <a
       v-for="(item, index) in navItems"
       :key="index"
       :href="item.href"
-      :class="{active: localActive === item.component}"
+      :class="{ active: localActive === item.component }"
       v-html="item.name"
     />
   </component>
@@ -68,10 +69,19 @@ $color-nav-link-active: $color-bleu-de-france;
   font-size: $size-s;
   line-height: $line-height-m;
   color: $color-white;
+  background-color: $color-rich-black;
   text-align: center;
   width: 100%;
+  z-index: 1;
+  max-width: 96%;
+  position: fixed;
   @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
+  }
+  img {
+    height: 42px;
+    width: 42px;
+    float: right;
   }
   a {
     color: $color-nav-link;
