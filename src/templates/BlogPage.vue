@@ -1,6 +1,26 @@
 <template>
-  <component :is="type" :class="['blog']">
+  <component :is="type" :class="['blogpage']">
+    <NavBar
+      active="BlogPage"
+      :navItems="[
+        { name: 'Welcome', component: 'Index', href: '/#/' },
+        { name: 'Blog', component: 'BlogPage', href: '/#/Blog' },
+        { name: 'Impressum', component: 'ImpressumPage', href: '/#/Impressum/' },
+      ]"
+    />
     <div id="BlogPage">
+      <wrapper>
+        <Paragraph>
+          <h2>First Post</h2>
+          Ich bin ein default Post für mein Blog. Es ist nur ein Test und wir passen es gut an. Also
+          viel freude und Spass mit meinen Blog.
+        </Paragraph>
+        <Paragraph>
+          <h2>Second Post</h2>
+          Ich bin ein default Post für mein Blog. Es ist nur ein Test und wir passen es gut an. Also
+          viel freude und Spass mit meinen Blog. Hier ist mehr Zeug das wir posten wollen.
+        </Paragraph>
+      </wrapper>
       <slot />
     </div>
   </component>
@@ -15,7 +35,7 @@ export default {
   /**
    * Component names should be short, pronounceable and Capitalized.
    */
-  name: "BlogPage",
+  name: "Blog",
   /**
    * Components in the system are labelled with status labels that reflect their
    * state of completion. See example below. All available statuses are:
@@ -61,17 +81,58 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/**
- * Styles in a top-level App component and in layout components may be global,
- * but all other components should always be scoped (using either scoped
- * attribute or class based scoping).
- */
-.example {
+// Design Tokens with local scope
+$color-template-background: $color-rich-black;
+$color-template-background-top: tint($color-template-background, 5%);
+$color-template-background-bottom: shade($color-template-background, 5%);
+$color-template-text: $color-white;
+$color-template-link: $color-bleu-de-france;
+
+.blogpage {
   @include reset;
-  @include stack-space($space-m);
-  color: set-text-color($color-rich-black, $color-white);
-  @media #{$media-query-m} {
-    @include stack-space($space-xl);
+  @include inset-space($space-m);
+  min-height: $space-xxl * 4;
+  background: $color-template-background;
+  background: linear-gradient(
+    0deg,
+    $color-template-background-bottom,
+    $color-template-background-top 100%
+  );
+  text-align: center;
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  @media #{$media-query-l} {
+    // This is how you’d use design tokens with media queries
+  }
+  .heading {
+    color: $color-template-text;
+    font-size: $size-l;
+  }
+  .paragraph {
+    color: $color-template-text;
+    background-color: $color-rich-black;
+    font-size: $size-s;
+    padding: 5px;
+  }
+  .text-link {
+    color: $color-template-link;
+  }
+  .wrapper {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: $space-xxl * 6;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  a {
+    font-family: $font-text;
+    color: $color-bleu-de-france;
+    text-decoration: underline;
   }
 }
 </style>

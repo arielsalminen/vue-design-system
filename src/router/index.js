@@ -2,7 +2,7 @@ import Vue from "vue"
 import Router from "vue-router"
 import Index from "@/templates/Welcome"
 import Impressum from "@/templates/Impressum"
-import Blog from "@/templates/BlogPage"
+import BlogPage from "@/templates/BlogPage"
 import NotFound from "@/templates/NotFound"
 
 Vue.use(Router)
@@ -19,11 +19,11 @@ export default new Router({
       name: "Impressum",
       component: Impressum,
     },
-    // {
-    //   path: "/Blog",
-    //   name:"Blog",
-    //   component: BlogPage,
-    // },
+    {
+      path: "/Blog",
+      name: "BlogPage",
+      component: BlogPage,
+    },
     {
       path: "*",
       name: "NotFound",

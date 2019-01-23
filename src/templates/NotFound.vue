@@ -4,6 +4,7 @@
       active="NotFound"
       :navItems="[
         { name: 'Template', component: 'Index', href: '/#/' },
+        { name: 'Blog', component: 'BlogPage', href: '/#/Blog' },
         { name: 'Impressum', component: 'Impressum', href: '/#/Impressum/' },
       ]"
     />

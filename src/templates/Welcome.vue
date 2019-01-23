@@ -4,6 +4,7 @@
       active="Welcome"
       :navItems="[
         { name: 'Welcome', component: 'Welcome', href: '/#/' },
+        { name: 'Blog', component: 'BlogPage', href: '/#/Blog' },
         { name: 'Impressum', component: 'Impressum', href: '/#/Impressum/' },
       ]"
     />
@@ -14,9 +15,12 @@
         jeden Menschen.
       </Paragraph>
       <Paragraph>
-        <a href="https://vueds.com">Vue Design System</a>is an open-source tool for building design
-        systems with Vue.js. It provides you and your team a set of organized tools, patterns &amp;
-        practices. It works as the foundation for your application development.
+        Wie schaffen wir das? Wir setzen auf OpenSource und die Freiheit sich zu entscheiden was man
+        will. Mit OpenSource haben Sie die Möglichkeit sich ohne andauernden Finaziellen Aufwand zu
+        erweitern und zu verbessern.<br />
+        Mit OpenSource stärken Sie die Sichrheit und Entwicklung unseres Internets. Denn nur wenn
+        das Internet für alle ein Sichererer Ort ist kann man Selbst sagen das das Internet Sicher
+        ist.
       </Paragraph>
     </Wrapper>
     <Wrapper> </Wrapper>
@@ -89,11 +93,11 @@ $color-template-link: $color-bleu-de-france;
   .wrapper {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    max-width: $space-xxl * 10;
+    max-width: $space-xxl * 8;
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
     left: 50%;
-    top: 35%;
+    top: 50%;
   }
   a {
     font-family: $font-text;

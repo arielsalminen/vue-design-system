@@ -4,6 +4,7 @@
       active="ImpressumPage"
       :navItems="[
         { name: 'Welcome', component: 'Index', href: '/#/' },
+        { name: 'Blog', component: 'BlogPage', href: '/#/Blog' },
         { name: 'Impressum', component: 'ImpressumPage', href: '/#/Impressum/' },
       ]"
     />
