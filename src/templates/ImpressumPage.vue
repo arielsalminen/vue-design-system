@@ -11,7 +11,7 @@
     <div id="ImpressumPage">
       <Wrapper>
         <!-- {{ impressum }} -->
-        <div id="impressum" src="./pages/impressum.md" />
+        <div id="impressum" src="@/pages/impressum.md" />
       </Wrapper>
     </div>
   </component>
@@ -22,6 +22,7 @@
  * Example component is used to visually communicate core parts of the product
  * and available actions.
  */
+// import impressum from "@/pages/impressum.md"
 export default {
   /**
    * Component names should be short, pronounceable and Capitalized.
