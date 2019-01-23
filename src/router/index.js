@@ -1,7 +1,7 @@
 import Vue from "vue"
 import Router from "vue-router"
 import Index from "@/templates/Welcome"
-import Impressum from "@/templates/Impressum"
+import Impressum from "@/templates/ImpressumPage"
 import BlogPage from "@/templates/BlogPage"
 import NotFound from "@/templates/NotFound"
 

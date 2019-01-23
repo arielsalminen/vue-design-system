@@ -11,6 +11,7 @@
     <div id="ImpressumPage">
       <Wrapper>
         <!-- {{ impressum }} -->
+        <div id="impressum" src="./pages/impressum.md" />
       </Wrapper>
     </div>
   </component>
@@ -69,7 +70,6 @@ export default {
   },
 }
 </script>
-
 <style lang="scss" scoped>
 // Design Tokens with local scope
 $color-template-background: $color-rich-black;
