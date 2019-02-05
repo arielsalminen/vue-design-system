@@ -3,9 +3,10 @@
     <NavBar
       active="Welcome"
       :navItems="[
-        { name: 'Welcome', component: 'Welcome', href: '/#/' },
-        { name: 'Blog', component: 'BlogPage', href: '/#/Blog' },
-        { name: 'Impressum', component: 'Impressum', href: '/#/Impressum/' },
+        { name: 'Willkommen', component: 'Index', href: '/#/' },
+        { name: 'Angebot', component: 'MyOffers', href: '/#/Angebot' },
+        { name: 'Kontakt', component: 'ContactPage', href: '/#/Kontakt/' },
+        { name: 'Impressum', component: 'ImpressumPage', href: '/#/Impressum/' },
       ]"
     />
     <Wrapper>
@@ -36,7 +37,7 @@ export default {
   status: "deprecated",
   release: "1.0.0",
   metaInfo: {
-    title: "Wilkommen",
+    title: "Willkommen",
     htmlAttrs: {
       lang: "de",
     },

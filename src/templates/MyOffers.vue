@@ -1,7 +1,7 @@
 <template>
-  <component :is="type" :class="['blogpage']">
+  <component :is="type" :class="['myoffers']">
     <NavBar
-      active="BlogPage"
+      active="MyOffers"
       :navItems="[
         { name: 'Willkommen', component: 'Index', href: '/#/' },
         { name: 'Angebot', component: 'MyOffers', href: '/#/Angebot' },
@@ -9,15 +9,20 @@
         { name: 'Impressum', component: 'ImpressumPage', href: '/#/Impressum/' },
       ]"
     />
-    <div id="BlogPage">
+    <div id="MyOffers">
       <wrapper>
         <Paragraph>
-          <h2>First Post</h2>
+          <h2>Service</h2>
           Ich bin ein default Post für mein Blog. Es ist nur ein Test und wir passen es gut an. Also
           viel freude und Spass mit meinen Blog.
         </Paragraph>
         <Paragraph>
-          <h2>Second Post</h2>
+          <h2>Praxis</h2>
+          Ich bin ein default Post für mein Blog. Es ist nur ein Test und wir passen es gut an. Also
+          viel freude und Spass mit meinen Blog. Hier ist mehr Zeug das wir posten wollen.
+        </Paragraph>
+        <Paragraph>
+          <h2>Büro</h2>
           Ich bin ein default Post für mein Blog. Es ist nur ein Test und wir passen es gut an. Also
           viel freude und Spass mit meinen Blog. Hier ist mehr Zeug das wir posten wollen.
         </Paragraph>
@@ -36,7 +41,7 @@ export default {
   /**
    * Component names should be short, pronounceable and Capitalized.
    */
-  name: "Blog",
+  name: "Angebot",
   /**
    * Components in the system are labelled with status labels that reflect their
    * state of completion. See example below. All available statuses are:
@@ -89,7 +94,7 @@ $color-template-background-bottom: shade($color-template-background, 5%);
 $color-template-text: $color-white;
 $color-template-link: $color-bleu-de-france;
 
-.blogpage {
+.myoffers {
   @include reset;
   @include inset-space($space-m);
   min-height: $space-xxl * 4;
