@@ -1,7 +1,7 @@
 <template>
   <component :is="type" class="index">
     <NavBar
-      active="Welcome"
+      active="Index"
       :navItems="[
         { name: 'Willkommen', component: 'Index', href: '/#/' },
         { name: 'Angebot', component: 'MyOffers', href: '/#/Angebot' },
@@ -12,8 +12,8 @@
     <Wrapper>
       <Heading>Unsere Ziele und Träume</Heading>
       <Paragraph>
-        Wir sind GT-Global und unsere Ziele sind einfach. Zugang zu Technologie und KnowHow für
-        jeden Menschen.
+        Ich sind GT-Global und meine Ziele sind einfach. Zugang zu Technologie und KnowHow für jeden
+        Menschen.
       </Paragraph>
       <Paragraph>
         Wie schaffen wir das? Wir setzen auf OpenSource und die Freiheit sich zu entscheiden was man
@@ -33,7 +33,7 @@
  * Shows how to layout and structure a home page.
  */
 export default {
-  name: "Welcome",
+  name: "Willkommen",
   status: "deprecated",
   release: "1.0.0",
   metaInfo: {
@@ -99,6 +99,7 @@ $color-template-link: $color-bleu-de-france;
     position: absolute;
     left: 50%;
     top: 50%;
+    background-color: #bebebe;
   }
   a {
     font-family: $font-text;
