@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" :aria-label="ariaLabel" :class="['icon', size]" v-html="svg"/>
+  <component :is="type" :aria-label="ariaLabel" :class="['vds-icon', size]" v-html="svg" />
 </template>
 
 <script>
@@ -11,7 +11,7 @@ const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/)
  * easily understand where they are in the product.
  */
 export default {
-  name: "Icon",
+  name: "VdsIcon",
   status: "review",
   release: "1.0.0",
   props: {
@@ -70,7 +70,7 @@ export default {
 
 // We don’t want to use scoped since these styles need to cascade down to SVGs.
 // We also want to be able to style .icon inside buttons etc.
-.icon {
+.vds-icon {
   @include reset;
   &.large svg {
     width: $space-l;
@@ -90,10 +90,10 @@ export default {
 <docs>
   ```jsx
   <div>
-    <Icon name="ready" aria-label="Component is ready" fill="#7cb518" />
-    <Icon name="review" fill="rgb(255,186,10)" />
-    <Icon name="deprecated" fill="rgb(235,59,36)" />
-    <Icon name="prototype" fill="rgb(37,138,239)" />
+    <VdsIcon name="ready" aria-label="Component is ready" fill="#7cb518" />
+    <VdsIcon name="review" fill="rgb(255,186,10)" />
+    <VdsIcon name="deprecated" fill="rgb(235,59,36)" />
+    <VdsIcon name="prototype" fill="rgb(37,138,239)" />
   </div>
   ```
 </docs>

@@ -1,7 +1,5 @@
 <template>
-  <component :is="type" class="wrapper">
-    <slot/>
-  </component>
+  <component :is="type" class="vds-wrapper"> <slot /> </component>
 </template>
 
 <script>
@@ -10,7 +8,7 @@
  * associated actions. Wrapper doesn’t provide customizable options.
  */
 export default {
-  name: "Wrapper",
+  name: "VdsWrapper",
   status: "review",
   release: "1.0.0",
   props: {
@@ -26,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
+.vds-wrapper {
   @include reset;
   @include inset-space($space-l);
   font-family: $font-text;
@@ -40,9 +38,8 @@ export default {
 }
 </style>
 
-
 <docs>
   ```jsx
-  <Wrapper>Wrapper can be used to wrap any components together.</Wrapper>
+  <VdsWrapper>Wrapper can be used to wrap any components together.</VdsWrapper>
   ```
 </docs>

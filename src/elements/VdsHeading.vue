@@ -1,7 +1,5 @@
 <template>
-  <component :is="level" class="heading">
-    <slot/>
-  </component>
+  <component :is="level" class="vds-heading"> <slot /> </component>
 </template>
 
 <script>
@@ -11,7 +9,7 @@
  * Heading element provides an option to change the level of the heading.
  */
 export default {
-  name: "Heading",
+  name: "VdsHeading",
   status: "prototype",
   release: "1.0.0",
   props: {
@@ -31,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.heading {
+.vds-heading {
   @include reset;
   @include stack-space($space-m);
   font-family: $font-heading;
@@ -75,10 +73,10 @@ h6 {
 <docs>
   ```jsx
   <div>
-    <Heading>The quick brown fox</Heading>
-    <Heading level="h2">The quick brown fox</Heading>
-    <Heading level="h3">The quick brown fox</Heading>
-    <Heading level="h4">The quick brown fox</Heading>
+    <VdsHeading>The quick brown fox</VdsHeading>
+    <VdsHeading level="h2">The quick brown fox</VdsHeading>
+    <VdsHeading level="h3">The quick brown fox</VdsHeading>
+    <VdsHeading level="h4">The quick brown fox</VdsHeading>
   </div>
   ```
 </docs>

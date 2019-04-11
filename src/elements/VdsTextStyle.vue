@@ -1,7 +1,5 @@
 <template>
-  <component :is="type" :class="['text-style', variation]">
-    <slot/>
-  </component>
+  <component :is="type" :class="['vds-text-style', variation]"> <slot /> </component>
 </template>
 
 <script>
@@ -11,7 +9,7 @@
  * styles only for aesthetic effect.
  */
 export default {
-  name: "TextStyle",
+  name: "VdsTextStyle",
   status: "ready",
   release: "1.0.0",
   props: {
@@ -45,7 +43,7 @@ export default {
 // Design Tokens with local scope
 $positive-text: #7cb518;
 
-.text-style {
+.vds-text-style {
   @include reset;
   @include stack-space($space-s);
   color: $color-rich-black;
@@ -72,15 +70,14 @@ $positive-text: #7cb518;
 }
 </style>
 
-
 <docs>
   ```jsx
   <div>
-    <TextStyle variation="default">Design isn’t just about the look and feel.</TextStyle>
+    <VdsTextStyle variation="default">Design isn’t just about the look and feel.</VdsTextStyle>
     <br />
-    <TextStyle variation="disabled">Design isn’t just about</TextStyle>
+    <VdsTextStyle variation="disabled">Design isn’t just about</VdsTextStyle>
     <br />
-    <TextStyle variation="strong">Design isn’t</TextStyle>
+    <VdsTextStyle variation="strong">Design isn’t</VdsTextStyle>
   </div>
   ```
 </docs>
