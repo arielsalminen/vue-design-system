@@ -47,13 +47,38 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: "babel-loader",
         include: [
           resolve("docs"),
           resolve("src"),
           resolve("test"),
           resolve("node_modules/webpack-dev-server/client"),
+          resolve("node_modules/regexpu-core"),
+          resolve("node_modules/unicode-match-property-ecmascript"),
+          resolve("node_modules/unicode-match-property-value-ecmascript"),
+          resolve("node_modules/buble/node_modules/acorn-jsx"),
         ],
+        use: {
+          loader: "babel-loader",
+          options: {
+            sourceType: "unambiguous",
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  useBuiltIns: "usage",
+                  targets: {
+                    ie: "11",
+                    chrome: "71",
+                    firefox: "64",
+                    safari: "11",
+                    edge: "17",
+                  },
+                },
+              ],
+            ],
+            comments: false,
+          },
+        },
       },
       {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,

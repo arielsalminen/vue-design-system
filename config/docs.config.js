@@ -192,6 +192,15 @@ module.exports = {
       ],
     },
   }),
+  compilerConfig: {
+    target: {
+      ie: "11",
+      chrome: "71",
+      firefox: "64",
+      safari: "11",
+      edge: "17",
+    },
+  },
   styleguideDir: "../dist/docs",
   printServerInstructions() {},
   printBuildInstructions(config) {
