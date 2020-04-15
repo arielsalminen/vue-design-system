@@ -180,6 +180,7 @@ module.exports = {
       )
     )
   },
+  getComponentPathLine: () => false,
   /**
    * Configure docs server to redirect asset queries
    */

@@ -352,15 +352,17 @@ div[class^="rsg--tab"] {
 
 // Here we’re setting a custom order for Styleguidist’s pieces
 header[class^="rsg--header"] {
-  order: 2;
+  order: 1;
 }
+
 div[class^="rsg--docs"],
 article[class^="rsg--root"],
 button[class^="rsg--button"] {
-  order: 3;
+  order: 2;
 }
+
 div[class^="rsg--root"] div[class^="rsg--tabs"] {
-  order: 4;
+  order: 3;
 }
 
 // Status label is shown in top right corner for each component
@@ -419,61 +421,12 @@ tr {
   }
 }
 
-table[class^="rsg--table"] {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  th {
-    padding: $space-s $space-l $space-s $space-s;
-    font-size: $size-s;
-    font-weight: $weight-semi-bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 0;
-    background: $color-cloud;
-    color: tint($color-oxford-blue, 10%);
-    text-align: left;
-  }
-  th[class^="rsg--cellHeading"],
-  td {
-    padding: $space-s $space-l $space-s $space-s;
-    background: transparent;
-  }
-  td {
-    font-size: $size-s;
-    padding: $space-s $space-l $space-s $space-s;
-    &:first-child {
-      font-weight: $weight-bold;
-      white-space: nowrap;
-    }
-  }
-  tr {
-    border-bottom: 1px solid tint($docs-grey, 50%);
-  }
-  tbody tr:last-child {
-    border-bottom: 0;
-  }
-}
-
-thead[class^="rsg--thead"] {
-  th:first-child {
-    border-top-left-radius: $radius-default;
-    border-bottom-left-radius: $radius-default;
-  }
-  th:last-child {
-    border-top-right-radius: $radius-default;
-    border-bottom-right-radius: $radius-default;
-  }
-}
-
 /* HIDDEN STYLEGUIDIST FUNCTIONALITY
 --------------------------------------------- */
 
 div[class^="rsg--tabButtons"],
-div[class^="rsg--controls"],
-div[class^="rsg--pathline"],
-footer[class^="rsg--footer"],
-div[class^="rsg--toolbar"] {
+div[class^="rsg--toolbar"],
+div[class^="rsg--controls"] {
   display: none !important;
 }
 
@@ -492,6 +445,7 @@ pre[class*="language-"] {
   color: #ffffff;
   font-family: Consolas, "Liberation Mono", Menlo, monospace;
   font-size: $size-s;
+  overflow: auto;
 }
 /*********************************************************
 * Tokens
