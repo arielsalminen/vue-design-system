@@ -266,20 +266,6 @@ div[class^="rsg--sidebar"] {
     padding-bottom: $space-l;
   }
 
-  // Sidebar sub navigations
-  ul ul[class^="rsg--list"] {
-    display: none;
-    &.vueds-visible {
-      display: block;
-    }
-  }
-
-  // Sidebar list item
-  li[class^="rsg--item"] {
-    margin: 0;
-    display: block;
-  }
-
   // Sidebar first level links
   a[class^="rsg--link"] {
     -webkit-font-smoothing: antialiased;

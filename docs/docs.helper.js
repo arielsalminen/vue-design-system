@@ -5,19 +5,23 @@
 import Vue from "vue"
 import WebFontLoader from "../src/utils/webFontLoader" // eslint-disable-line no-unused-vars
 import statusLabels from "./utils/statusLabels"
-import activeNav from "./utils/activeNav"
-import filterSearch from "./utils/filterSearch"
 import "codemirror/mode/jsx/jsx"
+
+// these component Needs to be loaded in somewhere as this is also shown in
+// element, Pattern & Template overviews.
+const components = require.context("./components/status/", true, /[A-Z].+.vue$/)
+
+// For each matching file name...
+components.keys().forEach(fileName => {
+  // Get the component config
+  const componentConfig = components(fileName)
+
+  // get the component name from the object
+  const componentName = componentConfig.default.name || componentConfig.name
+
+  // Globally register the component
+  Vue.component(componentName, componentConfig.default || componentConfig)
+})
 
 Vue.config.productionTip = false
 Vue.mixin(statusLabels)
-
-document.addEventListener("DOMContentLoaded", () => {
-  filterSearch.methods.init()
-  activeNav.methods.init()
-})
-
-window.addEventListener("hashchange", () => {
-  filterSearch.methods.init()
-  activeNav.methods.init()
-})

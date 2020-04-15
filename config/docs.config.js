@@ -20,14 +20,28 @@ module.exports = {
       base: ["'Fira Sans'", "Helvetica", "Arial", "sans-serif"],
       monospace: ["Consolas", "'Liberation Mono'", "Menlo", "monospace"],
     },
+    color: {
+      sidebarBackground: "#02172d",
+      border: "rgba(255, 255, 255, 0.1)",
+      link: "#258aef",
+      linkHover: "#1070d1",
+      /**
+       * prism colors configuration
+       */
+      codeComment: "#6d6d6d",
+      codePunctuation: "#54a3f2",
+      codeProperty: "#54a3f2",
+      codeString: "#ffcc4d",
+      codeInserted: "#EEEEEE",
+      codeOperator: "#DDDDDD",
+      codeKeyword: "#afe74c",
+      codeFunction: "#54a3f2",
+      codeVariable: "#AAAAAA",
+      codeBase: "#FFFFFF",
+      codeBackground: "#041d37",
+    },
   },
   renderRootJsx: path.join(__dirname, "../docs/components/Preview.js"),
-  /**
-   * Define a custom code highlighting theme.
-   */
-  editorConfig: {
-    theme: "night",
-  },
   /**
    * Path to static assets directory
    */
@@ -43,6 +57,7 @@ module.exports = {
     path.join(__dirname, "../docs/docs.helper.js"),
     path.join(__dirname, "../docs/docs.styles.scss"),
   ],
+  tocMode: "collapse",
   /**
    * Enabling the following option splits sections into separate views.
    */
@@ -51,9 +66,6 @@ module.exports = {
     {
       name: "Getting Started",
       content: "../docs/getting-started.md",
-      // Needs to be loaded in somewhere as this is also shown in
-      // element, Pattern & Template overviews.
-      components: "../docs/components/status/**/[A-Z]*.vue",
       sectionDepth: 1,
       exampleMode: "hide",
       usageMode: "hide",
