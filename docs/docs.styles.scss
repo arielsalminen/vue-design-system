@@ -197,16 +197,6 @@ td[class^="rsg--cell"] p {
 /* SIDEBAR
 --------------------------------------------- */
 
-// Sidebar logo
-div[class^="rsg--logo"] {
-  @include inset-space($space-m);
-  border-bottom: 1px solid rgba($color-white, 0.1);
-  h1 {
-    color: tint($color-bleu-de-france, 90%);
-    font-weight: $weight-normal;
-  }
-}
-
 // Sidebar version
 p[class^="rsg--version"] {
   @include inset-squish-space($space-xs);

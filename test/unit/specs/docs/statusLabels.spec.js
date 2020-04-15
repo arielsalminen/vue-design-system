@@ -9,10 +9,11 @@ const localVue = createLocalVue()
 localVue.mixin(statusLabels)
 
 const MockComponent = {
-  name: "example",
+  name: "Example",
   status: "prototype",
-  template:
-    "<div data-testid='Example-container'><label class='status original'>undefined</label></div>",
+  template: `<div data-testid='Example-container'>
+               <label class='status original'>undefined</label>
+             </div>`,
 }
 
 const wrapper = mount(ExampleComponent, {
@@ -22,6 +23,7 @@ const wrapper = mount(ExampleComponent, {
 
 describe("statusLabels.js", () => {
   it("should render status labels", () => {
+    console.log("wrap", wrapper)
     expect(wrapper.contains("label")).toBe(true)
   })
 
