@@ -9,12 +9,27 @@ import "codemirror/mode/jsx/jsx"
 
 // these component Needs to be loaded in somewhere as this is also shown in
 // element, Pattern & Template overviews.
-const components = require.context("./components/status/", true, /[A-Z].+.vue$/)
+const components = require.context("./components/status/", true, /[A-Z].+\.vue$/)
 
 // For each matching file name...
 components.keys().forEach(fileName => {
   // Get the component config
   const componentConfig = components(fileName)
+
+  // get the component name from the object
+  const componentName = componentConfig.default.name || componentConfig.name
+
+  // Globally register the component
+  Vue.component(componentName, componentConfig.default || componentConfig)
+})
+
+// Finally register private components that will be ignored in the styleguide
+const privateComponents = require.context("../src/", true, /[\\/]_.+\.vue$/)
+
+// For each matching file name...
+privateComponents.keys().forEach(fileName => {
+  // Get the component config
+  const componentConfig = privateComponents(fileName)
 
   // get the component name from the object
   const componentName = componentConfig.default.name || componentConfig.name

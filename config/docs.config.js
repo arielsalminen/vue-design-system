@@ -13,34 +13,7 @@ module.exports = {
    * Most of the styles are defined in /docs/docs.styles.scss
    */
   version: packageConfig.version,
-  theme: {
-    maxWidth: "100%",
-    sidebarWidth: 240,
-    fontFamily: {
-      base: ["'Fira Sans'", "Helvetica", "Arial", "sans-serif"],
-      monospace: ["Consolas", "'Liberation Mono'", "Menlo", "monospace"],
-    },
-    color: {
-      sidebarBackground: "#02172d",
-      border: "rgba(255, 255, 255, 0.1)",
-      link: "#258aef",
-      linkHover: "#1070d1",
-      /**
-       * prism colors configuration
-       */
-      codeComment: "#6d6d6d",
-      codePunctuation: "#54a3f2",
-      codeProperty: "#54a3f2",
-      codeString: "#ffcc4d",
-      codeInserted: "#EEEEEE",
-      codeOperator: "#DDDDDD",
-      codeKeyword: "#afe74c",
-      codeFunction: "#54a3f2",
-      codeVariable: "#AAAAAA",
-      codeBase: "#FFFFFF",
-      codeBackground: "#041d37",
-    },
-  },
+  theme: "../docs/theme.js",
   renderRootJsx: path.join(__dirname, "../docs/components/Preview.js"),
   /**
    * Path to static assets directory
@@ -134,17 +107,6 @@ module.exports = {
       exampleMode: "hide",
       usageMode: "hide",
       sectionDepth: 1,
-    },
-    {
-      /**
-       * Private components have to be loaded into the documentation as well,
-       * otherwise anything using them will be broken. We’re loading them in
-       * their own section, which then gets hidden in docs/docs.styles.scss
-       */
-      name: "Private Components",
-      exampleMode: "hide",
-      usageMode: "hide",
-      components: "../src/**/[_]*.vue",
     },
   ],
   /**
