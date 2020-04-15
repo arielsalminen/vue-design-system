@@ -11,7 +11,8 @@ localVue.mixin(statusLabels)
 const MockComponent = {
   name: "example",
   status: "prototype",
-  template: "<div id='Example-container'><label class='status original'>undefined</label></div>",
+  template:
+    "<div data-testid='Example-container'><label class='status original'>undefined</label></div>",
 }
 
 const wrapper = mount(ExampleComponent, {
@@ -34,6 +35,7 @@ describe("statusLabels.js", () => {
       attachToDocument: true,
       localVue,
     })
+
     // Wait that statusLabels is finished
     setTimeout(() => {
       const child = wrapper2.find(".original")

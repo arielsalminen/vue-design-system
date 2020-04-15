@@ -9,7 +9,7 @@ export default {
     const value = this.$options.status
 
     if (id) {
-      const container = document.getElementById(id)
+      const container = document.querySelector(`[data-testid="${id}"]`)
       const label = document.createElement("label")
 
       if (container) {
