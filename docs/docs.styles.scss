@@ -339,12 +339,7 @@ div[class^="rsg--tab"] {
 
 // Hidden HTML/VUE code preview
 .vueds-hidden {
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-  top: -10000px;
-  left: 0;
-  position: absolute !important;
+  display: none;
 }
 
 /* COMPONENT STATUS LABELS
@@ -437,6 +432,8 @@ div[class^="rsg--controls"] {
   border-radius: 0;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  // to display a white caret
+  color: #ffffff;
 }
 
 pre[class*="language-"] {
@@ -446,7 +443,9 @@ pre[class*="language-"] {
   font-family: Consolas, "Liberation Mono", Menlo, monospace;
   font-size: $size-s;
   overflow: auto;
+  white-space: pre-wrap;
 }
+
 /*********************************************************
 * Tokens
 */
