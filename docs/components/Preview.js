@@ -1,5 +1,9 @@
-import CodeMirror from "codemirror"
 import CodeTabs from "../utils/tabs.js"
+import { highlight as prismHighlight, languages } from "prismjs"
+import "prismjs/components/prism-clike"
+import "prismjs/components/prism-markup"
+import "prismjs/components/prism-javascript"
+import "prismjs/components/prism-jsx"
 
 function format(node, level) {
   const indentBefore = new Array(level++ + 1).join("  ")
@@ -43,37 +47,19 @@ export default previewComponent => {
         this.$el.localName +
         ">"
 
-      const elemText = format(div, 0).innerHTML.replace(/ class=""/g, "")
+      const elemText = format(div.childNodes[0], 0).innerHTML.replace(/ class=""/g, "")
       const elem = document.createElement("div")
+      elem.className = "language-html"
       const pre = document.createElement("pre")
       const parent = document.querySelector("article div[class^='rsg--tab']")
-      pre.appendChild(document.createTextNode(elemText.trim()))
+      pre.innerHTML = prismHighlight(elemText.trim(), languages["html"], "html")
       elem.appendChild(pre)
       if (parent) {
-        // Allow some time to pass to make sure codemirror is visible first
-        setTimeout(() => {
-          parent.appendChild(elem)
-          parent.appendChild(tabs)
+        parent.appendChild(elem)
+        parent.appendChild(tabs)
 
-          CodeMirror(
-            function(code) {
-              elem.parentNode.replaceChild(code, elem)
-              code.className += " vueds-html vueds-hidden"
-            },
-            {
-              value: pre.innerText || pre.textContent,
-              mode: "jsx",
-              lineNumbers: false,
-              lineWrapping: true,
-              readOnly: true,
-              dragDrop: false,
-              theme: "night",
-              viewportMargin: Infinity,
-            }
-          )
-
-          CodeTabs.init()
-        }, 300)
+        pre.className = "language-html vueds-html vueds-hidden"
+        CodeTabs.init()
       }
     },
   }

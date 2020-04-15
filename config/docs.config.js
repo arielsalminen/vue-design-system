@@ -14,6 +14,8 @@ module.exports = {
    */
   version: packageConfig.version,
   theme: "../docs/theme.js",
+  styles: "../docs/styles.js",
+  jssThemedEditor: false,
   renderRootJsx: path.join(__dirname, "../docs/components/Preview.js"),
   /**
    * Path to static assets directory

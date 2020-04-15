@@ -660,3 +660,89 @@ ul a[href*="/#/Design Tokens/All"],
 ul a[href*="/#/Private Components"] {
   display: none !important;
 }
+
+/* PRISMJS
+------------------------------------------- */
+
+.vueds-html {
+  padding: 20px;
+}
+
+:not(pre)[class*="language-"] {
+  background-color: #041d37;
+  border-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+pre[class*="language-"] {
+  padding: 16px;
+  margin: 0;
+  color: #ffffff;
+  font-family: Consolas;
+  font-size: 13px;
+}
+/*********************************************************
+* Tokens
+*/
+.namespace {
+  opacity: 0.7;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6d6d6d;
+}
+
+.token.punctuation {
+  color: #54a3f2;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #54a3f2;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #eeeeee;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #dddddd;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #afe74c;
+}
+
+.token.function {
+  color: #54a3f2;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #aaaaaa;
+}
+
+.token.attr-name {
+  color: #ffcc4d;
+}
