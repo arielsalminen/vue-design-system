@@ -1,7 +1,5 @@
 <template>
-  <component :is="level" class="heading">
-    <slot/>
-  </component>
+  <component :is="level" class="heading"> <slot /> </component>
 </template>
 
 <script>
@@ -74,11 +72,9 @@ h6 {
 
 <docs>
   ```jsx
-  <div>
-    <Heading>The quick brown fox</Heading>
-    <Heading level="h2">The quick brown fox</Heading>
-    <Heading level="h3">The quick brown fox</Heading>
-    <Heading level="h4">The quick brown fox</Heading>
-  </div>
+  <Heading>The quick brown fox</Heading>
+  <Heading level="h2">The quick brown fox</Heading>
+  <Heading level="h3">The quick brown fox</Heading>
+  <Heading level="h4">The quick brown fox</Heading>
   ```
 </docs>

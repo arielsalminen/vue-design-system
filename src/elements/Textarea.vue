@@ -1,5 +1,5 @@
 <template>
-  <component :is="wrapper" :class="['textarea', {'textarea-expand': width === 'expand'}]">
+  <component :is="wrapper" :class="['textarea', { 'textarea-expand': width === 'expand' }]">
     <label :for="id" v-if="label">{{ label }}</label>
     <textarea
       :id="id"
@@ -178,13 +178,10 @@ $color-placeholder: tint($color-silver, 50%);
 }
 </style>
 
-
 <docs>
   ```jsx
-  <div>
-    <Textarea label="Default textarea" placeholder="Write your text" id="textarea-1" />
-    <Textarea label=":focus" state="focus" placeholder="Write your text" id="textarea-2" />
-    <Textarea label="[disabled]" disabled value="Write your text" id="textarea-3" />
-  </div>
+  <Textarea label="Default textarea" placeholder="Write your text" id="textarea-1" />
+  <Textarea label=":focus" state="focus" placeholder="Write your text" id="textarea-2" />
+  <Textarea label="[disabled]" disabled value="Write your text" id="textarea-3" />
   ```
 </docs>

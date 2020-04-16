@@ -47,7 +47,9 @@ export default previewComponent => {
         this.$el.localName +
         ">"
 
-      const elemText = format(div.childNodes[0], 0).innerHTML.replace(/ class=""/g, "")
+      const elemText = Array.from(div.childNodes)
+        .map(n => format(n, 0).innerHTML.replace(/ class=""/g, ""))
+        .join("\n")
       const elem = document.createElement("div")
       elem.className = "language-html"
       const pre = document.createElement("pre")

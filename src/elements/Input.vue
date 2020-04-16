@@ -1,5 +1,5 @@
 <template>
-  <component :is="wrapper" :class="['input', {'input-expand': width === 'expand'}]">
+  <component :is="wrapper" :class="['input', { 'input-expand': width === 'expand' }]">
     <label :for="id" v-if="label">{{ label }}</label>
     <input
       :id="id"
@@ -10,7 +10,7 @@
       :placeholder="placeholder"
       @input="onInput($event.target.value)"
       @focus="onFocus($event.target.value)"
-    >
+    />
   </component>
 </template>
 
@@ -189,14 +189,11 @@ $color-placeholder: tint($color-silver, 50%);
 }
 </style>
 
-
 <docs>
   ```jsx
-  <div>
-    <Input label="Default input" placeholder="Write your text" id="input-1" />
-    <Input label=":hover" state="hover" placeholder="Write your text" id="input-2" />
-    <Input label=":focus" state="focus" placeholder="Write your text" id="input-3" />
-    <Input label="[disabled]" disabled value="Write your text" id="input-4" />
-  </div>
+  <Input label="Default input" placeholder="Write your text" id="input-1" />
+  <Input label=":hover" state="hover" placeholder="Write your text" id="input-2" />
+  <Input label=":focus" state="focus" placeholder="Write your text" id="input-3" />
+  <Input label="[disabled]" disabled value="Write your text" id="input-4" />
   ```
 </docs>

@@ -1,7 +1,5 @@
 <template>
-  <component :is="type" :class="['text-style', variation]">
-    <slot/>
-  </component>
+  <component :is="type" :class="['text-style', variation]"> <slot /> </component>
 </template>
 
 <script>
@@ -72,15 +70,12 @@ $positive-text: #7cb518;
 }
 </style>
 
-
 <docs>
   ```jsx
-  <div>
-    <TextStyle variation="default">Design isn’t just about the look and feel.</TextStyle>
-    <br />
-    <TextStyle variation="disabled">Design isn’t just about</TextStyle>
-    <br />
-    <TextStyle variation="strong">Design isn’t</TextStyle>
-  </div>
+  <TextStyle variation="default">Design isn’t just about the look and feel.</TextStyle>
+  <br />
+  <TextStyle variation="disabled">Design isn’t just about</TextStyle>
+  <br />
+  <TextStyle variation="strong">Design isn’t</TextStyle>
   ```
 </docs>
