@@ -1,25 +1,35 @@
+const Color = require("color")
+const tokens = require("../src/assets/tokens/tokens.json")
+
+const bleuDeFrance = Color(tokens.color_bleu_de_france)
+const oxfordBlue = Color(tokens.color_oxford_blue)
+
 /**
  * Styles specific from components
- * TODO: remove hardcoded dimensions and colors
  */
-
-module.exports = function(theme) {
+module.exports = function({ space }) {
   return {
     StyleGuide: {
       logo: {
-        padding: "24px",
+        padding: space[3],
       },
     },
     Logo: {
       logo: {
-        color: "#e9f3fd",
+        color: bleuDeFrance
+          .mix(Color("white"), 0.9)
+          .hsl()
+          .string(),
       },
     },
     ComponentsList: {
       isSelected: {
         "& > a[href], & > a[href]:hover": {
           isolate: false,
-          color: "#d3e8fc",
+          color: bleuDeFrance
+            .mix(Color("white"), 0.8)
+            .hsl()
+            .string(),
         },
       },
       item: {
@@ -36,14 +46,14 @@ module.exports = function(theme) {
         },
         "& > a[href]": {
           isolate: false,
-          padding: "4px 24px",
+          padding: `${space[0]}px ${space[3]}px`,
           display: "block",
           whiteSpace: "nowrap",
           overflow: "hidden",
           textOverflow: "ellipsis",
           "&:hover": {
             isolate: false,
-            color: "#84bdf6",
+            color: tokens.color_bleu_de_france_lighter,
           },
         },
       },
@@ -53,7 +63,7 @@ module.exports = function(theme) {
         padding: 0,
         "ul &": {
           lineHeight: "1.3",
-          paddingLeft: "16px",
+          paddingLeft: space[2],
         },
       },
     },
@@ -64,13 +74,16 @@ module.exports = function(theme) {
         "& th, & td": {
           isolate: false,
           letterSpacing: "1px",
-          padding: "16px",
+          padding: space[2],
           borderRadius: 0,
         },
         "& th": {
           isolate: false,
           textTransform: "uppercase",
-          color: "#1a3c5f",
+          color: oxfordBlue
+            .mix(Color("white"), 0.1)
+            .hsl()
+            .string(),
         },
         "& tr > td, & tr > th": {
           isolate: false,
