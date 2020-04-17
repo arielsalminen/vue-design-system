@@ -1,16 +1,19 @@
 <template>
-  <component :is="type" class="not-found">
-    <NavBar
-      active="NotFound"
+  <component :is="type" class="vds-not-found">
+    <VdsNavBar
+      active="VdsNotFound"
       :navItems="[
-        {name: 'Template', component: 'Index', href: '/#/'},
-        {name: 'Documentation', href: 'http://localhost:6060/'}
+        { name: 'Template', component: 'VdsIndex', href: '/#/' },
+        { name: 'Documentation', href: 'http://localhost:6060/' },
       ]"
     />
-    <Wrapper>
-      <Heading>404 Error</Heading>
-      <Paragraph>Couldn’t find a component that would match the URL you entered. Double check configuration in router/index.js.</Paragraph>
-    </Wrapper>
+    <VdsWrapper>
+      <VdsHeading>404 Error</VdsHeading>
+      <VdsParagraph
+        >Couldn’t find a component that would match the URL you entered. Double check configuration
+        in router/index.js.</VdsParagraph
+      >
+    </VdsWrapper>
   </component>
 </template>
 
@@ -19,7 +22,7 @@
  * Shows how to layout and structure an error page.
  */
 export default {
-  name: "NotFound",
+  name: "VdsNotFound",
   metaInfo: {
     title: "Page Not Found | Vue Design System",
     htmlAttrs: {
@@ -46,7 +49,7 @@ $color-template-background-bottom: shade($color-template-background, 5%);
 $color-template-text: $color-white;
 $color-template-link: $color-bleu-de-france;
 
-.not-found {
+.vds-not-found {
   @include reset;
   @include inset-space($space-m);
   min-height: $space-xxl * 4;
@@ -61,16 +64,16 @@ $color-template-link: $color-bleu-de-france;
   float: left;
   height: 100%;
   width: 100%;
-  .heading {
+  .vds-heading {
     color: $color-template-text;
   }
-  .paragraph {
+  .vds-paragraph {
     color: $color-template-text;
   }
-  .text-link {
+  .vds-text-link {
     color: $color-template-link;
   }
-  .wrapper {
+  .vds-wrapper {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     max-width: $space-xxl * 4.5;
@@ -84,6 +87,6 @@ $color-template-link: $color-bleu-de-france;
 
 <docs>
   ```jsx
-  <NotFound />
+  <VdsNotFound />
   ```
 </docs>

@@ -1,5 +1,5 @@
 <template>
-  <component :is="wrapper" :class="['textarea', {'textarea-expand': width === 'expand'}]">
+  <component :is="wrapper" :class="['vds-textarea', { 'textarea-expand': width === 'expand' }]">
     <label :for="id" v-if="label">{{ label }}</label>
     <textarea
       :id="id"
@@ -20,7 +20,7 @@
  * use the `Input` element.
  */
 export default {
-  name: "Textarea",
+  name: "VdsTextarea",
   status: "ready",
   release: "3.5.0",
   props: {
@@ -109,7 +109,7 @@ export default {
 // Design Tokens with local scope
 $color-placeholder: tint($color-silver, 50%);
 
-.textarea {
+.vds-textarea {
   @include stack-space($space-s);
   font-weight: $weight-normal;
   font-family: $font-text;
@@ -178,13 +178,12 @@ $color-placeholder: tint($color-silver, 50%);
 }
 </style>
 
-
 <docs>
   ```jsx
   <div>
-    <Textarea label="Default textarea" placeholder="Write your text" id="textarea-1" />
-    <Textarea label=":focus" state="focus" placeholder="Write your text" id="textarea-2" />
-    <Textarea label="[disabled]" disabled value="Write your text" id="textarea-3" />
+    <VdsTextarea label="Default textarea" placeholder="Write your text" id="textarea-1" />
+    <VdsTextarea label=":focus" state="focus" placeholder="Write your text" id="textarea-2" />
+    <VdsTextarea label="[disabled]" disabled value="Write your text" id="textarea-3" />
   </div>
   ```
 </docs>

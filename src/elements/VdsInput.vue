@@ -1,5 +1,5 @@
 <template>
-  <component :is="wrapper" :class="['input', {'input-expand': width === 'expand'}]">
+  <component :is="wrapper" :class="['vds-input', { 'input-expand': width === 'expand' }]">
     <label :for="id" v-if="label">{{ label }}</label>
     <input
       :id="id"
@@ -10,7 +10,7 @@
       :placeholder="placeholder"
       @input="onInput($event.target.value)"
       @focus="onFocus($event.target.value)"
-    >
+    />
   </component>
 </template>
 
@@ -21,7 +21,7 @@
  * formats including numbers. For longer input, use the form `Textarea` element.
  */
 export default {
-  name: "Input",
+  name: "VdsInput",
   status: "ready",
   release: "1.0.0",
   props: {
@@ -121,7 +121,7 @@ export default {
 // Design Tokens with local scope
 $color-placeholder: tint($color-silver, 50%);
 
-.input {
+.vds-input {
   @include stack-space($space-s);
   font-weight: $weight-normal;
   font-family: $font-text;
@@ -189,14 +189,13 @@ $color-placeholder: tint($color-silver, 50%);
 }
 </style>
 
-
 <docs>
   ```jsx
   <div>
-    <Input label="Default input" placeholder="Write your text" id="input-1" />
-    <Input label=":hover" state="hover" placeholder="Write your text" id="input-2" />
-    <Input label=":focus" state="focus" placeholder="Write your text" id="input-3" />
-    <Input label="[disabled]" disabled value="Write your text" id="input-4" />
+    <VdsInput label="Default input" placeholder="Write your text" id="input-1" />
+    <VdsInput label=":hover" state="hover" placeholder="Write your text" id="input-2" />
+    <VdsInput label=":focus" state="focus" placeholder="Write your text" id="input-3" />
+    <VdsInput label="[disabled]" disabled value="Write your text" id="input-4" />
   </div>
   ```
 </docs>
