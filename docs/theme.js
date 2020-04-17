@@ -1,5 +1,3 @@
-// const tokens = require("../src/assets/tokens/tokens.json")
-
 module.exports = {
   maxWidth: "100%",
   sidebarWidth: 240,
