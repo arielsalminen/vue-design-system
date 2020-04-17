@@ -17,7 +17,7 @@ export default {
   props: {
     /**
      * The html element used for the button.
-     * `button, a`
+     * @values button, a
      */
     type: {
       type: String,
@@ -28,7 +28,7 @@ export default {
     },
     /**
      * The size of the button. Defaults to medium.
-     * `small, medium, large`
+     * @values small, medium, large
      */
     size: {
       type: String,
@@ -56,7 +56,7 @@ export default {
     },
     /**
      * Manually trigger various states of the button.
-     * `hover, active, focus`
+     * @values hover, active, focus
      */
     state: {
       type: String,
@@ -67,7 +67,7 @@ export default {
     },
     /**
      * Style variation to give additional meaning.
-     * `primary, secondary`
+     * @values primary, secondary
      */
     variation: {
       type: String,

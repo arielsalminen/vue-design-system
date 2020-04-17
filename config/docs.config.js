@@ -181,6 +181,9 @@ module.exports = {
     )
   },
   getComponentPathLine: () => false,
+  styleguideComponents: {
+    Editor: path.join(__dirname, "../docs/components/Editor"),
+  },
   /**
    * Configure docs server to redirect asset queries
    */

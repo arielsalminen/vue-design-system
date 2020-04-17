@@ -47,7 +47,7 @@ export default {
     },
     /**
      * The html element name used for the wrapper.
-     * `div, section`
+     * @values div, section
      */
     wrapper: {
       type: String,
@@ -65,7 +65,7 @@ export default {
     },
     /**
      * The width of the form textarea.
-     * `auto, expand`
+     * @values auto, expand
      */
     width: {
       type: String,
@@ -76,7 +76,6 @@ export default {
     },
     /**
      * Whether the form textarea is disabled or not.
-     * `true, false`
      */
     disabled: {
       type: Boolean,
@@ -84,7 +83,7 @@ export default {
     },
     /**
      * Manually trigger various states of the textarea.
-     * `hover, active, focus`
+     * @values hover, active, focus
      */
     state: {
       type: String,

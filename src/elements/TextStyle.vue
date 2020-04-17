@@ -15,7 +15,7 @@ export default {
   props: {
     /**
      * The html element used for the text style.
-     * `span, em, i, strong`
+     * @values span, em, i, strong
      */
     type: {
       type: String,
@@ -26,7 +26,7 @@ export default {
     },
     /**
      * Style variation to give additional meaning.
-     * `default, disabled, strong, positive, negative`
+     * @values default, disabled, strong, positive, negative
      */
     variation: {
       type: String,

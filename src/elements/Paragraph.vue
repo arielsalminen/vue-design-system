@@ -10,7 +10,7 @@ export default {
   props: {
     /**
      * The html element used for the text.
-     * `p, span`
+     * @values p, span
      */
     type: {
       type: String,
@@ -21,7 +21,7 @@ export default {
     },
     /**
      * Style variation to give additional meaning.
-     * `intro, small, medium, large`
+     * @values intro, small, medium, large
      */
     variation: {
       type: String,

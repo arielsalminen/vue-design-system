@@ -27,7 +27,7 @@ export default {
   props: {
     /**
      * The type of the form input field.
-     * `text, number, email`
+     * @values text, number, email
      */
     type: {
       type: String,
@@ -59,7 +59,7 @@ export default {
     },
     /**
      * The html element name used for the wrapper.
-     * `div, section`
+     * @values div, section
      */
     wrapper: {
       type: String,
@@ -77,7 +77,7 @@ export default {
     },
     /**
      * The width of the form input field.
-     * `auto, expand`
+     * @values auto, expand
      */
     width: {
       type: String,
@@ -88,7 +88,6 @@ export default {
     },
     /**
      * Whether the form input field is disabled or not.
-     * `true, false`
      */
     disabled: {
       type: Boolean,
@@ -96,7 +95,7 @@ export default {
     },
     /**
      * Manually trigger various states of the input.
-     * `hover, active, focus`
+     * @values hover, active, focus
      */
     state: {
       type: String,

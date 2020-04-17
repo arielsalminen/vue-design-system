@@ -1,22 +1,54 @@
 module.exports = {
+  StyleGuide: {
+    logo: {
+      padding: "24px",
+    },
+  },
+  Logo: {
+    logo: {
+      color: "#e9f3fd",
+    },
+  },
   ComponentsList: {
     isSelected: {
-      fontWeight: "normal",
-      "& > a[href]": {
-        color: "#FFFFFF",
+      "& > a[href], & > a[href]:hover": {
+        isolate: false,
+        color: "#d3e8fc",
       },
     },
     item: {
+      "-webkit-font-smoothing": "antialiased",
+      "-moz-osx-font-smoothing": "grayscale",
       fontSize: "15px",
+      margin: 0,
       fontWeight: 600,
       "ul ul & ": {
+        "-webkit-font-smoothing": "subpixel-antialiased",
+        "-moz-osx-font-smoothing": "auto",
         fontWeight: 400,
         fontSize: "13px",
-        padding: "5px 0",
+      },
+      "& > a[href]": {
+        isolate: false,
+        padding: "4px 24px",
+        display: "block",
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        "&:hover": {
+          isolate: false,
+          color: "#84bdf6",
+        },
       },
     },
     list: {
-      marginTop: "2px",
+      isolate: false,
+      margin: 0,
+      padding: 0,
+      "ul &": {
+        lineHeight: "1.3",
+        paddingLeft: "16px",
+      },
     },
   },
   Table: {
@@ -45,7 +77,7 @@ module.exports = {
     },
     dataRow: {
       isolate: false,
-      ":hover": {
+      "&:hover": {
         isolate: false,
       },
     },

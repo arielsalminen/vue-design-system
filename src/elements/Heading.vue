@@ -15,7 +15,7 @@ export default {
   props: {
     /**
      * The heading level used for the heading.
-     * `h1, h2, h3, h4, h5, h6`
+     * @values h1, h2, h3, h4, h5, h6
      */
     level: {
       type: String,

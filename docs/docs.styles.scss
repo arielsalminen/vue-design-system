@@ -401,7 +401,8 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
 // Global tr setting so that vueds custom components use this as well
 tr {
   transition: background-color 0.1s ease;
-  &:hover {
+  &:hover,
+  body &[class^="rsg--dataRow"]:hover {
     background: rgba($color-cloud, 0.3);
   }
 }
@@ -424,10 +425,11 @@ div[class^="rsg--controls"] {
   border-bottom-right-radius: 3px;
   // to display a white caret
   color: #ffffff;
+  margin-bottom: $space-m;
 }
 
 pre[class*="language-"] {
-  padding: $space-s;
+  padding: $space-m;
   margin: 0;
   color: #ffffff;
   font-family: Consolas, "Liberation Mono", Menlo, monospace;
