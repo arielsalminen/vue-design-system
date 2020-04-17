@@ -184,6 +184,15 @@ module.exports = {
   styleguideComponents: {
     Editor: path.join(__dirname, "../docs/components/Editor"),
   },
+  compilerConfig: {
+    target: {
+      ie: "11",
+      chrome: "71",
+      firefox: "64",
+      safari: "11",
+      edge: "17",
+    },
+  },
   /**
    * Configure docs server to redirect asset queries
    */
