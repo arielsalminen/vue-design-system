@@ -37,8 +37,7 @@ main[class^="rsg--content"] {
 
 // Resetting margins for Styleguidist
 header[class^="rsg--header"] > div[class^="rsg--wrapper"],
-section > div[class^="rsg--wrapper"] + article[class^="rsg--root"],
-article[class^="rsg--root"] div[class^="rsg--root"] {
+section > div[class^="rsg--wrapper"] + article[class^="rsg--root"] {
   margin: 0 !important;
 }
 
@@ -436,6 +435,8 @@ pre[class*="language-"] {
   font-size: $size-s;
   overflow: auto;
   white-space: pre-wrap;
+  min-height: 86px;
+  box-sizing: border-box;
 }
 
 /*********************************************************
