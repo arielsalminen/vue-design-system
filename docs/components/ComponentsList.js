@@ -8,7 +8,7 @@ const tokens = require("../../src/assets/tokens/tokens.json")
 
 const bleuDeFrance = Color(tokens.color_bleu_de_france)
 
-const styles = ({ color, fontFamily, fontSize, space, mq }) => ({
+const styles = ({ fontFamily, space, mq }) => ({
   list: {
     isolate: false,
     margin: 0,
@@ -96,12 +96,7 @@ export const ComponentsListRenderer = ({ classes, items }) => {
         const open = item.forcedOpen || openSlug === item.slug
         return (
           <ComponentsListSectionRenderer
-            // To reinit all subsections when toggling sections,
-            // In other words for the useState hook to be reinitialized,
-            // we have to repaint it.
-            // Adding the open status to the key will force regenaration
-            // of an open section when it gets closed
-            key={item.slug + (open ? "*" : "")}
+            key={item.slug}
             classes={classes}
             {...item}
             open={open}
