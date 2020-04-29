@@ -183,6 +183,7 @@ module.exports = {
   getComponentPathLine: () => false,
   styleguideComponents: {
     Editor: path.join(__dirname, "../docs/components/Editor"),
+    ComponentsListRenderer: path.join(__dirname, "../docs/components/ComponentsList"),
   },
   compilerConfig: {
     target: {

@@ -78,6 +78,12 @@ module.exports = {
                 },
               ],
             ],
+            overrides: [
+              {
+                include: "docs/components/*.js",
+                plugins: ["babel-plugin-transform-react-jsx"],
+              },
+            ],
             comments: false,
           },
         },

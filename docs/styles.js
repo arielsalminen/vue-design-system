@@ -22,51 +22,6 @@ module.exports = function({ space }) {
           .string(),
       },
     },
-    ComponentsList: {
-      isSelected: {
-        "& > a[href], & > a[href]:hover": {
-          isolate: false,
-          color: bleuDeFrance
-            .mix(Color("white"), 0.8)
-            .hsl()
-            .string(),
-        },
-      },
-      item: {
-        "-webkit-font-smoothing": "antialiased",
-        "-moz-osx-font-smoothing": "grayscale",
-        fontSize: "15px",
-        margin: 0,
-        fontWeight: 600,
-        "ul ul & ": {
-          "-webkit-font-smoothing": "subpixel-antialiased",
-          "-moz-osx-font-smoothing": "auto",
-          fontWeight: 400,
-          fontSize: "13px",
-        },
-        "& > a[href]": {
-          isolate: false,
-          padding: `${space[0]}px ${space[3]}px`,
-          display: "block",
-          whiteSpace: "nowrap",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          "&:hover": {
-            isolate: false,
-            color: tokens.color_bleu_de_france_lighter,
-          },
-        },
-      },
-      list: {
-        isolate: false,
-        margin: 0,
-        padding: 0,
-        "ul &": {
-          lineHeight: "1.3",
-          paddingLeft: space[2],
-        },
-      },
-    },
     Table: {
       table: {
         borderCollapse: "collapse",
