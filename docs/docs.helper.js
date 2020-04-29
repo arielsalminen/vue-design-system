@@ -23,8 +23,10 @@ const registerAllComponents = components => {
 
 // these component Needs to be loaded in somewhere as this is also shown in
 // element, Pattern & Template overviews.
-const docsComponents = require.context("./components/status/", true, /[A-Z].+\.vue$/)
+const tokenComponents = require.context("./components/tokens/", true, /[A-Z].+\.vue$/)
+registerAllComponents(tokenComponents)
 
+const docsComponents = require.context("./components/status/", true, /[A-Z].+\.vue$/)
 registerAllComponents(docsComponents)
 
 // Finally register private components that will be ignored in the styleguide

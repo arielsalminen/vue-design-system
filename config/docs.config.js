@@ -55,22 +55,14 @@ module.exports = {
     {
       name: "Voice & Tone",
       content: "../docs/voice-and-tone.md",
-      sectionDepth: 1,
       exampleMode: "hide",
       usageMode: "hide",
     },
     {
       name: "Design Tokens",
       content: "../docs/tokens.md",
-      sectionDepth: 1,
       exampleMode: "hide",
       usageMode: "hide",
-      components: () => [
-        "../docs/components/tokens/Color.vue",
-        "../docs/components/tokens/FontSize.vue",
-        "../docs/components/tokens/Spacing.vue",
-        "../docs/components/tokens/All.vue",
-      ],
     },
     {
       name: "Elements",
