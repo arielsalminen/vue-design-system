@@ -82,10 +82,10 @@ exports.cssLoaders = function(options) {
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    sass: generateLoaders("sass", Object.assign({ indentedSyntax: true }, sassOptions)).concat(
-      sassResourcesConfig
-    ),
-    scss: generateLoaders("sass", sassOptions).concat(sassResourcesConfig),
+    sass: generateLoaders("sass", {
+      sassOptions: Object.assign({ indentedSyntax: true }, sassOptions),
+    }).concat(sassResourcesConfig),
+    scss: generateLoaders("sass", { sassOptions }).concat(sassResourcesConfig),
   }
 }
 

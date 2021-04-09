@@ -37,8 +37,7 @@ main[class^="rsg--content"] {
 
 // Resetting margins for Styleguidist
 header[class^="rsg--header"] > div[class^="rsg--wrapper"],
-section > div[class^="rsg--wrapper"] + article[class^="rsg--root"],
-article[class^="rsg--root"] div[class^="rsg--root"] {
+section > div[class^="rsg--wrapper"] + article[class^="rsg--root"] {
   margin: 0 !important;
 }
 
@@ -50,14 +49,6 @@ main section section > div > div[class^="rsg--root"] {
 
 /* TYPOGRAPHY
 --------------------------------------------- */
-
-// Link color
-div[class^="rsg--root"] a[class^="rsg--link"] {
-  color: $color-bleu-de-france;
-  &:hover {
-    color: $color-bleu-de-france-dark;
-  }
-}
 
 // Main headings
 // (includes h2 as well since in component views that’s the first heading)
@@ -205,16 +196,6 @@ td[class^="rsg--cell"] p {
 /* SIDEBAR
 --------------------------------------------- */
 
-// Sidebar logo
-div[class^="rsg--logo"] {
-  @include inset-space($space-m);
-  border-bottom: 1px solid rgba($color-white, 0.1);
-  h1 {
-    color: tint($color-bleu-de-france, 90%);
-    font-weight: $weight-normal;
-  }
-}
-
 // Sidebar version
 p[class^="rsg--version"] {
   @include inset-squish-space($space-xs);
@@ -255,92 +236,6 @@ div[class^="rsg--search"] input {
   &::-moz-placeholder {
     color: rgba(mix($color-white, $color-bleu-de-france, 50%), 0.35);
     opacity: 1;
-  }
-}
-
-// Sets sidebar background
-div[class^="rsg--sidebar"] {
-  background: mix($color-bleu-de-france, $color-rich-black, 5%);
-  border: 0;
-  @media (max-width: #{$docs-breakpoint}) {
-    padding-bottom: $space-l;
-  }
-
-  // Sidebar sub navigations
-  ul ul[class^="rsg--list"] {
-    display: none;
-    &.vueds-visible {
-      display: block;
-    }
-  }
-
-  // Sidebar list item
-  li[class^="rsg--item"] {
-    margin: 0;
-    display: block;
-  }
-
-  // Sidebar first level links
-  a[class^="rsg--link"] {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding: $space-xx-small $space-m;
-    font-weight: $weight-semi-bold;
-    color: $color-bleu-de-france;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    &:hover {
-      color: $color-bleu-de-france-lighter;
-    }
-    &:active {
-      color: $color-bleu-de-france-dark;
-    }
-  }
-
-  // Sidebar active link
-  .vueds-active {
-    ul[class^="rsg--list"] {
-      display: block;
-    }
-    & > a,
-    & > a:hover {
-      color: tint($color-bleu-de-france, 80%);
-    }
-  }
-
-  // Sidebar list
-  ul[class^="rsg--list"] {
-    padding-left: 0;
-
-    // Sidebar sub-list
-    ul {
-      padding-left: $space-s;
-      line-height: $line-height-s;
-      @media (max-width: #{$docs-breakpoint-small}) {
-        padding: 0 0 0 $space-l;
-        width: 90%;
-
-        // Sidebar sub-list item
-        li {
-          display: inline;
-          line-height: $line-height-m;
-        }
-      }
-
-      // Sidebar second level link
-      a[class*="rsg--link"] {
-        font-size: $size-s;
-        font-weight: $weight-normal;
-        -webkit-font-smoothing: subpixel-antialiased;
-        -moz-osx-font-smoothing: auto;
-        @media (max-width: #{$docs-breakpoint-small}) {
-          float: left;
-          padding: 0 $space-xs 0 0;
-        }
-      }
-    }
   }
 }
 
@@ -394,42 +289,6 @@ thead[class^="rsg--tableHead"] {
   border: 0;
 }
 
-// Codemirror and markdown code blocks
-pre[class^="rsg--pre"],
-.vueds-html.cm-s-night.CodeMirror,
-.react-codemirror2 .CodeMirror.CodeMirror {
-  background: mix($color-bleu-de-france, $color-rich-black, 10%);
-  border-bottom-left-radius: $radius-default;
-  border-bottom-right-radius: $radius-default;
-  box-sizing: border-box;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
-  height: auto;
-  border: 0;
-  font-family: Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: $size-s;
-  margin: 0;
-  min-height: $space-xxl / 1.5;
-  margin-bottom: $space-m;
-  color: $color-white;
-  padding: $space-m;
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  word-break: normal;
-  .CodeMirror-scroll,
-  .CodeMirror-vscrollbar {
-    overflow: hidden;
-  }
-  code {
-    color: $color-white;
-  }
-}
-
-// HTML preview needs some padding adjustments to match Styleguidist
-.vueds-html.cm-s-night.CodeMirror {
-  padding-left: $space-m - 4px;
-}
-
 // VUE & HTML Code tabs
 div[class^="rsg--tab"] {
   position: relative;
@@ -469,59 +328,7 @@ div[class^="rsg--tab"] {
 
 // Hidden HTML/VUE code preview
 .vueds-hidden {
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-  top: -10000px;
-  left: 0;
-  position: absolute !important;
-}
-
-// Fixes a few layout bugs with CodeMirror
-.CodeMirror-scroll.CodeMirror-scroll {
-  overflow: hidden !important;
-}
-
-// Code highlighting for both CodeMirror and Markdown files
-.hljs-variable,
-.hljs-selector-class,
-.cm-s-night span.cm-variable,
-.cm-s-night span.cm-variable-2,
-.cm-s-night span.cm-bracket,
-.cm-s-night span.cm-tag,
-.hljs-tag,
-.hljs-name {
-  color: $color-bleu-de-france-light !important;
-}
-.hljs-attribute,
-.hljs-keyword,
-.hljs-attr,
-.cm-s-night span.cm-operator,
-.cm-s-night span.cm-number,
-.cm-s-night span.cm-attribute {
-  color: $color-ucla-gold-light !important;
-}
-.cm-s-night span.cm-string,
-.hljs-string {
-  color: lighten($docs-status-ready, 20%) !important;
-}
-
-// Code highlighting elsewhere
-span[class^="rsg--type"],
-code[class^="rsg--code"] {
-  color: $color-silver;
-}
-span[class^="rsg--name"] code[class^="rsg--code"],
-code.name {
-  font-weight: $weight-bold;
-  color: shade($color-silver, 50%);
-}
-span[class^="rsg--type"] code[class^="rsg--code"],
-code.type {
-  background: tint($docs-grey, 75%);
-  color: shade($color-silver, 20%);
-  padding: $space-xx-small;
-  border-radius: $radius-default;
+  display: none;
 }
 
 /* COMPONENT STATUS LABELS
@@ -529,15 +336,17 @@ code.type {
 
 // Here we’re setting a custom order for Styleguidist’s pieces
 header[class^="rsg--header"] {
-  order: 2;
+  order: 1;
 }
+
 div[class^="rsg--docs"],
 article[class^="rsg--root"],
 button[class^="rsg--button"] {
-  order: 3;
+  order: 2;
 }
+
 div[class^="rsg--root"] div[class^="rsg--tabs"] {
-  order: 4;
+  order: 3;
 }
 
 // Status label is shown in top right corner for each component
@@ -591,55 +400,9 @@ div[class^="rsg--root"] div[class^="rsg--tabs"] {
 // Global tr setting so that vueds custom components use this as well
 tr {
   transition: background-color 0.1s ease;
-  &:hover {
+  &:hover,
+  body &[class^="rsg--dataRow"]:hover {
     background: rgba($color-cloud, 0.3);
-  }
-}
-
-table[class^="rsg--table"] {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  th {
-    padding: $space-s $space-l $space-s $space-s;
-    font-size: $size-s;
-    font-weight: $weight-semi-bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 0;
-    background: $color-cloud;
-    color: tint($color-oxford-blue, 10%);
-    text-align: left;
-  }
-  th[class^="rsg--cellHeading"],
-  td {
-    padding: $space-s $space-l $space-s $space-s;
-    background: transparent;
-  }
-  td {
-    font-size: $size-s;
-    padding: $space-s $space-l $space-s $space-s;
-    &:first-child {
-      font-weight: $weight-bold;
-      white-space: nowrap;
-    }
-  }
-  tr {
-    border-bottom: 1px solid tint($docs-grey, 50%);
-  }
-  tbody tr:last-child {
-    border-bottom: 0;
-  }
-}
-
-thead[class^="rsg--thead"] {
-  th:first-child {
-    border-top-left-radius: $radius-default;
-    border-bottom-left-radius: $radius-default;
-  }
-  th:last-child {
-    border-top-right-radius: $radius-default;
-    border-bottom-right-radius: $radius-default;
   }
 }
 
@@ -647,30 +410,96 @@ thead[class^="rsg--thead"] {
 --------------------------------------------- */
 
 div[class^="rsg--tabButtons"],
-div[class^="rsg--controls"],
-div[class^="rsg--pathline"],
-footer[class^="rsg--footer"],
-div[class^="rsg--toolbar"] {
+div[class^="rsg--toolbar"],
+div[class^="rsg--controls"] {
   display: none !important;
 }
 
-/* HIDDEN FUNCTIONALITY
---------------------------------------------- */
-
-// Hide private components
-.hide-private,
-.hide-private + div,
-a[href="#private-components"],
-a[href="#private-components"] + ul {
-  display: none !important;
+/* PRISMJS
+------------------------------------------- */
+:not(pre)[class*="language-"] {
+  background-color: mix($color-bleu-de-france, $color-rich-black, 10%);
+  border-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  // to display a white caret
+  color: #ffffff;
+  margin-bottom: $space-m;
 }
 
-// Hide Private components and placeholder sections
-ul a[href*="/#/Getting Started/Components"],
-ul a[href*="/#/Design Tokens/Color"],
-ul a[href*="/#/Design Tokens/Spacing"],
-ul a[href*="/#/Design Tokens/FontSize"],
-ul a[href*="/#/Design Tokens/All"],
-ul a[href*="/#/Private Components"] {
-  display: none !important;
+pre[class*="language-"] {
+  padding: $space-m;
+  margin: 0;
+  color: #ffffff;
+  font-family: Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: $size-s;
+  overflow: auto;
+  white-space: pre-wrap;
+  min-height: 86px;
+  box-sizing: border-box;
+}
+
+/*********************************************************
+* Tokens
+*/
+.namespace {
+  opacity: 0.7;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6d6d6d;
+}
+
+.token.punctuation {
+  color: #54a3f2;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #54a3f2;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #eeeeee;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #dddddd;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #afe74c;
+}
+
+.token.function {
+  color: #54a3f2;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #aaaaaa;
+}
+
+.token.attr-name {
+  color: #ffcc4d;
 }

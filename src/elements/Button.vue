@@ -1,6 +1,6 @@
 <template>
   <component :is="type" :href="href" :type="submit" :class="['button', size, state, variation]">
-    <slot/>
+    <slot />
   </component>
 </template>
 
@@ -17,7 +17,7 @@ export default {
   props: {
     /**
      * The html element used for the button.
-     * `button, a`
+     * @values button, a
      */
     type: {
       type: String,
@@ -28,7 +28,7 @@ export default {
     },
     /**
      * The size of the button. Defaults to medium.
-     * `small, medium, large`
+     * @values small, medium, large
      */
     size: {
       type: String,
@@ -56,7 +56,7 @@ export default {
     },
     /**
      * Manually trigger various states of the button.
-     * `hover, active, focus`
+     * @values hover, active, focus
      */
     state: {
       type: String,
@@ -67,7 +67,7 @@ export default {
     },
     /**
      * Style variation to give additional meaning.
-     * `primary, secondary`
+     * @values primary, secondary
      */
     variation: {
       type: String,
@@ -174,15 +174,13 @@ export default {
 
 <docs>
   ```jsx
-  <div>
-    <Button variation="primary" size="large">Primary Button</Button>
-    <Button variation="primary" size="medium">Medium</Button>
-    <Button variation="primary" size="small">Small</Button>
-    <br />
-    <Button>Default Button</Button>
-    <Button state="hover">:hover</Button>
-    <Button state="active">:active</Button>
-    <Button state="focus">:focus</Button>
-  </div>
+  <Button variation="primary" size="large">Primary Button</Button>
+  <Button variation="primary" size="medium">Medium</Button>
+  <Button variation="primary" size="small">Small</Button>
+  <br />
+  <Button>Default Button</Button>
+  <Button state="hover">:hover</Button>
+  <Button state="active">:active</Button>
+  <Button state="focus">:focus</Button>
   ```
 </docs>

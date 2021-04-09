@@ -1,7 +1,5 @@
 <template>
-  <component :is="type" :class="['text-style', variation]">
-    <slot/>
-  </component>
+  <component :is="type" :class="['text-style', variation]"> <slot /> </component>
 </template>
 
 <script>
@@ -17,7 +15,7 @@ export default {
   props: {
     /**
      * The html element used for the text style.
-     * `span, em, i, strong`
+     * @values span, em, i, strong
      */
     type: {
       type: String,
@@ -28,7 +26,7 @@ export default {
     },
     /**
      * Style variation to give additional meaning.
-     * `default, disabled, strong, positive, negative`
+     * @values default, disabled, strong, positive, negative
      */
     variation: {
       type: String,
@@ -72,15 +70,12 @@ $positive-text: #7cb518;
 }
 </style>
 
-
 <docs>
   ```jsx
-  <div>
-    <TextStyle variation="default">Design isn’t just about the look and feel.</TextStyle>
-    <br />
-    <TextStyle variation="disabled">Design isn’t just about</TextStyle>
-    <br />
-    <TextStyle variation="strong">Design isn’t</TextStyle>
-  </div>
+  <TextStyle variation="default">Design isn’t just about the look and feel.</TextStyle>
+  <br />
+  <TextStyle variation="disabled">Design isn’t just about</TextStyle>
+  <br />
+  <TextStyle variation="strong">Design isn’t</TextStyle>
   ```
 </docs>

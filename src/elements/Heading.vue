@@ -1,7 +1,5 @@
 <template>
-  <component :is="level" class="heading">
-    <slot/>
-  </component>
+  <component :is="level" class="heading"> <slot /> </component>
 </template>
 
 <script>
@@ -17,7 +15,7 @@ export default {
   props: {
     /**
      * The heading level used for the heading.
-     * `h1, h2, h3, h4, h5, h6`
+     * @values h1, h2, h3, h4, h5, h6
      */
     level: {
       type: String,
@@ -74,11 +72,9 @@ h6 {
 
 <docs>
   ```jsx
-  <div>
-    <Heading>The quick brown fox</Heading>
-    <Heading level="h2">The quick brown fox</Heading>
-    <Heading level="h3">The quick brown fox</Heading>
-    <Heading level="h4">The quick brown fox</Heading>
-  </div>
+  <Heading>The quick brown fox</Heading>
+  <Heading level="h2">The quick brown fox</Heading>
+  <Heading level="h3">The quick brown fox</Heading>
+  <Heading level="h4">The quick brown fox</Heading>
   ```
 </docs>

@@ -1,8 +1,6 @@
 <template>
   <component :is="type" :class="['example', variation]">
-    <div id="Example-container">
-      <slot/>
-    </div>
+    <div data-testid="Example-container"><slot /></div>
   </component>
 </template>
 

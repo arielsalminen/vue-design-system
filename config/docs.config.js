@@ -13,21 +13,10 @@ module.exports = {
    * Most of the styles are defined in /docs/docs.styles.scss
    */
   version: packageConfig.version,
-  theme: {
-    maxWidth: "100%",
-    sidebarWidth: 240,
-    fontFamily: {
-      base: ["'Fira Sans'", "Helvetica", "Arial", "sans-serif"],
-      monospace: ["Consolas", "'Liberation Mono'", "Menlo", "monospace"],
-    },
-  },
+  theme: "../docs/theme.js",
+  styles: "../docs/styles.js",
+  jssThemedEditor: false,
   renderRootJsx: path.join(__dirname, "../docs/components/Preview.js"),
-  /**
-   * Define a custom code highlighting theme.
-   */
-  editorConfig: {
-    theme: "night",
-  },
   /**
    * Path to static assets directory
    */
@@ -43,6 +32,7 @@ module.exports = {
     path.join(__dirname, "../docs/docs.helper.js"),
     path.join(__dirname, "../docs/docs.styles.scss"),
   ],
+  tocMode: "collapse",
   /**
    * Enabling the following option splits sections into separate views.
    */
@@ -51,9 +41,6 @@ module.exports = {
     {
       name: "Getting Started",
       content: "../docs/getting-started.md",
-      // Needs to be loaded in somewhere as this is also shown in
-      // element, Pattern & Template overviews.
-      components: "../docs/components/status/**/[A-Z]*.vue",
       sectionDepth: 1,
       exampleMode: "hide",
       usageMode: "hide",
@@ -68,22 +55,14 @@ module.exports = {
     {
       name: "Voice & Tone",
       content: "../docs/voice-and-tone.md",
-      sectionDepth: 1,
       exampleMode: "hide",
       usageMode: "hide",
     },
     {
       name: "Design Tokens",
       content: "../docs/tokens.md",
-      sectionDepth: 1,
       exampleMode: "hide",
       usageMode: "hide",
-      components: () => [
-        "../docs/components/tokens/Color.vue",
-        "../docs/components/tokens/FontSize.vue",
-        "../docs/components/tokens/Spacing.vue",
-        "../docs/components/tokens/All.vue",
-      ],
     },
     {
       name: "Elements",
@@ -122,17 +101,6 @@ module.exports = {
       exampleMode: "hide",
       usageMode: "hide",
       sectionDepth: 1,
-    },
-    {
-      /**
-       * Private components have to be loaded into the documentation as well,
-       * otherwise anything using them will be broken. We’re loading them in
-       * their own section, which then gets hidden in docs/docs.styles.scss
-       */
-      name: "Private Components",
-      exampleMode: "hide",
-      usageMode: "hide",
-      components: "../src/**/[_]*.vue",
     },
   ],
   /**
@@ -203,6 +171,20 @@ module.exports = {
           `${config.styleguideDir}\n`
       )
     )
+  },
+  getComponentPathLine: () => false,
+  styleguideComponents: {
+    Editor: path.join(__dirname, "../docs/components/Editor"),
+    ComponentsListRenderer: path.join(__dirname, "../docs/components/ComponentsList"),
+  },
+  compilerConfig: {
+    target: {
+      ie: "11",
+      chrome: "71",
+      firefox: "64",
+      safari: "11",
+      edge: "17",
+    },
   },
   /**
    * Configure docs server to redirect asset queries

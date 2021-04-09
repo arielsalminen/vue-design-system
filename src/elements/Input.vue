@@ -1,5 +1,5 @@
 <template>
-  <component :is="wrapper" :class="['input', {'input-expand': width === 'expand'}]">
+  <component :is="wrapper" :class="['input', { 'input-expand': width === 'expand' }]">
     <label :for="id" v-if="label">{{ label }}</label>
     <input
       :id="id"
@@ -10,7 +10,7 @@
       :placeholder="placeholder"
       @input="onInput($event.target.value)"
       @focus="onFocus($event.target.value)"
-    >
+    />
   </component>
 </template>
 
@@ -27,7 +27,7 @@ export default {
   props: {
     /**
      * The type of the form input field.
-     * `text, number, email`
+     * @values text, number, email
      */
     type: {
       type: String,
@@ -59,7 +59,7 @@ export default {
     },
     /**
      * The html element name used for the wrapper.
-     * `div, section`
+     * @values div, section
      */
     wrapper: {
       type: String,
@@ -77,7 +77,7 @@ export default {
     },
     /**
      * The width of the form input field.
-     * `auto, expand`
+     * @values auto, expand
      */
     width: {
       type: String,
@@ -88,7 +88,6 @@ export default {
     },
     /**
      * Whether the form input field is disabled or not.
-     * `true, false`
      */
     disabled: {
       type: Boolean,
@@ -96,7 +95,7 @@ export default {
     },
     /**
      * Manually trigger various states of the input.
-     * `hover, active, focus`
+     * @values hover, active, focus
      */
     state: {
       type: String,
@@ -189,14 +188,11 @@ $color-placeholder: tint($color-silver, 50%);
 }
 </style>
 
-
 <docs>
   ```jsx
-  <div>
-    <Input label="Default input" placeholder="Write your text" id="input-1" />
-    <Input label=":hover" state="hover" placeholder="Write your text" id="input-2" />
-    <Input label=":focus" state="focus" placeholder="Write your text" id="input-3" />
-    <Input label="[disabled]" disabled value="Write your text" id="input-4" />
-  </div>
+  <Input label="Default input" placeholder="Write your text" id="input-1" />
+  <Input label=":hover" state="hover" placeholder="Write your text" id="input-2" />
+  <Input label=":focus" state="focus" placeholder="Write your text" id="input-3" />
+  <Input label="[disabled]" disabled value="Write your text" id="input-4" />
   ```
 </docs>
