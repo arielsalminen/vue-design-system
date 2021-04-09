@@ -1,14 +1,12 @@
 <template>
   <div class="font-sizes">
     <div
-      v-for="(prop, index) in tokens"
+      v-for="(prop, index) in fontSizeTokens"
       :key="index"
       class="font"
-      v-if="prop.category === 'font-size'"
       :style="{ fontSize: prop.value }"
     >
-      ${{prop.name.replace(/_/g, "-")}}
-      <span>({{prop.value}})</span>
+      ${{ prop.name.replace(/_/g, "-") }} <span>({{ prop.value }})</span>
     </div>
   </div>
 </template>
@@ -31,10 +29,10 @@ export default {
       return order
     },
   },
-  data() {
-    return {
-      tokens: this.orderData(designTokens.props),
-    }
+  computed: {
+    fontSizeTokens() {
+      return this.orderData(designTokens.props).filter(prop => prop.category === "font-size")
+    },
   },
 }
 </script>
