@@ -1,15 +1,6 @@
 language: node_js
-node_js:
-  - "14"
-  - "node"
-env:
-  - WEBPACK_VERSION= # Current, from package.json
-  - WEBPACK_VERSION=4
 install:
   - npm ci
-before_script:
-  # Install Webpack version
-  - if [[ -n "$WEBPACK_VERSION" ]]; then npm install --no-save webpack@$WEBPACK_VERSION; fi
 branches:
   except:
     - gh-pages
