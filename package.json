@@ -77,10 +77,6 @@
       "node": true
     },
     "rules": {
-      "indent": [
-        "error",
-        2
-      ],
       "vue/no-unused-vars": "error",
       "quotes": [
         "error",
