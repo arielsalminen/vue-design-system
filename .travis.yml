@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "lts"
+  - "14"
   - "node"
 env:
   - WEBPACK_VERSION= # Current, from package.json
