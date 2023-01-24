@@ -19,7 +19,7 @@ import orderBy from "lodash/orderBy"
  * This typographic scale makes it easier to achieve visual harmony in the
  * interface. It’s purposefully designed to keep the number of separate font
  * sizes to a minimum. To edit font-sizes, see
- * [/src/tokens/font-size.yml](https://github.com/viljamis/vue-design-system/blob/master/src/tokens/font-size.yml).
+ * [/src/tokens/font-size.yml](https://github.com/arielsalminen/vue-design-system/blob/master/src/tokens/font-size.yml).
  */
 export default {
   name: "FontSize",

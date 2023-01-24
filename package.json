@@ -2,7 +2,7 @@
   "name": "vue-design-system",
   "version": "3.5.7",
   "description": "Vue Design System is an open-source tool for building Design Systems with Vue.js",
-  "author": "viljamis <me@viljamis.com>",
+  "author": "arielsalminen <me@arielsalminen.com>",
   "main": "dist/system/system.js",
   "files": [
     "dist/system"
@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viljamis/vue-design-system.git"
+    "url": "git+https://github.com/arielsalminen/vue-design-system.git"
   },
   "keywords": [
     "vue design system",

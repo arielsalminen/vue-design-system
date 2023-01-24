@@ -11,7 +11,7 @@
       <tbody>
         <tr v-for="(token, index) in tokens" :key="index" class="token">
           <td v-if="token.name">
-            <code class="name">${{token.name.replace(/_/g, "-")}}</code>
+            <code class="name">${{ token.name.replace(/_/g, "-") }}</code>
           </td>
           <td v-else>N/A</td>
           <td v-if="token.value">
@@ -30,10 +30,10 @@
               class="example box-shadow"
               :style="{ boxShadow: token.value }"
             />
-            <code class="type">{{token.value}}</code>
+            <code class="type">{{ token.value }}</code>
           </td>
           <td v-else>N/A</td>
-          <td v-if="token.category">{{token.category}}</td>
+          <td v-if="token.category">{{ token.category }}</td>
           <td v-else>N/A</td>
         </tr>
       </tbody>
@@ -49,7 +49,7 @@ import orderBy from "lodash/orderBy"
  * A list of available tokens in Vue Design System. Use these tokens in place
  * of hard-coded values in order to maintain a scalable and consistent system.
  * To edit these tokens and add more, see
- * [/src/tokens/](https://github.com/viljamis/vue-design-system/blob/master/src/tokens).
+ * [/src/tokens/](https://github.com/arielsalminen/vue-design-system/blob/master/src/tokens).
  */
 export default {
   name: "All",
